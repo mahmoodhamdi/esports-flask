@@ -69,5 +69,21 @@ def init_db():
         link TEXT
     )
 ''')
+
+    # Create matches table
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS matches (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            game TEXT,
+            match_date TEXT,
+            group_name TEXT,
+            team1_name TEXT,
+            team1_logo TEXT,
+            team2_name TEXT,
+            team2_logo TEXT,
+            match_time TEXT,
+            score TEXT
+        )
+    ''') 
     conn.commit()
     conn.close()
