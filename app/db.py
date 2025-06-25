@@ -85,5 +85,22 @@ def init_db():
             score TEXT
         )
     ''') 
+    # Create transfers table
+    cursor.execute('''
+CREATE TABLE IF NOT EXISTS transfers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    unique_id TEXT UNIQUE,
+    game TEXT,
+    date TEXT,
+    player_name TEXT,
+    player_flag TEXT,
+    old_team_name TEXT,
+    old_team_logo_light TEXT,
+    old_team_logo_dark TEXT,
+    new_team_name TEXT,
+    new_team_logo_light TEXT,
+    new_team_logo_dark TEXT
+)
+''')
     conn.commit()
     conn.close()
