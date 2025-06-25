@@ -146,6 +146,8 @@ def init_db():
                 new_team_name TEXT,
                 new_team_logo_light TEXT,
                 new_team_logo_dark TEXT,
+                hash_value TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ''')

@@ -31,6 +31,7 @@ def create_app():
     from .routes.ewc_matches import matches_bp as ewc_matches_bp  # Renamed
     from .routes.ewc_transfers import transfers_bp
     from .routes.global_matches import global_matches_bp
+    from .routes.player_transfers import player_transfers_bp
     # Register all blueprints
     app.register_blueprint(news_bp, url_prefix="/api")
     app.register_blueprint(admin_bp, url_prefix="/api")
@@ -42,5 +43,6 @@ def create_app():
     app.register_blueprint(ewc_matches_bp, url_prefix="/api")      # EWC matches
     app.register_blueprint(transfers_bp, url_prefix="/api")
     app.register_blueprint(global_matches_bp, url_prefix="/api")  # Global matches
+    app.register_blueprint(player_transfers_bp, url_prefix="/api")  # Player transfers
 
     return app
