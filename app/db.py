@@ -150,6 +150,26 @@ def init_db():
             )
         ''')
         
+        # Create global_matches table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS global_matches (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                game TEXT NOT NULL,
+                tournament TEXT NOT NULL,
+                group_name TEXT,
+                team1_name TEXT,
+                team1_logo TEXT,
+                team2_name TEXT,
+                team2_logo TEXT,
+                match_time TEXT,
+                score TEXT,
+                status TEXT DEFAULT 'scheduled',
+                hash_value TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ''')
+        
         conn.commit()
         logger.info("Database initialized successfully")
         
@@ -166,7 +186,7 @@ def reset_db_sequence():
         cursor = conn.cursor()
         cursor.execute("""
             DELETE FROM sqlite_sequence 
-            WHERE name IN ('news', 'teams', 'events', 'ewc_info', 'games', 'matches', 'transfers', 'prize_distribution')
+            WHERE name IN ('news', 'teams', 'events', 'ewc_info', 'games', 'matches', 'transfers', 'prize_distribution', 'global_matches')
         """)
         conn.commit()
         logger.debug("Reset SQLite sequence for all tables")
