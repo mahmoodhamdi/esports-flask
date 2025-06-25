@@ -73,7 +73,7 @@ def init_db():
                 release_date TEXT,
                 description TEXT,
                        
-                logo TEXT,
+                logo_url TEXT,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ''')
