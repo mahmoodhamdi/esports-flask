@@ -60,5 +60,14 @@ def init_db():
             logo_url TEXT
         )
     ''')
+
+    # Create events table
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS events (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        link TEXT
+    )
+''')
     conn.commit()
     conn.close()
