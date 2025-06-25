@@ -77,6 +77,22 @@ def init_db():
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ''')
+
+        # Create group_matches table
+        cursor.execute('''
+        CREATE TABLE IF NOT EXISTS group_matches (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            game TEXT,
+            tournament TEXT,
+            group_name TEXT,
+            team1_name TEXT,
+            team1_logo TEXT,
+            team2_name TEXT,
+            team2_logo TEXT,
+            match_time TEXT,
+            score TEXT
+        )
+    ''')
         
         # Create teams table
         cursor.execute('''
