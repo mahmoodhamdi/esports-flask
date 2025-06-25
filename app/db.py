@@ -67,11 +67,12 @@ def init_db():
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS games (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                title TEXT,
+                game_name TEXT,
                 genre TEXT,
                 platform TEXT,
                 release_date TEXT,
                 description TEXT,
+                       
                 logo TEXT,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
