@@ -9,11 +9,26 @@ def update_matches():
     """
     Scrape and store all EWC matches into DB
     ---
+    tags:
+      - EWC Matches
+    summary: Scrape all group stage matches and store them in the database
     responses:
       200:
         description: Matches stored successfully
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+              example: 80 matches saved successfully.
       500:
         description: Server error while storing matches
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+              example: "Error connecting to Liquipedia or database"
     """
     success, message = store_matches_in_db()
     if success:
@@ -29,37 +44,97 @@ def list_matches():
     """
     List all stored EWC matches with optional filters, sorting and pagination
     ---
+    tags:
+      - EWC Matches
+    summary: Retrieve stored matches with filters and pagination
     parameters:
       - name: game
         in: query
         type: string
         required: false
-        description: Filter by game name (exact match, case insensitive)
+        description: Filter by game name (case insensitive)
       - name: group
         in: query
         type: string
         required: false
-        description: Filter by group name (exact match, case insensitive)
+        description: Filter by group name (case insensitive)
       - name: date
         in: query
         type: string
+        format: date
         required: false
-        description: Filter by match_date (format YYYY-MM-DD)
+        description: Filter by match date in YYYY-MM-DD format
       - name: page
         in: query
         type: integer
         required: false
         default: 1
-        description: Page number (starting from 1)
+        description: Page number (1-based index)
       - name: per_page
         in: query
         type: integer
         required: false
         default: 20
-        description: Number of items per page (max 100)
+        description: Number of matches per page (max 100)
     responses:
       200:
-        description: Successfully retrieved filtered matches
+        description: Successfully retrieved matches
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+              example: Matches retrieved successfully
+            page:
+              type: integer
+              example: 1
+            per_page:
+              type: integer
+              example: 20
+            total_matches:
+              type: integer
+              example: 100
+            matches:
+              type: array
+              items:
+                type: object
+                properties:
+                  game:
+                    type: string
+                    example: PUBG Mobile
+                  match_date:
+                    type: string
+                    format: date
+                    example: 2025-07-20
+                  group_name:
+                    type: string
+                    example: Group A
+                  team1_name:
+                    type: string
+                    example: Falcons
+                  team1_logo:
+                    type: string
+                    example: https://liquipedia.net/images/flag.png
+                  team2_name:
+                    type: string
+                    example: NAVI
+                  team2_logo:
+                    type: string
+                    example: https://liquipedia.net/images/navi.png
+                  match_time:
+                    type: string
+                    example: July 20, 2025 - 16:00
+                  score:
+                    type: string
+                    example: 2-1
+      500:
+        description: Server error
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+              example: "An error occurred while retrieving matches"
     """
     try:
         game_filter = request.args.get('game', '').strip().lower()
