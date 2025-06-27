@@ -14,7 +14,7 @@ games_bp = Blueprint('games', __name__)
             'in': 'query',
             'type': 'boolean',
             'required': False,
-            'description': 'If true, fetch from Liquipedia and update the database'
+            'description': 'If true, fetch fresh data from Liquipedia and update the database'
         }
     ],
     'responses': {
@@ -26,10 +26,6 @@ games_bp = Blueprint('games', __name__)
                     "data": [
                         {
                             "game_name": "Dota 2",
-                            "logo_url": "https://liquipedia.net/images/..."
-                        },
-                        {
-                            "game_name": "League of Legends",
                             "logo_url": "https://liquipedia.net/images/..."
                         }
                     ]
@@ -46,16 +42,18 @@ def get_ewc_games():
     live = request.args.get("live", "false").lower() == "true"
     data = []
 
-    if not live:
+    if live:
+        data = fetch_ewc_games_from_web()
+        if data:
+            store_games_in_db(data)
+        else:
+            data = get_games_from_db()
+    else:
         data = get_games_from_db()
         if not data:
             data = fetch_ewc_games_from_web()
             if data:
                 store_games_in_db(data)
-    else:
-        data = fetch_ewc_games_from_web()
-        if data:
-            store_games_in_db(data)
 
     return jsonify({
         "message": "Games data retrieved successfully",
