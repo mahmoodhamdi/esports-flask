@@ -6,19 +6,39 @@ info_bp = Blueprint("info", __name__)
 @info_bp.route("/ewc_info", methods=["GET"])
 def get_ewc_info():
     """
-    Get Esports World Cup 2025 information
+    Get Esports World Cup 2025 general information
     ---
+    summary: Retrieve EWC 2025 Info (Games, Teams, and More)
+    operationId: getEwcInfo
+    tags:
+      - Esports Info
     parameters:
       - name: live
         in: query
         type: boolean
         required: false
-        description: Fetch live data from Liquipedia if true, otherwise use database
+        description: If true, fetch from Liquipedia directly, otherwise use cached DB
+        example: false
     responses:
       200:
-        description: Successfully retrieved
+        description: Successfully retrieved EWC info
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+              example: EWC information retrieved successfully
+            data:
+              type: object
+              description: General EWC info like teams, games, etc.
       500:
-        description: Internal Server Error
+        description: Internal server error
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+              example: Unexpected error occurred
     """
     live = request.args.get("live", "false").lower() == "true"
     try:
