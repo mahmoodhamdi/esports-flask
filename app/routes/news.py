@@ -19,35 +19,55 @@ def create_news():
     """
     Create a new news item
     ---
+    tags:
+      - News
     consumes:
       - multipart/form-data
-      - application/json
     parameters:
       - name: title
         in: formData
         type: string
         required: true
+        description: The title of the news item
       - name: writer
         in: formData
         type: string
         required: true
+        description: The author of the news
       - name: description
         in: formData
         type: string
+        required: false
+        description: Detailed description of the news
       - name: thumbnail_url
         in: formData
         type: string
+        required: false
+        description: URL of the thumbnail image
       - name: thumbnail_file
         in: formData
         type: file
+        required: false
+        description: Thumbnail image file (png, jpg, jpeg, gif, webp)
       - name: news_link
         in: formData
         type: string
+        required: false
+        description: External link to the full news article
     responses:
       201:
         description: News item created successfully
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+            id:
+              type: integer
       400:
-        description: Invalid input data
+        description: Missing or invalid input
+      500:
+        description: Internal server error
     """
     title = sanitize_input(request.form.get('title'), 255)
     writer = sanitize_input(request.form.get('writer'), 100)
@@ -117,31 +137,77 @@ def create_news():
 @news_bp.route('/news', methods=['GET'])
 def get_news():
     """
-    Get news items with pagination and filtering
+    Retrieve a list of news items with pagination, filtering, and sorting
     ---
+    tags:
+      - News
     parameters:
       - name: page
         in: query
         type: integer
         default: 1
+        description: Page number
       - name: per_page
         in: query
         type: integer
         default: 10
+        description: Number of items per page (max 100)
       - name: writer
         in: query
         type: string
+        required: false
+        description: Filter by writer name
       - name: search
         in: query
         type: string
+        required: false
+        description: Search in title and description
       - name: sort
         in: query
         type: string
         enum: [created_at, title]
         default: created_at
+        description: Sort field (descending)
     responses:
       200:
-        description: List of news items
+        description: Paginated list of news items
+        schema:
+          type: object
+          properties:
+            news:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  title:
+                    type: string
+                  description:
+                    type: string
+                  writer:
+                    type: string
+                  thumbnail_url:
+                    type: string
+                  news_link:
+                    type: string
+                  created_at:
+                    type: string
+                  updated_at:
+                    type: string
+            pagination:
+              type: object
+              properties:
+                page:
+                  type: integer
+                per_page:
+                  type: integer
+                total:
+                  type: integer
+                pages:
+                  type: integer
+      500:
+        description: Internal server error
     """
     page = max(1, request.args.get('page', 1, type=int))
     per_page = max(1, min(100, request.args.get('per_page', 10, type=int)))
@@ -225,39 +291,57 @@ def get_news():
 @news_bp.route('/news/<int:id>', methods=['PUT'])
 def update_news(id):
     """
-    Update an existing news item
+    Update an existing news item by ID
     ---
+    tags:
+      - News
     consumes:
       - multipart/form-data
-      - application/json
     parameters:
       - name: id
         in: path
         type: integer
         required: true
+        description: ID of the news item to update
       - name: title
         in: formData
         type: string
-      - name: description
-        in: formData
-        type: string
+        required: false
+        description: Updated title
       - name: writer
         in: formData
         type: string
+        required: false
+        description: Updated writer name
+      - name: description
+        in: formData
+        type: string
+        required: false
+        description: Updated description
       - name: thumbnail_url
         in: formData
         type: string
+        required: false
+        description: New thumbnail URL
       - name: thumbnail_file
         in: formData
         type: file
+        required: false
+        description: New thumbnail image file
       - name: news_link
         in: formData
         type: string
+        required: false
+        description: Updated news link
     responses:
       200:
         description: News item updated successfully
+      400:
+        description: Invalid update data
       404:
         description: News item not found
+      500:
+        description: Internal server error
     """
     try:
         conn = get_connection()
@@ -341,18 +425,23 @@ def update_news(id):
 @news_bp.route('/news/<int:id>', methods=['DELETE'])
 def delete_news(id):
     """
-    Delete a news item
+    Delete a news item by ID
     ---
+    tags:
+      - News
     parameters:
       - name: id
         in: path
         type: integer
         required: true
+        description: ID of the news item to delete
     responses:
       200:
         description: News item deleted successfully
       404:
         description: News item not found
+      500:
+        description: Internal server error
     """
     try:
         conn = get_connection()
@@ -378,11 +467,13 @@ def delete_all_news():
     """
     Delete all news items and reset ID sequence
     ---
+    tags:
+      - News
     responses:
       200:
-        description: All news items deleted successfully
+        description: All news items deleted successfully and ID reset
       500:
-        description: Database error
+        description: Internal server error
     """
     try:
         from ..db import reset_db_sequence
