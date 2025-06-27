@@ -10,21 +10,46 @@ admin_bp = Blueprint('admin', __name__)
 @admin_bp.route('/reset_db', methods=['POST'])
 def reset_db():
     """
-    Reset the database by deleting all data, resetting ID sequence, and optionally clearing uploads
+    Reset the entire database and optionally delete uploaded files.
+
+    This endpoint will:
+      - Delete all data from critical tables.
+      - Reset all auto-incrementing ID sequences.
+      - Optionally delete all uploaded files in the `uploads/` directory.
+
     ---
+    tags:
+      - Admin
     consumes:
       - application/json
     parameters:
-      - name: clear_uploads
-        in: body
-        type: boolean
+      - in: body
+        name: body
         required: false
-        description: Whether to delete all uploaded files in the uploads folder
+        description: Optional configuration for database reset
+        schema:
+          type: object
+          properties:
+            clear_uploads:
+              type: boolean
+              default: false
+              description: |
+                If true, all files inside the uploads directory will be deleted.
     responses:
       200:
         description: Database reset successfully
+        examples:
+          application/json:
+            {
+              "message": "Database reset successfully"
+            }
       500:
-        description: Database error
+        description: Internal server error during database reset
+        examples:
+          application/json:
+            {
+              "error": "Database error: table 'xyz' does not exist"
+            }
     """
     data = request.get_json() or {}
     clear_uploads = data.get('clear_uploads', False)
@@ -34,7 +59,7 @@ def reset_db():
         cursor = conn.cursor()
         
         # Delete all data from all tables
-        tables = ['news', 'teams', 'events', 'ewc_info', 'games', 'matches', 'transfers', 'prize_distribution']
+        tables = ['news','teams','events','ewc_info','games','matches','transfers','prize_distribution','group_matches','global_matches']
         for table in tables:
             cursor.execute(f'DELETE FROM {table}')
         
