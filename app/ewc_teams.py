@@ -1,13 +1,33 @@
 import sqlite3
-import requests
 from bs4 import BeautifulSoup
 import logging
+import requests
+import json
+import hashlib
+import os
 
 logger = logging.getLogger(__name__)
+BASE_URL = "https://liquipedia.net"
+API_URL = f"{BASE_URL}/esports/api.php"
+PAGE_NAME = "Esports_World_Cup/2025"
+HASH_FILE = "teams_ewc_hash.txt"
+OUTPUT_FILE = "teams_ewc.json"
+
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+}
+
+def calculate_hash(text):
+    return hashlib.md5(text.encode('utf-8')).hexdigest()
 
 def fetch_ewc_teams(live=False):
-
     """Fetch Esports World Cup 2025 teams from Liquipedia or database"""
+    params = {
+        'action': 'parse',
+        'page': PAGE_NAME,
+        'format': 'json',
+        'prop': 'text'
+    }
 
     if not live:
         try:
@@ -16,29 +36,34 @@ def fetch_ewc_teams(live=False):
             cursor.execute('SELECT team_name, logo_url FROM teams')
             teams_data = [{'team_name': row[0], 'logo_url': row[1]} for row in cursor.fetchall()]
             conn.close()
-
             if teams_data:
                 logger.debug("Retrieved teams data from database")
                 return teams_data
         except sqlite3.Error as e:
             logger.error(f"Database error while fetching teams: {str(e)}")
 
-    # Fetch from Liquipedia if live=True or no data in database
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
-    }
-    BASE_URL = "https://liquipedia.net"
-    url = 'https://liquipedia.net/esports/Esports_World_Cup/2025'
-
     try:
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
+        response = requests.get(API_URL, headers=HEADERS, params=params)
+        if response.status_code != 200:
+            print(f"API Error: {response.status_code}")
+            return []
 
+        html = response.json().get('parse', {}).get('text', {}).get('*', '')
+        current_hash = calculate_hash(html)
+
+        if os.path.exists(HASH_FILE):
+            with open(HASH_FILE, 'r', encoding='utf-8') as f:
+                old_hash = f.read().strip()
+            if current_hash == old_hash:
+                print("No changes detected. Skipping update.")
+                return []
+
+        soup = BeautifulSoup(html, 'html.parser')
         teams_data = []
-        all_tables = soup.select('div.table-responsive table.wikitable.sortable')
 
+        all_tables = soup.select('div.table-responsive table.wikitable.sortable')
         target_table = None
+
         for table in all_tables:
             headers_row = table.select_one('tr')
             headers_ths = headers_row.select('th') if headers_row else []
@@ -47,7 +72,7 @@ def fetch_ewc_teams(live=False):
                 break
 
         if not target_table:
-            logger.error("Could not find the teams table")
+            print("Could not find the teams table.")
             return []
 
         rows = target_table.select('tr')[1:]
@@ -63,7 +88,15 @@ def fetch_ewc_teams(live=False):
                     'logo_url': logo_url
                 })
 
-        # Store in database
+        with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+            json.dump(teams_data, f, ensure_ascii=False, indent=2)
+
+        with open(HASH_FILE, 'w', encoding='utf-8') as f:
+            f.write(current_hash)
+
+        print(f"Teams data updated and saved to {OUTPUT_FILE}")
+
+        # ✅ Store in database
         try:
             conn = sqlite3.connect('news.db')
             cursor = conn.cursor()
