@@ -1,0 +1,3026 @@
+{
+  "Week 1": [
+    {
+      "id": "fc56d8c91ea68a137f4410a9e78d4b2a",
+      "Ranking": "1.",
+      "Trend": "New",
+      "Team": "Porsche Coanda Esports Racing Team",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/5a/Porsche_Coanda_Esports_Racing_Team_lightmode.png/100px-Porsche_Coanda_Esports_Racing_Team_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d7/Porsche_Coanda_Esports_Racing_Team_darkmode.png/100px-Porsche_Coanda_Esports_Racing_Team_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "16723326c3c02a700020ebe989ce3191",
+      "Ranking": "1.",
+      "Trend": "New",
+      "Team": "Team Redline",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Team_Redline_lightmode.png/71px-Team_Redline_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Team_Redline_darkmode.png/71px-Team_Redline_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "90175952fb345e992c8f836292daf6dd",
+      "Ranking": "1.",
+      "Trend": "New",
+      "Team": "Virtus.pro",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "2aeea53bb6bf03a6fd87643272cbe92a",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "100 Thieves",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/100_Thieves_lightmode.png/64px-100_Thieves_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/78/100_Thieves_darkmode.png/64px-100_Thieves_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "99679389f217ac346f74d81cdca47850",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "All Gamers",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "e239dd98ae745772695622dfc684816b",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Bilibili Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "d270111918bdcd6a1fd3c810d77c8944",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Cloud9",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "491795175920778488658683d8594cd6",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "EDward Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/9/98/EDward_Gaming_2017_lightmode.png/50px-EDward_Gaming_2017_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c9/EDward_Gaming_2017_darkmode.png/50px-EDward_Gaming_2017_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "e3cedef05c9c346ef1a9196793e03291",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "EVOS Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "50e48f331695cf22c980b7db91ecc981",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "FURIA",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "e141a007a21b9fe82a50334d2302d919",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "FaZe Clan",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "a43f0ea7d756540f892c579956832408",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Fnatic",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "13b8aa6cffbb8b0064dc86e482093bae",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "G2 Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4b/G2_Esports_2020_lightmode.png/43px-G2_Esports_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cd/G2_Esports_2019_darkmode.png/44px-G2_Esports_2019_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "9cf758ec44eecbc961ddb7bb8e4b6efe",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Gaimin Gladiators",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "f63729d2ab7f05ef09063e0c23dcd1bf",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Gen.G Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Gen.G_Esports_lightmode.png/59px-Gen.G_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/Gen.G_Esports_darkmode.png/59px-Gen.G_Esports_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "6dab4b906f4f885ba69e1e84596b03fb",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Gentle Mates",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/06/Gentle_Mates_lightmode_2024.png/52px-Gentle_Mates_lightmode_2024.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Gentle_Mates_darkmode_2024.png/52px-Gentle_Mates_darkmode_2024.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "980ea8f77aa969976606b237de3716c9",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "HEROIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "58438f0d4b29117ac359cafeddd649b4",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "JD Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "2593729d9f0ddff3cfd8a57b0fa3335b",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "KOI",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "037bbcc16919864fccfc9be5d4c7d795",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Karmine Corp",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/0e/Karmine_Corp_lightmode.png/53px-Karmine_Corp_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/81/Karmine_Corp_darkmode.png/53px-Karmine_Corp_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "1bf247e615a65aa5b4da5f39cd167319",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "LOUD",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "4939fa95c78bbd85ea895cd2dffef35f",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Leviatán",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "1bbfcf9c9df8e49e5ef5631abdd3c892",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "MOUZ",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "37204e37b06ec095e235d1311b99be8b",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Natus Vincere",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Natus_Vincere_2021_lightmode.png/57px-Natus_Vincere_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/Natus_Vincere_2021_allmode.png/57px-Natus_Vincere_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "95b316dc9fe16992050e2bfcea6b64d6",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Ninjas in Pyjamas",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f4/Ninjas_in_Pyjamas_2021_lightmode.png/50px-Ninjas_in_Pyjamas_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/b7/Ninjas_in_Pyjamas_2021_darkmode.png/50px-Ninjas_in_Pyjamas_2021_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "327a27d1e6127df659ccd9df17746ae9",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "ONIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bf/ONIC_Esports_lightmode.png/74px-ONIC_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/34/ONIC_Esports_2019_allmode.png/74px-ONIC_Esports_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "4b81078743b6d709c3f770efbfe1c5e0",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "POWR",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "14d2cf0b26f58cfb98cc3d8d4bca3c68",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "REJECT",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/REJECT_2020_lightmode.png/56px-REJECT_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/REJECT_2020_darkmode.png/56px-REJECT_2020_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "cc5828d28b23a0ceedcee24ebbecebbc",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Rex Regum Qeon",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "6dd19538eee221be7d9769f8928ca4a9",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "S8UL Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "48b8bb02fd31161dbec127408a4e3f50",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Sentinels",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "1fab8164b08e9db94d3e9e37877d2e9d",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "T1",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "bcbd97267501362d2945d030468b39e8",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Team BDS",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "08cb146f13d10d2786a3ae6f28d7c96a",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Team Falcons",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "4e100bce6534785141ad924b167ef44e",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Team Liquid",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/01/Team_Liquid_2024_lightmode.png/44px-Team_Liquid_2024_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/59/Team_Liquid_2024_darkmode.png/44px-Team_Liquid_2024_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "bd0fceedcb8d149f5d6397a2d37a2aa0",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Team Secret",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/07/Team_Secret_lightmode.png/100px-Team_Secret_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d2/Team_Secret_darkmode.png/100px-Team_Secret_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "099729f2f7ee99fc2c5a3948f164f6d7",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Team Spirit",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/66/Team_Spirit_2022_lightmode.png/43px-Team_Spirit_2022_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/80/Team_Spirit_2022_darkmode.png/43px-Team_Spirit_2022_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "9e7b2ff712cebfee9d591cc5e57b34b6",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Team Vitality",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/Team_Vitality_2023_lightmode.png/41px-Team_Vitality_2023_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/96/Team_Vitality_2023_darkmode.png/41px-Team_Vitality_2023_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "f4c398cdbb780052723270b6b7b65e0e",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "ThunderTalk Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "b808c49cd51507b8b556008da7774f41",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Twisted Minds",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "49278c371314d0299454495ea1704107",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Weibo Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "fb957ca8d7389cf6500d73ad3cde0da6",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "Wolves Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "6b6738198d6735119e877ebc5b060af8",
+      "Ranking": "4.",
+      "Trend": "New",
+      "Team": "ZETA DIVISION",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4f/ZETA_DIVISION_lightmode.png/50px-ZETA_DIVISION_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/ZETA_DIVISION_darkmode.png/50px-ZETA_DIVISION_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    }
+  ],
+  "Week 2": [
+    {
+      "id": "7808f422e9a37b7c077e06c92df3cec7",
+      "Ranking": "1.",
+      "Trend": "-",
+      "Team": "Porsche Coanda Esports Racing Team",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/5a/Porsche_Coanda_Esports_Racing_Team_lightmode.png/100px-Porsche_Coanda_Esports_Racing_Team_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d7/Porsche_Coanda_Esports_Racing_Team_darkmode.png/100px-Porsche_Coanda_Esports_Racing_Team_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "18f31ca5e894e40afce1353da5dfd581",
+      "Ranking": "1.",
+      "Trend": "-",
+      "Team": "Team Redline",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Team_Redline_lightmode.png/71px-Team_Redline_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Team_Redline_darkmode.png/71px-Team_Redline_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "4dcd4902a28a6b3fc7c256bdc9c08f45",
+      "Ranking": "1.",
+      "Trend": "-",
+      "Team": "Virtus.pro",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "043d13ed0b855f0a3d8989cc5e9c580c",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "100 Thieves",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/100_Thieves_lightmode.png/64px-100_Thieves_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/78/100_Thieves_darkmode.png/64px-100_Thieves_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "e5809f93f518b5b71ca1847394bc9cee",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "All Gamers",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "bb8b331feda93567b1e7223bf432c8ba",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Bilibili Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "43b9fd5932cccd3a5aaefbf99b820098",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Cloud9",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "3e3166528f5e57997dd553e34b05aa4c",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "EDward Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/9/98/EDward_Gaming_2017_lightmode.png/50px-EDward_Gaming_2017_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c9/EDward_Gaming_2017_darkmode.png/50px-EDward_Gaming_2017_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "73743da0e2ee201f627e014df3160fff",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "EVOS Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "b12afddf1822557b7d98941b8edba0c1",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "FURIA",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "adf427c623263825437ddce614a1785b",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "FaZe Clan",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "04266bd41eb35dd56166cd7264c27578",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Fnatic",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "0fa9103e9cb8aa889f49729d2058a3a1",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "G2 Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4b/G2_Esports_2020_lightmode.png/43px-G2_Esports_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cd/G2_Esports_2019_darkmode.png/44px-G2_Esports_2019_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "6459187bf8791320c758230934e07bed",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Gaimin Gladiators",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "67b8902558e2db5a436e8af599b2bb22",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Gen.G Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Gen.G_Esports_lightmode.png/59px-Gen.G_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/Gen.G_Esports_darkmode.png/59px-Gen.G_Esports_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "01395c13711004572224d93d1745c971",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Gentle Mates",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/06/Gentle_Mates_lightmode_2024.png/52px-Gentle_Mates_lightmode_2024.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Gentle_Mates_darkmode_2024.png/52px-Gentle_Mates_darkmode_2024.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "8c955a5ae6418f8be3db1fd89a96d48c",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "HEROIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "64b59a9b7c5ee5c1a701b7d387f6fc57",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "JD Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "b1c7c878c73beea692403bd4894ae166",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "KOI",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "e9725f972836a98c0691eef80e80e428",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Karmine Corp",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/0e/Karmine_Corp_lightmode.png/53px-Karmine_Corp_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/81/Karmine_Corp_darkmode.png/53px-Karmine_Corp_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "8d0e79738bfa3aeba4ea20bcda0ad766",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "LOUD",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "e393db2802a1973c4e6cbb0901aa1d20",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Leviatán",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "801e9a559f88b644419b91790dfe365a",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "MOUZ",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "4082edbcdacebe038bbaad9aba703b0c",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Natus Vincere",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Natus_Vincere_2021_lightmode.png/57px-Natus_Vincere_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/Natus_Vincere_2021_allmode.png/57px-Natus_Vincere_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "fee4007d73ad47e9e903560c13ad69f1",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Ninjas in Pyjamas",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f4/Ninjas_in_Pyjamas_2021_lightmode.png/50px-Ninjas_in_Pyjamas_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/b7/Ninjas_in_Pyjamas_2021_darkmode.png/50px-Ninjas_in_Pyjamas_2021_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "dceb56d10dbe32c60cb8e980b038f312",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "ONIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bf/ONIC_Esports_lightmode.png/74px-ONIC_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/34/ONIC_Esports_2019_allmode.png/74px-ONIC_Esports_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "a22c052d4e0aa18d0c70d079b4888c55",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "POWR",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "dcbb38e4080400fa75d002b70de4d95b",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "REJECT",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/REJECT_2020_lightmode.png/56px-REJECT_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/REJECT_2020_darkmode.png/56px-REJECT_2020_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "8f1933fd5fe47595ce0e1d2dcd5a8cff",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Rex Regum Qeon",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "938fe89b9c563b146ececf406071a860",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "S8UL Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "c26fb85b066b6ffea107b9385888de23",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Sentinels",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "b04d18397b89bca488d2462f07584543",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "T1",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "da674bc593858686e3ef3efd25baf12c",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Team BDS",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "0a171fce59888659299366fa8e369761",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Team Falcons",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "947e422dcf77553dec79c2ec0ec58125",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Team Liquid",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/01/Team_Liquid_2024_lightmode.png/44px-Team_Liquid_2024_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/59/Team_Liquid_2024_darkmode.png/44px-Team_Liquid_2024_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "1db840cd6add53112db34dffa89d8b32",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Team Secret",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/07/Team_Secret_lightmode.png/100px-Team_Secret_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d2/Team_Secret_darkmode.png/100px-Team_Secret_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "3b78e3e8d11ba77a3872e1a7083a0ed3",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Team Spirit",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/66/Team_Spirit_2022_lightmode.png/43px-Team_Spirit_2022_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/80/Team_Spirit_2022_darkmode.png/43px-Team_Spirit_2022_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "80a272462cf29d7393822829883e5543",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Team Vitality",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/Team_Vitality_2023_lightmode.png/41px-Team_Vitality_2023_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/96/Team_Vitality_2023_darkmode.png/41px-Team_Vitality_2023_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "a9e2f189e17db599ea431f1834de3239",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "ThunderTalk Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "ea7e067aa19d6be032048e3e8ab988ec",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Twisted Minds",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "6eab351c33b9c546677b86c658c43f0a",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Weibo Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "a13c2099b5caee2b93db6d9d6786fbed",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "Wolves Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "9119d379b14a6230b257ce71a1fdd909",
+      "Ranking": "4.",
+      "Trend": "-",
+      "Team": "ZETA DIVISION",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4f/ZETA_DIVISION_lightmode.png/50px-ZETA_DIVISION_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/ZETA_DIVISION_darkmode.png/50px-ZETA_DIVISION_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    }
+  ],
+  "Week 3": [
+    {
+      "id": "28cbe0dab5e280d37cf6ee6ae5a33a62",
+      "Ranking": "1.",
+      "Trend": "▲ 3",
+      "Team": "All Gamers",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Points": "200",
+      "Total Rank": ""
+    },
+    {
+      "id": "243eda344fe729fac4b66aed80d4d635",
+      "Ranking": "1.",
+      "Trend": "▲ 3",
+      "Team": "ThunderTalk Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Points": "200",
+      "Total Rank": ""
+    },
+    {
+      "id": "e86a2d38605ca5488427f9ebab018c07",
+      "Ranking": "3.",
+      "Trend": "▼ 2",
+      "Team": "Porsche Coanda Esports Racing Team",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/5a/Porsche_Coanda_Esports_Racing_Team_lightmode.png/100px-Porsche_Coanda_Esports_Racing_Team_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d7/Porsche_Coanda_Esports_Racing_Team_darkmode.png/100px-Porsche_Coanda_Esports_Racing_Team_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "692ea13a6f693c750e247121bc762b1b",
+      "Ranking": "3.",
+      "Trend": "▼ 2",
+      "Team": "Team Redline",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Team_Redline_lightmode.png/71px-Team_Redline_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Team_Redline_darkmode.png/71px-Team_Redline_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "967aabd25da42ee10f93272e5c955eba",
+      "Ranking": "3.",
+      "Trend": "▼ 2",
+      "Team": "Virtus.pro",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "577e67b20d06feca07acd55c1933a999",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "100 Thieves",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/100_Thieves_lightmode.png/64px-100_Thieves_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/78/100_Thieves_darkmode.png/64px-100_Thieves_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "1574f13004bea7bf3cec87dec69c6add",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Bilibili Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "15b4f433c4d66519bd5eb2a976235885",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Cloud9",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "8c86d6b548f5f24aee0f5157d1f7d72e",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "EDward Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/9/98/EDward_Gaming_2017_lightmode.png/50px-EDward_Gaming_2017_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c9/EDward_Gaming_2017_darkmode.png/50px-EDward_Gaming_2017_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "c942c8eeb93357b787cdab4a23b34844",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "EVOS Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "d0751f1173cdf0a08c84eaea71eab0e3",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "FURIA",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "bc961a7781344915f5d5731dd1c6fd22",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "FaZe Clan",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "d8644dc6b4596b19bf4df8b57a791655",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Fnatic",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "006016e9e65eaada2e210770a7916a0d",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "G2 Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4b/G2_Esports_2020_lightmode.png/43px-G2_Esports_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cd/G2_Esports_2019_darkmode.png/44px-G2_Esports_2019_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "ae6742389c592fe12d9e38b0134810b3",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Gaimin Gladiators",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "134b548fee7dad5613a99a4e78955e92",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Gen.G Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Gen.G_Esports_lightmode.png/59px-Gen.G_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/Gen.G_Esports_darkmode.png/59px-Gen.G_Esports_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "09a3341d6c141ed803ceccf994cfa3dc",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Gentle Mates",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/06/Gentle_Mates_lightmode_2024.png/52px-Gentle_Mates_lightmode_2024.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Gentle_Mates_darkmode_2024.png/52px-Gentle_Mates_darkmode_2024.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "0a6acf2504703c86992262a784e9a12b",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "HEROIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "01298f53e1012209a1f5dd38ca0bb9e6",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "JD Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "f714d1422ed80e04165cb8e087d844fb",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "KOI",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "6db58fdf7b66203c61ed50665300611e",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Karmine Corp",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/0e/Karmine_Corp_lightmode.png/53px-Karmine_Corp_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/81/Karmine_Corp_darkmode.png/53px-Karmine_Corp_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "6a63be318c5351fdd595586ef80e2390",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "LOUD",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "f6d1e2a3af7d947ecfd56fc805ea8181",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Leviatán",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "514862090a59c56cfd4e9ddf675633cc",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "MOUZ",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "7d4b806c804c424c730eda6ee847b25a",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Natus Vincere",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Natus_Vincere_2021_lightmode.png/57px-Natus_Vincere_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/Natus_Vincere_2021_allmode.png/57px-Natus_Vincere_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "56633f31342698cf0a5edb29564aef3d",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Ninjas in Pyjamas",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f4/Ninjas_in_Pyjamas_2021_lightmode.png/50px-Ninjas_in_Pyjamas_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/b7/Ninjas_in_Pyjamas_2021_darkmode.png/50px-Ninjas_in_Pyjamas_2021_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "041501516bf393df1c24ebf5623c137d",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "ONIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bf/ONIC_Esports_lightmode.png/74px-ONIC_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/34/ONIC_Esports_2019_allmode.png/74px-ONIC_Esports_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "8bf0a268087723db56ddbffcc0224b96",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "POWR",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "4e77b7c85bc3031e2c12f3f2bf19e7d2",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "REJECT",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/REJECT_2020_lightmode.png/56px-REJECT_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/REJECT_2020_darkmode.png/56px-REJECT_2020_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "7be73ae66b5ef434c862560df38ae602",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Rex Regum Qeon",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "da75f969ea476d5812ddcc55923a0179",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "S8UL Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "d3b7066c9feb796db518e54773025a25",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Sentinels",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "dd82b1e000f0fc13640b5f2e22496355",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "T1",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "0ce353f90e0646c77baed977242ae83b",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Team BDS",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "27cf13ddc69db3788b54944e9583c4db",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Team Falcons",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "340f3dccf918a71b8c4355968466a4e2",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Team Liquid",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/01/Team_Liquid_2024_lightmode.png/44px-Team_Liquid_2024_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/59/Team_Liquid_2024_darkmode.png/44px-Team_Liquid_2024_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "8ebe2300179040f423f2a6450f40a823",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Team Secret",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/07/Team_Secret_lightmode.png/100px-Team_Secret_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d2/Team_Secret_darkmode.png/100px-Team_Secret_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "72b55e6300cd34a401ae5f8340513d66",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Team Spirit",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/66/Team_Spirit_2022_lightmode.png/43px-Team_Spirit_2022_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/80/Team_Spirit_2022_darkmode.png/43px-Team_Spirit_2022_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "93b887cc9c705c4b158f6748d357e1ef",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Team Vitality",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/Team_Vitality_2023_lightmode.png/41px-Team_Vitality_2023_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/96/Team_Vitality_2023_darkmode.png/41px-Team_Vitality_2023_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "88f0f4ed5109686190bebed1dcbc9af8",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Twisted Minds",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "3bd9aeb70085536dfa304aa33d67ed59",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Weibo Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "08ef9dcd8d9728ea4deb4029617f7ca9",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "Wolves Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "544fcff229a95bcee5e5cd03dd85aa83",
+      "Ranking": "6.",
+      "Trend": "▼ 2",
+      "Team": "ZETA DIVISION",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4f/ZETA_DIVISION_lightmode.png/50px-ZETA_DIVISION_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/ZETA_DIVISION_darkmode.png/50px-ZETA_DIVISION_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    }
+  ],
+  "Week 4": [
+    {
+      "id": "3a305577d99418906739986b30d3da00",
+      "Ranking": "1.",
+      "Trend": "-",
+      "Team": "All Gamers",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Points": "200",
+      "Total Rank": ""
+    },
+    {
+      "id": "7f66195c1abd15a78f48daf146cfa5b0",
+      "Ranking": "1.",
+      "Trend": "-",
+      "Team": "ThunderTalk Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Points": "200",
+      "Total Rank": ""
+    },
+    {
+      "id": "6f2c7caba21f22bb085c8848bb9f03f2",
+      "Ranking": "3.",
+      "Trend": "-",
+      "Team": "Porsche Coanda Esports Racing Team",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/5a/Porsche_Coanda_Esports_Racing_Team_lightmode.png/100px-Porsche_Coanda_Esports_Racing_Team_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d7/Porsche_Coanda_Esports_Racing_Team_darkmode.png/100px-Porsche_Coanda_Esports_Racing_Team_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "a8d09e17603e6fb0293dabff5b9d05cb",
+      "Ranking": "3.",
+      "Trend": "-",
+      "Team": "Team Redline",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Team_Redline_lightmode.png/71px-Team_Redline_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Team_Redline_darkmode.png/71px-Team_Redline_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "d2ac20ac6c1a0071273a0c467ed25e88",
+      "Ranking": "3.",
+      "Trend": "-",
+      "Team": "Virtus.pro",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "e9bbb835f8240b1a8f4876bc1b5791ef",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "100 Thieves",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/100_Thieves_lightmode.png/64px-100_Thieves_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/78/100_Thieves_darkmode.png/64px-100_Thieves_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "5be9ddf2c9d7d04ce77d3c04d9d6c4ee",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Bilibili Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "c423d8b9a3a0627e3a377a1be9ffc394",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Cloud9",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "e0c18683c730f6ba014565db145b3e3b",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "EDward Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/9/98/EDward_Gaming_2017_lightmode.png/50px-EDward_Gaming_2017_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c9/EDward_Gaming_2017_darkmode.png/50px-EDward_Gaming_2017_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "5a920fa4e6d5a10688e07c4341466be9",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "EVOS Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "b3de7fac2d48fba44d02779b5d2a7b32",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "FURIA",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "122a70703dacc3c50efc8858440b2e15",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "FaZe Clan",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "66788b8cdcadf516d29c91406f7bd44a",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Fnatic",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "0436805838fd739e59eaac561de81e8a",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "G2 Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4b/G2_Esports_2020_lightmode.png/43px-G2_Esports_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cd/G2_Esports_2019_darkmode.png/44px-G2_Esports_2019_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "a55459221ccb6c263056fe29e5c71857",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Gaimin Gladiators",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "2921f2bcf7a8996f61e04d474998a205",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Gen.G Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Gen.G_Esports_lightmode.png/59px-Gen.G_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/Gen.G_Esports_darkmode.png/59px-Gen.G_Esports_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "e4dd5f575e1671f82c5723c464038f32",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Gentle Mates",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/06/Gentle_Mates_lightmode_2024.png/52px-Gentle_Mates_lightmode_2024.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Gentle_Mates_darkmode_2024.png/52px-Gentle_Mates_darkmode_2024.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "2bdf58c391d4e680cb95bfb671aed265",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "HEROIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "d83177882357ac35bd8691eb605a6a14",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "JD Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "90f2266bc268ef10352379258ab4f518",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "KOI",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "50f1a4b0d555025c6f7eaf3d1a959f9e",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Karmine Corp",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/0e/Karmine_Corp_lightmode.png/53px-Karmine_Corp_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/81/Karmine_Corp_darkmode.png/53px-Karmine_Corp_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "788aab86c4866c37be849197baa63eaa",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "LOUD",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "38cb314ca9ad751eb8cab88e9c6928c2",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Leviatán",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "7bcc1ee2a950716317fea09eaa68e908",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "MOUZ",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "31974eeb5fc5ea70c5e9c11979e22edf",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Natus Vincere",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Natus_Vincere_2021_lightmode.png/57px-Natus_Vincere_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/Natus_Vincere_2021_allmode.png/57px-Natus_Vincere_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "3093afbdc79b068557bce990ddba2145",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Ninjas in Pyjamas",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f4/Ninjas_in_Pyjamas_2021_lightmode.png/50px-Ninjas_in_Pyjamas_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/b7/Ninjas_in_Pyjamas_2021_darkmode.png/50px-Ninjas_in_Pyjamas_2021_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "ce212155ca8e3aff0439e1a458861542",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "ONIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bf/ONIC_Esports_lightmode.png/74px-ONIC_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/34/ONIC_Esports_2019_allmode.png/74px-ONIC_Esports_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "a4c93a8795558bef3c1bc5fb95d26d1a",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "POWR",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "aee1225ec5737213fdf22b645b110334",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "REJECT",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/REJECT_2020_lightmode.png/56px-REJECT_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/REJECT_2020_darkmode.png/56px-REJECT_2020_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "7c7f2cbd45e4e74f97a17a88ba33fa10",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Rex Regum Qeon",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "fcd844b8be26660bedb0193a32a46bcf",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "S8UL Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "9ba55353620f34b0a3c6592201f9e023",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Sentinels",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "fe29277c5454d816283b04feff9d0117",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "T1",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "ac10a133ea7c4fbd67e890ebc0c1f99f",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team BDS",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "b5919d1d44183862fb07afabf62c2eef",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Falcons",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "ee2ffd16b0783530b2eec93f003d50ef",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Liquid",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/01/Team_Liquid_2024_lightmode.png/44px-Team_Liquid_2024_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/59/Team_Liquid_2024_darkmode.png/44px-Team_Liquid_2024_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "4d6c3cf118ab9a7de4b78413d6ff8db2",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Secret",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/07/Team_Secret_lightmode.png/100px-Team_Secret_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d2/Team_Secret_darkmode.png/100px-Team_Secret_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "07c94e87098b33b15bb2c797f890023d",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Spirit",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/66/Team_Spirit_2022_lightmode.png/43px-Team_Spirit_2022_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/80/Team_Spirit_2022_darkmode.png/43px-Team_Spirit_2022_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "f5c4ed49af4f6597bb13fe2106628da9",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Vitality",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/Team_Vitality_2023_lightmode.png/41px-Team_Vitality_2023_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/96/Team_Vitality_2023_darkmode.png/41px-Team_Vitality_2023_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "9465062d72c83f4be30c0b17389c39f7",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Twisted Minds",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "71e3b8319edc1fa45610a48e99b88671",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Weibo Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "91a25ed2de61acd7b9a55d423758ba23",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Wolves Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "9beecd7b9e41dd46668d04613ff107b7",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "ZETA DIVISION",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4f/ZETA_DIVISION_lightmode.png/50px-ZETA_DIVISION_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/ZETA_DIVISION_darkmode.png/50px-ZETA_DIVISION_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    }
+  ],
+  "Week 5": [
+    {
+      "id": "2dec9d10f973a193a835d4ac03fb0f82",
+      "Ranking": "1.",
+      "Trend": "-",
+      "Team": "All Gamers",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Points": "200",
+      "Total Rank": ""
+    },
+    {
+      "id": "a31597dd676c72f5622909022c55a06c",
+      "Ranking": "1.",
+      "Trend": "-",
+      "Team": "ThunderTalk Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Points": "200",
+      "Total Rank": ""
+    },
+    {
+      "id": "8a31af89f1c0125afdea13125f76d89d",
+      "Ranking": "3.",
+      "Trend": "-",
+      "Team": "Porsche Coanda Esports Racing Team",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/5a/Porsche_Coanda_Esports_Racing_Team_lightmode.png/100px-Porsche_Coanda_Esports_Racing_Team_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d7/Porsche_Coanda_Esports_Racing_Team_darkmode.png/100px-Porsche_Coanda_Esports_Racing_Team_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "92b2bf1c86302a645f06229a0917c94f",
+      "Ranking": "3.",
+      "Trend": "-",
+      "Team": "Team Redline",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Team_Redline_lightmode.png/71px-Team_Redline_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Team_Redline_darkmode.png/71px-Team_Redline_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "c32cd2d855c519113883d776668b0e03",
+      "Ranking": "3.",
+      "Trend": "-",
+      "Team": "Virtus.pro",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "b51e8fdb26ba3b43ffdbad45dd0f7990",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "100 Thieves",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/100_Thieves_lightmode.png/64px-100_Thieves_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/78/100_Thieves_darkmode.png/64px-100_Thieves_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "5a61fbaa19f208d53b96dcce7a5c7a05",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Bilibili Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "165d94491681f660f5a89524742b16b8",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Cloud9",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "3917ba00e1431cc82039a1467012781b",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "EDward Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/9/98/EDward_Gaming_2017_lightmode.png/50px-EDward_Gaming_2017_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c9/EDward_Gaming_2017_darkmode.png/50px-EDward_Gaming_2017_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "4a41ce98ae1d1c773ebc457eb0c868b0",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "EVOS Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "8f2fddccc818686fbdca83c069fc5007",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "FURIA",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "8ef3938547bb6b028bb296aed5b19d0b",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "FaZe Clan",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "d741fb99107fd54f7e937e0a53514b39",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Fnatic",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "5d5e14674243aae06d15954b377f9d79",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "G2 Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4b/G2_Esports_2020_lightmode.png/43px-G2_Esports_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cd/G2_Esports_2019_darkmode.png/44px-G2_Esports_2019_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "a5482aaf656b1a82acc9c4c3a2636c8e",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Gaimin Gladiators",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "a9d7362ec917da874da3deb8bbd8594b",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Gen.G Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Gen.G_Esports_lightmode.png/59px-Gen.G_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/Gen.G_Esports_darkmode.png/59px-Gen.G_Esports_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "943ffb0164db2f9da1beecf26ace2dca",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Gentle Mates",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/06/Gentle_Mates_lightmode_2024.png/52px-Gentle_Mates_lightmode_2024.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Gentle_Mates_darkmode_2024.png/52px-Gentle_Mates_darkmode_2024.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "31eb786ce926aec1c7f1981f4ef3c6ba",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "HEROIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "5fb4ec5b598fc704b704ef6eddc7432e",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "JD Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "9f5b6aa6730fff9810c1cd9ffd3a2290",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "KOI",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "ec5d141e575398e681eb2461ede35ee7",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Karmine Corp",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/0e/Karmine_Corp_lightmode.png/53px-Karmine_Corp_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/81/Karmine_Corp_darkmode.png/53px-Karmine_Corp_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "bda062458e000b014424cca5ec122e06",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "LOUD",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "347a653d70ea549ed0738edeea2f8a66",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Leviatán",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "8129ba39019b8fa600fe28fc088fe7ae",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "MOUZ",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "46def6751cfefffa7ff7ecef1d4c7e4a",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Natus Vincere",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Natus_Vincere_2021_lightmode.png/57px-Natus_Vincere_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/Natus_Vincere_2021_allmode.png/57px-Natus_Vincere_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "f6ffe35d0ec92c4435f102d48fc27f68",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Ninjas in Pyjamas",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f4/Ninjas_in_Pyjamas_2021_lightmode.png/50px-Ninjas_in_Pyjamas_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/b7/Ninjas_in_Pyjamas_2021_darkmode.png/50px-Ninjas_in_Pyjamas_2021_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "07d338cf706f37317edfce10c5b6e5cf",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "ONIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bf/ONIC_Esports_lightmode.png/74px-ONIC_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/34/ONIC_Esports_2019_allmode.png/74px-ONIC_Esports_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "d322eeede5f2ea2f940c26712ca862bb",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "POWR",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "1c95aa92b3872e712fb823c4a18f9a67",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "REJECT",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/REJECT_2020_lightmode.png/56px-REJECT_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/REJECT_2020_darkmode.png/56px-REJECT_2020_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "a1a9b3a971a2f2f422178be9dcfe111b",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Rex Regum Qeon",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "85806a8dcc65ad994a433ad5a882f198",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "S8UL Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "5710380262daf831170a54b7041c2fdc",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Sentinels",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "76a62b016cc5f9c442139ef3bb825611",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "T1",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "7d85f571684bbcfa1420f538fe4f5f22",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team BDS",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "56e4f87b4238232be2de94714e82fe34",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Falcons",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "ca90522cc461b5335ed23081f9ffe057",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Liquid",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/01/Team_Liquid_2024_lightmode.png/44px-Team_Liquid_2024_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/59/Team_Liquid_2024_darkmode.png/44px-Team_Liquid_2024_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "9b640c7235766568bc5151d7132aa23f",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Secret",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/07/Team_Secret_lightmode.png/100px-Team_Secret_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d2/Team_Secret_darkmode.png/100px-Team_Secret_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "8e21820596d31994e16da6d70ad12f36",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Spirit",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/66/Team_Spirit_2022_lightmode.png/43px-Team_Spirit_2022_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/80/Team_Spirit_2022_darkmode.png/43px-Team_Spirit_2022_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "5a35483afa0fefb2dce45587b64914e8",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Vitality",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/Team_Vitality_2023_lightmode.png/41px-Team_Vitality_2023_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/96/Team_Vitality_2023_darkmode.png/41px-Team_Vitality_2023_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "b099a1664900f6668d0283b8c50e9d8c",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Twisted Minds",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "17431f232342d03fb3bfb15e1ddb33c7",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Weibo Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "14d7ba27a01e27bac771036cd3568bc4",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Wolves Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "0950ade4f22047ba7bb3d94e91f05346",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "ZETA DIVISION",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4f/ZETA_DIVISION_lightmode.png/50px-ZETA_DIVISION_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/ZETA_DIVISION_darkmode.png/50px-ZETA_DIVISION_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    }
+  ],
+  "Week 6": [
+    {
+      "id": "6efeaaf1668a1d79b18f72b4483a1c44",
+      "Ranking": "1.",
+      "Trend": "-",
+      "Team": "All Gamers",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Points": "200",
+      "Total Rank": ""
+    },
+    {
+      "id": "4a7bff41ef8ef58bf66d752d6bbf3b33",
+      "Ranking": "1.",
+      "Trend": "-",
+      "Team": "ThunderTalk Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Points": "200",
+      "Total Rank": ""
+    },
+    {
+      "id": "fb8af39f4cda55945ea119990f971109",
+      "Ranking": "3.",
+      "Trend": "-",
+      "Team": "Porsche Coanda Esports Racing Team",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/5a/Porsche_Coanda_Esports_Racing_Team_lightmode.png/100px-Porsche_Coanda_Esports_Racing_Team_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d7/Porsche_Coanda_Esports_Racing_Team_darkmode.png/100px-Porsche_Coanda_Esports_Racing_Team_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "1e4652880b8e6a828cf7d9c6af7b046e",
+      "Ranking": "3.",
+      "Trend": "-",
+      "Team": "Team Redline",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Team_Redline_lightmode.png/71px-Team_Redline_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Team_Redline_darkmode.png/71px-Team_Redline_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "022f2d0ac7b1087e9bef203e4c448890",
+      "Ranking": "3.",
+      "Trend": "-",
+      "Team": "Virtus.pro",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "953fecb7d10074a1e967d493f062023b",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "100 Thieves",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/100_Thieves_lightmode.png/64px-100_Thieves_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/78/100_Thieves_darkmode.png/64px-100_Thieves_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "944399abe5a5c5545182122bbf70d66f",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Bilibili Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "f44c2ef73833e0437bc81e979c77a700",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Cloud9",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "5408a74dd0945f630b07487a3693d251",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "EDward Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/9/98/EDward_Gaming_2017_lightmode.png/50px-EDward_Gaming_2017_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c9/EDward_Gaming_2017_darkmode.png/50px-EDward_Gaming_2017_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "f6f32620cdafa18a3a2576805c79fcae",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "EVOS Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "0c66a33b51922641d0661411a9a54269",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "FURIA",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "506e85d9effe4934373edc6b14372c60",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "FaZe Clan",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "a62481005d00660010168b0bc6660927",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Fnatic",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "5f015192ba8fb6d1831b30fb634d6ab0",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "G2 Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4b/G2_Esports_2020_lightmode.png/43px-G2_Esports_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cd/G2_Esports_2019_darkmode.png/44px-G2_Esports_2019_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "52349527275d2e50b440de69340bcd44",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Gaimin Gladiators",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "81befe34df095768ee239124d3da6e08",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Gen.G Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Gen.G_Esports_lightmode.png/59px-Gen.G_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/Gen.G_Esports_darkmode.png/59px-Gen.G_Esports_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "35503eb5f9f24985ee2a740784125af5",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Gentle Mates",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/06/Gentle_Mates_lightmode_2024.png/52px-Gentle_Mates_lightmode_2024.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Gentle_Mates_darkmode_2024.png/52px-Gentle_Mates_darkmode_2024.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "215313ec36419aa5967422b123501d1f",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "HEROIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "d7aab491fbb71f7f1ba384d6ed313118",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "JD Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "865968241cf449ecf8d165e51b1d570e",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "KOI",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "2c413ab11bb65c22ade745ba3d931c17",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Karmine Corp",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/0e/Karmine_Corp_lightmode.png/53px-Karmine_Corp_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/81/Karmine_Corp_darkmode.png/53px-Karmine_Corp_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "074326b39186d5c7c1203e75e1729885",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "LOUD",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "2c412fb0606cf2ab5eb8ebf46a00cf8d",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Leviatán",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "aaf0277c2ab3098a06fa9a9fd3d85ac5",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "MOUZ",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "fd26c09bfa0444a40f7c35ac217546d2",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Natus Vincere",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Natus_Vincere_2021_lightmode.png/57px-Natus_Vincere_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/Natus_Vincere_2021_allmode.png/57px-Natus_Vincere_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "43a8023aef98b0343990ef26a10a3b1a",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Ninjas in Pyjamas",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f4/Ninjas_in_Pyjamas_2021_lightmode.png/50px-Ninjas_in_Pyjamas_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/b7/Ninjas_in_Pyjamas_2021_darkmode.png/50px-Ninjas_in_Pyjamas_2021_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "227ccf00962935275c6319f80f1031b9",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "ONIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bf/ONIC_Esports_lightmode.png/74px-ONIC_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/34/ONIC_Esports_2019_allmode.png/74px-ONIC_Esports_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "d0bcf08906270b61b533a08cc7c5df11",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "POWR",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "5062c618f2f903c7e96686edf623de89",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "REJECT",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/REJECT_2020_lightmode.png/56px-REJECT_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/REJECT_2020_darkmode.png/56px-REJECT_2020_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "53877ddca534eb06209cf55a537d097d",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Rex Regum Qeon",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "b1c579c62b340715f23ba96678a7ba2f",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "S8UL Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "856ff0fab18d25b4049b49338b9c1cf4",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Sentinels",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "c61afb572eb9a9bfcf51de3c2572498b",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "T1",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "1bebf9d35c10cf1bd6cb4f963fd9dd72",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team BDS",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "7b11ff1a58485e87330f43d67dda3cde",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Falcons",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "8b35872b73c3dc5c9f76b19812134887",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Liquid",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/01/Team_Liquid_2024_lightmode.png/44px-Team_Liquid_2024_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/59/Team_Liquid_2024_darkmode.png/44px-Team_Liquid_2024_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "bb09301d4a6e270c582a3ebf985d83d2",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Secret",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/07/Team_Secret_lightmode.png/100px-Team_Secret_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d2/Team_Secret_darkmode.png/100px-Team_Secret_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "8cfc843edb98cfc0eabb670c07e17ed8",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Spirit",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/66/Team_Spirit_2022_lightmode.png/43px-Team_Spirit_2022_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/80/Team_Spirit_2022_darkmode.png/43px-Team_Spirit_2022_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "ad57d156d65a983b59bac056f73a1634",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Vitality",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/Team_Vitality_2023_lightmode.png/41px-Team_Vitality_2023_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/96/Team_Vitality_2023_darkmode.png/41px-Team_Vitality_2023_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "f57d9461fdb3df715a04055cabc6ddc6",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Twisted Minds",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "13e600f64f41ccc4c7c6868f53c7505d",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Weibo Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "a6572f38db40a9f81815c52275ac6270",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Wolves Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "d76fe46779dacd4d3e98df1619627924",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "ZETA DIVISION",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4f/ZETA_DIVISION_lightmode.png/50px-ZETA_DIVISION_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/ZETA_DIVISION_darkmode.png/50px-ZETA_DIVISION_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    }
+  ],
+  "Week 7": [
+    {
+      "id": "1f8908b5f3e7fc81ba581b75ef2aa9d3",
+      "Ranking": "1.",
+      "Trend": "-",
+      "Team": "All Gamers",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png",
+      "Points": "200",
+      "Total Rank": ""
+    },
+    {
+      "id": "be365b6e85ba9dccfd41d22707de70c3",
+      "Ranking": "1.",
+      "Trend": "-",
+      "Team": "ThunderTalk Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png",
+      "Points": "200",
+      "Total Rank": ""
+    },
+    {
+      "id": "f96887f1ad44f60f0f3565351ef0311e",
+      "Ranking": "3.",
+      "Trend": "-",
+      "Team": "Porsche Coanda Esports Racing Team",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/5a/Porsche_Coanda_Esports_Racing_Team_lightmode.png/100px-Porsche_Coanda_Esports_Racing_Team_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d7/Porsche_Coanda_Esports_Racing_Team_darkmode.png/100px-Porsche_Coanda_Esports_Racing_Team_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "c7caf938bcc500465a9b3d0f44b21f84",
+      "Ranking": "3.",
+      "Trend": "-",
+      "Team": "Team Redline",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Team_Redline_lightmode.png/71px-Team_Redline_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Team_Redline_darkmode.png/71px-Team_Redline_darkmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "d9e7ad7779e4c99d63a51a9a7fe05376",
+      "Ranking": "3.",
+      "Trend": "-",
+      "Team": "Virtus.pro",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+      "Points": "150",
+      "Total Rank": "150"
+    },
+    {
+      "id": "94f8b3a7d2f7c9ac634102bd3ef02f23",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "100 Thieves",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/100_Thieves_lightmode.png/64px-100_Thieves_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/78/100_Thieves_darkmode.png/64px-100_Thieves_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "ab07f5184ba4b7ca76fddabe6ac96b1d",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Bilibili Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/50/Bilibili_Gaming_2021_allmode.png/100px-Bilibili_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "90f0e5177c6c6a708e3117bd6c62d33a",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Cloud9",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/bb/Cloud9_2023_allmode.png/73px-Cloud9_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "802e6480c6791069cb5d939f39725c12",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "EDward Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/9/98/EDward_Gaming_2017_lightmode.png/50px-EDward_Gaming_2017_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c9/EDward_Gaming_2017_darkmode.png/50px-EDward_Gaming_2017_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "ca838f7bd40d4fcc239ca9fda9daec6a",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "EVOS Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d0/EVOS_Esports_allmode.png/52px-EVOS_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "0fde00dd3016fe93f12aec0491e01bd5",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "FURIA",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "4433a2bc6400fd4412614f4a20a91794",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "FaZe Clan",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "b765dca3804d88150b8e4f4b929719fd",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Fnatic",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f9/Fnatic_2020_allmode.png/77px-Fnatic_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "6a8ea3a5ff72f9d23959f401a76b69c4",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "G2 Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4b/G2_Esports_2020_lightmode.png/43px-G2_Esports_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/cd/G2_Esports_2019_darkmode.png/44px-G2_Esports_2019_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "48252b049f3f2307efcb907f250fde12",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Gaimin Gladiators",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "7172e7ad80a4ffb87de00e00de0890b7",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Gen.G Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Gen.G_Esports_lightmode.png/59px-Gen.G_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/Gen.G_Esports_darkmode.png/59px-Gen.G_Esports_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "015e5ef9506fe1dc6ee3846cc7fa6825",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Gentle Mates",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/06/Gentle_Mates_lightmode_2024.png/52px-Gentle_Mates_lightmode_2024.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/f/f8/Gentle_Mates_darkmode_2024.png/52px-Gentle_Mates_darkmode_2024.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "dfe2b2e9aa9e395f7b74eb73d5ebe52d",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "HEROIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/0/03/Heroic_2023_allmode.png/57px-Heroic_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "fcb579af3c9b875f9a7da4392977bba3",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "JD Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d6/JD_Gaming_2021_allmode.png/89px-JD_Gaming_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "12944cb2d4f2fe71fa67fede391cb7a4",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "KOI",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/7/71/KOI_2024_allmode.png/30px-KOI_2024_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "3ba7cb0b00423304407da3dc6765dfec",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Karmine Corp",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/0e/Karmine_Corp_lightmode.png/53px-Karmine_Corp_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/81/Karmine_Corp_darkmode.png/53px-Karmine_Corp_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "a4a888b2b27cdefad6213f73876ff82d",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "LOUD",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/8b/LOUD_allmode.png/67px-LOUD_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "feabe85a524e193bff2a64764a33b500",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Leviatán",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/ec/Leviat%C3%A1n_allmode.png/50px-Leviat%C3%A1n_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "42bc11e3bbe2c75051b116b7a96a09ea",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "MOUZ",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/c/c2/MOUZ_2021_allmode.png/47px-MOUZ_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "0433528987b41d988f60331b719eef75",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Natus Vincere",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/3/3f/Natus_Vincere_2021_lightmode.png/57px-Natus_Vincere_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/Natus_Vincere_2021_allmode.png/57px-Natus_Vincere_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "7d1d5d53c83c341cc6246b1df8b37801",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Ninjas in Pyjamas",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/f/f4/Ninjas_in_Pyjamas_2021_lightmode.png/50px-Ninjas_in_Pyjamas_2021_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/b7/Ninjas_in_Pyjamas_2021_darkmode.png/50px-Ninjas_in_Pyjamas_2021_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "b17d947feed818fe96a84a96e94c6400",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "ONIC",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/b/bf/ONIC_Esports_lightmode.png/74px-ONIC_Esports_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/3/34/ONIC_Esports_2019_allmode.png/74px-ONIC_Esports_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "40a8de58188fce3556683ea843366c2c",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "POWR",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e5/POWR_2021_allmode.png/100px-POWR_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "b77060fc73e8d590afd97274aff96f04",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "REJECT",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/REJECT_2020_lightmode.png/56px-REJECT_2020_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/b/ba/REJECT_2020_darkmode.png/56px-REJECT_2020_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "80eacf6b16b4bf611021ff1c169169ca",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Rex Regum Qeon",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1e/Rex_Regum_Qeon_allmode.png/70px-Rex_Regum_Qeon_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "3d79550e8f6bbb2a134e5c65bd7d9f49",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "S8UL Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/1d/S8UL_allmode.png/37px-S8UL_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "e1a28f31ce1b0fca0142dd400c76dce4",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Sentinels",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/1/13/Sentinels_2020_allmode.png/50px-Sentinels_2020_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "bd4bde09d355e5e8a2a3660ddc3126b1",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "T1",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/e/e4/T1_2019_allmode.png/100px-T1_2019_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "360f7ba7e1bd40c11f0f2539841946b1",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team BDS",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/60/Team_BDS_2021_allmode.png/41px-Team_BDS_2021_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "9f06e4e399eb0ec3ecd0c43c8c1d62d8",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Falcons",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "e52a0579e14585fabca3cc43266d218d",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Liquid",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/01/Team_Liquid_2024_lightmode.png/44px-Team_Liquid_2024_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/5/59/Team_Liquid_2024_darkmode.png/44px-Team_Liquid_2024_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "94a7bd2786345b9637df99bae92078a3",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Secret",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/0/07/Team_Secret_lightmode.png/100px-Team_Secret_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/d/d2/Team_Secret_darkmode.png/100px-Team_Secret_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "aa34f231333e4dc2bb4f7e3e4ea0e8f8",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Spirit",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/66/Team_Spirit_2022_lightmode.png/43px-Team_Spirit_2022_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/8/80/Team_Spirit_2022_darkmode.png/43px-Team_Spirit_2022_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "a92a73ce87151a82ae9f3d90fe1610fa",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Team Vitality",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/e/e4/Team_Vitality_2023_lightmode.png/41px-Team_Vitality_2023_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/96/Team_Vitality_2023_darkmode.png/41px-Team_Vitality_2023_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "2064c7371fe36d38abb4e016278bad67",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Twisted Minds",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/24/Twisted_Minds_2023_allmode.png/71px-Twisted_Minds_2023_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "1516cea0ee1f7eca17e35b944984358b",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Weibo Gaming",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "36b4cb924856b703f4bb0e30d7c35d6b",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "Wolves Esports",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/6/6c/Wolves_Esports_allmode.png/58px-Wolves_Esports_allmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    },
+    {
+      "id": "f13d2441a6f7cb4c2fce601809a7ff01",
+      "Ranking": "6.",
+      "Trend": "-",
+      "Team": "ZETA DIVISION",
+      "Logo_Light": "https://liquipedia.net/commons/images/thumb/4/4f/ZETA_DIVISION_lightmode.png/50px-ZETA_DIVISION_lightmode.png",
+      "Logo_Dark": "https://liquipedia.net/commons/images/thumb/9/95/ZETA_DIVISION_darkmode.png/50px-ZETA_DIVISION_darkmode.png",
+      "Points": "0",
+      "Total Rank": ""
+    }
+  ]
+}

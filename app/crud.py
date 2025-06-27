@@ -1,4 +1,6 @@
-from .db import get_connection
+import json
+import os
+from app.db import get_connection
 
 def get_games_from_db():
     conn = get_connection()
@@ -19,3 +21,17 @@ def store_games_in_db(games_data):
         )
     conn.commit()
     conn.close()
+
+
+
+def get_ewc_rank_from_db():
+    if os.path.exists("club_championship_standings_api.json"):
+        with open("club_championship_standings_api.json", "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+def store_ewc_rank_in_db(data):
+    with open("club_championship_standings_api.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
