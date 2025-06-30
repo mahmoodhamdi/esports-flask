@@ -72,7 +72,6 @@ def init_db():
                 platform TEXT,
                 release_date TEXT,
                 description TEXT,
-                       
                 logo_url TEXT,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
@@ -80,19 +79,19 @@ def init_db():
 
         # Create group_matches table
         cursor.execute('''
-        CREATE TABLE IF NOT EXISTS group_matches (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            game TEXT,
-            tournament TEXT,
-            group_name TEXT,
-            team1_name TEXT,
-            team1_logo TEXT,
-            team2_name TEXT,
-            team2_logo TEXT,
-            match_time TEXT,
-            score TEXT
-        )
-    ''')
+            CREATE TABLE IF NOT EXISTS group_matches (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                game TEXT,
+                tournament TEXT,
+                group_name TEXT,
+                team1_name TEXT,
+                team1_logo TEXT,
+                team2_name TEXT,
+                team2_logo TEXT,
+                match_time TEXT,
+                score TEXT
+            )
+        ''')
         
         # Create teams table
         cursor.execute('''
@@ -172,6 +171,24 @@ def init_db():
             )
         ''')
         
+        # Create ewc_teams_players table - MOVED TO CORRECT POSITION
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS ewc_teams_players (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                game TEXT NOT NULL,
+                team_name TEXT NOT NULL,
+                placement TEXT,
+                tournament TEXT,
+                tournament_logo TEXT,
+                years TEXT,
+                players TEXT, -- Storing players as JSON string
+                hash_value TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                UNIQUE(game, team_name)
+            )
+        ''')
+        
         conn.commit()
         logger.info("Database initialized successfully")
         
@@ -188,7 +205,7 @@ def reset_db_sequence():
         cursor = conn.cursor()
         cursor.execute("""
             DELETE FROM sqlite_sequence 
-            WHERE name IN ('news', 'teams', 'events', 'ewc_info', 'games', 'matches', 'transfers', 'prize_distribution', 'global_matches')
+            WHERE name IN ('news', 'teams', 'events', 'ewc_info', 'games', 'matches', 'transfers', 'prize_distribution', 'global_matches', 'ewc_teams_players')
         """)
         conn.commit()
         logger.debug("Reset SQLite sequence for all tables")
@@ -197,21 +214,3 @@ def reset_db_sequence():
         raise
     finally:
         conn.close()
-
-        # Create ewc_teams_players table
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS ewc_teams_players (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                game TEXT NOT NULL,
-                team_name TEXT NOT NULL,
-                placement TEXT,
-                tournament TEXT,
-                tournament_logo TEXT,
-                years TEXT,
-                players TEXT, -- Storing players as JSON string
-                hash_value TEXT,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
-        ''')
-

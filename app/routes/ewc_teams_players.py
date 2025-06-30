@@ -68,6 +68,22 @@ teams_players_bp = Blueprint("teams_players", __name__)
             "type": "string",
             "required": False,
             "description": "General search query across team name, player name, country, and tournament"
+        },
+        {
+            "name": "page",
+            "in": "query",
+            "type": "integer",
+            "required": False,
+            "default": 1,
+            "description": "Page number for pagination"
+        },
+        {
+            "name": "per_page",
+            "in": "query",
+            "type": "integer",
+            "required": False,
+            "default": 10,
+            "description": "Number of items per page for pagination"
         }
     ],
     "responses": {
@@ -148,6 +164,18 @@ teams_players_bp = Blueprint("teams_players", __name__)
                     "total_teams": {
                         "type": "integer",
                         "example": 16
+                    },
+                    "page": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "per_page": {
+                        "type": "integer",
+                        "example": 10
+                    },
+                    "total_pages": {
+                        "type": "integer",
+                        "example": 2
                     }
                 }
             }
@@ -186,9 +214,11 @@ def get_ewc_teams_players():
         if has_won_before_filter is not None:
             has_won_before_filter = has_won_before_filter.lower() == "true"
         search_query = request.args.get("search")
+        page = int(request.args.get("page", 1))
+        per_page = int(request.args.get("per_page", 10))
         
         # Fetch teams and players data
-        teams_data = fetch_ewc_teams_players(
+        result = fetch_ewc_teams_players(
             game=game, 
             page_title=page_title, 
             live=live, 
@@ -196,7 +226,9 @@ def get_ewc_teams_players():
             player_name_filter=player_name_filter, 
             country_filter=country_filter, 
             has_won_before_filter=has_won_before_filter, 
-            search_query=search_query
+            search_query=search_query,
+            page=page,
+            per_page=per_page
         )
         
         # Determine data source
@@ -204,10 +236,13 @@ def get_ewc_teams_players():
         
         return jsonify({
             "success": True,
-            "data": teams_data,
+            "data": result["data"],
             "message": f"Teams and players data retrieved successfully from {source}",
             "source": source,
-            "total_teams": len(teams_data)
+            "total_teams": result["total_teams"],
+            "page": result["page"],
+            "per_page": result["per_page"],
+            "total_pages": result["total_pages"]
         }), 200
         
     except Exception as e:
@@ -272,6 +307,22 @@ def get_ewc_teams_players():
             "type": "string",
             "required": False,
             "description": "General search query across team name, player name, country, and tournament"
+        },
+        {
+            "name": "page",
+            "in": "query",
+            "type": "integer",
+            "required": False,
+            "default": 1,
+            "description": "Page number for pagination"
+        },
+        {
+            "name": "per_page",
+            "in": "query",
+            "type": "integer",
+            "required": False,
+            "default": 10,
+            "description": "Number of items per page for pagination"
         }
     ],
     "responses": {
@@ -298,9 +349,11 @@ def get_ewc_teams_players_by_game(game):
         if has_won_before_filter is not None:
             has_won_before_filter = has_won_before_filter.lower() == "true"
         search_query = request.args.get("search")
+        page = int(request.args.get("page", 1))
+        per_page = int(request.args.get("per_page", 10))
         
         # Fetch teams and players data for specific game
-        teams_data = fetch_ewc_teams_players(
+        result = fetch_ewc_teams_players(
             game=game, 
             page_title=page_title, 
             live=live, 
@@ -308,7 +361,9 @@ def get_ewc_teams_players_by_game(game):
             player_name_filter=player_name_filter, 
             country_filter=country_filter, 
             has_won_before_filter=has_won_before_filter, 
-            search_query=search_query
+            search_query=search_query,
+            page=page,
+            per_page=per_page
         )
         
         # Determine data source
@@ -316,11 +371,14 @@ def get_ewc_teams_players_by_game(game):
         
         return jsonify({
             "success": True,
-            "data": teams_data,
+            "data": result["data"],
             "message": f"Teams and players data for {game} retrieved successfully from {source}",
             "source": source,
             "game": game,
-            "total_teams": len(teams_data)
+            "total_teams": result["total_teams"],
+            "page": result["page"],
+            "per_page": result["per_page"],
+            "total_pages": result["total_pages"]
         }), 200
         
     except Exception as e:
