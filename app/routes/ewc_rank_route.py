@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from flasgger import swag_from
 from app.ewc_rank import get_ewc_rank_data, get_available_weeks
-from app.crud import get_ewc_rank_from_db, store_ewc_rank_in_db
+from app.crud.crud import get_ewc_rank_from_db, store_ewc_rank_in_db
 
 ewc_rank_bp = Blueprint("ewc_rank", __name__)
 

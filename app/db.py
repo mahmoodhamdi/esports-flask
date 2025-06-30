@@ -197,3 +197,21 @@ def reset_db_sequence():
         raise
     finally:
         conn.close()
+
+        # Create ewc_teams_players table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS ewc_teams_players (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                game TEXT NOT NULL,
+                team_name TEXT NOT NULL,
+                placement TEXT,
+                tournament TEXT,
+                tournament_logo TEXT,
+                years TEXT,
+                players TEXT, -- Storing players as JSON string
+                hash_value TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ''')
+

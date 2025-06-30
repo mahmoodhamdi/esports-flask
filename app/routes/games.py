@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from flasgger import swag_from
-from app.crud import get_games_from_db, store_games_in_db
+from app.crud.crud import get_games_from_db, store_games_in_db
 from app.liquipedia import fetch_ewc_games_from_web
 
 games_bp = Blueprint('games', __name__)
