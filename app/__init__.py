@@ -34,6 +34,7 @@ def create_app():
     from .routes.player_transfers import player_transfers_bp
     from .routes.ewc_rank_route import ewc_rank_bp
     from .routes.ewc_teams_players import teams_players_bp
+    from .routes.team_information import team_information_bp
     # Register all blueprints
     app.register_blueprint(news_bp, url_prefix="/api")
     app.register_blueprint(admin_bp, url_prefix="/api")
@@ -48,5 +49,5 @@ def create_app():
     app.register_blueprint(player_transfers_bp, url_prefix="/api")  # Player transfers
     app.register_blueprint(ewc_rank_bp, url_prefix="/api")
     app.register_blueprint(teams_players_bp, url_prefix="/api")
-
+    app.register_blueprint(team_information_bp, url_prefix="/api")
     return app
