@@ -188,7 +188,16 @@ def init_db():
                 UNIQUE(game, team_name)
             )
         ''')
-        
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS player_information (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                game TEXT NOT NULL,
+                player_page_name TEXT NOT NULL,
+                data TEXT NOT NULL,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                UNIQUE(game, player_page_name)
+            )
+        ''')        
         # Create team_information table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS team_information (
