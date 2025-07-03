@@ -1,0 +1,1 @@
+SUPPORTED_SEARCH_TYPES = ["news", "teams", "events", "games", "matches", "players"]
