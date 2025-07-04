@@ -1,8 +1,5 @@
 app = "esports-flask"
-primary_region = "ams" # اختار أقرب منطقة ليك
-
-[build]
-  image = "python:3.10-slim"
+primary_region = "ams"
 
 [env]
   PORT = "8080"
