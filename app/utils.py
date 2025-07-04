@@ -14,9 +14,8 @@ logger = logging.getLogger(__name__)
 UPLOAD_FOLDER = 'static/uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webp'}
 BASE_URL = 'https://liquipedia.net'
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
-}
+HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+
 
 def get_html_via_api(game: str, page: str) -> str:
     """Fetch raw HTML of a specific Liquipedia page for a game"""
@@ -154,7 +153,7 @@ def sanitize_input(text: str, max_length: int = None) -> str:
     if not text:
         return ''
     text = text.strip()
-    text = re.sub(r'[<>]', '', text)  # Remove HTML tags
+    text = re.sub(r'[<>]', '', text)
     if max_length:
         text = text[:max_length]
     return text

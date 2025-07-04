@@ -20,7 +20,8 @@ def create_news_item(title, writer, description, thumbnail_url, thumbnail_file, 
         if allowed_file(thumbnail_file.filename):
             filename = save_uploaded_file(thumbnail_file)
             if filename:
-                final_thumbnail_url = f"{request.host_url.rstrip('/')}{filename}"  # Use full URL
+                final_thumbnail_url = f"{request.host_url.rstrip('/')}/{filename.lstrip('/')}"
+
             else:
                 raise RuntimeError("Failed to save uploaded file")
         else:
