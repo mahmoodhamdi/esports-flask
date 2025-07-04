@@ -1,5 +1,0 @@
-app = "esports-flask"
-primary_region = "ams"
-
-[env]
-  PORT = "8080"
