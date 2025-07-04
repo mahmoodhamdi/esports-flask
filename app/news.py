@@ -7,7 +7,7 @@ import os
 logger = logging.getLogger(__name__)
 
 # Base URL for constructing full image URLs (configure for production)
-BASE_URL = os.environ.get('BASE_URL', 'http://localhost:5000')
+BASE_URL = os.environ.get('BASE_URL', 'https://web-production-535d82.up.railway.app')
 
 def create_news_item(title, writer, description, thumbnail_url, thumbnail_file, news_link):
     """Create a new news item with validation."""
