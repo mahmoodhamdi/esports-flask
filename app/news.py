@@ -4,10 +4,13 @@ from datetime import datetime
 from app.db import get_connection
 from app.utils import save_uploaded_file, is_valid_url, is_valid_thumbnail, sanitize_input, allowed_file
 import os
+from flask import url_for
+
 logger = logging.getLogger(__name__)
 
-# Base URL for constructing full image URLs (configure for production)
+# Base URL (optional, but we use url_for now)
 BASE_URL = os.environ.get('BASE_URL', 'https://web-production-535d82.up.railway.app')
+
 
 def create_news_item(title, writer, description, thumbnail_url, thumbnail_file, news_link):
     """Create a new news item with validation."""
@@ -24,16 +27,14 @@ def create_news_item(title, writer, description, thumbnail_url, thumbnail_file, 
         raise ValueError("Provide either thumbnail file or URL, not both")
 
     if thumbnail_file:
-        logger.debug(f"Received file: {thumbnail_file.filename}")
         if not allowed_file(thumbnail_file.filename):
             raise ValueError("Invalid file type. Allowed: png, jpg, jpeg, gif, webp")
-        final_thumbnail_url = save_uploaded_file(thumbnail_file)
-        if not final_thumbnail_url:
+        saved_relative_path = save_uploaded_file(thumbnail_file)
+        if not saved_relative_path:
             raise RuntimeError("Failed to save uploaded file")
-        # Convert relative path to full URL
-        if final_thumbnail_url.startswith('/'):
-            final_thumbnail_url = f"{BASE_URL}{final_thumbnail_url}"
-    
+        # Use url_for to generate full URL
+        final_thumbnail_url = url_for('static', filename=f'uploads/{os.path.basename(saved_relative_path)}', _external=True)
+
     elif thumbnail_url:
         logger.debug(f"Received thumbnail_url: {thumbnail_url}")
         if not is_valid_thumbnail(thumbnail_url):
@@ -49,9 +50,9 @@ def create_news_item(title, writer, description, thumbnail_url, thumbnail_file, 
         cursor.execute('''
             INSERT INTO news (title, description, writer, thumbnail_url, news_link, created_at, updated_at)
             VALUES (?, ?, ?, ?, ?, ?, ?)
-        ''', (title, description, writer, final_thumbnail_url, news_link, 
+        ''', (title, description, writer, final_thumbnail_url, news_link,
               datetime.utcnow().isoformat(), datetime.utcnow().isoformat()))
-        
+
         conn.commit()
         news_id = cursor.lastrowid
         logger.info(f"Created news item {news_id}")
@@ -207,7 +208,8 @@ def update_news_item(id, title, description, writer, thumbnail_url, thumbnail_fi
             final_thumbnail_url = save_uploaded_file(thumbnail_file)
             if not final_thumbnail_url:
                 raise RuntimeError("Failed to save uploaded file")
-            update_data['thumbnail_url'] = f"{BASE_URL}{final_thumbnail_url}"
+            update_data['thumbnail_url'] = url_for('static', filename=f'uploads/{os.path.basename(final_thumbnail_url)}', _external=True)
+
         elif thumbnail_url:
             if not is_valid_thumbnail(thumbnail_url):
                 raise ValueError("Invalid thumbnail URL")

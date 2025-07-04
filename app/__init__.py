@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 def create_app():
     """Application factory pattern"""
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='static')
     
     # Enable CORS
     CORS(app)
