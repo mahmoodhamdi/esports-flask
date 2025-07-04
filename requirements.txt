@@ -3,3 +3,7 @@ requests
 beautifulsoup4
 flasgger
 flask_sqlalchemy
+flask-cors
+fuzzywuzzy
+python-Levenshtein
+
