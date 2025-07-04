@@ -1,12 +1,27 @@
 import sqlite3
 import logging
 import time
+import random
 from .db import get_connection
 from .search_logger import log_search_query
 from .fts_search import fts_global_search
 from .fuzzy_search_extended import fuzzy_global_search_extended, suggest_corrections_extended
 
 logger = logging.getLogger(__name__)
+
+def get_random_items_from_table(table_name, limit=5):
+    """Get random items from a specified table."""
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
+        cursor.execute(f"SELECT * FROM {table_name} ORDER BY RANDOM() LIMIT ?", (limit,))
+        results = [dict(row) for row in cursor.fetchall()]
+        return results
+    except sqlite3.Error as e:
+        logger.error(f"Error getting random items from {table_name}: {str(e)}")
+        return []
+    finally:
+        conn.close()
 
 def enhanced_search_extended(query, search_mode='auto', search_type=None, fuzzy_threshold=70, 
                            page=1, per_page=10, filters=None):
@@ -26,11 +41,16 @@ def enhanced_search_extended(query, search_mode='auto', search_type=None, fuzzy_
     
     try:
         if not query or not query.strip():
+            all_tables = get_all_table_names_extended()
+            random_results = {}
+            for table in all_tables:
+                random_results[table] = get_random_items_from_table(table, limit=5)
+            
             return {
-                'results': {},
-                'total': 0,
-                'search_mode': search_mode,
-                'execution_time': 0,
+                'results': random_results,
+                'total': sum(len(v) for v in random_results.values()),
+                'search_mode': 'random',
+                'execution_time': time.time() - start_time,
                 'suggestions': []
             }
         

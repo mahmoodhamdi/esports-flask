@@ -26,12 +26,13 @@ def search():
             if key not in ['query', 'search_mode', 'search_type', 'fuzzy_threshold', 'page', 'per_page'] and value:
                 filters[key] = value
         
-        if not query:
-            return jsonify({
-                'error': 'Query parameter is required',
-                'available_tables': get_all_table_names_extended(),
-                'searchable_fields': get_searchable_fields_by_table()
-            }), 400
+        # Allow empty queries to return random items
+        # if not query:
+        #     return jsonify({
+        #         'error': 'Query parameter is required',
+        #         'available_tables': get_all_table_names_extended(),
+        #         'searchable_fields': get_searchable_fields_by_table()
+        #     }), 400
         
         # Perform enhanced search
         results = enhanced_search_extended(
