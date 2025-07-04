@@ -1,19 +1,27 @@
 import logging
 from flask import Blueprint, jsonify, request
-from app.utils import sanitize_input
+from app.utils import sanitize_input, allowed_file, save_uploaded_file, is_valid_url, is_valid_thumbnail
 from app.news import (
     create_news_item, get_news_items, get_news_by_id,
     update_news_item, delete_news_item, delete_all_news_items
 )
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+from werkzeug.utils import secure_filename
+import os
 
 logger = logging.getLogger(__name__)
 news_bp = Blueprint('news', __name__)
 
+# Rate limiting for production
+limiter = Limiter(key_func=get_remote_address)
+
 @news_bp.route('/news', methods=['POST'])
+@limiter.limit("10 per minute")
 def create_news():
     """
     Create a new news item
-    ---
+    --- 
     tags:
       - News
     summary: Create a new news item with title, writer, and optional details
@@ -25,42 +33,42 @@ def create_news():
         type: string
         required: true
         maxLength: 255
-        description: The title of the news item
+        description: News title
         example: "New Tournament Announced"
       - name: writer
         in: formData
         type: string
         required: true
         maxLength: 100
-        description: The author of the news item
+        description: News author
         example: "John Doe"
       - name: description
         in: formData
         type: string
         required: false
         maxLength: 2000
-        description: Detailed description of the news item
-        example: "A new esports tournament has been announced for 2025."
+        description: News description
+        example: "A new esports tournament for 2025."
       - name: thumbnail_url
         in: formData
         type: string
         required: false
-        description: URL of the thumbnail image
+        description: Thumbnail URL
         example: "https://example.com/thumbnail.jpg"
       - name: thumbnail_file
         in: formData
         type: file
         required: false
-        description: Thumbnail image file (png, jpg, jpeg, gif, webp)
+        description: Thumbnail image (png, jpg, jpeg, gif, webp)
       - name: news_link
         in: formData
         type: string
         required: false
-        description: External link to the full news article
+        description: External news link
         example: "https://example.com/news"
     responses:
       201:
-        description: News item created successfully
+        description: News created
         schema:
           type: object
           properties:
@@ -71,231 +79,156 @@ def create_news():
               type: integer
               example: 1
       400:
-        description: Missing or invalid input
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-              example: "Title and writer are required"
+        description: Invalid input
+      413:
+        description: File too large
+      429:
+        description: Too many requests
       500:
-        description: Internal server error
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-              example: "Database error: ..."
+        description: Server error
     """
-    title = sanitize_input(request.form.get('title'), 255)
-    writer = sanitize_input(request.form.get('writer'), 100)
-    description = sanitize_input(request.form.get('description'), 2000)
-    thumbnail_url = sanitize_input(request.form.get('thumbnail_url'))
-    thumbnail_file = request.files.get('thumbnail_file')
-    news_link = sanitize_input(request.form.get('news_link'))
-    
     try:
+        title = sanitize_input(request.form.get('title'), 255)
+        writer = sanitize_input(request.form.get('writer'), 100)
+        description = sanitize_input(request.form.get('description'), 2000)
+        thumbnail_url = sanitize_input(request.form.get('thumbnail_url'))
+        thumbnail_file = request.files.get('thumbnail_file')
+        news_link = sanitize_input(request.form.get('news_link'))
+
+        if not title or not writer:
+            return jsonify({"error": "Title and writer are required"}), 400
+
+        if thumbnail_file:
+            if thumbnail_file.content_length > 5 * 1024 * 1024:  # 5MB limit
+                return jsonify({"error": "File too large, maximum 5MB"}), 413
+            if not allowed_file(thumbnail_file.filename):
+                return jsonify({"error": "Invalid file type. Allowed: png, jpg, jpeg, gif, webp"}), 400
+
         result = create_news_item(title, writer, description, thumbnail_url, thumbnail_file, news_link)
-        return jsonify(result), 201
+        response = jsonify(result)
+        response.headers['X-Content-Type-Options'] = 'nosniff'
+        return response, 201
+
     except ValueError as e:
         return jsonify({"error": str(e)}), 400
     except RuntimeError as e:
-        return jsonify({"error": str(e)}), 500
+        logger.error(f"File upload error: {str(e)}")
+        return jsonify({"error": "Failed to process file upload"}), 500
     except Exception as e:
-        return jsonify({"error": f"Database error: {str(e)}"}), 500
+        logger.error(f"Server error: {str(e)}")
+        return jsonify({"error": "Internal server error"}), 500
 
 @news_bp.route('/news', methods=['GET'])
+@limiter.limit("60 per minute")
 def get_news():
     """
-    Retrieve a list of news items with pagination, filtering, and sorting
+    Retrieve paginated news items
     ---
     tags:
       - News
-    summary: Get a paginated list of news items with optional filters
+    summary: Get news items with pagination and filters
     parameters:
       - name: page
         in: query
         type: integer
         default: 1
         minimum: 1
-        description: Page number for pagination
-        example: 1
       - name: per_page
         in: query
         type: integer
         default: 10
         minimum: 1
         maximum: 100
-        description: Number of items per page
-        example: 10
       - name: writer
         in: query
         type: string
         required: false
-        description: Filter by writer name (partial match)
-        example: "John Doe"
       - name: search
         in: query
         type: string
         required: false
-        description: Search in title and description (partial match)
-        example: "tournament"
       - name: sort
         in: query
         type: string
         enum: [created_at, title]
         default: created_at
-        description: Sort field (descending)
-        example: "created_at"
     responses:
       200:
-        description: Paginated list of news items
-        schema:
-          type: object
-          properties:
-            news:
-              type: array
-              items:
-                type: object
-                properties:
-                  id:
-                    type: integer
-                    example: 1
-                  title:
-                    type: string
-                    example: "New Tournament Announced"
-                  description:
-                    type: string
-                    example: "A new esports tournament has been announced for 2025."
-                  writer:
-                    type: string
-                    example: "John Doe"
-                  thumbnail_url:
-                    type: string
-                    example: "https://example.com/thumbnail.jpg"
-                  news_link:
-                    type: string
-                    example: "https://example.com/news"
-                  created_at:
-                    type: string
-                    example: "2025-06-28T02:45:00Z"
-                  updated_at:
-                    type: string
-                    example: "2025-06-28T02:45:00Z"
-            pagination:
-              type: object
-              properties:
-                page:
-                  type: integer
-                  example: 1
-                per_page:
-                  type: integer
-                  example: 10
-                total:
-                  type: integer
-                  example: 50
-                pages:
-                  type: integer
-                  example: 5
+        description: News items retrieved
+      400:
+        description: Invalid parameters
+      429:
+        description: Too many requests
       500:
-        description: Internal server error
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-              example: "Database error: ..."
+        description: Server error
     """
-    page = request.args.get('page', 1, type=int)
-    per_page = request.args.get('per_page', 10, type=int)
-    writer = sanitize_input(request.args.get('writer', ''))
-    search = sanitize_input(request.args.get('search', ''))
-    sort = request.args.get('sort', 'created_at').strip()
-    
     try:
+        page = max(1, request.args.get('page', 1, type=int))
+        per_page = max(1, min(100, request.args.get('per_page', 10, type=int)))
+        writer = sanitize_input(request.args.get('writer', ''))
+        search = sanitize_input(request.args.get('search', ''))
+        sort = request.args.get('sort', 'created_at').strip()
+        if sort not in ('created_at', 'title'):
+            return jsonify({"error": "Invalid sort parameter"}), 400
+
         result = get_news_items(page, per_page, writer, search, sort)
-        return jsonify(result)
+        response = jsonify(result)
+        response.headers['Cache-Control'] = 'public, max-age=300'
+        response.headers['X-Content-Type-Options'] = 'nosniff'
+        return response
+
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
     except Exception as e:
-        return jsonify({"error": f"Database error: {str(e)}"}), 500
+        logger.error(f"Server error: {str(e)}")
+        return jsonify({"error": "Internal server error"}), 500
 
 @news_bp.route('/news/<int:id>', methods=['GET'])
+@limiter.limit("60 per minute")
 def get_news_by_id_route(id):
     """
-    Retrieve a single news item by ID
+    Retrieve single news item
     ---
     tags:
       - News
-    summary: Get details of a specific news item by its ID
+    summary: Get news item by ID
     parameters:
       - name: id
         in: path
         type: integer
         required: true
-        description: ID of the news item to retrieve
-        example: 1
     responses:
       200:
-        description: News item retrieved successfully
-        schema:
-          type: object
-          properties:
-            id:
-              type: integer
-              example: 1
-            title:
-              type: string
-              example: "New Tournament Announced"
-            description:
-              type: string
-              example: "A new esports tournament has been announced for 2025."
-            writer:
-              type: string
-              example: "John Doe"
-            thumbnail_url:
-              type: string
-              example: "https://example.com/thumbnail.jpg"
-            news_link:
-              type: string
-              example: "https://example.com/news"
-            created_at:
-              type: string
-              example: "2025-06-28T02:45:00Z"
-            updated_at:
-              type: string
-              example: "2025-06-28T02:45:00Z"
+        description: News item retrieved
       404:
         description: News item not found
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-              example: "News item not found"
+      429:
+        description: Too many requests
       500:
-        description: Internal server error
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-              example: "Database error: ..."
+        description: Server error
     """
     try:
         result = get_news_by_id(id)
-        return jsonify(result)
+        response = jsonify(result)
+        response.headers['Cache-Control'] = 'public, max-age=300'
+        response.headers['X-Content-Type-Options'] = 'nosniff'
+        return response
+
     except ValueError as e:
         return jsonify({"error": str(e)}), 404
     except Exception as e:
-        return jsonify({"error": f"Database error: {str(e)}"}), 500
+        logger.error(f"Server error: {str(e)}")
+        return jsonify({"error": "Internal server error"}), 500
 
 @news_bp.route('/news/<int:id>', methods=['PUT'])
+@limiter.limit("10 per minute")
 def update_news(id):
     """
-    Update an existing news item by ID
+    Update news item
     ---
     tags:
       - News
-    summary: Update details of a specific news item
+    summary: Update news item by ID
     consumes:
       - multipart/form-data
     parameters:
@@ -303,174 +236,141 @@ def update_news(id):
         in: path
         type: integer
         required: true
-        description: ID of the news item to update
-        example: 1
       - name: title
         in: formData
         type: string
         required: false
         maxLength: 255
-        description: Updated title of the news item
-        example: "Updated Tournament News"
       - name: writer
         in: formData
         type: string
         required: false
         maxLength: 100
-        description: Updated writer name
-        example: "Jane Doe"
       - name: description
         in: formData
         type: string
         required: false
         maxLength: 2000
-        description: Updated description
-        example: "Updated details for the 2025 tournament."
       - name: thumbnail_url
         in: formData
         type: string
         required: false
-        description: New thumbnail URL
-        example: "https://example.com/new_thumbnail.jpg"
       - name: thumbnail_file
         in: formData
         type: file
         required: false
-        description: New thumbnail image file (png, jpg, jpeg, gif, webp)
       - name: news_link
         in: formData
         type: string
         required: false
-        description: Updated external news link
-        example: "https://example.com/updated_news"
     responses:
       200:
-        description: News item updated successfully
-        schema:
-          type: object
-          properties:
-            message:
-              type: string
-              example: "News updated successfully"
+        description: News updated
       400:
-        description: Invalid update data
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-              example: "No data provided to update"
+        description: Invalid input
       404:
         description: News item not found
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-              example: "News item not found"
+      413:
+        description: File too large
+      429:
+        description: Too many requests
       500:
-        description: Internal server error
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-              example: "Database error: ..."
+        description: Server error
     """
-    title = sanitize_input(request.form.get('title'), 255)
-    description = sanitize_input(request.form.get('description'), 2000)
-    writer = sanitize_input(request.form.get('writer'), 100)
-    thumbnail_url = sanitize_input(request.form.get('thumbnail_url'))
-    thumbnail_file = request.files.get('thumbnail_file')
-    news_link = sanitize_input(request.form.get('news_link'))
-    
     try:
+        title = sanitize_input(request.form.get('title'), 255)
+        description = sanitize_input(request.form.get('description'), 2000)
+        writer = sanitize_input(request.form.get('writer'), 100)
+        thumbnail_url = sanitize_input(request.form.get('thumbnail_url'))
+        thumbnail_file = request.files.get('thumbnail_file')
+        news_link = sanitize_input(request.form.get('news_link'))
+
+        if thumbnail_file:
+            if thumbnail_file.content_length > 5 * 1024 * 1024:  # 5MB limit
+                return jsonify({"error": "File too large, maximum 5MB"}), 413
+            if not allowed_file(thumbnail_file.filename):
+                return jsonify({"error": "Invalid file type. Allowed: png, jpg, jpeg, gif, webp"}), 400
+
         result = update_news_item(id, title, description, writer, thumbnail_url, thumbnail_file, news_link)
-        return jsonify(result)
+        response = jsonify(result)
+        response.headers['X-Content-Type-Options'] = 'nosniff'
+        return response
+
     except ValueError as e:
-        return jsonify({"error": str(e)}), 400 if "not found" not in str(e).lower() else 404
+        status = 404 if "not found" in str(e).lower() else 400
+        return jsonify({"error": str(e)}), status
     except RuntimeError as e:
-        return jsonify({"error": str(e)}), 500
+        logger.error(f"File upload error: {str(e)}")
+        return jsonify({"error": "Failed to process file upload"}), 500
     except Exception as e:
-        return jsonify({"error": f"Database error: {str(e)}"}), 500
+        logger.error(f"Server error: {str(e)}")
+        return jsonify({"error": "Internal server error"}), 500
 
 @news_bp.route('/news/<int:id>', methods=['DELETE'])
+@limiter.limit("10 per minute")
 def delete_news(id):
     """
-    Delete a news item by ID
+    Delete news item
     ---
     tags:
       - News
-    summary: Delete a specific news item by its ID
+    summary: Delete news item by ID
     parameters:
       - name: id
         in: path
         type: integer
         required: true
-        description: ID of the news item to delete
-        example: 1
     responses:
       200:
-        description: News item deleted successfully
-        schema:
-          type: object
-          properties:
-            message:
-              type: string
-              example: "News deleted successfully"
+        description: News deleted
       404:
         description: News item not found
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-              example: "News item not found"
+      429:
+        description: Too many requests
       500:
-        description: Internal server error
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-              example: "Database error: ..."
+        description: Server error
     """
     try:
         result = delete_news_item(id)
-        return jsonify(result)
+        response = jsonify(result)
+        response.headers['X-Content-Type-Options'] = 'nosniff'
+        return response
+
     except ValueError as e:
         return jsonify({"error": str(e)}), 404
     except Exception as e:
-        return jsonify({"error": f"Database error: {str(e)}"}), 500
+        logger.error(f"Server error: {str(e)}")
+        return jsonify({"error": "Internal server error"}), 500
 
 @news_bp.route('/news', methods=['DELETE'])
+@limiter.limit("5 per hour")
 def delete_all_news():
     """
-    Delete all news items and reset ID sequence
+    Delete all news items
     ---
     tags:
       - News
-    summary: Delete all news items and reset the ID sequence
+    summary: Delete all news items and reset ID sequence
     responses:
       200:
-        description: All news items deleted successfully
-        schema:
-          type: object
-          properties:
-            message:
-              type: string
-              example: "All news items deleted successfully and ID sequence reset"
+        description: All news deleted
+      429:
+        description: Too many requests
       500:
-        description: Internal server error
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-              example: "Database error: ..."
+        description: Server error
     """
     try:
         result = delete_all_news_items()
-        return jsonify(result)
+        response = jsonify(result)
+        response.headers['X-Content-Type-Options'] = 'nosniff'
+        return response
+
     except Exception as e:
-        return jsonify({"error": f"Database error: {str(e)}"}), 500
+        logger.error(f"Server error: {str(e)}")
+        return jsonify({"error": "Internal server error"}), 500
+
+@news_bp.after_request
+def add_security_headers(response):
+    response.headers['X-Frame-Options'] = 'DENY'
+    response.headers['X-XSS-Protection'] = '1; mode=block'
+    return response
