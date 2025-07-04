@@ -1,5 +1,6 @@
 import sqlite3
 import logging
+from flask import request  # Added import
 from datetime import datetime
 from app.db import get_connection
 from app.utils import save_uploaded_file, is_valid_url, is_valid_thumbnail, sanitize_input, allowed_file
@@ -17,8 +18,10 @@ def create_news_item(title, writer, description, thumbnail_url, thumbnail_file, 
     if thumbnail_file:
         logger.debug(f"Received file: {thumbnail_file.filename}")
         if allowed_file(thumbnail_file.filename):
-            final_thumbnail_url = save_uploaded_file(thumbnail_file)
-            if not final_thumbnail_url:
+            filename = save_uploaded_file(thumbnail_file)
+            if filename:
+                final_thumbnail_url = f"{request.host_url.rstrip('/')}{filename}"  # Use full URL
+            else:
                 raise RuntimeError("Failed to save uploaded file")
         else:
             raise ValueError("Invalid file type. Allowed: png, jpg, jpeg, gif, webp")
@@ -145,8 +148,10 @@ def update_news_item(id, title, description, writer, thumbnail_url, thumbnail_fi
     if thumbnail_file:
         logger.debug(f"Received file for update: {thumbnail_file.filename}")
         if allowed_file(thumbnail_file.filename):
-            final_thumbnail_url = save_uploaded_file(thumbnail_file)
-            if not final_thumbnail_url:
+            filename = save_uploaded_file(thumbnail_file)
+            if filename:
+                final_thumbnail_url = f"{request.host_url.rstrip('/')}{filename}"  # Use full URL
+            else:
                 raise RuntimeError("Failed to save uploaded file")
         else:
             raise ValueError("Invalid file type. Allowed: png, jpg, jpeg, gif, webp")
