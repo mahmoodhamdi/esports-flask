@@ -8,3 +8,4 @@ flask-cors
 fuzzywuzzy
 python-Levenshtein
 flask_limiter
+pytz

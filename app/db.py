@@ -488,7 +488,29 @@ def init_db():
                 VALUES (new.id, new.game, new.player_name, new.old_team_name, new.new_team_name);
             END
         ''')
-        
+        # Create game_matches table (new table for this task)
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS game_matches (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                game TEXT NOT NULL,
+                status TEXT NOT NULL,
+                tournament_name TEXT NOT NULL,
+                team1_name TEXT NOT NULL,
+                team2_name TEXT NOT NULL,
+                match_time TEXT NOT NULL,
+                score TEXT,
+                stream_link TEXT,
+                tournament_link TEXT,
+                tournament_icon TEXT,
+                team1_logo TEXT,
+                team2_logo TEXT,
+                format TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                UNIQUE(game, tournament_name, team1_name, team2_name, match_time)
+            )
+        ''')
+
         cursor.execute('''
             CREATE TRIGGER IF NOT EXISTS transfers_ad AFTER DELETE ON transfers BEGIN
                 INSERT INTO transfers_fts(transfers_fts, rowid, game, player_name, old_team_name, new_team_name) 
