@@ -498,6 +498,7 @@ def init_db():
                 team1_name TEXT NOT NULL,
                 team2_name TEXT NOT NULL,
                 match_time TEXT NOT NULL,
+                match_date TEXT NOT NULL,  -- New column for date in YYYY-MM-DD
                 score TEXT,
                 stream_link TEXT,
                 tournament_link TEXT,

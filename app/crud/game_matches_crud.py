@@ -26,10 +26,9 @@ def get_game_matches(game=None, status=None, tournament=None, day=None):
             params.append(tournament)
         if day:
             try:
-                input_date = datetime.strptime(day, "%Y-%m-%d")
-                formatted_date = input_date.strftime("%Y-%m-%d")
-                conditions.append("DATE(STRFTIME('%Y-%m-%d', SUBSTR(match_time, 1, INSTR(match_time, ' - ') - 1))) = ?")
-                params.append(formatted_date)
+                datetime.strptime(day, "%Y-%m-%d")  # Validate format
+                conditions.append('match_date = ?')
+                params.append(day)
             except ValueError as e:
                 logger.error(f"Invalid day format '{day}': {e}")
                 raise ValueError("Day parameter must be in YYYY-MM-DD format")
@@ -42,6 +41,12 @@ def get_game_matches(game=None, status=None, tournament=None, day=None):
         logger.debug(f"Executing query: {query} with params: {params}")
         cursor.execute(query, params)
         matches = [dict(row) for row in cursor.fetchall()]
+
+        # Debug: Log the matches found for day filtering
+        if day:
+            logger.debug(f"Found {len(matches)} matches for day {day}")
+            for match in matches[:3]:  # Log first 3 matches
+                logger.debug(f"Match: {match['team1_name']} vs {match['team2_name']} at {match['match_time']}")
 
         conn.close()
 
