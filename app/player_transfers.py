@@ -1,9 +1,10 @@
+import json
 import requests
 from bs4 import BeautifulSoup
-import json
-import hashlib
-import logging
 from datetime import datetime
+import hashlib
+import os
+import logging
 from .db import get_connection
 
 logger = logging.getLogger(__name__)
@@ -13,58 +14,52 @@ HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
 }
 
-def calculate_hash(text):
-    """Calculate MD5 hash of text"""
-    return hashlib.md5(text.encode('utf-8')).hexdigest()
-
-def get_transfer_html_via_api(game_name):
+def get_main_page_html_via_api(game_name):
     """
-    Get the HTML content for the transfer portal using MediaWiki API (prop=text).
+    Get the HTML content for the main page using MediaWiki API (prop=text).
     """
     api_url = f"{BASE_URL}/{game_name}/api.php"
     params = {
         "action": "parse",
-        "page": "Portal:Transfers",
+        "page": "Main_Page",
         "format": "json",
         "prop": "text"
     }
-    
     try:
-        response = requests.get(api_url, headers=HEADERS, params=params)
-        if response.status_code != 200:
-            logger.error(f"Failed to fetch HTML via API: {response.status_code}")
-            return None
-
-        return response.json().get("parse", {}).get("text", {}).get("*", "")
+        response = requests.get(api_url, headers=HEADERS, params=params, timeout=10)
+        if response.status_code == 200:
+            return response.json().get("parse", {}).get("text", {}).get("*", "")
     except Exception as e:
-        logger.error(f"Error fetching transfer HTML: {str(e)}")
-        return None
+        logger.error(f"API fetch failed: {e}")
+    return None
+
+def calculate_hash(text):
+    """Calculate MD5 hash of text"""
+    return hashlib.md5(text.encode('utf-8')).hexdigest()
 
 def parse_transfer_html(html):
     """Parse transfer HTML and extract transfer data"""
     soup = BeautifulSoup(html, 'html.parser')
-    table_transfers = soup.select_one('div.divTable.mainpage-transfer.Ref')
-    if not table_transfers:
+    table = soup.select_one('div.divTable.mainpage-transfer.Ref')
+    if not table:
         logger.error("No transfer table found in HTML.")
         return []
 
     data = []
-    rows = table_transfers.select('div.divRow')
-    for row in rows:
+    for row in table.select('div.divRow'):
         try:
-            date_cell = row.select_one('div.Date')
-            date = date_cell.text.strip() if date_cell else 'N/A'
+            date = row.select_one('div.Date')
+            date = date.text.strip() if date else 'N/A'
 
             players = []
-            player_blocks = row.select('div.Name .block-player')
-            for block in player_blocks:
+            for block in row.select('div.Name .block-player'):
                 name_tag = block.select_one('.name a')
                 name = name_tag.text.strip() if name_tag else "N/A"
-                flag_img = block.select_one('img')
-                flag_logo = BASE_URL + flag_img['src'] if flag_img else None
+                flag = block.select_one('img')
+                flag_url = BASE_URL + flag['src'] if flag else None
                 players.append({
                     "Name": name,
-                    "Flag": flag_logo
+                    "Flag": flag_url
                 })
 
             old_light = row.select_one('div.OldTeam .team-template-lightmode img')
@@ -96,11 +91,9 @@ def parse_transfer_html(html):
                 },
                 "Unique_ID": unique_id
             })
-
         except Exception as e:
-            logger.error(f"Failed to parse transfer row: {e}")
+            logger.error(f"Failed to parse row: {e}")
             continue
-
     return data
 
 def store_transfers_in_db(game: str, transfers_data: list, hash_value: str):
@@ -160,11 +153,54 @@ def store_transfers_in_db(game: str, transfers_data: list, hash_value: str):
     finally:
         conn.close()
 
+def update_data_file(game_name):
+    """
+    Update data file with new transfers (file-based approach)
+    """
+    filename = f"{game_name.lower()}_transfers.json"
+    hasfile = f"{game_name.lower()}_transfer_hash.txt"
+
+    try:
+        with open(filename, 'r', encoding='utf-8') as f:
+            old_data = json.load(f)
+            old_ids = {entry['Unique_ID'] for entry in old_data}
+    except FileNotFoundError:
+        old_data = []
+        old_ids = set()
+
+    html = get_main_page_html_via_api(game_name)
+    if not html:
+        logger.error("Failed to get HTML from API.")
+        return
+
+    current_hash = calculate_hash(html)
+    if os.path.exists(hasfile):
+        with open(hasfile, 'r', encoding='utf-8') as f:
+            old_hash = f.read().strip()
+        if current_hash == old_hash:
+            logger.info("No changes detected. Skipping update.")
+            return
+
+    new_data = parse_transfer_html(html)
+    added = 0
+    for entry in new_data:
+        if entry['Unique_ID'] not in old_ids:
+            old_data.append(entry)
+            added += 1
+
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(old_data, f, ensure_ascii=False, indent=2)
+
+    with open(hasfile, 'w', encoding='utf-8') as f:
+        f.write(current_hash)
+
+    logger.info(f"Updated '{filename}' - New transfers added: {added}")
+
 def fetch_and_store_transfers(game: str):
     """
     Fetch transfers and store them in database if changed
     """
-    html = get_transfer_html_via_api(game)
+    html = get_main_page_html_via_api(game)
     if not html:
         logger.error(f"Failed to get HTML for {game}")
         return {"status": "error", "message": "Failed to fetch transfer data"}
@@ -447,4 +483,3 @@ def import_transfers_from_json(game: str, json_data: list):
         return {"status": "error", "message": str(e)}
     finally:
         conn.close()
-
