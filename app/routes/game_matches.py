@@ -41,6 +41,18 @@ def game_matches():
         required: false
         default: false
         description: If true, fetch fresh data from API; if false, use database and return empty array if no matches.
+      - name: page
+        in: query
+        type: integer
+        required: false
+        default: 1
+        description: Page number for pagination (minimum 1).
+      - name: per_page
+        in: query
+        type: integer
+        required: false
+        default: 10
+        description: Number of tournaments per page (minimum 1, maximum 100).
     responses:
       200:
         description: Matches fetched successfully, grouped by tournament and game, or empty array if none found.
@@ -55,6 +67,9 @@ def game_matches():
                   tournament_name:
                     type: string
                     example: "EPL Season 27"
+                  tournament_image:
+                    type: string
+                    example: "https://liquipedia.net/tournament_icon.png"
                   games:
                     type: array
                     items:
@@ -83,20 +98,39 @@ def game_matches():
                               team1_name:
                                 type: string
                                 example: "eSpoiled"
+                              team1_image:
+                                type: string
+                                example: "https://liquipedia.net/team1_logo.png"
                               team2_name:
                                 type: string
                                 example: "AimP"
+                              team2_image:
+                                type: string
+                                example: "https://liquipedia.net/team2_logo.png"
                               stream_link:
                                 type: string
                                 example: "None"
+            total:
+              type: integer
+              description: Total number of tournaments
+              example: 20
+            page:
+              type: integer
+              description: Current page number
+              example: 1
+            per_page:
+              type: integer
+              description: Number of tournaments per page
+              example: 10
       400:
-        description: Bad request if 'live=true' and 'game' is not provided, or invalid day format.
+        description: Bad request if 'live=true' and 'game' is not provided, invalid day format, or invalid pagination parameters.
       500:
         description: Internal server error for database or API issues.
     examples:
       application/json:
         tournaments:
           - tournament_name: "EPL Season 27"
+            tournament_image: "https://liquipedia.net/tournament_icon.png"
             games:
               - game: "dota2"
                 matches:
@@ -105,21 +139,29 @@ def game_matches():
                     score: "2:::0"
                     status: "Completed"
                     team1_name: "eSpoiled"
+                    team1_image: "https://liquipedia.net/team1_logo.png"
                     team2_name: "AimP"
+                    team2_image: "https://liquipedia.net/team2_logo.png"
                     stream_link: "None"
-                  - id: 95
-                    match_time: "July 1, 2025 - 17:00 CEST"
-                    score: "0:::2"
-                    status: "Completed"
-                    team1_name: "YeS"
-                    team2_name: "Z10"
-                    stream_link: "None"
+        total: 1
+        page: 1
+        per_page: 10
     """
     game = request.args.get('game')
     status = request.args.get('status')
     tournament = request.args.get('tournament')
     day = request.args.get('day')
     live = request.args.get('live', 'false').lower() == 'true'
+    page = request.args.get('page', 1, type=int)
+    per_page = request.args.get('per_page', 10, type=int)
+
+    # Validate pagination parameters
+    if page < 1:
+        logger.warning(f"Invalid page number: {page}")
+        return jsonify({"error": "Page number must be at least 1"}), 400
+    if per_page < 1 or per_page > 100:
+        logger.warning(f"Invalid per_page value: {per_page}")
+        return jsonify({"error": "Per_page must be between 1 and 100"}), 400
 
     try:
         if live:
@@ -128,12 +170,10 @@ def game_matches():
                 return jsonify({"error": "Game parameter is required when live=true"}), 400
             logger.info(f"Fetching fresh data for game={game}, day={day}")
             scrape_matches(game)
-            results = get_game_matches(game, status, tournament, day)
-        else:
-            results = get_game_matches(game, status, tournament, day)
-            logger.info(f"Found {len(results)} tournaments for live=false, game={game}, day={day}")
+        results = get_game_matches(game, status, tournament, day, page, per_page)
+        logger.info(f"Found {results['total']} tournaments for live={live}, game={game}, day={day}, page={page}, per_page={per_page}")
 
-        return jsonify({"tournaments": results})
+        return jsonify(results)
 
     except ValueError as e:
         logger.error(f"Invalid input: {e}")

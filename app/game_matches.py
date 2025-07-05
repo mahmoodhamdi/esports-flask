@@ -45,6 +45,23 @@ def scrape_matches(game="dota2"):
             tournament_tag = match.select_one('.match-tournament .tournament-name a')
             status = "Upcoming" if match.find_parent('div[data-toggle-area-content="1"]') else "Completed"
 
+            # Scrape image URLs
+            team1_logo = match.select_one('.team-left img')
+            team2_logo = match.select_one('.team-right img')
+            tournament_icon = match.select_one('.match-tournament img')
+            
+            team1_logo_url = team1_logo['src'] if team1_logo and 'src' in team1_logo.attrs else None
+            team2_logo_url = team2_logo['src'] if team2_logo and 'src' in team2_logo.attrs else None
+            tournament_icon_url = tournament_icon['src'] if tournament_icon and 'src' in tournament_icon.attrs else None
+
+            # Prepend base URL if relative
+            if team1_logo_url and team1_logo_url.startswith('/'):
+                team1_logo_url = BASE_URL + team1_logo_url
+            if team2_logo_url and team2_logo_url.startswith('/'):
+                team2_logo_url = BASE_URL + team2_logo_url
+            if tournament_icon_url and tournament_icon_url.startswith('/'):
+                tournament_icon_url = BASE_URL + tournament_icon_url
+
             raw_time = time_span.text.strip() if time_span else "N/A"
             formatted_time = raw_time
             match_date = "N/A"
@@ -88,11 +105,11 @@ def scrape_matches(game="dota2"):
                 match_date,
                 score,
                 "None",
-                None,
-                None,
-                None,
-                None,
-                None
+                None,  # tournament_link
+                tournament_icon_url,
+                team1_logo_url,
+                team2_logo_url,
+                None  # format
             )
 
             try:
