@@ -23,8 +23,7 @@ session.headers.update({
     'Accept-Language': 'en-US,en;q=0.9',
     'DNT': '1',
     'Cache-Control': 'no-cache',
-    'Pragma': 'no-cache',
-    'X-Requested-With': 'XMLHttpRequest'
+    'Pragma': 'no-cache'
 })
 
 
@@ -35,24 +34,23 @@ def convert_timestamp_to_eest(timestamp: int) -> str:
 
 
 def scrape_matches(game="dota2"):
-    """Fetch match data from Liquipedia API and store it in the database."""
+    """Fetch match data from Liquipedia page and store it in the database."""
     BASE_URL = "https://liquipedia.net"
-    API_URL = f"{BASE_URL}/{game}/api.php"
-    params = {
-        'action': 'parse',
-        'page': "Liquipedia:Matches",
-        'format': 'json',
-        'prop': 'text'
-    }
+    page_url = f"{BASE_URL}/{game}/Liquipedia:Matches"
 
     try:
-        response = session.get(API_URL, params=params, timeout=10)
+        response = session.get(page_url, timeout=10)
         response.raise_for_status()
-        html_content = response.json()['parse']['text']['*']
-        soup = BeautifulSoup(html_content, "html.parser")
+        soup = BeautifulSoup(response.text, "html.parser")
+    except requests.HTTPError as e:
+        logger.error(f"HTTP Error {e.response.status_code} for {game}: {e.response.url}")
+        return
     except requests.RequestException as e:
-        logger.error(f"API request failed for {game}: {e}")
-        raise
+        logger.error(f"Request failed for {game}: {e}")
+        return
+    except Exception as e:
+        logger.error(f"Unexpected error parsing data for {game}: {e}")
+        return
 
     conn = get_connection()
     cursor = conn.cursor()
