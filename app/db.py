@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 def get_connection():
     """Get database connection with row factory"""
-    conn = sqlite3.connect("news.db")
+    conn = sqlite3.connect("new.db")
     conn.row_factory = sqlite3.Row
     return conn
 
