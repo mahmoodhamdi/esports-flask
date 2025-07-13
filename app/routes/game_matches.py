@@ -147,7 +147,7 @@ def game_matches():
         page: 1
         per_page: 10
     """
-    game = request.args.get('game')
+    game = request.args.getlist('game')
     status = request.args.get('status')
     tournament = request.args.getlist('tournament')
     day = request.args.get('day')

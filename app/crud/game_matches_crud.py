@@ -16,8 +16,13 @@ def get_game_matches(game=None, status=None, tournament=None, day=None, page=1, 
         params = []
 
         if game:
-            conditions.append('game = ?')
-            params.append(game)
+            if isinstance(game, list):
+                placeholders = ','.join(['?'] * len(game))
+                conditions.append(f'game IN ({placeholders})')
+                params.extend(game)
+            else:
+                conditions.append('game = ?')
+                params.append(game)
         if status:
             conditions.append('status = ?')
             params.append(status)
