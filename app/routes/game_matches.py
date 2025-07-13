@@ -149,7 +149,7 @@ def game_matches():
     """
     game = request.args.get('game')
     status = request.args.get('status')
-    tournament = request.args.get('tournament')
+    tournament = request.args.getlist('tournament')
     day = request.args.get('day')
     live = request.args.get('live', 'false').lower() == 'true'
     page = request.args.get('page', 1, type=int)

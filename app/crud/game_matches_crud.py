@@ -22,8 +22,13 @@ def get_game_matches(game=None, status=None, tournament=None, day=None, page=1, 
             conditions.append('status = ?')
             params.append(status)
         if tournament:
-            conditions.append('tournament_name = ?')
-            params.append(tournament)
+            if isinstance(tournament, list):
+                placeholders = ','.join(['?'] * len(tournament))
+                conditions.append(f'tournament_name IN ({placeholders})')
+                params.extend(tournament)
+            else:
+                conditions.append('tournament_name = ?')
+                params.append(tournament)
         if day:
             try:
                 datetime.strptime(day, "%Y-%m-%d")  # Validate format
