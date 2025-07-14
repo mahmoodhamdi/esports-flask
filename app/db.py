@@ -488,6 +488,25 @@ def init_db():
                 VALUES (new.id, new.game, new.player_name, new.old_team_name, new.new_team_name);
             END
         ''')
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS new_teams (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL UNIQUE,
+                logo_url TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ''')
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS team_games (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                team_id INTEGER NOT NULL,
+                game_name TEXT NOT NULL,
+                logo_mode TEXT,
+                logo_url TEXT,
+                FOREIGN KEY (team_id) REFERENCES new_teams(id) ON DELETE CASCADE
+            )
+        ''')
         # Create game_matches table (new table for this task)
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS game_matches (
