@@ -36,8 +36,8 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/c/c2/100_Thieves_lightmode.png/64px-100_Thieves_lightmode.png"
   },
   {
-    "team_name": "All Gamers",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/c/cf/All_Gamers_allmode.png/39px-All_Gamers_allmode.png"
+    "team_name": "AG.AL International",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/2/25/AG.AL_Esports_International_allmode.png/51px-AG.AL_Esports_International_allmode.png"
   },
   {
     "team_name": "Bilibili Gaming",
@@ -176,6 +176,10 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/f/fe/4thrives_gold_logo_2024_allmode.PNG/57px-4thrives_gold_logo_2024_allmode.PNG"
   },
   {
+    "team_name": "9z Team",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/7/7f/9z_Team_2024_lightmode.png/60px-9z_Team_2024_lightmode.png"
+  },
+  {
     "team_name": "A.C.T. Esports Club",
     "logo_url": "https://liquipedia.net/commons/images/thumb/6/6b/ACT_Esports_allmode.png/30px-ACT_Esports_allmode.png"
   },
@@ -210,10 +214,6 @@
   {
     "team_name": "Area 77",
     "logo_url": "https://liquipedia.net/commons/images/thumb/a/a4/Area_77_2024_allmode.png/53px-Area_77_2024_allmode.png"
-  },
-  {
-    "team_name": "ARG ON TOP",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/9/99/Call_of_Duty_Default_lightmode.png/47px-Call_of_Duty_Default_lightmode.png"
   },
   {
     "team_name": "ARP Gaming",
@@ -304,8 +304,8 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/8/86/CTBC_Flying_Oyster_2022_allmode.png/53px-CTBC_Flying_Oyster_2022_allmode.png"
   },
   {
-    "team_name": "Daytrade Gaming",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/5/5e/Daytrade_2021.png/52px-Daytrade_2021.png"
+    "team_name": "FULL SENSE",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/f/f5/FULL_SENSE_allmode.png/50px-FULL_SENSE_allmode.png"
   },
   {
     "team_name": "DetonatioN FocusMe",
@@ -325,7 +325,7 @@
   },
   {
     "team_name": "Dragons Esports",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/b/b7/Dragons_Esports_allmode.png/47px-Dragons_Esports_allmode.png"
+    "logo_url": "https://liquipedia.net/commons/images/thumb/0/0f/Dragons_Esports_2024_allmode.png/77px-Dragons_Esports_2024_allmode.png"
   },
   {
     "team_name": "DreamMax e-Sports",
@@ -340,16 +340,12 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/1/16/EArena_2022_allmode.png/50px-EArena_2022_allmode.png"
   },
   {
-    "team_name": "ELF",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/9/99/Call_of_Duty_Default_lightmode.png/47px-Call_of_Duty_Default_lightmode.png"
-  },
-  {
-    "team_name": "Emeryci",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/9/9a/Teamfight_Tactics_LOGO_lightmode.png/50px-Teamfight_Tactics_LOGO_lightmode.png"
-  },
-  {
     "team_name": "ENTER FORCE.36",
     "logo_url": "https://liquipedia.net/commons/images/thumb/4/48/ENTER_FORCE_36_2021_allmode.png/42px-ENTER_FORCE_36_2021_allmode.png"
+  },
+  {
+    "team_name": "Evolution Power",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/1/15/Evolution_Power.png/48px-Evolution_Power.png"
   },
   {
     "team_name": "Execration",
@@ -362,6 +358,10 @@
   {
     "team_name": "FAV gaming",
     "logo_url": "https://liquipedia.net/commons/images/thumb/3/3e/FAV_gaming_2022_lightmode.png/44px-FAV_gaming_2022_lightmode.png"
+  },
+  {
+    "team_name": "Fire Flux Esports",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/f/fd/Fire_Flux_Esports_allmode.png/100px-Fire_Flux_Esports_allmode.png"
   },
   {
     "team_name": "FiveFears",
@@ -440,6 +440,10 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/e/e8/Horaa_Esports_lightmode.png/51px-Horaa_Esports_lightmode.png"
   },
   {
+    "team_name": "IDA Esports",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/d/dd/IDA_Esports_2025_allmode.png/95px-IDA_Esports_2025_allmode.png"
+  },
+  {
     "team_name": "IGZIST",
     "logo_url": "https://liquipedia.net/commons/images/thumb/a/a9/IGZIST_lightmode.png/100px-IGZIST_lightmode.png"
   },
@@ -452,8 +456,16 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/6/6d/Intense_Game_lightmode.png/47px-Intense_Game_lightmode.png"
   },
   {
+    "team_name": "Inner Circle",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/c/c6/Inner_Circle_2025_allmode.png/43px-Inner_Circle_2025_allmode.png"
+  },
+  {
     "team_name": "Kagendra",
     "logo_url": "https://liquipedia.net/commons/images/thumb/0/0a/Kagendra_allmode.png/79px-Kagendra_allmode.png"
+  },
+  {
+    "team_name": "KINGZERO-eSports",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/4/43/Kingzone_DragonX_NoText.png/71px-Kingzone_DragonX_NoText.png"
   },
   {
     "team_name": "KINOTROPE gaming",
@@ -480,8 +492,8 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/a/a2/Luminosity_Gaming_2018_allmode.png/50px-Luminosity_Gaming_2018_allmode.png"
   },
   {
-    "team_name": "Mythic SEAL",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/2/20/Mythic_Seal_allmode.png/50px-Mythic_Seal_allmode.png"
+    "team_name": "NASR Esports",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/f/fd/NASR_Esports_allmode.png/39px-NASR_Esports_allmode.png"
   },
   {
     "team_name": "NTMR",
@@ -556,12 +568,16 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/0/0a/Petrichor_Road_lightmode.png/51px-Petrichor_Road_lightmode.png"
   },
   {
-    "team_name": "Pillos",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/9/99/Call_of_Duty_Default_lightmode.png/47px-Call_of_Duty_Default_lightmode.png"
-  },
-  {
     "team_name": "Porsche Coanda",
     "logo_url": "https://liquipedia.net/commons/images/thumb/5/5a/Porsche_Coanda_Esports_Racing_Team_lightmode.png/100px-Porsche_Coanda_Esports_Racing_Team_lightmode.png"
+  },
+  {
+    "team_name": "Project 7 Esports",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/8/84/Project_7_lightmode.png/25px-Project_7_lightmode.png"
+  },
+  {
+    "team_name": "Qing Jiu Club",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/1/15/Qing_Jiu_Club_allmode.png/60px-Qing_Jiu_Club_allmode.png"
   },
   {
     "team_name": "R8 Esports",
@@ -582,6 +598,10 @@
   {
     "team_name": "Red Hawks",
     "logo_url": "https://liquipedia.net/commons/images/thumb/8/81/Red_Hawks_allmode.png/40px-Red_Hawks_allmode.png"
+  },
+  {
+    "team_name": "Regnum Carya Esports",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/9/93/Regnum_Carya_Esports_2025_allmode.png/48px-Regnum_Carya_Esports_2025_allmode.png"
   },
   {
     "team_name": "Rising Rage",
@@ -624,12 +644,16 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/7/7c/Talon_Esports_2019_allmode.png/66px-Talon_Esports_2019_allmode.png"
   },
   {
-    "team_name": "Spacestation Gaming",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/8/8b/Spacestation_Gaming_2021_allmode.png/41px-Spacestation_Gaming_2021_allmode.png"
-  },
-  {
     "team_name": "TDT Esports",
     "logo_url": "https://liquipedia.net/commons/images/thumb/9/9e/TDT_Esports_2023_lightmode.png/56px-TDT_Esports_2023_lightmode.png"
+  },
+  {
+    "team_name": "Team Aryan",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/e/e3/Team_Aryan_lightmode.png/99px-Team_Aryan_lightmode.png"
+  },
+  {
+    "team_name": "Team CC",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/0/07/Team_CC_2025_allmode.png/36px-Team_CC_2025_allmode.png"
   },
   {
     "team_name": "Team Dekii",
@@ -638,6 +662,10 @@
   {
     "team_name": "Team Flash",
     "logo_url": "https://liquipedia.net/commons/images/thumb/c/c5/Team_Flash_allmode.png/56px-Team_Flash_allmode.png"
+  },
+  {
+    "team_name": "Team GAMAX",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/8/8a/Team_GAMAX_allmode.png/50px-Team_GAMAX_allmode.png"
   },
   {
     "team_name": "Team Heretics",
@@ -660,6 +688,10 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/0/03/Team_Redline_lightmode.png/71px-Team_Redline_lightmode.png"
   },
   {
+    "team_name": "Team Vision",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/8/8d/Team_Vision_2025_lightmode.png/51px-Team_Vision_2025_lightmode.png"
+  },
+  {
     "team_name": "Team WaR",
     "logo_url": "https://liquipedia.net/commons/images/thumb/8/8f/Team_WaR_allmode.png/38px-Team_WaR_allmode.png"
   },
@@ -669,7 +701,7 @@
   },
   {
     "team_name": "Terror Queens",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/9/98/Terror_Queen_allmode.png/53px-Terror_Queen_allmode.png"
+    "logo_url": "https://liquipedia.net/commons/images/thumb/9/98/Terror_Queen_allmode.png/54px-Terror_Queen_allmode.png"
   },
   {
     "team_name": "The Expendables",
@@ -684,19 +716,7 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/1/16/Theerathon_Five_Academy_allmode.png/35px-Theerathon_Five_Academy_allmode.png"
   },
   {
-    "team_name": "The Gatos Guapos",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/f/ff/The_Gatos_Guapos_allmode.png/50px-The_Gatos_Guapos_allmode.png"
-  },
-  {
-    "team_name": "The MongolZ",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/2/2b/The_MongolZ_2024_03_allmode.png/39px-The_MongolZ_2024_03_allmode.png"
-  },
-  {
-    "team_name": "The Ultimates",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/8/80/The_Ultimates_2020_allmode.png/100px-The_Ultimates_2020_allmode.png"
-  },
-  {
-    "team_name": "ThunderTalk Gaming",
+    "team_name": "TT Global",
     "logo_url": "https://liquipedia.net/commons/images/thumb/0/09/ThunderTalk_Gaming_allmode.png/52px-ThunderTalk_Gaming_allmode.png"
   },
   {
@@ -728,6 +748,10 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/5/5f/TyLoo_2016_allmode.png/56px-TyLoo_2016_allmode.png"
   },
   {
+    "team_name": "UbecManiacGT",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/e/e2/UbecManiacGT_lightmode.png/43px-UbecManiacGT_lightmode.png"
+  },
+  {
     "team_name": "UNLIMIT",
     "logo_url": "https://liquipedia.net/commons/images/thumb/8/85/UNLIMIT_2025_allmode.png/43px-UNLIMIT_2025_allmode.png"
   },
@@ -756,10 +780,6 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/b/b4/Waow_GG_Esports_lightmode.png/100px-Waow_GG_Esports_lightmode.png"
   },
   {
-    "team_name": "WhateverItTakes",
-    "logo_url": "https://liquipedia.net/commons/images/thumb/9/99/Call_of_Duty_Default_lightmode.png/47px-Call_of_Duty_Default_lightmode.png"
-  },
-  {
     "team_name": "Wildcard",
     "logo_url": "https://liquipedia.net/commons/images/thumb/b/b3/Wildcard_2024_lightmode.png/42px-Wildcard_2024_lightmode.png"
   },
@@ -784,11 +804,19 @@
     "logo_url": "https://liquipedia.net/commons/images/thumb/d/db/Yangon_Galacticos_2021_allmode.png/55px-Yangon_Galacticos_2021_allmode.png"
   },
   {
+    "team_name": "Yesports",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/9/9c/Yesports_allmode.png/39px-Yesports_allmode.png"
+  },
+  {
     "team_name": "ZEDI ESPORTS",
     "logo_url": "https://liquipedia.net/commons/images/thumb/e/e5/ZEDI_ESPORTS_lightmode.png/100px-ZEDI_ESPORTS_lightmode.png"
   },
   {
     "team_name": "Zero Tenacity",
     "logo_url": "https://liquipedia.net/commons/images/thumb/c/c6/Zero_Tenacity_2022_lightmode.png/73px-Zero_Tenacity_2022_lightmode.png"
+  },
+  {
+    "team_name": "ZoKorp Esports",
+    "logo_url": "https://liquipedia.net/commons/images/thumb/3/3e/ZoKorp_Esports_lightmode.png/76px-ZoKorp_Esports_lightmode.png"
   }
 ]
