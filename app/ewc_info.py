@@ -2,17 +2,23 @@ import sqlite3
 import requests
 import json
 import logging
+import hashlib
 from bs4 import BeautifulSoup
 
 logger = logging.getLogger(__name__)
 
-def get_ewc_information(live=False):
-    """Fetch Esports World Cup 2025 information from Liquipedia or database"""
+def get_url_hash(url: str) -> str:
+    return hashlib.sha256(url.encode()).hexdigest()
+
+def get_ewc_information(live=False, url="https://liquipedia.net/esports/Esports_World_Cup/2025"):
+    """Fetch tournament information from Liquipedia or database"""
+    url_hash = get_url_hash(url)
+
     if not live:
         try:
             conn = sqlite3.connect('news.db')
             cursor = conn.cursor()
-            cursor.execute('SELECT * FROM ewc_info ORDER BY updated_at DESC LIMIT 1')
+            cursor.execute('SELECT * FROM ewc_info WHERE url_hash = ? ORDER BY updated_at DESC LIMIT 1', (url_hash,))
             row = cursor.fetchone()
             conn.close()
             if row:
@@ -32,14 +38,14 @@ def get_ewc_information(live=False):
                     'updated_at': row[13]
                 }
         except sqlite3.Error as e:
-            logger.error(f"DB error while fetching EWC info: {str(e)}")
+            logger.error(f"DB error while fetching info: {str(e)}")
 
-    # Live Fetch from Liquipedia
     try:
         headers = {'User-Agent': 'Mozilla/5.0'}
-        response = requests.get("https://liquipedia.net/esports/Esports_World_Cup/2025", headers=headers)
+        response = requests.get(url, headers=headers)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
+
         box = soup.select_one('div.fo-nttax-infobox')
         if not box:
             logger.error("No info box found.")
@@ -56,7 +62,7 @@ def get_ewc_information(live=False):
 
         data['logo_light'] = "https://liquipedia.net" + box.select_one('.infobox-image.lightmode img')['src']
         data['logo_dark'] = "https://liquipedia.net" + box.select_one('.infobox-image.darkmode img')['src']
-        
+
         loc_img = box.select_one('div.infobox-cell-2.infobox-description:contains("Location") + div span.flag img')
         data['location_logo'] = "https://liquipedia.net" + loc_img['src'] if loc_img else None
 
@@ -73,27 +79,27 @@ def get_ewc_information(live=False):
         try:
             conn = sqlite3.connect('news.db')
             cursor = conn.cursor()
-            cursor.execute('DELETE FROM ewc_info')
+            cursor.execute('DELETE FROM ewc_info WHERE url_hash = ?', (url_hash,))
             cursor.execute('''
                 INSERT INTO ewc_info (
                     header, series, organizers, location, prize_pool, 
                     start_date, end_date, liquipedia_tier, logo_light, 
-                    logo_dark, location_logo, social_links
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    logo_dark, location_logo, social_links, url_hash
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', (
                 data.get('header'), data.get('series'), data.get('organizers'), data.get('location'),
                 data.get('prize_pool'), data.get('start_date'), data.get('end_date'), data.get('liquipedia_tier'),
                 data.get('logo_light'), data.get('logo_dark'), data.get('location_logo'),
-                json.dumps(data.get('social_links'))
+                json.dumps(data.get('social_links')), url_hash
             ))
             conn.commit()
         except sqlite3.Error as e:
-            logger.error(f"DB error while storing EWC info: {str(e)}")
+            logger.error(f"DB error while storing info: {str(e)}")
         finally:
             conn.close()
 
         return data
 
     except Exception as e:
-        logger.error(f"Error fetching or processing EWC info: {str(e)}")
+        logger.error(f"Error fetching or processing info: {str(e)}")
         return {}
