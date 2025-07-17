@@ -6,7 +6,6 @@ import logging
 logger = logging.getLogger(__name__)
 
 prize_bp = Blueprint('prize', __name__)
-
 @prize_bp.route("/ewc_prize_distribution", methods=["GET"])
 @swag_from({
     'tags': ['Prize'],
@@ -37,6 +36,13 @@ prize_bp = Blueprint('prize', __name__)
             'in': 'query',
             'type': 'string',
             'description': 'Filter by place or prize'
+        },
+        {
+            'name': 'url',
+            'in': 'query',
+            'type': 'string',
+            'required': False,
+            'description': 'Custom Liquipedia page URL to fetch prize distribution'
         }
     ],
     'responses': {
@@ -45,21 +51,8 @@ prize_bp = Blueprint('prize', __name__)
             'examples': {
                 'application/json': {
                     "message": "Prize distribution data retrieved successfully",
-                    "data": [
-                        {
-                            "place": "1st",
-                            "place_logo": "https://...",
-                            "prize": "$500,000",
-                            "participants": "Team A",
-                            "logo_team": "https://..."
-                        }
-                    ],
-                    "pagination": {
-                        "page": 1,
-                        "per_page": 10,
-                        "total": 20,
-                        "pages": 2
-                    }
+                    "data": [],
+                    "pagination": {}
                 }
             }
         }
@@ -70,9 +63,10 @@ def get_ewc_prize_distribution():
     page = max(1, request.args.get('page', 1, type=int))
     per_page = max(1, min(100, request.args.get('per_page', 10, type=int)))
     filter_query = request.args.get('filter', '').strip()
+    url = request.args.get('url', None)
 
     try:
-        prize_data = get_prize_distribution(live=live)
+        prize_data = get_prize_distribution(live=live, url=url)
         if not prize_data:
             return jsonify({
                 "message": "No prize distribution data found",
