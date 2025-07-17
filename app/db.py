@@ -77,21 +77,6 @@ def init_db():
             )
         ''')
 
-        # Create group_matches table
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS group_matches (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                game TEXT,
-                tournament TEXT,
-                group_name TEXT,
-                team1_name TEXT,
-                team1_logo TEXT,
-                team2_name TEXT,
-                team2_logo TEXT,
-                match_time TEXT,
-                score TEXT
-            )
-        ''')
         
         # Create teams table
         cursor.execute('''
@@ -103,32 +88,8 @@ def init_db():
             )
         ''')
 
-        # Create events table
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS events (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name TEXT,
-                link TEXT,
-                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
-        ''')
-
-        # Create matches table
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS matches (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                game TEXT,
-                match_date TEXT,
-                group_name TEXT,
-                team1_name TEXT,
-                team1_logo TEXT,
-                team2_name TEXT,
-                team2_logo TEXT,
-                match_time TEXT,
-                score TEXT,
-                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
-        ''') 
+     
+      
         
         # Create transfers table
         cursor.execute('''
@@ -145,26 +106,6 @@ def init_db():
                 new_team_name TEXT,
                 new_team_logo_light TEXT,
                 new_team_logo_dark TEXT,
-                hash_value TEXT,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
-        ''')
-        
-        # Create global_matches table
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS global_matches (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                game TEXT NOT NULL,
-                tournament TEXT NOT NULL,
-                group_name TEXT,
-                team1_name TEXT,
-                team1_logo TEXT,
-                team2_name TEXT,
-                team2_logo TEXT,
-                match_time TEXT,
-                score TEXT,
-                status TEXT DEFAULT 'scheduled',
                 hash_value TEXT,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -243,13 +184,7 @@ def init_db():
             )
         ''')
         
-        # Events FTS table
-        cursor.execute('''
-            CREATE VIRTUAL TABLE IF NOT EXISTS events_fts USING fts5(
-                name, content=events, content_rowid=id
-            )
-        ''')
-        
+     
         # Games FTS table
         cursor.execute('''
             CREATE VIRTUAL TABLE IF NOT EXISTS games_fts USING fts5(
@@ -257,12 +192,7 @@ def init_db():
             )
         ''')
         
-        # Matches FTS table
-        cursor.execute('''
-            CREATE VIRTUAL TABLE IF NOT EXISTS matches_fts USING fts5(
-                game, group_name, team1_name, team2_name, content=matches, content_rowid=id
-            )
-        ''')
+       
 
         # Prize distribution FTS table
         cursor.execute('''
@@ -278,13 +208,7 @@ def init_db():
             )
         ''')
 
-        # Group matches FTS table
-        cursor.execute('''
-            CREATE VIRTUAL TABLE IF NOT EXISTS group_matches_fts USING fts5(
-                game, tournament, group_name, team1_name, team2_name, content=group_matches, content_rowid=id
-            )
-        ''')
-
+       
         # Transfers FTS table
         cursor.execute('''
             CREATE VIRTUAL TABLE IF NOT EXISTS transfers_fts USING fts5(
@@ -292,12 +216,7 @@ def init_db():
             )
         ''')
 
-        # Global matches FTS table
-        cursor.execute('''
-            CREATE VIRTUAL TABLE IF NOT EXISTS global_matches_fts USING fts5(
-                game, tournament, group_name, team1_name, team2_name, status, content=global_matches, content_rowid=id
-            )
-        ''')
+         
 
         # EWC teams players FTS table
         cursor.execute('''
@@ -365,26 +284,10 @@ def init_db():
             END
         ''')
 
-        # Events triggers
-        cursor.execute('''
-            CREATE TRIGGER IF NOT EXISTS events_ai AFTER INSERT ON events BEGIN
-                INSERT INTO events_fts(rowid, name) VALUES (new.id, new.name);
-            END
-        ''')
+ 
+ 
         
-        cursor.execute('''
-            CREATE TRIGGER IF NOT EXISTS events_ad AFTER DELETE ON events BEGIN
-                INSERT INTO events_fts(events_fts, rowid, name) VALUES('delete', old.id, old.name);
-            END
-        ''')
-        
-        cursor.execute('''
-            CREATE TRIGGER IF NOT EXISTS events_au AFTER UPDATE ON events BEGIN
-                INSERT INTO events_fts(events_fts, rowid, name) VALUES('delete', old.id, old.name);
-                INSERT INTO events_fts(rowid, name) VALUES (new.id, new.name);
-            END
-        ''')
-
+ 
         # Games triggers
         cursor.execute('''
             CREATE TRIGGER IF NOT EXISTS games_ai AFTER INSERT ON games BEGIN
@@ -409,30 +312,7 @@ def init_db():
             END
         ''')
 
-        # Matches triggers
-        cursor.execute('''
-            CREATE TRIGGER IF NOT EXISTS matches_ai AFTER INSERT ON matches BEGIN
-                INSERT INTO matches_fts(rowid, game, group_name, team1_name, team2_name) 
-                VALUES (new.id, new.game, new.group_name, new.team1_name, new.team2_name);
-            END
-        ''')
-        
-        cursor.execute('''
-            CREATE TRIGGER IF NOT EXISTS matches_ad AFTER DELETE ON matches BEGIN
-                INSERT INTO matches_fts(matches_fts, rowid, game, group_name, team1_name, team2_name) 
-                VALUES('delete', old.id, old.game, old.group_name, old.team1_name, old.team2_name);
-            END
-        ''')
-        
-        cursor.execute('''
-            CREATE TRIGGER IF NOT EXISTS matches_au AFTER UPDATE ON matches BEGIN
-                INSERT INTO matches_fts(matches_fts, rowid, game, group_name, team1_name, team2_name) 
-                VALUES('delete', old.id, old.game, old.group_name, old.team1_name, old.team2_name);
-                INSERT INTO matches_fts(rowid, game, group_name, team1_name, team2_name) 
-                VALUES (new.id, new.game, new.group_name, new.team1_name, new.team2_name);
-            END
-        ''')
-
+     
         # Prize distribution triggers
         cursor.execute('''
             CREATE TRIGGER IF NOT EXISTS prize_distribution_ai AFTER INSERT ON prize_distribution BEGIN
@@ -507,29 +387,7 @@ def init_db():
                 FOREIGN KEY (team_id) REFERENCES new_teams(id) ON DELETE CASCADE
             )
         ''')
-        # Create game_matches table (new table for this task)
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS game_matches (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                game TEXT NOT NULL,
-                status TEXT NOT NULL,
-                tournament_name TEXT NOT NULL,
-                team1_name TEXT NOT NULL,
-                team2_name TEXT NOT NULL,
-                match_time TEXT NOT NULL,
-                match_date TEXT NOT NULL,  -- New column for date in YYYY-MM-DD
-                score TEXT,
-                stream_link TEXT,
-                tournament_link TEXT,
-                tournament_icon TEXT,
-                team1_logo TEXT,
-                team2_logo TEXT,
-                format TEXT,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                UNIQUE(game, tournament_name, team1_name, team2_name, match_time)
-            )
-        ''')
+      
 
         cursor.execute('''
             CREATE TRIGGER IF NOT EXISTS transfers_ad AFTER DELETE ON transfers BEGIN
@@ -552,24 +410,6 @@ def init_db():
         
     except sqlite3.Error as e:
         logger.error(f"Database initialization error: {str(e)}")
-        raise
-    finally:
-        conn.close()
-
-def reset_db_sequence():
-    """Reset the SQLite sequence for all tables"""
-    try:
-        conn = get_connection()
-        cursor = conn.cursor()
-        cursor.execute("""
-            DELETE FROM sqlite_sequence 
-            WHERE name IN ('news', 'teams', 'events', 'ewc_info', 'games', 'matches', 'transfers', 
-                           'prize_distribution', 'global_matches', 'ewc_teams_players', 'team_information')
-        """)
-        conn.commit()
-        logger.debug("Reset SQLite sequence for all tables")
-    except sqlite3.Error as e:
-        logger.error(f"Failed to reset SQLite sequence: {str(e)}")
         raise
     finally:
         conn.close()

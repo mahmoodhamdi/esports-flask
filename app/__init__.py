@@ -23,15 +23,12 @@ def create_app():
 
     # Register blueprints with unique import names
     from .routes.news import news_bp
-    from .routes.admin import admin_bp
+ 
     from .routes.games import games_bp
     from .routes.prizes import prize_bp
     from .routes.info import info_bp
     from .routes.ewc_teams import teams_bp
-    from .routes.ewc_events import events_bp
-    from .routes.ewc_matches import matches_bp as ewc_matches_bp  # Renamed
-    from .routes.ewc_transfers import transfers_bp
-    from .routes.global_matches import global_matches_bp
+ 
     from .routes.player_transfers import player_transfers_bp
     from .routes.ewc_rank_route import ewc_rank_bp
     from .routes.ewc_teams_players import ewc_teams_players_bp
@@ -39,20 +36,14 @@ def create_app():
     from .routes.player_information import player_information_bp
     from .routes.search import search_bp
     from .routes.search_extended import search_extended_bp
-    from .routes.game_matches import game_matches_bp
     from .routes.new_teams import new_teams_bp
     # Register all blueprints
     app.register_blueprint(news_bp, url_prefix="/api")
-    app.register_blueprint(admin_bp, url_prefix="/api")
     app.register_blueprint(prize_bp, url_prefix="/api")
     app.register_blueprint(games_bp, url_prefix="/api")
     app.register_blueprint(info_bp, url_prefix="/api")
     app.register_blueprint(teams_bp, url_prefix="/api")
-    app.register_blueprint(events_bp, url_prefix="/api")
-    app.register_blueprint(ewc_matches_bp, url_prefix="/api")  # EWC matches
-    app.register_blueprint(transfers_bp, url_prefix="/api")
-    app.register_blueprint(global_matches_bp,
-                           url_prefix="/api")  # Global matches
+ 
     app.register_blueprint(player_transfers_bp,
                            url_prefix="/api")  # Player transfers
     app.register_blueprint(ewc_rank_bp, url_prefix="/api")
@@ -61,7 +52,7 @@ def create_app():
     app.register_blueprint(player_information_bp, url_prefix="/api")
     app.register_blueprint(search_bp, url_prefix="/api")
     app.register_blueprint(search_extended_bp, url_prefix="/api/extended")
-    app.register_blueprint(game_matches_bp, url_prefix="/api")  # Register new blueprint
+ 
     app.register_blueprint(new_teams_bp, url_prefix="/api")
     # Serve uploaded files
     @app.route('/uploads/<path:filename>')
