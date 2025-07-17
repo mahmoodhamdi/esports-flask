@@ -10,7 +10,7 @@ def get_connection():
     return conn
 
 def init_game_matches_db():
-    """Initialize the SQLite database with tournaments and matches tables"""
+    """Initialize the SQLite database with tournaments, matches, and matches_games tables"""
     conn = get_connection()
     cursor = conn.cursor()
     
@@ -56,11 +56,24 @@ def init_game_matches_db():
             )
         ''')
 
+        # Create matches_games table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS matches_games (
+                match_id TEXT NOT NULL,
+                game TEXT NOT NULL,
+                PRIMARY KEY (match_id, game),
+                FOREIGN KEY (match_id) REFERENCES matches(match_id) ON DELETE CASCADE
+            )
+        ''')
+
         # Create indexes for matches
         cursor.execute('CREATE INDEX IF NOT EXISTS idx_matches_match_id ON matches(match_id)')
         cursor.execute('CREATE INDEX IF NOT EXISTS idx_matches_timestamp ON matches(timestamp)')
         cursor.execute('CREATE INDEX IF NOT EXISTS idx_matches_status ON matches(status)')
         cursor.execute('CREATE INDEX IF NOT EXISTS idx_matches_tournament_id ON matches(tournament_id)')
+
+        # Create index for matches_games
+        cursor.execute('CREATE INDEX IF NOT EXISTS idx_matches_games_game ON matches_games(game)')
 
         conn.commit()
         logger.info("Game matches database initialized successfully")

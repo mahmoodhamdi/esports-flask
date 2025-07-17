@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from app.game_matches_init_db import get_connection, init_game_matches_db
-from app.crud.game_matches_crud import get_grouped_matches
+from app.crud.game_matches_crud import get_grouped_matches, insert_or_update_match_game
 from app.game_matches import scrape_matches
 import json
 
@@ -11,24 +11,26 @@ def game_matches():
     # Initialize game matches tables
     init_game_matches_db()
 
-    game = request.args.get('game')
-    day = request.args.get('day')
+    # Handle multiple values for parameters only when live=false
+    game = request.args.get('game', '').split(',') if request.args.get('game') and request.args.get('live', 'false').lower() == 'false' else [request.args.get('game')] if request.args.get('game') else None
+    day = request.args.get('day', '').split(',') if request.args.get('day') and request.args.get('live', 'false').lower() == 'false' else [request.args.get('day')] if request.args.get('day') else None
+    tournament = request.args.get('tournament', '').split(',') if request.args.get('tournament') and request.args.get('live', 'false').lower() == 'false' else [request.args.get('tournament')] if request.args.get('tournament') else None
     live = request.args.get('live', 'false').lower() == 'true'
     page = int(request.args.get('page', 1))
     per_page = int(request.args.get('per_page', 10))
 
-    if live and not game:
-        return jsonify({"error": "Game parameter is required when live=true"}), 400
+    if live and (not game or len(game) > 1 or (game and game[0] is None)):
+        return jsonify({"error": "Exactly one game parameter is required when live=true"}), 400
 
     conn = get_connection()
 
-    if live:
-        match_data = scrape_matches(game)
+    if live and game and game[0]:
+        match_data = scrape_matches(game[0])
         for status, tournaments in match_data.items():
             for tournament_name, tournament_data in tournaments.items():
                 tournament_link = tournament_data["tournament_link"]
                 tournament_id = insert_or_update_tournament(
-                    conn, game, tournament_name, tournament_link, tournament_data["tournament_icon"]
+                    conn, game[0], tournament_name, tournament_link, tournament_data["tournament_icon"]
                 )
                 for match in tournament_data["matches"]:
                     match_id = match["match_id"]
@@ -40,8 +42,9 @@ def game_matches():
                             match["format"], match["score"], json.dumps(match["stream_link"]), match["details_link"],
                             match.get("group")
                         )
+                        insert_or_update_match_game(conn, match_id, game[0])
 
-    grouped_matches, total = get_grouped_matches(conn, game=game, day=day, page=page, per_page=per_page)
+    grouped_matches, total = get_grouped_matches(conn, game=game, day=day, tournament=tournament, page=page, per_page=per_page)
     response = {
         "tournaments": grouped_matches,
         "total": total,

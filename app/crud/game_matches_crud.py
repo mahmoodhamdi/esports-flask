@@ -6,23 +6,36 @@ def get_tournament_by_link(conn, link):
     cursor.execute("SELECT * FROM tournaments WHERE link = ?", (link,))
     return cursor.fetchone()
 
-def get_grouped_matches(conn, game=None, day=None, status=None, page=1, per_page=10):
+def insert_or_update_match_game(conn, match_id, game):
+    cursor = conn.cursor()
+    cursor.execute('''
+        INSERT OR IGNORE INTO matches_games (match_id, game)
+        VALUES (?, ?)
+    ''', (match_id, game))
+    conn.commit()
+
+def get_grouped_matches(conn, game=None, day=None, tournament=None, status=None, page=1, per_page=10):
     offset = (page - 1) * per_page
     query = '''
-        SELECT m.*, t.name as tournament_name, t.game, t.link as tournament_link, t.icon as tournament_icon
+        SELECT m.*, t.name as tournament_name, t.game as primary_game, t.link as tournament_link, t.icon as tournament_icon, mg.game
         FROM matches m
         JOIN tournaments t ON m.tournament_id = t.id
+        JOIN matches_games mg ON m.match_id = mg.match_id
         WHERE 1=1
     '''
     params = []
     
     if game:
-        query += " AND t.game = ?"
-        params.append(game)
+        query += " AND mg.game IN ({})".format(','.join(['?'] * len(game)))
+        params.extend(game)
     
     if day:
-        query += " AND DATE(m.timestamp, 'unixepoch') = ?"
-        params.append(day)
+        query += " AND DATE(m.timestamp, 'unixepoch') IN ({})".format(','.join(['?'] * len(day)))
+        params.extend(day)
+    
+    if tournament:
+        query += " AND t.name IN ({})".format(','.join(['?'] * len(tournament)))
+        params.extend(tournament)
     
     if status:
         query += " AND m.status = ?"
@@ -40,15 +53,19 @@ def get_grouped_matches(conn, game=None, day=None, status=None, page=1, per_page
         SELECT COUNT(*)
         FROM matches m
         JOIN tournaments t ON m.tournament_id = t.id
+        JOIN matches_games mg ON m.match_id = mg.match_id
         WHERE 1=1
     '''
     count_params = []
     if game:
-        count_query += " AND t.game = ?"
-        count_params.append(game)
+        count_query += " AND mg.game IN ({})".format(','.join(['?'] * len(game)))
+        count_params.extend(game)
     if day:
-        count_query += " AND DATE(m.timestamp, 'unixepoch') = ?"
-        count_params.append(day)
+        count_query += " AND DATE(m.timestamp, 'unixepoch') IN ({})".format(','.join(['?'] * len(day)))
+        count_params.extend(day)
+    if tournament:
+        count_query += " AND t.name IN ({})".format(','.join(['?'] * len(tournament)))
+        count_params.extend(tournament)
     if status:
         count_query += " AND m.status = ?"
         count_params.append(status)
