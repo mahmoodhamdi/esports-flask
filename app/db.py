@@ -77,18 +77,7 @@ def init_db():
             )
         ''')
 
-        
-        # Create teams table
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS teams (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                team_name TEXT,
-                logo_url TEXT,
-                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
-        ''')
-
-     
+    
       
         
         # Create transfers table
@@ -177,12 +166,7 @@ def init_db():
             )
         ''')
         
-        # Teams FTS table
-        cursor.execute('''
-            CREATE VIRTUAL TABLE IF NOT EXISTS teams_fts USING fts5(
-                team_name, content=teams, content_rowid=id
-            )
-        ''')
+     
         
      
         # Games FTS table
@@ -264,28 +248,6 @@ def init_db():
             END
         ''')
 
-        # Teams triggers
-        cursor.execute('''
-            CREATE TRIGGER IF NOT EXISTS teams_ai AFTER INSERT ON teams BEGIN
-                INSERT INTO teams_fts(rowid, team_name) VALUES (new.id, new.team_name);
-            END
-        ''')
-        
-        cursor.execute('''
-            CREATE TRIGGER IF NOT EXISTS teams_ad AFTER DELETE ON teams BEGIN
-                INSERT INTO teams_fts(teams_fts, rowid, team_name) VALUES('delete', old.id, old.team_name);
-            END
-        ''')
-        
-        cursor.execute('''
-            CREATE TRIGGER IF NOT EXISTS teams_au AFTER UPDATE ON teams BEGIN
-                INSERT INTO teams_fts(teams_fts, rowid, team_name) VALUES('delete', old.id, old.team_name);
-                INSERT INTO teams_fts(rowid, team_name) VALUES (new.id, new.team_name);
-            END
-        ''')
-
- 
- 
         
  
         # Games triggers

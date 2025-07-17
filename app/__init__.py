@@ -15,7 +15,9 @@ def create_app():
 
     # Initialize database
     from .db import init_db
+    from .game_teams_init_db import init_game_teams_db
     init_db()
+    init_game_teams_db()
 
     # Initialize Swagger
     swagger = Swagger(app)
@@ -32,8 +34,8 @@ def create_app():
     from .routes.player_information import player_information_bp
     from .routes.search import search_bp
     from .routes.search_extended import search_extended_bp
-    from .routes.new_teams import new_teams_bp
-    from .routes.game_matches import game_matches_bp  # New blueprint
+    from .routes.game_matches import game_matches_bp
+    from .routes.game_teams import new_teams_bp
 
     # Register all blueprints
     app.register_blueprint(news_bp, url_prefix="/api")
@@ -47,8 +49,8 @@ def create_app():
     app.register_blueprint(player_information_bp, url_prefix="/api")
     app.register_blueprint(search_bp, url_prefix="/api")
     app.register_blueprint(search_extended_bp, url_prefix="/api/extended")
+    app.register_blueprint(game_matches_bp, url_prefix="/api")
     app.register_blueprint(new_teams_bp, url_prefix="/api")
-    app.register_blueprint(game_matches_bp, url_prefix="/api")  # Register new blueprint
 
     # Serve uploaded files
     @app.route('/uploads/<path:filename>')
