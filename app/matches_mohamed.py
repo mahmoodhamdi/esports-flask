@@ -353,6 +353,5 @@ def get_matches_paginated(
         "page": page,
         "per_page": per_page,
         "total": total_tournaments,
-        "tournaments": paginated_tournaments,
-        "filtered_by_day": day if day else None
+        "tournaments": paginated_tournaments
     }

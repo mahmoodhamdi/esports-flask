@@ -7,6 +7,8 @@ from urllib.parse import urlparse
 from werkzeug.utils import secure_filename
 import requests
 from bs4 import BeautifulSoup
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 logger = logging.getLogger(__name__)
 
@@ -16,14 +18,11 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webp'}
 BASE_URL = 'https://liquipedia.net'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 
-from datetime import datetime
-from zoneinfo import ZoneInfo
 
 def convert_timestamp_to_eest(timestamp: int) -> str:
     dt_utc = datetime.utcfromtimestamp(timestamp).replace(tzinfo=ZoneInfo("UTC"))
     dt_eest = dt_utc.astimezone(ZoneInfo("Europe/Athens"))
     return dt_eest.strftime("%B %d, %Y - %H:%M EEST")
-
 def ensure_upload_folder():
     """Create uploads directory if it doesn't exist"""
     if not os.path.exists(UPLOAD_FOLDER):
