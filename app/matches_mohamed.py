@@ -309,8 +309,14 @@ def get_matches_paginated(
         tournament["games"] = sorted(tournament["games"], key=lambda g: g["game"])
         
         
-    priority = ['EWC 2025', 'Esports World Cup 2025']
-    
+    priority = [
+    'EWC 2025',
+    'Esports World Cup 2025',
+    'Esports World Cup 2025 - BO6'
+    'Esports World Cup 2025 - Warzone',
+    'Honor of Kings World Cup 2025',
+    'PUBG Mobile World Cup 2025',
+    ]
     sorted_tournaments = sorted(
         tournaments_map.values(),
         key=lambda t: (priority.index(t["tournament_name"]) if t["tournament_name"] in priority else float('inf'))
