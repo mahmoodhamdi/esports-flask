@@ -78,37 +78,18 @@ def parse_and_update_teams():
     return {"success": True}
 
 def get_teams(page=1, per_page=10, name_filter=None, game_filter=None, logo_mode_filter=None, all_filter=None):
-    """Retrieve teams with pagination and filters, preserving all data."""
     conn = get_connection()
     cursor = conn.cursor()
-    
+
     offset = (page - 1) * per_page
-    
-    # Construct the query with filters
-    if all_filter:
-        # Use FTS5 for full-text search across all fields
-        query = """
-            SELECT gt.team_name, gt.team_logo_url, gt.game_name, gt.game_url, gt.logo_mode, gt.logo_url
-            FROM game_teams gt
-            JOIN game_teams_fts gtf ON gt.id = gtf.rowid
-            WHERE gtf MATCH ?
-        """
-        count_query = """
-            SELECT COUNT(DISTINCT gt.team_name)
-            FROM game_teams gt
-            JOIN game_teams_fts gtf ON gt.id = gtf.rowid
-            WHERE gtf MATCH ?
-        """
-        params = [all_filter]
-    else:
-        query = """
-            SELECT team_name, team_logo_url, game_name, game_url, logo_mode, logo_url
-            FROM game_teams
-        """
+
+    try:
+        # ====== Step 1: Get distinct team names for pagination ======
+        team_name_query = "SELECT DISTINCT team_name FROM game_teams"
         count_query = "SELECT COUNT(DISTINCT team_name) FROM game_teams"
         params = []
-        
         where_clauses = []
+
         if name_filter:
             where_clauses.append("team_name LIKE ?")
             params.append(f"%{name_filter}%")
@@ -118,23 +99,37 @@ def get_teams(page=1, per_page=10, name_filter=None, game_filter=None, logo_mode
         if logo_mode_filter:
             where_clauses.append("logo_mode = ?")
             params.append(logo_mode_filter)
-        
+
         if where_clauses:
-            query += " WHERE " + " AND ".join(where_clauses)
-            count_query += " WHERE " + " AND ".join(where_clauses)
-    
-    try:
+            where_sql = " WHERE " + " AND ".join(where_clauses)
+            team_name_query += where_sql
+            count_query += where_sql
+
+        team_name_query += " LIMIT ? OFFSET ?"
+        team_params = params + [per_page, offset]
+
         # Get total count
         cursor.execute(count_query, params)
         total = cursor.fetchone()[0]
-        
-        # Get paginated teams
-        query += " LIMIT ? OFFSET ?"
-        params.extend([per_page, offset])
-        cursor.execute(query, params)
+
+        # Get team names for current page
+        cursor.execute(team_name_query, team_params)
+        team_names = [row[0] for row in cursor.fetchall()]
+
+        if not team_names:
+            return [], total
+
+        # ====== Step 2: Get full team data for these names ======
+        placeholders = ",".join("?" for _ in team_names)
+        full_data_query = f"""
+            SELECT team_name, team_logo_url, game_name, game_url, logo_mode, logo_url
+            FROM game_teams
+            WHERE team_name IN ({placeholders})
+        """
+        cursor.execute(full_data_query, team_names)
         rows = cursor.fetchall()
-        
-        # Group by team_name to match JSON structure
+
+        # Group by team_name
         teams_dict = {}
         for row in rows:
             team_name = row['team_name']
@@ -155,16 +150,16 @@ def get_teams(page=1, per_page=10, name_filter=None, game_filter=None, logo_mode
                 'mode': row['logo_mode'],
                 'url': row['logo_url']
             })
-        
-        # Convert to list and ensure games are a list
+
+        # Final formatting
         result = []
         for team in teams_dict.values():
             team['games'] = list(team['games'].values())
             result.append(team)
-        
-        logger.info(f"Retrieved {len(result)} teams (total: {total}) for page {page}, filters: name={name_filter}, game={game_filter}, logo_mode={logo_mode_filter}, all={all_filter}")
+
+        logger.info(f"Retrieved {len(result)} teams (total: {total}) for page {page}")
         return result, total
-    
+
     except sqlite3.Error as e:
         logger.error(f"Database query error: {str(e)}")
         return [], 0
