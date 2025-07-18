@@ -30,6 +30,23 @@ def init_db():
             )
         ''')
         
+        
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS matches (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                game TEXT,
+                status TEXT,
+                tournament TEXT,
+                team1 TEXT,
+                team2 TEXT,
+                score TEXT,
+                match_time TEXT,
+                format TEXT,
+                stream_link TEXT,
+                match_group TEXT
+            )
+        ''')    
+        
         # Create prize_distribution table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS prize_distribution (
