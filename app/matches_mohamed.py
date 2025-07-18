@@ -1,5 +1,7 @@
 import requests, random
 from bs4 import BeautifulSoup
+from datetime import datetime, date
+from zoneinfo import ZoneInfo
 from app.utils import convert_timestamp_to_eest
 from app.db import get_connection
 
@@ -29,6 +31,22 @@ def extract_team_logos(team_side_element):
     )
     return logo_light, logo_dark
 
+
+def parse_match_date(match_time_str):
+    """Extract date from match time string (e.g., 'July 24, 2025 - 15:30 EEST')"""
+    try:
+        # Parse the date part from the string
+        if match_time_str == "N/A" or not match_time_str:
+            return None
+        
+        # Extract date part (before the " - ")
+        date_part = match_time_str.split(" - ")[0]
+        
+        # Parse the date
+        parsed_date = datetime.strptime(date_part, "%B %d, %Y").date()
+        return parsed_date
+    except:
+        return None
 
 
 def scrape_matches(game: str = "dota2"):
@@ -198,6 +216,7 @@ def get_matches_paginated(
     games: list = [],
     tournaments: list = [],
     live: bool = False,
+    day: str = None,  # New parameter: format "YYYY-MM-DD"
     page: int = 1,
     per_page: int = 10
 ):
@@ -219,55 +238,52 @@ def get_matches_paginated(
     if live:
         where_clauses.append("status = 'Not Started'")
 
+    # Add day filter
+    if day:
+        try:
+            # Parse the day parameter (expected format: YYYY-MM-DD)
+            filter_date = datetime.strptime(day, "%Y-%m-%d").date()
+            
+            # Get all matches and filter by date in Python (since SQLite doesn't have native date parsing for our format)
+            where_clauses.append("match_time != 'N/A' AND match_time IS NOT NULL")
+            
+        except ValueError:
+            # Invalid date format, ignore the filter
+            pass
+
     where_sql = " AND ".join(where_clauses)
     if where_sql:
         where_sql = "WHERE " + where_sql
 
-    # Get total count
-    cursor.execute(f"""
-        SELECT COUNT(DISTINCT tournament)
-        FROM matches
-        {where_sql}
-    """, params)
-    total_tournaments = cursor.fetchone()[0]
-
-    # Get paginated tournament names
-    cursor.execute(f"""
-        SELECT DISTINCT tournament
-        FROM matches
-        {where_sql}
-        ORDER BY tournament
-        LIMIT ? OFFSET ?
-    """, params + [per_page, (page - 1) * per_page])
-    tournament_names = [row[0] for row in cursor.fetchall()]
-
-    if not tournament_names:
-        conn.close()
-        return {
-            "page": page,
-            "per_page": per_page,
-            "total": total_tournaments,
-            "tournaments": []
-        }
-
-    # Get all matches
-    match_params = list(params) + tournament_names
-    match_clause = f"{where_sql} AND tournament IN ({','.join(['?'] * len(tournament_names))})" \
-        if where_sql else f"WHERE tournament IN ({','.join(['?'] * len(tournament_names))})"
-
+    # First, get all matches that match the basic filters
     cursor.execute(f"""
         SELECT *
         FROM matches
-        {match_clause}
+        {where_sql}
         ORDER BY tournament, match_time
-    """, match_params)
+    """, params)
 
-    matches = cursor.fetchall()
+    all_matches = cursor.fetchall()
     keys = [column[0] for column in cursor.description]
-    matches_data = [dict(zip(keys, row)) for row in matches]
-    conn.close()
+    matches_data = [dict(zip(keys, row)) for row in all_matches]
 
-    # Build response
+    # Apply day filter in Python if specified
+    if day:
+        try:
+            filter_date = datetime.strptime(day, "%Y-%m-%d").date()
+            filtered_matches = []
+            
+            for match in matches_data:
+                match_date = parse_match_date(match.get('match_time'))
+                if match_date and match_date == filter_date:
+                    filtered_matches.append(match)
+            
+            matches_data = filtered_matches
+        except ValueError:
+            # Invalid date format, use all matches
+            pass
+
+    # Group matches by tournament
     tournaments_map = {}
     for match in matches_data:
         tournament_name = match['tournament']
@@ -302,28 +318,41 @@ def get_matches_paginated(
             "status": match["status"]
         })
 
-    # Sort
-    for tournament in tournaments_map.values():
+    # Apply pagination to tournaments
+    total_tournaments = len(tournaments_map)
+    tournament_list = list(tournaments_map.values())
+    
+    # Sort tournaments
+    priority = [
+        'EWC 2025',
+        'Esports World Cup 2025',
+        'Esports World Cup 2025 - BO6',
+        'Esports World Cup 2025 - Warzone',
+        'Honor of Kings World Cup 2025',
+        'PUBG Mobile World Cup 2025',
+    ]
+    
+    tournament_list.sort(
+        key=lambda t: (priority.index(t["tournament_name"]) if t["tournament_name"] in priority else float('inf'))
+    )
+
+    # Apply pagination
+    start_idx = (page - 1) * per_page
+    end_idx = start_idx + per_page
+    paginated_tournaments = tournament_list[start_idx:end_idx]
+
+    # Sort matches within each tournament
+    for tournament in paginated_tournaments:
         for game_entry in tournament["games"]:
             game_entry["matches"].sort(key=lambda m: m["match_time"])
         tournament["games"] = sorted(tournament["games"], key=lambda g: g["game"])
-        
-        
-    priority = [
-    'EWC 2025',
-    'Esports World Cup 2025',
-    'Esports World Cup 2025 - BO6'
-    'Esports World Cup 2025 - Warzone',
-    'Honor of Kings World Cup 2025',
-    'PUBG Mobile World Cup 2025',
-    ]
-    sorted_tournaments = sorted(
-        tournaments_map.values(),
-        key=lambda t: (priority.index(t["tournament_name"]) if t["tournament_name"] in priority else float('inf'))
-    )
+
+    conn.close()
+
     return {
         "page": page,
         "per_page": per_page,
         "total": total_tournaments,
-        "tournaments": sorted_tournaments
+        "tournaments": paginated_tournaments,
+        "filtered_by_day": day if day else None
     }
