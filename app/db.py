@@ -30,22 +30,30 @@ def init_db():
             )
         ''')
         
-        
+        # Create matches table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS matches (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                game TEXT,
-                status TEXT,
-                tournament TEXT,
-                team1 TEXT,
-                team2 TEXT,
-                score TEXT,
-                match_time TEXT,
-                format TEXT,
-                stream_link TEXT,
-                match_group TEXT
+                id INTEGER PRIMARY KEY AUTOINCREMENT,      -- unique match ID
+                game TEXT,                                  -- game name (e.g., dota2, valorant)
+                status TEXT,                                -- match status (Upcoming, Completed, etc.)
+                tournament TEXT,                            -- tournament name
+                tournament_link TEXT,                       -- URL to the tournament page
+                tournament_icon TEXT,                       -- tournament icon image URL
+                team1 TEXT,                                 -- name of team 1
+                logo1_light TEXT,                           -- team 1 logo (light theme)
+                logo1_dark TEXT,                            -- team 1 logo (dark theme)
+                team2 TEXT,                                 -- name of team 2
+                logo2_light TEXT,                           -- team 2 logo (light theme)
+                logo2_dark TEXT,                            -- team 2 logo (dark theme)
+                score TEXT,                                 -- match score (e.g., 2:0)
+                match_time TEXT,                            -- localized match time (EEST)
+                format TEXT,                                -- format (e.g., Bo3)
+                stream_link TEXT,                           -- stream URL
+                match_group TEXT                            -- group or bracket name
             )
-        ''')    
+        ''')
+
+
         
         # Create prize_distribution table
         cursor.execute('''
