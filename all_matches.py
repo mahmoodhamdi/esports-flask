@@ -81,7 +81,9 @@ def scrape_matches(game: str = "dota2"):
             team2 = match.select_one('.team-right .team-template-text a')
 
             team1_element = match.select_one('.team-left')
+            team1_url = f"{BASE_URL}{team1['href']}"if team1 and team1.has_attr('href') else ""
             team2_element = match.select_one('.team-right')
+            team2_url = f"{BASE_URL}{team2['href']}"if team2 and team2.has_attr('href') else ""
             logo1_light, logo1_dark = extract_team_logos(team1_element)
             logo2_light, logo2_dark = extract_team_logos(team2_element)
 
@@ -93,8 +95,14 @@ def scrape_matches(game: str = "dota2"):
             timestamp = timer_span.get("data-timestamp") if timer_span else None
             match_time = convert_timestamp_to_eest(int(timestamp)) if timestamp else "N/A"
 
-            stream_div = match.select_one('.match-streams a')
-            stream_link = f"{BASE_URL}{stream_div['href']}" if stream_div and stream_div.has_attr('href') else "None"
+            stream_links = []
+            for a in match.select('.match-streams a'):
+                if a.has_attr('href'):
+                    stream_links.append(f"{BASE_URL}{a['href']}")
+            
+            details_div = match.select_one('.match-bottom-bar a')
+            details_link = f"{BASE_URL}{details_div['href']}" if details_div and details_div.has_attr('href') else "N/A"
+
 
             tournament_tag = match.select_one('.match-tournament .tournament-name a')
             tournament_icon_tag = match.select_one('.match-tournament .tournament-icon img')
@@ -110,15 +118,18 @@ def scrape_matches(game: str = "dota2"):
 
             match_info = {
                 "team1": team1.text.strip() if team1 else "N/A",
+                'team1_url': team1_url,
                 "logo1_light": logo1_light,
                 "logo1_dark": logo1_dark,
                 "team2": team2.text.strip() if team2 else "N/A",
+                "team2_url" : team2_url,
                 "logo2_light": logo2_light,
                 "logo2_dark": logo2_dark,
                 "match_time": match_time,
                 "format": fmt.text.strip() if fmt else "N/A",
                 "score": score,
-                "stream_link": stream_link
+                "stream_link": stream_links,
+                "details_link": details_link
             }
 
             bracket_header = match.select_one('.bracket-header span') or match.select_one('.bracket-header')
@@ -150,6 +161,6 @@ def update_file_if_changed(game, new_data):
 
 
 if __name__ == "__main__":
-    game = "dota2"  
+    game = "valorant"  
     match_data = scrape_matches(game)
     update_file_if_changed(game, match_data)

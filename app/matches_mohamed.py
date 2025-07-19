@@ -1,36 +1,28 @@
-import requests, random
+import requests, random, json, os, hashlib
 from bs4 import BeautifulSoup
-from datetime import datetime, date
+from datetime import datetime
 from zoneinfo import ZoneInfo
 from app.utils import convert_timestamp_to_eest
 from app.db import get_connection
 
 BASE_URL = "https://liquipedia.net"
-USER_AGENTS = ['Mozilla/5.0', 'Safari/537.36']
+USER_AGENTS = [
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.1 Safari/605.1.15',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; rv:125.0) Gecko/20100101 Firefox/125.0'
+]
 
 session = requests.Session()
 session.headers.update({
     'User-Agent': random.choice(USER_AGENTS),
     'Referer': 'https://www.google.com/',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'DNT': '1',
+    'Cache-Control': 'no-cache',
+    'Pragma': 'no-cache',
+    'X-Requested-With': 'XMLHttpRequest'
 })
-
-
-def extract_team_logos(team_side_element):
-    if not team_side_element:
-        return "N/A", "N/A"
-
-    light_tag = team_side_element.select_one('.team-template-lightmode img')
-    dark_tag = team_side_element.select_one('.team-template-darkmode img')
-    fallback_tag = team_side_element.select_one('.team-template-image-icon img')
-
-    logo_light = f"{BASE_URL}{light_tag['src']}" if light_tag else (
-        f"{BASE_URL}{fallback_tag['src']}" if fallback_tag else "N/A"
-    )
-    logo_dark = f"{BASE_URL}{dark_tag['src']}" if dark_tag else (
-        f"{BASE_URL}{fallback_tag['src']}" if fallback_tag else "N/A"
-    )
-    return logo_light, logo_dark
-
 
 def parse_match_date(match_time_str):
     """Extract date from match time string (e.g., 'July 24, 2025 - 15:30 EEST')"""
@@ -48,6 +40,20 @@ def parse_match_date(match_time_str):
     except:
         return None
 
+def extract_team_logos(team_side_element):
+    if not team_side_element:
+        return "N/A", "N/A"
+    light_tag = team_side_element.select_one('.team-template-lightmode img')
+    dark_tag = team_side_element.select_one('.team-template-darkmode img')
+    fallback_tag = team_side_element.select_one('.team-template-image-icon img')
+    logo_light = f"{BASE_URL}{light_tag['src']}" if light_tag else (
+        f"{BASE_URL}{fallback_tag['src']}" if fallback_tag else "N/A"
+    )
+    logo_dark = f"{BASE_URL}{dark_tag['src']}" if dark_tag else (
+        f"{BASE_URL}{fallback_tag['src']}" if fallback_tag else "N/A"
+    )
+    return logo_light, logo_dark
+
 
 def scrape_matches(game: str = "dota2"):
     url = f"{BASE_URL}/{game}/api.php"
@@ -58,64 +64,101 @@ def scrape_matches(game: str = "dota2"):
         'prop': 'text'
     }
 
-    response = session.get(url, params=params)
+    response = session.get(url, params=params, timeout=10)
     soup = BeautifulSoup(response.json()['parse']['text']['*'], 'html.parser')
-    
-    matches_data = {}
+
+    data = {
+        "Upcoming": {},
+        "Completed": {}
+    }
 
     for section in soup.select('div[data-toggle-area-content]'):
         status = "Upcoming" if section.get('data-toggle-area-content') == "1" else "Completed"
-        
+
         for match in section.select('.match'):
             team1 = match.select_one('.team-left .team-template-text a')
             team2 = match.select_one('.team-right .team-template-text a')
 
             team1_el = match.select_one('.team-left')
             team2_el = match.select_one('.team-right')
+            team1_url = f"{BASE_URL}{team1['href']}" if team1 and team1.has_attr('href') else ""
+            team2_url = f"{BASE_URL}{team2['href']}" if team2 and team2.has_attr('href') else ""
+
             logo1_light, logo1_dark = extract_team_logos(team1_el)
             logo2_light, logo2_dark = extract_team_logos(team2_el)
 
             score_spans = [s.text.strip() for s in match.select('.versus-upper span') if s.text.strip()]
             score = ":".join(score_spans) if len(score_spans) >= 2 else ""
-            
+
             match_time_el = match.select_one(".timer-object")
             match_time = convert_timestamp_to_eest(int(match_time_el['data-timestamp'])) if match_time_el else "N/A"
-            
+
+            stream_links = []
+            for a in match.select('.match-streams a'):
+                if a.has_attr('href'):
+                    stream_links.append(f"{BASE_URL}{a['href']}")
+
+            details_tag = match.select_one('.match-bottom-bar a')
+            details_link = f"{BASE_URL}{details_tag['href']}" if details_tag and details_tag.has_attr('href') else "N/A"
+
             fmt = match.select_one('.versus-lower abbr')
             tournament_tag = match.select_one('.match-tournament .tournament-name a')
             tournament_icon_tag = match.select_one('.match-tournament .tournament-icon img')
             bracket = match.select_one('.bracket-header span') or match.select_one('.bracket-header')
-            stream_tag = match.select_one('.match-streams a')
 
-            tournament_name = tournament_tag.text.strip() if tournament_tag else "Unknown"
+            tournament_name = tournament_tag.text.strip() if tournament_tag else "Unknown Tournament"
 
-            if tournament_name not in matches_data.get(status, {}):
-                matches_data.setdefault(status, {})[tournament_name] = {
+            if tournament_name not in data[status]:
+                data[status][tournament_name] = {
                     "tournament": tournament_name,
                     "tournament_link": f"{BASE_URL}{tournament_tag['href']}" if tournament_tag else "",
                     "tournament_icon": f"{BASE_URL}{tournament_icon_tag['src']}" if tournament_icon_tag else "",
                     "matches": []
                 }
 
-            match_obj = {
+            match_info = {
                 "team1": team1.text.strip() if team1 else "N/A",
+                "team1_url": team1_url,
                 "logo1_light": logo1_light,
                 "logo1_dark": logo1_dark,
                 "team2": team2.text.strip() if team2 else "N/A",
+                "team2_url": team2_url,
                 "logo2_light": logo2_light,
                 "logo2_dark": logo2_dark,
-                "score": score,
                 "match_time": match_time,
                 "format": fmt.text.strip() if fmt else "N/A",
-                "stream_link": f"{BASE_URL}{stream_tag['href']}" if stream_tag and stream_tag.has_attr('href') else "N/A",
-                "group": bracket.text.strip() if bracket else None,
-                "status": status,
-                "game": game
+                "score": score,
+                "stream_link": stream_links,
+                "details_link": details_link
             }
 
-            matches_data[status][tournament_name]["matches"].append(match_obj)
+            if bracket:
+                match_info["group"] = bracket.text.strip()
 
-    return matches_data
+            data[status][tournament_name]["matches"].append(match_info)
+
+    return data
+
+
+def calculate_hash(obj):
+    return hashlib.md5(json.dumps(obj, sort_keys=True).encode()).hexdigest()
+
+
+def update_file_if_changed(game, new_data):
+    filename = f"{game}_matches.json"
+    old_data = {}
+    if os.path.exists(filename):
+        with open(filename, 'r', encoding='utf-8') as f:
+            old_data = json.load(f)
+
+    if calculate_hash(old_data) != calculate_hash(new_data):
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(new_data, f, ensure_ascii=False, indent=2)
+        print(f"✅ Updated {filename}")
+    else:
+        print("🟡 No changes detected.")
+
+    
 
 
 def save_matches_to_db(game: str, matches_data: dict):
@@ -133,10 +176,10 @@ def save_matches_to_db(game: str, matches_data: dict):
                 cursor.execute('''
                     INSERT INTO matches (
                         game, status, tournament, tournament_link, tournament_icon,
-                        team1, logo1_light, logo1_dark,
-                        team2, logo2_light, logo2_dark,
-                        score, match_time, format, stream_link, match_group
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        team1, team1_url, logo1_light, logo1_dark,
+                        team2, team2_url, logo2_light, logo2_dark,
+                        score, match_time, format, stream_links, details_link, match_group
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ''', (
                     game,
                     status,
@@ -144,15 +187,18 @@ def save_matches_to_db(game: str, matches_data: dict):
                     t_link,
                     t_icon,
                     match.get("team1"),
+                    match.get("team1_url"),
                     match.get("logo1_light"),
                     match.get("logo1_dark"),
                     match.get("team2"),
+                    match.get("team2_url"),
                     match.get("logo2_light"),
                     match.get("logo2_dark"),
                     match.get("score"),
                     match.get("match_time"),
                     match.get("format"),
-                    match.get("stream_link"),
+                    json.dumps(match.get("stream_link", [])),
+                    match.get("details_link"),
                     match.get("group")
                 ))
     conn.commit()
@@ -305,15 +351,18 @@ def get_matches_paginated(
 
         game_entry["matches"].append({
             "team1": match["team1"],
+            "team1_url": match.get("team1_url"),
             "logo1_light": match["logo1_light"],
             "logo1_dark": match["logo1_dark"],
             "team2": match["team2"],
+            "team2_url": match.get("team2_url"),
             "logo2_light": match["logo2_light"],
             "logo2_dark": match["logo2_dark"],
             "score": match["score"],
             "match_time": match["match_time"],
             "format": match["format"],
-            "stream_link": match["stream_link"],
+            "stream_link": json.loads(match["stream_links"]) if match.get("stream_links") else [],
+            "details_link": match.get("details_link"),
             "group": match["match_group"],
             "status": match["status"]
         })
