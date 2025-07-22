@@ -41,17 +41,33 @@ def parse_match_date(match_time_str):
         return None
 
 def extract_team_logos(team_side_element):
-    if not team_side_element:
+    if team_side_element is None:
         return "N/A", "N/A"
+    
     light_tag = team_side_element.select_one('.team-template-lightmode img')
     dark_tag = team_side_element.select_one('.team-template-darkmode img')
     fallback_tag = team_side_element.select_one('.team-template-image-icon img')
-    logo_light = f"{BASE_URL}{light_tag['src']}" if light_tag else (
-        f"{BASE_URL}{fallback_tag['src']}" if fallback_tag else "N/A"
+    flag_tag = team_side_element.select_one('.flag img')
+
+    def get_src(tag):
+        return f"{BASE_URL}{tag['src']}" if tag and tag.has_attr("src") else "N/A"
+
+    logo_light = (
+        get_src(light_tag)
+        if light_tag else
+        get_src(fallback_tag)
+        if fallback_tag else
+        get_src(flag_tag)
     )
-    logo_dark = f"{BASE_URL}{dark_tag['src']}" if dark_tag else (
-        f"{BASE_URL}{fallback_tag['src']}" if fallback_tag else "N/A"
+
+    logo_dark = (
+        get_src(dark_tag)
+        if dark_tag else
+        get_src(fallback_tag)
+        if fallback_tag else
+        get_src(flag_tag)
     )
+
     return logo_light, logo_dark
 
 
@@ -73,11 +89,15 @@ def scrape_matches(game: str = "dota2"):
     }
 
     for section in soup.select('div[data-toggle-area-content]'):
-        status = "Upcoming" if section.get('data-toggle-area-content') == "1" else "Completed"
+        section_type = section.get('data-toggle-area-content')
+        status = "Upcoming" if section_type == "1" else "Completed" if section_type == "2" else "Other"
+        if status not in data:
+            continue
 
         for match in section.select('.match'):
-            team1 = match.select_one('.team-left .team-template-text a')
-            team2 = match.select_one('.team-right .team-template-text a')
+            # دعم اللاعبين الفرديين كمان
+            team1 = match.select_one('.team-left .team-template-text a, .team-left .inline-player a')
+            team2 = match.select_one('.team-right .team-template-text a, .team-right .inline-player a')
 
             team1_el = match.select_one('.team-left')
             team2_el = match.select_one('.team-right')
@@ -138,7 +158,6 @@ def scrape_matches(game: str = "dota2"):
             data[status][tournament_name]["matches"].append(match_info)
 
     return data
-
 
 def calculate_hash(obj):
     return hashlib.md5(json.dumps(obj, sort_keys=True).encode()).hexdigest()

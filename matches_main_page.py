@@ -35,8 +35,6 @@ def convert_timestamp_to_eest(timestamp: int) -> str:
 
 
 def extract_team_logos(team_side_element):
-    if team_side_element is None:
-        return "N/A", "N/A"
     light_tag = team_side_element.select_one('.team-template-lightmode img')
     dark_tag = team_side_element.select_one('.team-template-darkmode img')
     fallback_tag = team_side_element.select_one('.team-template-image-icon img')
@@ -65,11 +63,9 @@ def extract_team_logos(team_side_element):
     return logo_light, logo_dark
 
 
-
-
-def scrape_matches(game: str = "honorofkings"):
+def scrape_matches(game: str = "starcraft"):
     API_URL = f"{BASE_URL}/{game}/api.php"
-    PAGE = "Liquipedia:Matches"
+    PAGE = "Main_Page"
 
     params = {
         'action': 'parse',
@@ -96,8 +92,8 @@ def scrape_matches(game: str = "honorofkings"):
             continue
 
         for match in section.select('.match'):
-            team1 = match.select_one('.team-left .team-template-text a, .team-left .inline-player a')
-            team2 = match.select_one('.team-right .team-template-text a, .team-right .inline-player a')
+            team1 = match.select_one('.team-left .starcraft-inline-player a, .team-left .inline-player a')
+            team2 = match.select_one('.team-right .starcraft-inline-player a, .team-right .inline-player a')
 
             team1_element = match.select_one('.team-left')
             team1_url = f"{BASE_URL}{team1['href']}"if team1 and team1.has_attr('href') else ""
@@ -180,6 +176,6 @@ def update_file_if_changed(game, new_data):
 
 
 if __name__ == "__main__":
-    game = "honorofkings"  
+    game = "starcraft"  
     match_data = scrape_matches(game)
     update_file_if_changed(game, match_data)
