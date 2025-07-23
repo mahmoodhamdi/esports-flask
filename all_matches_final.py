@@ -35,8 +35,6 @@ def convert_timestamp_to_eest(timestamp: int) -> str:
 
 
 def extract_team_logos(team_side_element):
-    if team_side_element is None:
-        return "N/A", "N/A"
     light_tag = team_side_element.select_one('.team-template-lightmode img')
     dark_tag = team_side_element.select_one('.team-template-darkmode img')
     fallback_tag = team_side_element.select_one('.team-template-image-icon img')
@@ -64,12 +62,20 @@ def extract_team_logos(team_side_element):
 
     return logo_light, logo_dark
 
+def extract_tournament_icon(match):
+    dark_icon = match.select_one('.match-info-tournament .darkmode img')
+    light_icon = match.select_one('.match-info-tournament .lightmode img')
+    any_icon = match.select_one('.match-info-tournament img')
+
+    def get_src(tag):
+        return f"{BASE_URL}{tag['src']}" if tag and tag.has_attr('src') else ""
+
+    return get_src(dark_icon) or get_src(light_icon) or get_src(any_icon) or "N/A"
 
 
-
-def scrape_matches(game: str = "honorofkings"):
+def scrape_matches(game: str = "valorant"):
     API_URL = f"{BASE_URL}/{game}/api.php"
-    PAGE = "Liquipedia:Matches"
+    PAGE = "Main_Page"
 
     params = {
         'action': 'parse',
@@ -95,35 +101,40 @@ def scrape_matches(game: str = "honorofkings"):
         if status not in data:
             continue
 
-        for match in section.select('.match'):
-            team1 = match.select_one('.team-left .team-template-text a, .team-left .inline-player a')
-            team2 = match.select_one('.team-right .team-template-text a, .team-right .inline-player a')
+        for match in section.select('.match-info'):
+            team1 = match.select_one('.match-info-header-opponent-left .name a')
+            team2 = match.select_one('.match-info-header-opponent:not(.match-info-header-opponent-left) .name a')
 
-            team1_element = match.select_one('.team-left')
+            team1_element = match.select_one('.match-info-header-opponent-left')
             team1_url = f"{BASE_URL}{team1['href']}"if team1 and team1.has_attr('href') else ""
-            team2_element = match.select_one('.team-right')
+            team2_element = match.select_one('.match-info-header-opponent:not(.match-info-header-opponent-left)')
             team2_url = f"{BASE_URL}{team2['href']}"if team2 and team2.has_attr('href') else ""
             logo1_light, logo1_dark = extract_team_logos(team1_element)
             logo2_light, logo2_dark = extract_team_logos(team2_element)
 
-            fmt = match.select_one('.versus-lower abbr')
-            score_spans = [s.text.strip() for s in match.select('.versus-upper span') if s.text.strip()]
-            score = ":".join(score_spans) if len(score_spans) >= 2 else ""
+            fmt = match.select_one('.match-info-header-scoreholder-lower')
+            score_spans = [s.text.strip() for s in match.select('.match-info-header-scoreholder-score')]
+            score = ":".join(score_spans) if len(score_spans) == 2 else ""
 
             timer_span = match.select_one(".timer-object")
             timestamp = timer_span.get("data-timestamp") if timer_span else None
             match_time = convert_timestamp_to_eest(int(timestamp)) if timestamp else "N/A"
 
             stream_links = []
-            for a in match.select('.match-streams a'):
+            for a in match.select('.match-info-links a'):
                 if a.has_attr('href'):
-                    stream_links.append(f"{BASE_URL}{a['href']}")
+                   href = a['href']
+                   full_link = href if href.startswith("http") else f"{BASE_URL}{href}"
+                   stream_links.append(full_link)
             
-            details_div = match.select_one('.match-bottom-bar a')
-            details_link = f"{BASE_URL}{details_div['href']}" if details_div and details_div.has_attr('href') else "N/A"
+            details_div = match.select_one('.match-info-links a')
+            details_link = next(
+                           (f"{BASE_URL}{a['href']}" for a in match.select('.match-info-links a')
+                           if 'match:' in a['href'].lower()), "N/A"
+                            )
 
 
-            tournament_tag = match.select_one('.match-tournament .tournament-name a')
+            tournament_tag = match.select_one('.match-info-tournament .tournament-name a')
             tournament_icon_tag = match.select_one('.match-tournament .tournament-icon img')
 
             tournament_name = tournament_tag.text.strip() if tournament_tag else "Unknown Tournament"
@@ -131,7 +142,7 @@ def scrape_matches(game: str = "honorofkings"):
                 data[status][tournament_name] = {
                     "tournament": tournament_name,
                     "tournament_link": f"{BASE_URL}{tournament_tag['href']}" if tournament_tag else "",
-                    "tournament_icon": f"{BASE_URL}{tournament_icon_tag['src']}" if tournament_icon_tag else "",
+                    "tournament_icon": extract_tournament_icon(match),
                     "matches": []
                 }
 
@@ -180,6 +191,6 @@ def update_file_if_changed(game, new_data):
 
 
 if __name__ == "__main__":
-    game = "honorofkings"  
+    game = "valorant"  
     match_data = scrape_matches(game)
     update_file_if_changed(game, match_data)

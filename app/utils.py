@@ -18,6 +18,25 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webp'}
 BASE_URL = 'https://liquipedia.net'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 
+from urllib.parse import urlparse, parse_qs
+
+from urllib.parse import urlparse, parse_qs
+
+def clean_liquipedia_url(full_url: str) -> str:
+    """
+    Converts redlink URLs like:
+    https://liquipedia.net/dota2/index.php?title=Team_Lynx&action=edit&redlink=1
+    into:
+    https://liquipedia.net/dota2/Team_Lynx
+    """
+    if "index.php?" in full_url and "title=" in full_url:
+
+        base_part, query_part = full_url.split("index.php?", 1)
+        query_dict = parse_qs(query_part)
+        title = query_dict.get("title", [""])[0]
+        return f"{base_part}{title}"
+    return full_url
+
 
 def convert_timestamp_to_eest(timestamp: int) -> str:
     dt_utc = datetime.utcfromtimestamp(timestamp).replace(tzinfo=ZoneInfo("UTC"))
