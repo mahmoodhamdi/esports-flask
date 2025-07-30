@@ -9,6 +9,12 @@ def get_connection():
     conn = sqlite3.connect("news.db")
     conn.row_factory = sqlite3.Row
     return conn
+import hashlib
+
+
+def generate_match_uid(game, team1, team2, match_time, details_link):
+    key = f"{game}_{team1}_{team2}_{match_time}_{details_link}"
+    return hashlib.md5(key.encode()).hexdigest()
 
 def init_db():
     """Initialize the SQLite database with all required tables"""
@@ -16,20 +22,6 @@ def init_db():
     cursor = conn.cursor()
     
     try:
-        # Create news table
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS news (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                title TEXT NOT NULL,
-                description TEXT,
-                writer TEXT NOT NULL,
-                thumbnail_url TEXT,
-                news_link TEXT,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
-        ''')
-        
         # Create matches table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS matches (
@@ -55,7 +47,31 @@ def init_db():
                 match_group TEXT
             )
         ''')
+        # Try to add uid column (skip if already exists)
+        try:
+            cursor.execute("ALTER TABLE matches ADD COLUMN uid TEXT")
+        except sqlite3.OperationalError as e:
+            if "duplicate column name" not in str(e).lower():
+                raise  # Raise if it's a different error
 
+        cursor.execute('''
+            CREATE UNIQUE INDEX IF NOT EXISTS idx_matches_uid ON matches(uid);
+        ''')
+        
+        # Create news table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS news (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                title TEXT NOT NULL,
+                description TEXT,
+                writer TEXT NOT NULL,
+                thumbnail_url TEXT,
+                news_link TEXT,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ''')
+        
 
         
         # Create prize_distribution table

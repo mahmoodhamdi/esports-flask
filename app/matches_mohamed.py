@@ -3,9 +3,10 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from app.utils import clean_liquipedia_url, BASE_URL
-from app.db import get_connection
 import pytz
 from dateutil import tz
+import json
+from app.db import get_connection, generate_match_uid
 
 USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
@@ -161,34 +162,51 @@ def update_file_if_changed(game, new_data):
     else:
         print("🟡 No changes detected.")
 
+
 def save_matches_to_db(game: str, matches_data: dict):
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("DELETE FROM matches WHERE game = ?", (game, ))
+
     for status, tournaments in matches_data.items():
         for tournament_name, tournament_info in tournaments.items():
             t_link = tournament_info.get("tournament_link", "")
             t_icon = tournament_info.get("tournament_icon", "")
             for match in tournament_info["matches"]:
-                cursor.execute(
-                    '''
+                team1 = match.get("team1", "")
+                team2 = match.get("team2", "")
+                match_time = match.get("match_time", "")
+                details_link = match.get("details_link", "")
+                uid = generate_match_uid(game, team1, team2, match_time, details_link)
+
+                cursor.execute('''
                     INSERT INTO matches (
                         game, status, tournament, tournament_link, tournament_icon,
                         team1, team1_url, logo1_light, logo1_dark,
                         team2, team2_url, logo2_light, logo2_dark,
-                        score, match_time, format, stream_links, details_link, match_group
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                    ''', (game, status, tournament_name, t_link, t_icon,
-                          match.get("team1"), match.get("team1_url"),
-                          match.get("logo1_light"), match.get("logo1_dark"),
-                          match.get("team2"), match.get("team2_url"),
-                          match.get("logo2_light"), match.get("logo2_dark"),
-                          match.get("score"), match.get("match_time"),
-                          match.get("format"),
-                          json.dumps(match.get("stream_link", [])),
-                          match.get("details_link"), match.get("group")))
+                        score, match_time, format, stream_links, details_link, match_group, uid
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ON CONFLICT(uid) DO UPDATE SET
+                        status = excluded.status,
+                        score = excluded.score,
+                        match_time = excluded.match_time,
+                        stream_links = excluded.stream_links,
+                        tournament = excluded.tournament,
+                        tournament_icon = excluded.tournament_icon,
+                        format = excluded.format
+                ''', (
+                    game, status, tournament_name, t_link, t_icon,
+                    team1, match.get("team1_url"),
+                    match.get("logo1_light"), match.get("logo1_dark"),
+                    team2, match.get("team2_url"),
+                    match.get("logo2_light"), match.get("logo2_dark"),
+                    match.get("score"), match_time,
+                    match.get("format"), json.dumps(match.get("stream_link", [])),
+                    match.get("details_link"), match.get("group"), uid
+                ))
+
     conn.commit()
     conn.close()
+
 
 def get_matches_by_filters(games=[], tournaments=[], live=False, page=1, per_page=10):
     conn = get_connection()
