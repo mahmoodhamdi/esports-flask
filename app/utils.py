@@ -38,10 +38,15 @@ def clean_liquipedia_url(full_url: str) -> str:
     return full_url
 
 
-def convert_timestamp_to_eest(timestamp: int) -> str:
-    dt_utc = datetime.utcfromtimestamp(timestamp).replace(tzinfo=ZoneInfo("UTC"))
-    dt_eest = dt_utc.astimezone(ZoneInfo("Europe/Athens"))
-    return dt_eest.strftime("%B %d, %Y - %H:%M EEST")
+def convert_timestamp_to_local(timestamp: int, client_tz: str = "Asia/Riyadh") -> str:
+    try:
+        dt_utc = datetime.utcfromtimestamp(timestamp).replace(tzinfo=ZoneInfo("UTC"))
+        dt_local = dt_utc.astimezone(ZoneInfo(client_tz))
+        return dt_local.strftime("%B %d, %Y - %I:%M %p")
+    except Exception as e:
+        print(f"[ERROR] Invalid timezone '{client_tz}': {e}")
+        return "N/A"
+
 def ensure_upload_folder():
     """Create uploads directory if it doesn't exist"""
     if not os.path.exists(UPLOAD_FOLDER):

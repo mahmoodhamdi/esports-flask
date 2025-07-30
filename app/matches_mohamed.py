@@ -2,8 +2,10 @@ import requests, random, json, os, hashlib
 from bs4 import BeautifulSoup
 from datetime import datetime
 from zoneinfo import ZoneInfo
-from app.utils import clean_liquipedia_url, convert_timestamp_to_eest, BASE_URL
+from app.utils import clean_liquipedia_url, BASE_URL
 from app.db import get_connection
+import pytz
+from dateutil import tz
 
 USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
@@ -23,34 +25,18 @@ session.headers.update({
     'X-Requested-With': 'XMLHttpRequest'
 })
 
-
-def parse_match_date(match_time_str):
-    try:
-        if match_time_str == "N/A" or not match_time_str:
-            return None
-        date_part = match_time_str.split(" - ")[0]
-        return datetime.strptime(date_part, "%B %d, %Y").date()
-    except:
-        return None
-
-
-def convert_timestamp_to_eest(timestamp: int) -> str:
-    dt_utc = datetime.utcfromtimestamp(timestamp).replace(
-        tzinfo=ZoneInfo("UTC"))
-    dt_eest = dt_utc.astimezone(ZoneInfo("Europe/Athens"))  # EEST (UTC+3)
-    return dt_eest.strftime("%B %d, %Y - %H:%M EEST")
-
+def convert_timestamp_to_utc_iso(timestamp: int) -> str:
+    dt_utc = datetime.utcfromtimestamp(timestamp).replace(tzinfo=ZoneInfo("UTC"))
+    return dt_utc.isoformat()
 
 def extract_team_logos(team_side_element):
     light_tag = team_side_element.select_one('.team-template-lightmode img')
     dark_tag = team_side_element.select_one('.team-template-darkmode img')
-    fallback_tag = team_side_element.select_one(
-        '.team-template-image-icon img')
+    fallback_tag = team_side_element.select_one('.team-template-image-icon img')
     flag_tag = team_side_element.select_one('.flag img')
 
     def get_src(tag):
-        return f"{BASE_URL}{tag['src']}" if tag and tag.has_attr(
-            "src") else "N/A"
+        return f"{BASE_URL}{tag['src']}" if tag and tag.has_attr("src") else "N/A"
 
     logo_light = (get_src(light_tag) if light_tag else
                   get_src(fallback_tag) if fallback_tag else get_src(flag_tag))
@@ -60,7 +46,6 @@ def extract_team_logos(team_side_element):
 
     return logo_light, logo_dark
 
-
 def extract_tournament_icon(match):
     dark_icon = match.select_one('.match-info-tournament .darkmode img')
     light_icon = match.select_one('.match-info-tournament .lightmode img')
@@ -69,9 +54,7 @@ def extract_tournament_icon(match):
     def get_src(tag):
         return f"{BASE_URL}{tag['src']}" if tag and tag.has_attr('src') else ""
 
-    return get_src(dark_icon) or get_src(light_icon) or get_src(
-        any_icon) or "N/A"
-
+    return get_src(dark_icon) or get_src(light_icon) or get_src(any_icon) or "N/A"
 
 def scrape_matches(game: str = "valorant"):
     API_URL = f"{BASE_URL}/{game}/api.php"
@@ -98,22 +81,14 @@ def scrape_matches(game: str = "valorant"):
             continue
 
         for match in section.select('.match-info'):
-            team1 = match.select_one(
-                '.match-info-header-opponent-left .name a')
-            team2 = match.select_one(
-                '.match-info-header-opponent:not(.match-info-header-opponent-left) .name a'
-            )
+            team1 = match.select_one('.match-info-header-opponent-left .name a')
+            team2 = match.select_one('.match-info-header-opponent:not(.match-info-header-opponent-left) .name a')
 
-            team1_element = match.select_one(
-                '.match-info-header-opponent-left')
-            team2_element = match.select_one(
-                '.match-info-header-opponent:not(.match-info-header-opponent-left)'
-            )
+            team1_element = match.select_one('.match-info-header-opponent-left')
+            team2_element = match.select_one('.match-info-header-opponent:not(.match-info-header-opponent-left)')
 
-            team1_url_raw = f"{BASE_URL}{team1['href']}" if team1 and team1.has_attr(
-                'href') else ""
-            team2_url_raw = f"{BASE_URL}{team2['href']}" if team2 and team2.has_attr(
-                'href') else ""
+            team1_url_raw = f"{BASE_URL}{team1['href']}" if team1 and team1.has_attr('href') else ""
+            team2_url_raw = f"{BASE_URL}{team2['href']}" if team2 and team2.has_attr('href') else ""
 
             team1_url = clean_liquipedia_url(team1_url_raw)
             team2_url = clean_liquipedia_url(team2_url_raw)
@@ -122,86 +97,55 @@ def scrape_matches(game: str = "valorant"):
             logo2_light, logo2_dark = extract_team_logos(team2_element)
 
             fmt = match.select_one('.match-info-header-scoreholder-lower')
-            score_spans = [
-                s.text.strip()
-                for s in match.select('.match-info-header-scoreholder-score')
-            ]
+            score_spans = [s.text.strip() for s in match.select('.match-info-header-scoreholder-score')]
             score = ":".join(score_spans) if len(score_spans) == 2 else ""
 
             timer_span = match.select_one(".timer-object")
-            timestamp = timer_span.get(
-                "data-timestamp") if timer_span else None
-            match_time = convert_timestamp_to_eest(
-                int(timestamp)) if timestamp else "N/A"
+            timestamp = timer_span.get("data-timestamp") if timer_span else None
+            match_time = convert_timestamp_to_utc_iso(int(timestamp)) if timestamp else None
 
             stream_links = []
             for a in match.select('.match-info-links a'):
                 href = a.get('href', '')
-                full_link = href if href.startswith(
-                    "http") else f"{BASE_URL}{href}"
+                full_link = href if href.startswith("http") else f"{BASE_URL}{href}"
                 stream_links.append(full_link)
 
-            details_link = next((f"{BASE_URL}{a['href']}"
-                                 for a in match.select('.match-info-links a')
-                                 if 'match:' in a['href'].lower()), "N/A")
+            details_link = next((f"{BASE_URL}{a['href']}" for a in match.select('.match-info-links a') if 'match:' in a['href'].lower()), "N/A")
 
-            tournament_tag = match.select_one(
-                '.match-info-tournament .tournament-name a')
-            tournament_name = tournament_tag.text.strip(
-            ) if tournament_tag else "Unknown Tournament"
+            tournament_tag = match.select_one('.match-info-tournament .tournament-name a')
+            tournament_name = tournament_tag.text.strip() if tournament_tag else "Unknown Tournament"
 
             if tournament_name not in data[status]:
                 data[status][tournament_name] = {
-                    "tournament":
-                    tournament_name,
-                    "tournament_link":
-                    f"{BASE_URL}{tournament_tag['href']}"
-                    if tournament_tag else "",
-                    "tournament_icon":
-                    extract_tournament_icon(match),
+                    "tournament": tournament_name,
+                    "tournament_link": f"{BASE_URL}{tournament_tag['href']}" if tournament_tag else "",
+                    "tournament_icon": extract_tournament_icon(match),
                     "matches": []
                 }
 
             match_info = {
-                "team1":
-                team1.text.strip() if team1 else "N/A",
-                "team1_url":
-                team1_url,
-                "logo1_light":
-                logo1_light,
-                "logo1_dark":
-                logo1_dark,
-                "team2":
-                team2.text.strip() if team2 else "N/A",
-                "team2_url":
-                team2_url,
-                "logo2_light":
-                logo2_light,
-                "logo2_dark":
-                logo2_dark,
-                "match_time":
-                match_time,
-                "format":
-                fmt.text.strip() if fmt else "N/A",
-                "score":
-                score,
-                "stream_link":
-                stream_links,
-                "details_link":
-                details_link,
-                "group": (match.select_one('.bracket-header span')
-                          or match.select_one('.bracket-header')).text.strip()
-                if match.select_one('.bracket-header') else None
+                "team1": team1.text.strip() if team1 else "N/A",
+                "team1_url": team1_url,
+                "logo1_light": logo1_light,
+                "logo1_dark": logo1_dark,
+                "team2": team2.text.strip() if team2 else "N/A",
+                "team2_url": team2_url,
+                "logo2_light": logo2_light,
+                "logo2_dark": logo2_dark,
+                "match_time": match_time,
+                "format": fmt.text.strip() if fmt else "N/A",
+                "score": score,
+                "stream_link": stream_links,
+                "details_link": details_link,
+                "group": (match.select_one('.bracket-header span') or match.select_one('.bracket-header')).text.strip() if match.select_one('.bracket-header') else None
             }
 
             data[status][tournament_name]["matches"].append(match_info)
 
     return data
 
-
 def calculate_hash(obj):
     return hashlib.md5(json.dumps(obj, sort_keys=True).encode()).hexdigest()
-
 
 def update_file_if_changed(game, new_data):
     filename = f"{game}_matches.json"
@@ -216,7 +160,6 @@ def update_file_if_changed(game, new_data):
         print(f"✅ Updated {filename}")
     else:
         print("🟡 No changes detected.")
-
 
 def save_matches_to_db(game: str, matches_data: dict):
     conn = get_connection()
@@ -235,24 +178,19 @@ def save_matches_to_db(game: str, matches_data: dict):
                         team2, team2_url, logo2_light, logo2_dark,
                         score, match_time, format, stream_links, details_link, match_group
                     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                ''', (game, status, tournament_name, t_link, t_icon,
-                      match.get("team1"), match.get("team1_url"),
-                      match.get("logo1_light"), match.get("logo1_dark"),
-                      match.get("team2"), match.get("team2_url"),
-                      match.get("logo2_light"), match.get("logo2_dark"),
-                      match.get("score"), match.get("match_time"),
-                      match.get("format"),
-                      json.dumps(match.get("stream_link", [])),
-                      match.get("details_link"), match.get("group")))
+                    ''', (game, status, tournament_name, t_link, t_icon,
+                          match.get("team1"), match.get("team1_url"),
+                          match.get("logo1_light"), match.get("logo1_dark"),
+                          match.get("team2"), match.get("team2_url"),
+                          match.get("logo2_light"), match.get("logo2_dark"),
+                          match.get("score"), match.get("match_time"),
+                          match.get("format"),
+                          json.dumps(match.get("stream_link", [])),
+                          match.get("details_link"), match.get("group")))
     conn.commit()
     conn.close()
 
-
-def get_matches_by_filters(games=[],
-                           tournaments=[],
-                           live=False,
-                           page=1,
-                           per_page=10):
+def get_matches_by_filters(games=[], tournaments=[], live=False, page=1, per_page=10):
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -285,7 +223,6 @@ def get_matches_by_filters(games=[],
     conn.close()
     return result, total
 
-
 def get_matches_from_db(game: str):
     conn = get_connection()
     cursor = conn.cursor()
@@ -295,35 +232,40 @@ def get_matches_from_db(game: str):
 
     result = {}
     for row in rows:
-        result.setdefault(row["status"],
-                          {}).setdefault(row["tournament"],
-                                         {"matches": []})["matches"].append({
-                                             "team1":
-                                             row["team1"],
-                                             "team2":
-                                             row["team2"],
-                                             "score":
-                                             row["score"],
-                                             "match_time":
-                                             row["match_time"],
-                                             "format":
-                                             row["format"],
-                                             "stream_link":
-                                             row["stream_link"],
-                                             "group":
-                                             row["match_group"]
-                                         })
+        result.setdefault(row["status"], {}).setdefault(row["tournament"], {"matches": []})["matches"].append({
+            "team1": row["team1"],
+            "team2": row["team2"],
+            "score": row["score"],
+            "match_time": row["match_time"],
+            "format": row["format"],
+            "stream_link": row["stream_link"],
+            "group": row["match_group"]
+        })
 
     return result
 
+def parse_match_date(match_time_str, timezone_str="UTC"):
+    try:
+        if not match_time_str or match_time_str == "N/A":
+            return None
+
+        date_part, time_part = match_time_str.split(" - ")
+        dt = datetime.strptime(f"{date_part} {time_part}", "%B %d, %Y %H:%M")
+        dt = pytz.utc.localize(dt)
+        local_tz = pytz.timezone(timezone_str)
+        local_dt = dt.astimezone(local_tz)
+        return local_dt
+    except Exception as e:
+        return None
 
 def get_matches_paginated(
         games: list = [],
         tournaments: list = [],
         live: bool = False,
-        day: str = None,  # New parameter: format "YYYY-MM-DD"
+        day: str = None,
         page: int = 1,
-        per_page: int = 10):
+        per_page: int = 10,
+        timezone: str = "UTC"):
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -336,58 +278,62 @@ def get_matches_paginated(
         params.extend(games)
 
     if tournaments:
-        where_clauses.append(
-            f"tournament IN ({','.join(['?'] * len(tournaments))})")
+        where_clauses.append(f"tournament IN ({','.join(['?'] * len(tournaments))})")
         params.extend(tournaments)
 
     if live:
         where_clauses.append("status = 'Not Started'")
 
-    # Add day filter
     if day:
         try:
-            # Parse the day parameter (expected format: YYYY-MM-DD)
             filter_date = datetime.strptime(day, "%Y-%m-%d").date()
-
-            # Get all matches and filter by date in Python (since SQLite doesn't have native date parsing for our format)
-            where_clauses.append(
-                "match_time != 'N/A' AND match_time IS NOT NULL")
-
+            where_clauses.append("match_time != 'N/A' AND match_time IS NOT NULL")
         except ValueError:
-            # Invalid date format, ignore the filter
             pass
 
     where_sql = " AND ".join(where_clauses)
     if where_sql:
         where_sql = "WHERE " + where_sql
 
-    # First, get all matches that match the basic filters
     cursor.execute(
         f"""
         SELECT *
         FROM matches
         {where_sql}
         ORDER BY tournament, match_time
-    """, params)
+        """, params)
 
     all_matches = cursor.fetchall()
     keys = [column[0] for column in cursor.description]
     matches_data = [dict(zip(keys, row)) for row in all_matches]
+
+    # تحويل الوقت إلى التوقيت المحلي إذا كان live=False
+    if not live and timezone:
+        for match in matches_data:
+            if match['match_time'] and match['match_time'] != 'N/A':
+                try:
+                    # تحويل الوقت من UTC إلى التوقيت المحلي
+                    dt_utc = datetime.fromisoformat(match['match_time'])
+                    local_tz = ZoneInfo(timezone)
+                    local_dt = dt_utc.astimezone(local_tz)
+                    match['match_time'] = local_dt.isoformat()
+                except ValueError:
+                    match['match_time'] = None  # في حالة وجود خطأ في تحويل الوقت
 
     # Apply day filter in Python if specified
     if day:
         try:
             filter_date = datetime.strptime(day, "%Y-%m-%d").date()
             filtered_matches = []
-
             for match in matches_data:
-                match_date = parse_match_date(match.get('match_time'))
-                if match_date and match_date == filter_date:
-                    filtered_matches.append(match)
-
+                if match['match_time'] and match['match_time'] != 'N/A':
+                    match_dt = datetime.fromisoformat(match['match_time']).date()
+                    if match_dt == filter_date:
+                        filtered_matches.append(match)
+                else:
+                    continue
             matches_data = filtered_matches
         except ValueError:
-            # Invalid date format, use all matches
             pass
 
     # Group matches by tournament
@@ -402,44 +348,27 @@ def get_matches_paginated(
                 "games": []
             }
 
-        game_entry = next((g for g in tournaments_map[tournament_name]["games"]
-                           if g["game"] == match["game"]), None)
+        game_entry = next((g for g in tournaments_map[tournament_name]["games"] if g["game"] == match["game"]), None)
         if not game_entry:
             game_entry = {"game": match["game"], "matches": []}
             tournaments_map[tournament_name]["games"].append(game_entry)
 
         game_entry["matches"].append({
-            "team1":
-            match["team1"],
-            "team1_url":
-            match.get("team1_url"),
-            "logo1_light":
-            match["logo1_light"],
-            "logo1_dark":
-            match["logo1_dark"],
-            "team2":
-            match["team2"],
-            "team2_url":
-            match.get("team2_url"),
-            "logo2_light":
-            match["logo2_light"],
-            "logo2_dark":
-            match["logo2_dark"],
-            "score":
-            match["score"],
-            "match_time":
-            match["match_time"],
-            "format":
-            match["format"],
-            "stream_link":
-            json.loads(match["stream_links"])
-            if match.get("stream_links") else [],
-            "details_link":
-            match.get("details_link"),
-            "group":
-            match["match_group"],
-            "status":
-            match["status"]
+            "team1": match["team1"],
+            "team1_url": match.get("team1_url"),
+            "logo1_light": match["logo1_light"],
+            "logo1_dark": match["logo1_dark"],
+            "team2": match["team2"],
+            "team2_url": match.get("team2_url"),
+            "logo2_light": match["logo2_light"],
+            "logo2_dark": match["logo2_dark"],
+            "score": match["score"],
+            "match_time": match["match_time"],
+            "format": match["format"],
+            "stream_link": json.loads(match["stream_links"]) if match.get("stream_links") else [],
+            "details_link": match.get("details_link"),
+            "group": match["match_group"],
+            "status": match["status"]
         })
 
     # Apply pagination to tournaments
@@ -448,17 +377,9 @@ def get_matches_paginated(
 
     # Sort tournaments
     priority_keywords = [
-        'MSC',
-        'Hok World Cup',
-        'EWC',
-        'Honor of Kings World Cup',
-        'Esports World Cup 2025',
-        'EWC 2025',
-        'Esports World Cup',
-        'Esports World',
-        'Esports',
-        'World Cup',
-        'PUBG Mobile World Cup',
+        'MSC', 'Hok World Cup', 'EWC', 'Honor of Kings World Cup',
+        'Esports World Cup 2025', 'EWC 2025', 'Esports World Cup',
+        'Esports World', 'Esports', 'World Cup', 'PUBG Mobile World Cup'
     ]
 
     def get_priority_index(name: str) -> int:
@@ -466,26 +387,21 @@ def get_matches_paginated(
         for i, keyword in enumerate(priority_keywords):
             if keyword.lower() in name_lower:
                 return i
-        return len(priority_keywords) + 1  # for non-priority items
+        return len(priority_keywords) + 1
 
-    # ترتيب البطولات
     tournament_list.sort(key=lambda t: (
         get_priority_index(t["tournament_name"]),
-        t["tournament_name"].lower(
-        )  # ثانوي: ترتيب أبجدي بين اللي نفس الأولوية
+        t["tournament_name"].lower()
     ))
 
-    # Apply pagination
     start_idx = (page - 1) * per_page
     end_idx = start_idx + per_page
     paginated_tournaments = tournament_list[start_idx:end_idx]
 
-    # Sort matches within each tournament
     for tournament in paginated_tournaments:
         for game_entry in tournament["games"]:
-            game_entry["matches"].sort(key=lambda m: m["match_time"])
-        tournament["games"] = sorted(tournament["games"],
-                                     key=lambda g: g["game"])
+            game_entry["matches"].sort(key=lambda m: m["match_time"] or "")
+        tournament["games"] = sorted(tournament["games"], key=lambda g: g["game"])
 
     conn.close()
 
