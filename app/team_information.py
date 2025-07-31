@@ -4,6 +4,7 @@ import json
 from datetime import datetime
 import random
 import time
+from urllib.parse import urlparse
 
 USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
@@ -25,6 +26,40 @@ session.headers.update({
 
 BASE_URL = "https://liquipedia.net"
 
+def parse_liquipedia_url(url: str) -> tuple[str, str] | None:
+    """
+    Parse Liquipedia URL to extract game and page name.
+    
+    Args:
+        url: Full Liquipedia URL (e.g., https://liquipedia.net/dota2/Team_Liquid)
+    
+    Returns:
+        Tuple of (game, page_name) or None if invalid URL
+    """
+    try:
+        parsed = urlparse(url)
+        
+        # Check if it's a Liquipedia URL
+        if parsed.netloc != 'liquipedia.net':
+            print(f"Error: Not a Liquipedia URL: {url}")
+            return None
+        
+        # Extract path components
+        path_parts = parsed.path.strip('/').split('/')
+        
+        if len(path_parts) < 2:
+            print(f"Error: Invalid Liquipedia URL format: {url}")
+            return None
+        
+        game = path_parts[0]
+        page_name = '/'.join(path_parts[1:]) 
+        
+        return game, page_name
+        
+    except Exception as e:
+        print(f"Error parsing URL {url}: {e}")
+        return None
+
 def get_html_from_api(game: str, page: str) -> str | None:
     """Fetch HTML content from Liquipedia API for a given game and page."""
     api_url = f"{BASE_URL}/{game}/api.php"
@@ -39,6 +74,9 @@ def get_html_from_api(game: str, page: str) -> str | None:
         response = session.get(api_url, params=params, timeout=10)
         if response.status_code == 200:
             data = response.json()
+            if 'parse' not in data:
+                print(f"Page not found: {page} for {game}")
+                return None
             return data['parse']['text']['*']
         else:
             print(f"HTTP {response.status_code}: Failed to fetch {page} for {game}")
@@ -46,6 +84,40 @@ def get_html_from_api(game: str, page: str) -> str | None:
     except Exception as e:
         print(f"Exception during request: {e}")
         return None
+
+def get_html_from_api_by_url(url: str) -> str | None:
+    """
+    Fetch HTML content from Liquipedia API using full URL.
+    
+    Args:
+        url: Full Liquipedia URL
+    
+    Returns:
+        HTML content or None if failed
+    """
+    parsed_url = parse_liquipedia_url(url)
+    if not parsed_url:
+        return None
+    
+    game, page_name = parsed_url
+    return get_html_from_api(game, page_name)
+
+def get_team_info_by_url(url: str) -> tuple[dict, str]:
+    """
+    Fetch team information from Liquipedia using full URL.
+    
+    Args:
+        url: Full Liquipedia URL
+    
+    Returns:
+        Tuple of (team_data_dict, team_name)
+    """
+    parsed_url = parse_liquipedia_url(url)
+    if not parsed_url:
+        return {}, "Invalid URL"
+    
+    game, page_name = parsed_url
+    return get_team_info(game, page_name)
 
 def get_team_info(game: str, team_page_name: str) -> tuple[dict, str]:
     """Fetch team information from Liquipedia API."""

@@ -77,7 +77,7 @@ def parse_and_update_teams():
     
     return {"success": True}
 
-def get_teams(page=1, per_page=10, name_filter=None, game_filter=None, logo_mode_filter=None, all_filter=None):
+def get_teams(page=1, per_page=100, name_filter=None, game_filter=None, logo_mode_filter=None, all_filter=None):
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -126,7 +126,17 @@ def get_teams(page=1, per_page=10, name_filter=None, game_filter=None, logo_mode
             FROM game_teams
             WHERE team_name IN ({placeholders})
         """
-        cursor.execute(full_data_query, team_names)
+        full_data_params = team_names[:]
+
+        if game_filter:
+            full_data_query += " AND game_name LIKE ?"
+            full_data_params.append(f"%{game_filter}%")
+
+        if logo_mode_filter:
+            full_data_query += " AND logo_mode = ?"
+            full_data_params.append(logo_mode_filter)
+
+        cursor.execute(full_data_query, full_data_params)
         rows = cursor.fetchall()
 
         # Group by team_name

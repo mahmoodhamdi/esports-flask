@@ -1,3 +1,5 @@
+# app/__init__.py
+
 import logging
 from flask import Flask, send_from_directory
 from flask_cors import CORS
@@ -37,6 +39,7 @@ def create_app():
     from .routes.game_matches import game_matches_bp
     from .routes.game_teams import new_teams_bp
     from app.routes.matches_mohamed import matches_bp
+    from app.routes.ewc_weeks import weeks_bp
 
     # Register all blueprints
     app.register_blueprint(news_bp, url_prefix="/api")
@@ -53,7 +56,7 @@ def create_app():
     app.register_blueprint(game_matches_bp, url_prefix="/api")
     app.register_blueprint(new_teams_bp, url_prefix="/api")
     app.register_blueprint(matches_bp, url_prefix="/api")
-
+    app.register_blueprint(weeks_bp, url_prefix="/api")
 
     # Serve uploaded files
     @app.route('/uploads/<path:filename>')

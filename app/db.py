@@ -1,7 +1,7 @@
 import sqlite3
 import os
 import logging
-
+import hashlib
 logger = logging.getLogger(__name__)
 
 def get_connection():
@@ -9,8 +9,6 @@ def get_connection():
     conn = sqlite3.connect("news.db")
     conn.row_factory = sqlite3.Row
     return conn
-import hashlib
-
 
 def generate_match_uid(game, team1, team2, match_time, details_link):
     key = f"{game}_{team1}_{team2}_{match_time}_{details_link}"
@@ -22,6 +20,32 @@ def init_db():
     cursor = conn.cursor()
     
     try:
+        # Create weeks table
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS weeks (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT UNIQUE NOT NULL
+            )
+        """)
+        
+        # Create games table
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS games_in_week (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                week_id INTEGER NOT NULL,
+                game_name TEXT NOT NULL,
+                FOREIGN KEY (week_id) REFERENCES weeks(id)
+            )
+        """)
+        
+        # Create settings table
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS settings_in_week (
+                key TEXT PRIMARY KEY,
+                value TEXT
+            )
+        """)
+        
         # Create matches table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS matches (
