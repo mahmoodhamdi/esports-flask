@@ -9,3 +9,4 @@ fuzzywuzzy
 python-Levenshtein
 flask_limiter
 pytz
+python-dateutil
