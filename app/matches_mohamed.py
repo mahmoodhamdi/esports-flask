@@ -112,14 +112,18 @@ def scrape_matches(game: str = "valorant"):
                 stream_links.append(full_link)
 
             details_link = next((f"{BASE_URL}{a['href']}" for a in match.select('.match-info-links a') if 'match:' in a['href'].lower()), "N/A")
+            
+            tournament_link_tag = match.select_one('.match-info-tournament a[href]')
+           
+            # tournament_icon_tag = match.select_one('.match-tournament .tournament-icon img')
 
-            tournament_tag = match.select_one('.match-info-tournament .tournament-name a')
-            tournament_name = tournament_tag.text.strip() if tournament_tag else "Unknown Tournament"
-
-            if tournament_name not in data[status]:
+            tournament_name_span = match.select_one('.match-info-tournament a span')
+            tournament_name = tournament_name_span.text.strip() if tournament_name_span else "Unknown Tournament"
+            tournament_link = f"{BASE_URL}{tournament_link_tag['href']}" if tournament_link_tag else ""
+            if tournament_name not in data[status]:               
                 data[status][tournament_name] = {
                     "tournament": tournament_name,
-                    "tournament_link": f"{BASE_URL}{tournament_tag['href']}" if tournament_tag else "",
+                    "tournament_link": tournament_link,
                     "tournament_icon": extract_tournament_icon(match),
                     "matches": []
                 }
