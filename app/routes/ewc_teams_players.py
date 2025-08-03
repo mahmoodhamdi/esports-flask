@@ -118,6 +118,23 @@ def ewc_players():
     paginated = paginate(filtered_players, page, per_page)
     return jsonify(paginated)
 
+# @ewc_teams_players_bp.route('/all_players', methods=['GET'])
+# def all_players():
+#     player_role = request.args.get('player_role')
+#     player_country = request.args.get('player_country')
+#     has_won_before_str = request.args.get('has_won_before')
+#     has_won_before = None
+#     if has_won_before_str:
+#         has_won_before = has_won_before_str.lower() == 'true'
+#     page = int(request.args.get('page', 1))
+#     per_page = int(request.args.get('per_page', 10))
+
+#     all_players = get_all_players(player_role, player_country, has_won_before)
+#     filtered_players = filter_all_players(all_players, player_role, player_country, has_won_before)
+
+#     paginated = paginate(filtered_players, page, per_page)
+#     return jsonify(paginated)
+
 @ewc_teams_players_bp.route('/all_players', methods=['GET'])
 def all_players():
     player_role = request.args.get('player_role')
@@ -126,11 +143,13 @@ def all_players():
     has_won_before = None
     if has_won_before_str:
         has_won_before = has_won_before_str.lower() == 'true'
-    page = int(request.args.get('page', 1))
-    per_page = int(request.args.get('per_page', 10))
 
     all_players = get_all_players(player_role, player_country, has_won_before)
     filtered_players = filter_all_players(all_players, player_role, player_country, has_won_before)
+
+    # تعطيل الـ pagination بإرجاع كل العناصر مرة واحدة مع الحفاظ على نفس شكل الـ response
+    page = 1
+    per_page = len(filtered_players) if filtered_players else 1  # عشان ميطلعش صفر ويتسبب في قسمة على صفر
 
     paginated = paginate(filtered_players, page, per_page)
     return jsonify(paginated)

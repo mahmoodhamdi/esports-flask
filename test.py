@@ -633,3 +633,30 @@
 #         "total": total_tournaments,
 #         "tournaments": paginated_tournaments
 #     }
+import json
+from app.db import get_connection
+
+def generate_player_links_json_from_db(output_path='player_links.json'):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT players FROM ewc_teams_players")
+    rows = cursor.fetchall()
+    conn.close()
+
+    all_links = []
+
+    for row in rows:
+        players = json.loads(row['players'])  # players is a JSON string
+        for player in players:
+            link = player.get('player_link')  # ✅ المفتاح الصحيح
+            if link:
+                all_links.append(link)
+
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(all_links, f, ensure_ascii=False, indent=2)
+
+    print(f"✅ Generated {len(all_links)} player links in {output_path}")
+
+if __name__ == '__main__':
+    generate_player_links_json_from_db()
