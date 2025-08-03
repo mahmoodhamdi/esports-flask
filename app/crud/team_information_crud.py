@@ -11,12 +11,21 @@ def get_team_info(game: str, team_page_name: str) -> dict | None:
             WHERE game = ? AND team_page_name = ?
         ''', (game, team_page_name))
         row = cursor.fetchone()
-        return json.loads(row['data']) if row else None
+        if row:
+            data = json.loads(row['data'])
+
+            # ✂️ احذف الـ Upcoming_Matches لو موجودة
+            data.pop("Upcoming_Matches", None)
+
+            return data
+        else:
+            return None
     except Exception as e:
         print(f"Error retrieving team info: {e}")
         return None
     finally:
         conn.close()
+
 
 def save_team_info(game: str, team_page_name: str, data: dict) -> bool:
     """Save or update team information in the database."""

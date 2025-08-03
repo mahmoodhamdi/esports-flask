@@ -10,7 +10,7 @@ def player_information():
     game = request.args.get('game')
     player = request.args.get('player')
     live = request.args.get('live', 'false').lower() == 'true'
-    fields = request.args.get('fields')  # Optional: comma-separated fields to filter response
+    fields = request.args.get('fields')
 
     if not game or not player:
         return jsonify({"error": "Missing 'game' or 'player' parameter"}), 400
