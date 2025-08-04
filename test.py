@@ -635,6 +635,36 @@
 #     }
 import json
 from app.db import get_connection
+import json
+from app.db import get_connection  # تأكد من المسار الصحيح لوحدة الاتصال بقاعدة البيانات
+import json
+from app.db import get_connection
+
+def export_game_urls_to_json():
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    try:
+        # استعلام للحصول على جميع روابط الألعاب بدون تكرار
+        cursor.execute("SELECT DISTINCT game_url FROM game_teams")
+        rows = cursor.fetchall()
+
+        # استخراج الروابط كقائمة
+        game_urls = [row[0] for row in rows if row[0]]
+
+        # حفظها في ملف JSON
+        with open('all_game_urls.json', 'w', encoding='utf-8') as f:
+            json.dump(game_urls, f, indent=2, ensure_ascii=False)
+
+        print(f"✅ Saved {len(game_urls)} game URLs to 'all_game_urls.json'")
+    except Exception as e:
+        print(f"❌ Error: {e}")
+    finally:
+        conn.close()
+
+if __name__ == "__main__":
+    export_game_urls_to_json()
+
 
 def generate_player_links_json_from_db(output_path='player_links.json'):
     conn = get_connection()
