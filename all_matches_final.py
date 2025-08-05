@@ -34,33 +34,33 @@ def convert_timestamp_to_eest(timestamp: int) -> str:
     return dt_eest.strftime("%B %d, %Y - %H:%M EEST")
 
 
-def extract_team_logos(team_side_element):
-    light_tag = team_side_element.select_one('.team-template-lightmode img')
-    dark_tag = team_side_element.select_one('.team-template-darkmode img')
-    fallback_tag = team_side_element.select_one('.team-template-image-icon img')
-    flag_tag = team_side_element.select_one('.flag img')
+# def extract_team_logos(team_side_element):
+#     light_tag = team_side_element.select_one('.team-template-lightmode img')
+#     dark_tag = team_side_element.select_one('.team-template-darkmode img')
+#     fallback_tag = team_side_element.select_one('.team-template-image-icon img')
+#     flag_tag = team_side_element.select_one('.flag img')
 
-    def get_src(tag):
-        return f"{BASE_URL}{tag['src']}" if tag and tag.has_attr("src") else "N/A"
+#     def get_src(tag):
+#         return f"{BASE_URL}{tag['src']}" if tag and tag.has_attr("src") else "N/A"
 
     
-    logo_light = (
-        get_src(light_tag)
-        if light_tag else
-        get_src(fallback_tag)
-        if fallback_tag else
-        get_src(flag_tag)
-    )
+#     logo_light = (
+#         get_src(light_tag)
+#         if light_tag else
+#         get_src(fallback_tag)
+#         if fallback_tag else
+#         get_src(flag_tag)
+#     )
 
-    logo_dark = (
-        get_src(dark_tag)
-        if dark_tag else
-        get_src(fallback_tag)
-        if fallback_tag else
-        get_src(flag_tag)
-    )
+#     logo_dark = (
+#         get_src(dark_tag)
+#         if dark_tag else
+#         get_src(fallback_tag)
+#         if fallback_tag else
+#         get_src(flag_tag)
+#     )
 
-    return logo_light, logo_dark
+#     return logo_light, logo_dark
 
 def extract_tournament_icon(match):
     dark_icon = match.select_one('.match-info-tournament .darkmode img')
