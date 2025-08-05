@@ -1,0 +1,1349 @@
+{
+  "Upcoming": {
+    "Esports World Cup 2025 - Group B": {
+      "tournament": "Esports World Cup 2025 - Group B",
+      "tournament_link": "https://liquipedia.net/rainbowsix/Esports_World_Cup/2025#Group_B",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/5/5f/Esports_World_Cup_icon_darkmode.png/50px-Esports_World_Cup_icon_darkmode.png",
+      "matches": [
+        {
+          "team1": "FLCS",
+          "team1_url": "https://liquipedia.net/rainbowsix/Team_Falcons",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+          "team2": "Secret",
+          "team2_url": "https://liquipedia.net/rainbowsix/Team_Secret",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/0/07/Team_Secret_lightmode.png/100px-Team_Secret_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/d/d2/Team_Secret_darkmode.png/100px-Team_Secret_darkmode.png",
+          "match_time": "2025-08-05T10:00:00+00:00",
+          "format": "(Bo1)",
+          "score": "0:0",
+          "stream_link": [
+            "https://liquipedia.net/rainbowsix/Special:Stream/twitch/EWC_AmazonArena_EN",
+            "https://liquipedia.net/rainbowsix/Special:Stream/youtube/Esports_World_Cup"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "SSG",
+          "team1_url": "https://liquipedia.net/rainbowsix/Spacestation_Gaming",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/8/8b/Spacestation_Gaming_2021_allmode.png/41px-Spacestation_Gaming_2021_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/8/8b/Spacestation_Gaming_2021_allmode.png/41px-Spacestation_Gaming_2021_allmode.png",
+          "team2": "w7m",
+          "team2_url": "https://liquipedia.net/rainbowsix/W7m_esports",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/a/ae/W7M_esports_allmode.png/48px-W7M_esports_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/a/ae/W7M_esports_allmode.png/48px-W7M_esports_allmode.png",
+          "match_time": "2025-08-05T11:20:00+00:00",
+          "format": "(Bo1)",
+          "score": "",
+          "stream_link": [
+            "https://liquipedia.net/rainbowsix/Special:Stream/twitch/EWC_AmazonArena_EN",
+            "https://liquipedia.net/rainbowsix/Special:Stream/youtube/Esports_World_Cup"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "EP",
+          "team1_url": "https://liquipedia.net/rainbowsix/ENTERPRISE_Esports",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/5/56/ENTERPRISE_Esports_2023_allmode.png/74px-ENTERPRISE_Esports_2023_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/5/56/ENTERPRISE_Esports_2023_allmode.png/74px-ENTERPRISE_Esports_2023_allmode.png",
+          "team2": "NIP",
+          "team2_url": "https://liquipedia.net/rainbowsix/Ninjas_in_Pyjamas",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/f/f4/Ninjas_in_Pyjamas_2021_lightmode.png/50px-Ninjas_in_Pyjamas_2021_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/b/b7/Ninjas_in_Pyjamas_2021_darkmode.png/50px-Ninjas_in_Pyjamas_2021_darkmode.png",
+          "match_time": "2025-08-05T12:40:00+00:00",
+          "format": "(Bo1)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "FURIA",
+          "team1_url": "https://liquipedia.net/rainbowsix/FURIA",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+          "team2": "OXG",
+          "team2_url": "https://liquipedia.net/rainbowsix/Oxygen_Esports",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/1/1f/Oxygen_Esports_2023_allmode.png/51px-Oxygen_Esports_2023_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/1/1f/Oxygen_Esports_2023_allmode.png/51px-Oxygen_Esports_2023_allmode.png",
+          "match_time": "2025-08-05T12:40:00+00:00",
+          "format": "(Bo1)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-05T17:00:00+00:00",
+          "format": "(Bo1)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-05T17:00:00+00:00",
+          "format": "(Bo1)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-05T18:20:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-05T18:20:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-06T18:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-06T18:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "Esports World Cup 2025 - Group A": {
+      "tournament": "Esports World Cup 2025 - Group A",
+      "tournament_link": "https://liquipedia.net/rainbowsix/Esports_World_Cup/2025#Group_A",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/5/5f/Esports_World_Cup_icon_darkmode.png/50px-Esports_World_Cup_icon_darkmode.png",
+      "matches": [
+        {
+          "team1": "G2",
+          "team1_url": "https://liquipedia.net/rainbowsix/G2_Esports",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/4/4b/G2_Esports_2020_lightmode.png/43px-G2_Esports_2020_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/c/cd/G2_Esports_2019_darkmode.png/44px-G2_Esports_2019_darkmode.png",
+          "team2": "Gen.G",
+          "team2_url": "https://liquipedia.net/rainbowsix/Gen.G_Esports",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/3/3f/Gen.G_Esports_lightmode.png/59px-Gen.G_Esports_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/b/ba/Gen.G_Esports_darkmode.png/59px-Gen.G_Esports_darkmode.png",
+          "match_time": "2025-08-05T10:00:00+00:00",
+          "format": "(Bo1)",
+          "score": "0:0",
+          "stream_link": [
+            "https://liquipedia.net/rainbowsix/Special:Stream/twitch/EWC_AmazonArena_EN2",
+            "https://liquipedia.net/rainbowsix/Special:Stream/youtube/Esports_World_Cup"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "WBG",
+          "team1_url": "https://liquipedia.net/rainbowsix/Weibo_Gaming",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+          "team2": "SR",
+          "team2_url": "https://liquipedia.net/rainbowsix/Shopify_Rebellion",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/a/a4/Shopify_Rebellion_2021_lightmode.png/32px-Shopify_Rebellion_2021_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/9/92/Shopify_Rebellion_2021_darkmode.png/32px-Shopify_Rebellion_2021_darkmode.png",
+          "match_time": "2025-08-05T10:00:00+00:00",
+          "format": "(Bo1)",
+          "score": "0:0",
+          "stream_link": [
+            "https://liquipedia.net/rainbowsix/Special:Stream/twitch/EWC_AmazonArena_EN3",
+            "https://liquipedia.net/rainbowsix/Special:Stream/youtube/Esports_World_Cup"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "BFX",
+          "team1_url": "https://liquipedia.net/rainbowsix/FEARX",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/0/02/FearX_icon_lightmode.png/55px-FearX_icon_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/6/60/FearX_icon_darkmode.png/55px-FearX_icon_darkmode.png",
+          "team2": "VP",
+          "team2_url": "https://liquipedia.net/rainbowsix/Virtus.pro",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+          "match_time": "2025-08-05T11:20:00+00:00",
+          "format": "(Bo1)",
+          "score": "",
+          "stream_link": [
+            "https://liquipedia.net/rainbowsix/Special:Stream/twitch/EWC_AmazonArena_EN3",
+            "https://liquipedia.net/rainbowsix/Special:Stream/youtube/Esports_World_Cup"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "FaZe",
+          "team1_url": "https://liquipedia.net/rainbowsix/FaZe_Clan",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+          "team2": "DZ",
+          "team2_url": "https://liquipedia.net/rainbowsix/DarkZero",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/8/8a/DarkZero_allmode.png/55px-DarkZero_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/8/8a/DarkZero_allmode.png/55px-DarkZero_allmode.png",
+          "match_time": "2025-08-05T11:20:00+00:00",
+          "format": "(Bo1)",
+          "score": "",
+          "stream_link": [
+            "https://liquipedia.net/rainbowsix/Special:Stream/twitch/EWC_AmazonArena_EN2",
+            "https://liquipedia.net/rainbowsix/Special:Stream/youtube/Esports_World_Cup"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-05T12:40:00+00:00",
+          "format": "(Bo1)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-05T14:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-05T14:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-05T14:00:00+00:00",
+          "format": "(Bo1)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-06T15:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-06T15:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "Esports World Cup 2025 - Playoffs": {
+      "tournament": "Esports World Cup 2025 - Playoffs",
+      "tournament_link": "https://liquipedia.net/rainbowsix/Esports_World_Cup/2025#Playoffs",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/5/5f/Esports_World_Cup_icon_darkmode.png/50px-Esports_World_Cup_icon_darkmode.png",
+      "matches": [
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-07T15:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-07T15:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-07T18:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-07T18:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-08T15:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-08T15:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-09T13:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "N/A",
+          "team1_url": "",
+          "logo1_light": "N/A",
+          "logo1_dark": "N/A",
+          "team2": "N/A",
+          "team2_url": "",
+          "logo2_light": "N/A",
+          "logo2_dark": "N/A",
+          "match_time": "2025-08-09T16:00:00+00:00",
+          "format": "(Bo5)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "Liga START - 2025: Finals - Playoffs (Phase 3)": {
+      "tournament": "Liga START - 2025: Finals - Playoffs (Phase 3)",
+      "tournament_link": "https://liquipedia.net/rainbowsix/Liga_START/2025#Playoffs_(Phase_3)",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/7/7d/Liga_START_2025_allmode.png/50px-Liga_START_2025_allmode.png",
+      "matches": [
+        {
+          "team1": "SG",
+          "team1_url": "https://liquipedia.net/rainbowsix/Stellae_Gaming",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/0/00/Stellae_lightmode.png/91px-Stellae_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/e/ea/Stellae_darkmode.png/91px-Stellae_darkmode.png",
+          "team2": "V7",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Vince_Seven_Esports&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/d/dd/Vince_Seven_Esports_allmode.png/23px-Vince_Seven_Esports_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/d/dd/Vince_Seven_Esports_allmode.png/23px-Vince_Seven_Esports_allmode.png",
+          "match_time": "2025-08-16T16:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    }
+  },
+  "Completed": {
+    "ELEMENT FIVE - Playoffs": {
+      "tournament": "ELEMENT FIVE - Playoffs",
+      "tournament_link": "https://liquipedia.net/rainbowsix/ELEMENT/FIVE#Playoffs",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/0/0e/ELEMENT_2025_icon_allmode.png/38px-ELEMENT_2025_icon_allmode.png",
+      "matches": [
+        {
+          "team1": "MORI",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Hakikimori&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/3/32/Hakikimori_allmode.png/48px-Hakikimori_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/3/32/Hakikimori_allmode.png/48px-Hakikimori_allmode.png",
+          "team2": "QoR",
+          "team2_url": "https://liquipedia.net/rainbowsix/Qor_Gaming",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/0/00/QoR_2022_allmode.png/45px-QoR_2022_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/0/00/QoR_2022_allmode.png/45px-QoR_2022_allmode.png",
+          "match_time": "2025-08-03T22:00:00+00:00",
+          "format": "(Bo5)",
+          "score": "1:3",
+          "stream_link": [
+            "https://youtu.be/hkLRkQHnQes?si=FFnGvHTM7TOjyNk4&t=922"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "CLB",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Certified_Lover_Boys&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/1/19/Certified_Lover_Boys_2023_Dec_lightmode.png/56px-Certified_Lover_Boys_2023_Dec_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/6/63/Certified_Lover_Boys_2023_Dec_darkmode.png/56px-Certified_Lover_Boys_2023_Dec_darkmode.png",
+          "team2": "QoR",
+          "team2_url": "https://liquipedia.net/rainbowsix/Qor_Gaming",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/0/00/QoR_2022_allmode.png/45px-QoR_2022_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/0/00/QoR_2022_allmode.png/45px-QoR_2022_allmode.png",
+          "match_time": "2025-08-02T22:00:00+00:00",
+          "format": "(Bo5)",
+          "score": "1:3",
+          "stream_link": [
+            "https://youtu.be/0_AUIWQxZtQ?si=W8pBb7QAEXAywTsi&t=822"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "MORI",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Hakikimori&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/3/32/Hakikimori_allmode.png/48px-Hakikimori_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/3/32/Hakikimori_allmode.png/48px-Hakikimori_allmode.png",
+          "team2": "CLB",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Certified_Lover_Boys&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/1/19/Certified_Lover_Boys_2023_Dec_lightmode.png/56px-Certified_Lover_Boys_2023_Dec_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/6/63/Certified_Lover_Boys_2023_Dec_darkmode.png/56px-Certified_Lover_Boys_2023_Dec_darkmode.png",
+          "match_time": "2025-08-02T00:30:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [
+            "https://youtu.be/K6VqEemdrDw?si=7CvhBHwVMb-4BnjX&t=10303"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "QoR",
+          "team1_url": "https://liquipedia.net/rainbowsix/Qor_Gaming",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/0/00/QoR_2022_allmode.png/45px-QoR_2022_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/0/00/QoR_2022_allmode.png/45px-QoR_2022_allmode.png",
+          "team2": "VAL",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Valor_Esports_(American_team)&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/2/2d/Valor_Esports_GG_allmode.png/35px-Valor_Esports_GG_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/2/2d/Valor_Esports_GG_allmode.png/35px-Valor_Esports_GG_allmode.png",
+          "match_time": "2025-08-01T22:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [
+            "https://youtu.be/K6VqEemdrDw?si=iTG3y5z7OO5hoZX-&t=945"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "VAL",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Valor_Esports_(American_team)&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/2/2d/Valor_Esports_GG_allmode.png/35px-Valor_Esports_GG_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/2/2d/Valor_Esports_GG_allmode.png/35px-Valor_Esports_GG_allmode.png",
+          "team2": "BST",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Black_Stallions&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/7/70/Black_Stallions_lightmode.png/42px-Black_Stallions_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/d/df/Black_Stallions_darkmode.png/42px-Black_Stallions_darkmode.png",
+          "match_time": "2025-08-01T00:30:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [
+            "https://youtu.be/SPvALdpEyTg?si=wD-Q8FWOGM3I6Klm&t=12504"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "QoR",
+          "team1_url": "https://liquipedia.net/rainbowsix/Qor_Gaming",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/0/00/QoR_2022_allmode.png/45px-QoR_2022_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/0/00/QoR_2022_allmode.png/45px-QoR_2022_allmode.png",
+          "team2": "K&C",
+          "team2_url": "https://liquipedia.net/rainbowsix/Karn_%26_Co",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/c/cb/Karn_and_Co_2023_lightmode.png/37px-Karn_and_Co_2023_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/c/cd/Karn_and_Co_2023_darkmode.png/37px-Karn_and_Co_2023_darkmode.png",
+          "match_time": "2025-07-31T22:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [
+            "https://youtu.be/SPvALdpEyTg?si=cWiPMQWcsimuKiYg&t=932"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "BST",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Black_Stallions&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/7/70/Black_Stallions_lightmode.png/42px-Black_Stallions_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/d/df/Black_Stallions_darkmode.png/42px-Black_Stallions_darkmode.png",
+          "team2": "RAD",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Rad_eSports&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/8/84/Rad_Esports_allmode.png/44px-Rad_Esports_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/8/84/Rad_Esports_allmode.png/44px-Rad_Esports_allmode.png",
+          "match_time": "2025-07-28T00:30:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [
+            "https://youtu.be/otphhdVSnzQ?si=9QEmeMI8j85-jIMH&t=9905"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "K&C",
+          "team1_url": "https://liquipedia.net/rainbowsix/Karn_%26_Co",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/c/cb/Karn_and_Co_2023_lightmode.png/37px-Karn_and_Co_2023_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/c/cd/Karn_and_Co_2023_darkmode.png/37px-Karn_and_Co_2023_darkmode.png",
+          "team2": "ECE",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Evil_Connections_Esports&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/c/c2/Evil_Connections_2023_lightmode.png/55px-Evil_Connections_2023_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/9/9d/Evil_Connections_2023_darkmode.png/55px-Evil_Connections_2023_darkmode.png",
+          "match_time": "2025-07-27T22:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [
+            "https://youtu.be/otphhdVSnzQ?si=ztY7_Nq6ZxnS1a8Q&t=906"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "QoR",
+          "team1_url": "https://liquipedia.net/rainbowsix/Qor_Gaming",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/0/00/QoR_2022_allmode.png/45px-QoR_2022_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/0/00/QoR_2022_allmode.png/45px-QoR_2022_allmode.png",
+          "team2": "CLB",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Certified_Lover_Boys&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/1/19/Certified_Lover_Boys_2023_Dec_lightmode.png/56px-Certified_Lover_Boys_2023_Dec_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/6/63/Certified_Lover_Boys_2023_Dec_darkmode.png/56px-Certified_Lover_Boys_2023_Dec_darkmode.png",
+          "match_time": "2025-07-27T00:30:00+00:00",
+          "format": "(Bo3)",
+          "score": "0:2",
+          "stream_link": [
+            "https://youtu.be/Zhp1UaYjJTU?si=mO_AP0A54jielFS5&t=11283"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "MORI",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Hakikimori&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/3/32/Hakikimori_allmode.png/48px-Hakikimori_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/3/32/Hakikimori_allmode.png/48px-Hakikimori_allmode.png",
+          "team2": "VAL",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Valor_Esports_(American_team)&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/2/2d/Valor_Esports_GG_allmode.png/35px-Valor_Esports_GG_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/2/2d/Valor_Esports_GG_allmode.png/35px-Valor_Esports_GG_allmode.png",
+          "match_time": "2025-07-26T22:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [
+            "https://youtu.be/Zhp1UaYjJTU?si=ULjc7dzAxHPfydlo&t=844"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "CLB",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Certified_Lover_Boys&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/1/19/Certified_Lover_Boys_2023_Dec_lightmode.png/56px-Certified_Lover_Boys_2023_Dec_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/6/63/Certified_Lover_Boys_2023_Dec_darkmode.png/56px-Certified_Lover_Boys_2023_Dec_darkmode.png",
+          "team2": "RAD",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Rad_eSports&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/8/84/Rad_Esports_allmode.png/44px-Rad_Esports_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/8/84/Rad_Esports_allmode.png/44px-Rad_Esports_allmode.png",
+          "match_time": "2025-07-26T00:30:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [
+            "https://youtu.be/zPmegPaeQLk?si=5mQgXvxGrMwt1RWt&t=163"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "QoR",
+          "team1_url": "https://liquipedia.net/rainbowsix/Qor_Gaming",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/0/00/QoR_2022_allmode.png/45px-QoR_2022_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/0/00/QoR_2022_allmode.png/45px-QoR_2022_allmode.png",
+          "team2": "BST",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Black_Stallions&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/7/70/Black_Stallions_lightmode.png/42px-Black_Stallions_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/d/df/Black_Stallions_darkmode.png/42px-Black_Stallions_darkmode.png",
+          "match_time": "2025-07-25T22:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [
+            "https://youtu.be/hwtRHULHgJk?si=EA2xPiuOWfB8eSeu&t=905"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "VAL",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Valor_Esports_(American_team)&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/2/2d/Valor_Esports_GG_allmode.png/35px-Valor_Esports_GG_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/2/2d/Valor_Esports_GG_allmode.png/35px-Valor_Esports_GG_allmode.png",
+          "team2": "ECE",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Evil_Connections_Esports&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/c/c2/Evil_Connections_2023_lightmode.png/55px-Evil_Connections_2023_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/9/9d/Evil_Connections_2023_darkmode.png/55px-Evil_Connections_2023_darkmode.png",
+          "match_time": "2025-07-25T00:30:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [
+            "https://youtu.be/dm8rfTIkuPM?si=7rX-Br8Uaau_JKGA&t=12745"
+          ],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "MORI",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Hakikimori&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/3/32/Hakikimori_allmode.png/48px-Hakikimori_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/3/32/Hakikimori_allmode.png/48px-Hakikimori_allmode.png",
+          "team2": "K&C",
+          "team2_url": "https://liquipedia.net/rainbowsix/Karn_%26_Co",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/c/cb/Karn_and_Co_2023_lightmode.png/37px-Karn_and_Co_2023_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/c/cd/Karn_and_Co_2023_darkmode.png/37px-Karn_and_Co_2023_darkmode.png",
+          "match_time": "2025-07-24T22:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [
+            "https://youtu.be/dm8rfTIkuPM?si=onoN6jbt3lZwdl5O&t=899"
+          ],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "Liga START - 2025: Finals - Playoffs (Phase 3)": {
+      "tournament": "Liga START - 2025: Finals - Playoffs (Phase 3)",
+      "tournament_link": "https://liquipedia.net/rainbowsix/Liga_START/2025#Playoffs_(Phase_3)",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/7/7d/Liga_START_2025_allmode.png/50px-Liga_START_2025_allmode.png",
+      "matches": [
+        {
+          "team1": "V7",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Vince_Seven_Esports&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/d/dd/Vince_Seven_Esports_allmode.png/23px-Vince_Seven_Esports_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/d/dd/Vince_Seven_Esports_allmode.png/23px-Vince_Seven_Esports_allmode.png",
+          "team2": "AME",
+          "team2_url": "https://liquipedia.net/rainbowsix/Amo_Minha_Ex",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "match_time": "2025-08-03T16:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "SG",
+          "team1_url": "https://liquipedia.net/rainbowsix/Stellae_Gaming",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/0/00/Stellae_lightmode.png/91px-Stellae_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/e/ea/Stellae_darkmode.png/91px-Stellae_darkmode.png",
+          "team2": "V7",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Vince_Seven_Esports&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/d/dd/Vince_Seven_Esports_allmode.png/23px-Vince_Seven_Esports_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/d/dd/Vince_Seven_Esports_allmode.png/23px-Vince_Seven_Esports_allmode.png",
+          "match_time": "2025-08-02T19:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "AME",
+          "team1_url": "https://liquipedia.net/rainbowsix/Amo_Minha_Ex",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "team2": "sN",
+          "team2_url": "https://liquipedia.net/rainbowsix/SuperNova_Team",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/a/ab/SuperNova_%28Brazilian_team%29_allmode.png/57px-SuperNova_%28Brazilian_team%29_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/a/ab/SuperNova_%28Brazilian_team%29_allmode.png/57px-SuperNova_%28Brazilian_team%29_allmode.png",
+          "match_time": "2025-08-02T16:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "sN",
+          "team1_url": "https://liquipedia.net/rainbowsix/SuperNova_Team",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/a/ab/SuperNova_%28Brazilian_team%29_allmode.png/57px-SuperNova_%28Brazilian_team%29_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/a/ab/SuperNova_%28Brazilian_team%29_allmode.png/57px-SuperNova_%28Brazilian_team%29_allmode.png",
+          "team2": "ELV.Ac",
+          "team2_url": "https://liquipedia.net/rainbowsix/Elevate_Academy",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/b/ba/Elevate_2020_lightmode.png/50px-Elevate_2020_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/1/10/Elevate_2020_darkmode.png/50px-Elevate_2020_darkmode.png",
+          "match_time": "2025-07-30T00:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "SyG",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Sygnia&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/d/d9/Sygnia_allmode.png/50px-Sygnia_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/d/d9/Sygnia_allmode.png/50px-Sygnia_allmode.png",
+          "team2": "AME",
+          "team2_url": "https://liquipedia.net/rainbowsix/Amo_Minha_Ex",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "match_time": "2025-07-29T22:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "0:2",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "V7",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Vince_Seven_Esports&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/d/dd/Vince_Seven_Esports_allmode.png/23px-Vince_Seven_Esports_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/d/dd/Vince_Seven_Esports_allmode.png/23px-Vince_Seven_Esports_allmode.png",
+          "team2": "SyG",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Sygnia&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/d/d9/Sygnia_allmode.png/50px-Sygnia_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/d/d9/Sygnia_allmode.png/50px-Sygnia_allmode.png",
+          "match_time": "2025-07-29T00:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "sN",
+          "team1_url": "https://liquipedia.net/rainbowsix/SuperNova_Team",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/a/ab/SuperNova_%28Brazilian_team%29_allmode.png/57px-SuperNova_%28Brazilian_team%29_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/a/ab/SuperNova_%28Brazilian_team%29_allmode.png/57px-SuperNova_%28Brazilian_team%29_allmode.png",
+          "team2": "SG",
+          "team2_url": "https://liquipedia.net/rainbowsix/Stellae_Gaming",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/0/00/Stellae_lightmode.png/91px-Stellae_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/e/ea/Stellae_darkmode.png/91px-Stellae_darkmode.png",
+          "match_time": "2025-07-28T22:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "1:2",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "CdB",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Chapeiros_do_Bobs&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "team2": "ELV.Ac",
+          "team2_url": "https://liquipedia.net/rainbowsix/Elevate_Academy",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/b/ba/Elevate_2020_lightmode.png/50px-Elevate_2020_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/1/10/Elevate_2020_darkmode.png/50px-Elevate_2020_darkmode.png",
+          "match_time": "2025-07-25T00:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "1:2",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "FT",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=FACHAS_TEAM&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "team2": "AME",
+          "team2_url": "https://liquipedia.net/rainbowsix/Amo_Minha_Ex",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "match_time": "2025-07-24T22:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "0:2",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "ELV.Ac",
+          "team1_url": "https://liquipedia.net/rainbowsix/Elevate_Academy",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/b/ba/Elevate_2020_lightmode.png/50px-Elevate_2020_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/1/10/Elevate_2020_darkmode.png/50px-Elevate_2020_darkmode.png",
+          "team2": "VASCO",
+          "team2_url": "https://liquipedia.net/rainbowsix/Vasco_eSports",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/f/fc/Vasco_eSports_allmode.png/34px-Vasco_eSports_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/f/fc/Vasco_eSports_allmode.png/34px-Vasco_eSports_allmode.png",
+          "match_time": "2025-07-23T00:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "CdB",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=Chapeiros_do_Bobs&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "team2": "CPC",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Curralzinho_CPC&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/9/98/Curralzinho_CPC_lightmode.png/45px-Curralzinho_CPC_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/7/74/Curralzinho_CPC_darkmode.png/45px-Curralzinho_CPC_darkmode.png",
+          "match_time": "2025-07-22T22:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "AME",
+          "team1_url": "https://liquipedia.net/rainbowsix/Amo_Minha_Ex",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "team2": "NIC",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=NICARAGUA%27S_ESPORTS&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/f/fd/NICARAGUA%27S_ESPORTS_allmode.png/38px-NICARAGUA%27S_ESPORTS_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/f/fd/NICARAGUA%27S_ESPORTS_allmode.png/38px-NICARAGUA%27S_ESPORTS_allmode.png",
+          "match_time": "2025-07-22T00:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "LGG",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=LOTUS-GG&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "team2": "FT",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=FACHAS_TEAM&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "match_time": "2025-07-21T22:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "0:2",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "R6 Central Combine 2025 - Playoffs": {
+      "tournament": "R6 Central Combine 2025 - Playoffs",
+      "tournament_link": "https://liquipedia.net/rainbowsix/Central_Combine/2025#Playoffs",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/2/21/R6_Central_Combine_2025_allmode.png/47px-R6_Central_Combine_2025_allmode.png",
+      "matches": [
+        {
+          "team1": "GK",
+          "team1_url": "https://liquipedia.net/rainbowsix/Geekay_Esports",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/f/f1/Geekay_Esports_2023_allmode.png/67px-Geekay_Esports_2023_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/f/f1/Geekay_Esports_2023_allmode.png/67px-Geekay_Esports_2023_allmode.png",
+          "team2": "Secret AC",
+          "team2_url": "https://liquipedia.net/rainbowsix/Team_Secret_Academy",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/0/07/Team_Secret_lightmode.png/100px-Team_Secret_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/d/d2/Team_Secret_darkmode.png/100px-Team_Secret_darkmode.png",
+          "match_time": "2025-08-02T14:30:00+00:00",
+          "format": "(Bo5)",
+          "score": "3:0",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "Copa Sul-Americana - 2025 - Results": {
+      "tournament": "Copa Sul-Americana - 2025 - Results",
+      "tournament_link": "https://liquipedia.net/rainbowsix/Copa_Sul-Americana/2025#Results",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/2/25/Copa_Sul-Americana_darkmode.png/43px-Copa_Sul-Americana_darkmode.png",
+      "matches": [
+        {
+          "team1": "NIC",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=NICARAGUA%27S_ESPORTS&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/f/fd/NICARAGUA%27S_ESPORTS_allmode.png/38px-NICARAGUA%27S_ESPORTS_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/f/fd/NICARAGUA%27S_ESPORTS_allmode.png/38px-NICARAGUA%27S_ESPORTS_allmode.png",
+          "team2": "KDS",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=KDS_DO_PAGODE&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "match_time": "2025-08-01T01:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "LA CHISPAAA",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=LA_CHISPAAA&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "team2": "CdB",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=Chapeiros_do_Bobs&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "match_time": "2025-07-31T23:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "0:2",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "LGG",
+          "team1_url": "https://liquipedia.net/rainbowsix/index.php?title=LOTUS-GG&action=edit&redlink=1",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "team2": "AdvoGatos",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=AdvoGatos_E-Sports&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "match_time": "2025-07-24T00:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "AME",
+          "team1_url": "https://liquipedia.net/rainbowsix/Amo_Minha_Ex",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/c/c4/Rainbow_Six_Siege_X_default_allmode.png/35px-Rainbow_Six_Siege_X_default_allmode.png",
+          "team2": "NOVA",
+          "team2_url": "https://liquipedia.net/rainbowsix/index.php?title=OS_MENINOS_DA_NOVA&action=edit&redlink=1",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/2/21/Osmeninosdanova_allmodes.png/68px-Osmeninosdanova_allmodes.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/2/21/Osmeninosdanova_allmodes.png/68px-Osmeninosdanova_allmodes.png",
+          "match_time": "2025-07-23T22:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "SAL 2025 - Stage 1 - 5th Place": {
+      "tournament": "SAL 2025 - Stage 1 - 5th Place",
+      "tournament_link": "https://liquipedia.net/rainbowsix/South_America_League/2025/Stage_1#5th_Place",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/b/bf/R6_Esports_2025_SAL_allmode.png/50px-R6_Esports_2025_SAL_allmode.png",
+      "matches": [
+        {
+          "team1": "Liquid",
+          "team1_url": "https://liquipedia.net/rainbowsix/Team_Liquid",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/0/01/Team_Liquid_2024_lightmode.png/44px-Team_Liquid_2024_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/5/59/Team_Liquid_2024_darkmode.png/44px-Team_Liquid_2024_darkmode.png",
+          "team2": "BD",
+          "team2_url": "https://liquipedia.net/rainbowsix/Black_Dragons",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/d/d4/Black_Dragons_2025_lightmode.png/50px-Black_Dragons_2025_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/3/3c/Black_Dragons_2025_darkmode.png/50px-Black_Dragons_2025_darkmode.png",
+          "match_time": "2025-07-30T21:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "SAL 2025 - Stage 1 - Playoffs": {
+      "tournament": "SAL 2025 - Stage 1 - Playoffs",
+      "tournament_link": "https://liquipedia.net/rainbowsix/South_America_League/2025/Stage_1#Playoffs",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/b/bf/R6_Esports_2025_SAL_allmode.png/50px-R6_Esports_2025_SAL_allmode.png",
+      "matches": [
+        {
+          "team1": "FaZe",
+          "team1_url": "https://liquipedia.net/rainbowsix/FaZe_Clan",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+          "team2": "FURIA",
+          "team2_url": "https://liquipedia.net/rainbowsix/FURIA",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+          "match_time": "2025-07-27T16:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "0:2",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "FURIA",
+          "team1_url": "https://liquipedia.net/rainbowsix/FURIA",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+          "team2": "NIP",
+          "team2_url": "https://liquipedia.net/rainbowsix/Ninjas_in_Pyjamas",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/f/f4/Ninjas_in_Pyjamas_2021_lightmode.png/50px-Ninjas_in_Pyjamas_2021_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/b/b7/Ninjas_in_Pyjamas_2021_darkmode.png/50px-Ninjas_in_Pyjamas_2021_darkmode.png",
+          "match_time": "2025-07-26T21:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "NIP",
+          "team1_url": "https://liquipedia.net/rainbowsix/Ninjas_in_Pyjamas",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/f/f4/Ninjas_in_Pyjamas_2021_lightmode.png/50px-Ninjas_in_Pyjamas_2021_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/b/b7/Ninjas_in_Pyjamas_2021_darkmode.png/50px-Ninjas_in_Pyjamas_2021_darkmode.png",
+          "team2": "w7m",
+          "team2_url": "https://liquipedia.net/rainbowsix/W7m_esports",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/a/ae/W7M_esports_allmode.png/48px-W7M_esports_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/a/ae/W7M_esports_allmode.png/48px-W7M_esports_allmode.png",
+          "match_time": "2025-07-26T18:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "FURIA",
+          "team1_url": "https://liquipedia.net/rainbowsix/FURIA",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/a/aa/FURIA_Esports_allmode.png/51px-FURIA_Esports_allmode.png",
+          "team2": "FaZe",
+          "team2_url": "https://liquipedia.net/rainbowsix/FaZe_Clan",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/3/3d/FaZe_Clan_2025_allmode.png/76px-FaZe_Clan_2025_allmode.png",
+          "match_time": "2025-07-26T15:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "0:2",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "NIP",
+          "team1_url": "https://liquipedia.net/rainbowsix/Ninjas_in_Pyjamas",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/f/f4/Ninjas_in_Pyjamas_2021_lightmode.png/50px-Ninjas_in_Pyjamas_2021_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/b/b7/Ninjas_in_Pyjamas_2021_darkmode.png/50px-Ninjas_in_Pyjamas_2021_darkmode.png",
+          "team2": "Liquid",
+          "team2_url": "https://liquipedia.net/rainbowsix/Team_Liquid",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/0/01/Team_Liquid_2024_lightmode.png/44px-Team_Liquid_2024_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/5/59/Team_Liquid_2024_darkmode.png/44px-Team_Liquid_2024_darkmode.png",
+          "match_time": "2025-07-25T21:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "w7m",
+          "team1_url": "https://liquipedia.net/rainbowsix/W7m_esports",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/a/ae/W7M_esports_allmode.png/48px-W7M_esports_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/a/ae/W7M_esports_allmode.png/48px-W7M_esports_allmode.png",
+          "team2": "BD",
+          "team2_url": "https://liquipedia.net/rainbowsix/Black_Dragons",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/d/d4/Black_Dragons_2025_lightmode.png/50px-Black_Dragons_2025_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/3/3c/Black_Dragons_2025_darkmode.png/50px-Black_Dragons_2025_darkmode.png",
+          "match_time": "2025-07-25T18:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "APL 2025 APAC North - Stage 1 - Playoffs": {
+      "tournament": "APL 2025 APAC North - Stage 1 - Playoffs",
+      "tournament_link": "https://liquipedia.net/rainbowsix/Asia_Pacific_League/2025/Stage_1/APAC_North#Playoffs",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/e/e2/R6_Esports_2025_APL_allmode.png/42px-R6_Esports_2025_APL_allmode.png",
+      "matches": [
+        {
+          "team1": "BFX",
+          "team1_url": "https://liquipedia.net/rainbowsix/FEARX",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/0/02/FearX_icon_lightmode.png/55px-FearX_icon_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/6/60/FearX_icon_darkmode.png/55px-FearX_icon_darkmode.png",
+          "team2": "DK",
+          "team2_url": "https://liquipedia.net/rainbowsix/Dplus",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/b/ba/Dplus_lightmode.png/100px-Dplus_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/2/23/Dplus_darkmode.png/100px-Dplus_darkmode.png",
+          "match_time": "2025-07-27T07:30:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "DK",
+          "team1_url": "https://liquipedia.net/rainbowsix/Dplus",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/b/ba/Dplus_lightmode.png/100px-Dplus_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/2/23/Dplus_darkmode.png/100px-Dplus_darkmode.png",
+          "team2": "SZ",
+          "team2_url": "https://liquipedia.net/rainbowsix/SCARZ",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/7/7c/SCARZ_2022_lightmode.png/63px-SCARZ_2022_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/5/53/SCARZ_2022_darkmode.png/63px-SCARZ_2022_darkmode.png",
+          "match_time": "2025-07-27T05:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "APL 2025 ASIA - Stage 1 - Playoffs": {
+      "tournament": "APL 2025 ASIA - Stage 1 - Playoffs",
+      "tournament_link": "https://liquipedia.net/rainbowsix/Asia_Pacific_League/2025/Stage_1/Asia#Playoffs",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/e/e2/R6_Esports_2025_APL_allmode.png/42px-R6_Esports_2025_APL_allmode.png",
+      "matches": [
+        {
+          "team1": "ELV",
+          "team1_url": "https://liquipedia.net/rainbowsix/Elevate",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/b/ba/Elevate_2020_lightmode.png/50px-Elevate_2020_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/1/10/Elevate_2020_darkmode.png/50px-Elevate_2020_darkmode.png",
+          "team2": "WBG",
+          "team2_url": "https://liquipedia.net/rainbowsix/Weibo_Gaming",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+          "match_time": "2025-07-26T08:30:00+00:00",
+          "format": "(Bo3)",
+          "score": "0:2",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "WBG",
+          "team1_url": "https://liquipedia.net/rainbowsix/Weibo_Gaming",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/2/20/Weibo_allmode.png/62px-Weibo_allmode.png",
+          "team2": "SH",
+          "team2_url": "https://liquipedia.net/rainbowsix/Souls_Heart_Esport",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/7/74/Soul%27s_Heart_Esport_2022_allmode.png/42px-Soul%27s_Heart_Esport_2022_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/7/74/Soul%27s_Heart_Esport_2022_allmode.png/42px-Soul%27s_Heart_Esport_2022_allmode.png",
+          "match_time": "2025-07-26T06:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "APL 2025 OCE - Stage 1 - Playoffs": {
+      "tournament": "APL 2025 OCE - Stage 1 - Playoffs",
+      "tournament_link": "https://liquipedia.net/rainbowsix/Asia_Pacific_League/2025/Stage_1/Oceania#Playoffs",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/e/e2/R6_Esports_2025_APL_allmode.png/42px-R6_Esports_2025_APL_allmode.png",
+      "matches": [
+        {
+          "team1": "EP",
+          "team1_url": "https://liquipedia.net/rainbowsix/ENTERPRISE_Esports",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/5/56/ENTERPRISE_Esports_2023_allmode.png/74px-ENTERPRISE_Esports_2023_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/5/56/ENTERPRISE_Esports_2023_allmode.png/74px-ENTERPRISE_Esports_2023_allmode.png",
+          "team2": "Ludavica",
+          "team2_url": "https://liquipedia.net/rainbowsix/Ludavica",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/f/f4/Ludavica_allmode.png/52px-Ludavica_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/f/f4/Ludavica_allmode.png/52px-Ludavica_allmode.png",
+          "match_time": "2025-07-25T07:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:0",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "GG",
+          "team1_url": "https://liquipedia.net/rainbowsix/Gaimin_Gladiators",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/4/45/Gaimin_Gladiators_2022_allmode.png/30px-Gaimin_Gladiators_2022_allmode.png",
+          "team2": "Ludavica",
+          "team2_url": "https://liquipedia.net/rainbowsix/Ludavica",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/f/f4/Ludavica_allmode.png/52px-Ludavica_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/f/f4/Ludavica_allmode.png/52px-Ludavica_allmode.png",
+          "match_time": "2025-07-25T04:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "0:2",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "EML 2025 - Stage 1 - Playoffs": {
+      "tournament": "EML 2025 - Stage 1 - Playoffs",
+      "tournament_link": "https://liquipedia.net/rainbowsix/Europe_MENA_League/2025/Stage_1#Playoffs",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/f/fe/R6_Esports_2025_EML_allmode.png/50px-R6_Esports_2025_EML_allmode.png",
+      "matches": [
+        {
+          "team1": "G2",
+          "team1_url": "https://liquipedia.net/rainbowsix/G2_Esports",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/4/4b/G2_Esports_2020_lightmode.png/43px-G2_Esports_2020_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/c/cd/G2_Esports_2019_darkmode.png/44px-G2_Esports_2019_darkmode.png",
+          "team2": "FLCS",
+          "team2_url": "https://liquipedia.net/rainbowsix/Team_Falcons",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+          "match_time": "2025-07-22T19:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "Secret",
+          "team1_url": "https://liquipedia.net/rainbowsix/Team_Secret",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/0/07/Team_Secret_lightmode.png/100px-Team_Secret_lightmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/d/d2/Team_Secret_darkmode.png/100px-Team_Secret_darkmode.png",
+          "team2": "FLCS",
+          "team2_url": "https://liquipedia.net/rainbowsix/Team_Falcons",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+          "match_time": "2025-07-22T13:00:00+00:00",
+          "format": "(Bo3)",
+          "score": "0:2",
+          "stream_link": [],
+          "details_link": "N/A"
+        },
+        {
+          "team1": "FLCS",
+          "team1_url": "https://liquipedia.net/rainbowsix/Team_Falcons",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/8/83/Team_Falcons_2022_allmode.png/41px-Team_Falcons_2022_allmode.png",
+          "team2": "VP",
+          "team2_url": "https://liquipedia.net/rainbowsix/Virtus.pro",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/c/c0/Virtus.pro_2019_allmode.png/51px-Virtus.pro_2019_allmode.png",
+          "match_time": "2025-07-21T21:30:00+00:00",
+          "format": "(Bo3)",
+          "score": "2:1",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "EML 2025 - Stage 1 - 5th Place": {
+      "tournament": "EML 2025 - Stage 1 - 5th Place",
+      "tournament_link": "https://liquipedia.net/rainbowsix/Europe_MENA_League/2025/Stage_1#5th_Place",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/f/fe/R6_Esports_2025_EML_allmode.png/50px-R6_Esports_2025_EML_allmode.png",
+      "matches": [
+        {
+          "team1": "MACKO",
+          "team1_url": "https://liquipedia.net/rainbowsix/MACKO_Esports",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/0/09/MACKO_Esports_2022_allmode.png/51px-MACKO_Esports_2022_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/0/09/MACKO_Esports_2022_allmode.png/51px-MACKO_Esports_2022_allmode.png",
+          "team2": "Gen.G",
+          "team2_url": "https://liquipedia.net/rainbowsix/Gen.G_Esports",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/3/3f/Gen.G_Esports_lightmode.png/59px-Gen.G_Esports_lightmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/b/ba/Gen.G_Esports_darkmode.png/59px-Gen.G_Esports_darkmode.png",
+          "match_time": "2025-07-22T15:30:00+00:00",
+          "format": "(Bo3)",
+          "score": "1:2",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    },
+    "APL 2025 OCE - Stage 1 - 5th Place": {
+      "tournament": "APL 2025 OCE - Stage 1 - 5th Place",
+      "tournament_link": "https://liquipedia.net/rainbowsix/Asia_Pacific_League/2025/Stage_1/Oceania#5th_Place",
+      "tournament_icon": "https://liquipedia.net/commons/images/thumb/e/e2/R6_Esports_2025_APL_allmode.png/42px-R6_Esports_2025_APL_allmode.png",
+      "matches": [
+        {
+          "team1": "CS",
+          "team1_url": "https://liquipedia.net/rainbowsix/Circular_Spheres",
+          "logo1_light": "https://liquipedia.net/commons/images/thumb/0/05/Circular_Spheres_allmode.png/49px-Circular_Spheres_allmode.png",
+          "logo1_dark": "https://liquipedia.net/commons/images/thumb/0/05/Circular_Spheres_allmode.png/49px-Circular_Spheres_allmode.png",
+          "team2": "TSG",
+          "team2_url": "https://liquipedia.net/rainbowsix/True_Synergy_Gaming",
+          "logo2_light": "https://liquipedia.net/commons/images/thumb/3/3f/True_Synergy_Gaming_allmode.png/59px-True_Synergy_Gaming_allmode.png",
+          "logo2_dark": "https://liquipedia.net/commons/images/thumb/3/3f/True_Synergy_Gaming_allmode.png/59px-True_Synergy_Gaming_allmode.png",
+          "match_time": "2025-07-22T09:30:00+00:00",
+          "format": "(Bo3)",
+          "score": "0:2",
+          "stream_link": [],
+          "details_link": "N/A"
+        }
+      ]
+    }
+  }
+}

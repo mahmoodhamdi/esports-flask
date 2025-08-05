@@ -79,7 +79,7 @@ def get_matches():
                 }), 400
 
             print(f"🔄 Scraping live matches for {game}...")
-            scraped_matches = scrape_matches(game)
+            scraped_matches = scrape_matches(game,use_matches_page=True)
             save_matches_to_db(game, scraped_matches)
             print(f"✅ Saved {game} matches to database")
 

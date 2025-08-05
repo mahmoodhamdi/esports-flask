@@ -1,3 +1,4 @@
+# F:/Freelance/escore_app/data analysis/ALL_MATCH.py
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -27,11 +28,25 @@ session.headers.update({
     'X-Requested-With': 'XMLHttpRequest'
 })
 
+def convert_timestamp_to_utc_iso(timestamp: int) -> str:
+    dt_utc = datetime.utcfromtimestamp(timestamp).replace(
+        tzinfo=ZoneInfo("UTC"))
+    return dt_utc.isoformat()
 
-def convert_timestamp_to_eest(timestamp: int) -> str:
-    dt_utc = datetime.utcfromtimestamp(timestamp).replace(tzinfo=ZoneInfo("UTC"))
-    dt_eest = dt_utc.astimezone(ZoneInfo("Europe/Athens"))  # EEST (UTC+3)
-    return dt_eest.strftime("%B %d, %Y - %H:%M EEST")
+'''''
+def extract_team_logos(team_side_element):
+    light_tag = team_side_element.select_one('.team-template-lightmode img')
+    dark_tag = team_side_element.select_one('.team-template-darkmode img')
+    fallback_tag = team_side_element.select_one('.team-template-image-icon img')
+
+    logo_light = f"{BASE_URL}{light_tag['src']}" if light_tag else (
+        f"{BASE_URL}{fallback_tag['src']}" if fallback_tag else "N/A"
+    )
+    logo_dark = f"{BASE_URL}{dark_tag['src']}" if dark_tag else (
+        f"{BASE_URL}{fallback_tag['src']}" if fallback_tag else "N/A"
+    )
+    return logo_light, logo_dark
+'''''
 
 def extract_team_logos(team_side_element):
     if not team_side_element:
@@ -62,35 +77,10 @@ def extract_team_logos(team_side_element):
     )
 
     return logo_light, logo_dark
-# def extract_team_logos(team_side_element):
-#     light_tag = team_side_element.select_one('.team-template-lightmode img')
-#     dark_tag = team_side_element.select_one('.team-template-darkmode img')
-#     fallback_tag = team_side_element.select_one('.team-template-image-icon img')
-#     flag_tag = team_side_element.select_one('.flag img')
 
-#     def get_src(tag):
-#         return f"{BASE_URL}{tag['src']}" if tag and tag.has_attr("src") else "N/A"
-
-    
-#     logo_light = (
-#         get_src(light_tag)
-#         if light_tag else
-#         get_src(fallback_tag)
-#         if fallback_tag else
-#         get_src(flag_tag)
-#     )
-
-#     logo_dark = (
-#         get_src(dark_tag)
-#         if dark_tag else
-#         get_src(fallback_tag)
-#         if fallback_tag else
-#         get_src(flag_tag)
-#     )
-
-#     return logo_light, logo_dark
 
 def extract_tournament_icon(match):
+    """Extract tournament icon from match element"""
     dark_icon = match.select_one('.match-info-tournament .darkmode img')
     light_icon = match.select_one('.match-info-tournament .lightmode img')
     any_icon = match.select_one('.match-info-tournament img')
@@ -101,9 +91,10 @@ def extract_tournament_icon(match):
     return get_src(dark_icon) or get_src(light_icon) or get_src(any_icon) or "N/A"
 
 
+
 def scrape_matches(game: str = "rainbowsix"):
     API_URL = f"{BASE_URL}/{game}/api.php"
-    PAGE = "Main_Page"
+    PAGE = "Liquipedia:Matches"
 
     params = {
         'action': 'parse',
@@ -146,7 +137,8 @@ def scrape_matches(game: str = "rainbowsix"):
 
             timer_span = match.select_one(".timer-object")
             timestamp = timer_span.get("data-timestamp") if timer_span else None
-            match_time = convert_timestamp_to_eest(int(timestamp)) if timestamp else "N/A"
+            match_time = convert_timestamp_to_utc_iso(
+                int(timestamp)) if timestamp else None
 
             stream_links = []
             for a in match.select('.match-info-links a'):
@@ -162,14 +154,16 @@ def scrape_matches(game: str = "rainbowsix"):
                             )
 
 
-            tournament_tag = match.select_one('.match-info-tournament .tournament-name a')
+            tournament_link_tag = match.select_one('.match-info-tournament a[href]')
             tournament_icon_tag = match.select_one('.match-tournament .tournament-icon img')
 
-            tournament_name = tournament_tag.text.strip() if tournament_tag else "Unknown Tournament"
+            tournament_name_span = match.select_one('.match-info-tournament a span')
+            tournament_name = tournament_name_span.text.strip() if tournament_name_span else "Unknown Tournament"
+            tournament_link = f"{BASE_URL}{tournament_link_tag['href']}" if tournament_link_tag else ""
             if tournament_name not in data[status]:
                 data[status][tournament_name] = {
                     "tournament": tournament_name,
-                    "tournament_link": f"{BASE_URL}{tournament_tag['href']}" if tournament_tag else "",
+                    "tournament_link": tournament_link,
                     "tournament_icon": extract_tournament_icon(match),
                     "matches": []
                 }
