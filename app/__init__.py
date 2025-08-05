@@ -40,7 +40,7 @@ def create_app():
     from .routes.game_teams import new_teams_bp
     from app.routes.matches_mohamed import matches_bp
     from app.routes.ewc_weeks import weeks_bp
-    from auto_live_player_info.fetch_player_info_script import live_player_info_automatic_bp
+    # from auto_live_player_info.fetch_player_info_script import live_player_info_automatic_bp
 
 
     # Register all blueprints
@@ -59,7 +59,7 @@ def create_app():
     app.register_blueprint(new_teams_bp, url_prefix="/api")
     app.register_blueprint(matches_bp, url_prefix="/api")
     app.register_blueprint(weeks_bp, url_prefix="/api")
-    app.register_blueprint(live_player_info_automatic_bp, url_prefix="/api")
+    # app.register_blueprint(live_player_info_automatic_bp, url_prefix="/api")
 
 
     # Serve uploaded files
