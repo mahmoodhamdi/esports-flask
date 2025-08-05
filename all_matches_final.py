@@ -73,7 +73,7 @@ def extract_tournament_icon(match):
     return get_src(dark_icon) or get_src(light_icon) or get_src(any_icon) or "N/A"
 
 
-def scrape_matches(game: str = "valorant"):
+def scrape_matches(game: str = "callofduty"):
     API_URL = f"{BASE_URL}/{game}/api.php"
     PAGE = "Main_Page"
 
@@ -191,6 +191,6 @@ def update_file_if_changed(game, new_data):
 
 
 if __name__ == "__main__":
-    game = "valorant"  
+    game = "callofduty"  
     match_data = scrape_matches(game)
     update_file_if_changed(game, match_data)

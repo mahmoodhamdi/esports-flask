@@ -58,7 +58,7 @@ class TeamFetcherGUI:
         ttk.Label(file_frame, text="Delay between requests (sec):").grid(row=1, column=0, sticky="w", pady=5)
         delay_frame = ttk.Frame(file_frame)
         delay_frame.grid(row=1, column=1, sticky="w", pady=5)
-        ttk.Spinbox(delay_frame, from_=1, to=3600, textvariable=self.delay_var, width=10).pack(side="left")
+        ttk.Spinbox(delay_frame, from_=60, to=3600, textvariable=self.delay_var, width=10).pack(side="left")
         ttk.Label(delay_frame, text="(Recommended: 60-300 seconds)").pack(side="left", padx=(10, 0))
 
         # Statistics section
