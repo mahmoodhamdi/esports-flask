@@ -76,22 +76,22 @@ def extract_tournament_icon(match):
 
     return get_src(dark_icon) or get_src(light_icon) or get_src(any_icon) or "N/A"
 
+CUSTOM_STREAM_LINKS = {
+    # "rainbowsix": {
+    #     ("NIP", "EP"): "https://yyyyyyyyyy.tv/val_match1",
+    # },
+}
 
-def scrape_matches(game: str = "valorant", use_matches_page: bool = False):
+def scrape_matches(game: str = "valorant", use_matches_page: bool = True):
     """
     Scrape matches from Liquipedia
-    
+
     Args:
-        game: Game to scrape (valorant, easportsfc, etc.)
+        game: Game to scrape (valorant, cs2, etc.)
         use_matches_page: If True, use Liquipedia:Matches page, otherwise use Main_Page
     """
     API_URL = f"{BASE_URL}/{game}/api.php"
-    
-    # Choose which page to scrape based on parameter
-    if use_matches_page:
-        PAGE = "Liquipedia:Matches"
-    else:
-        PAGE = "Main_Page"
+    PAGE = "Liquipedia:Matches" if use_matches_page else "Main_Page"
 
     params = {
         'action': 'parse',
@@ -99,15 +99,15 @@ def scrape_matches(game: str = "valorant", use_matches_page: bool = False):
         'format': 'json',
         'prop': 'text'
     }
-    
+
     response = session.get(API_URL, params=params, timeout=10)
     response.raise_for_status()
     html_content = response.json()['parse']['text']['*']
     soup = BeautifulSoup(html_content, "html.parser")
 
     data = {"Upcoming": {}, "Completed": {}}
-
     sections = soup.select('div[data-toggle-area-content]')
+
     for section in sections:
         section_type = section.get('data-toggle-area-content')
         status = "Upcoming" if section_type == "1" else "Completed" if section_type == "2" else "Other"
@@ -137,21 +137,35 @@ def scrape_matches(game: str = "valorant", use_matches_page: bool = False):
             timer_span = match.select_one(".timer-object")
             timestamp = timer_span.get("data-timestamp") if timer_span else None
             match_time = convert_timestamp_to_utc_iso(int(timestamp)) if timestamp else "N/A"
+
             stream_links = []
             for a in match.select('.match-info-links a'):
                 href = a.get('href', '')
                 full_link = href if href.startswith("http") else f"{BASE_URL}{href}"
                 stream_links.append(full_link)
 
+            
+            team1_name = team1.text.strip() if team1 else ""
+            team2_name = team2.text.strip() if team2 else ""
+
+            game_links = CUSTOM_STREAM_LINKS.get(game.lower())
+            if game_links:
+                custom_link = game_links.get((team1_name, team2_name)) or game_links.get((team2_name, team1_name))
+                if custom_link:
+                    stream_links.append(custom_link)
+
+            # إزالة التكرارات
+            stream_links = list(set(stream_links))
+
             details_link = next((f"{BASE_URL}{a['href']}"
-                                for a in match.select('.match-info-links a')
-                                if 'match:' in a['href'].lower()), "N/A")
+                                 for a in match.select('.match-info-links a')
+                                 if 'match:' in a['href'].lower()), "N/A")
 
             tournament_link_tag = match.select_one('.match-info-tournament a[href]')
             tournament_name_span = match.select_one('.match-info-tournament a span')
             tournament_name = tournament_name_span.text.strip() if tournament_name_span else "Unknown Tournament"
             tournament_link = f"{BASE_URL}{tournament_link_tag['href']}" if tournament_link_tag else ""
-            
+
             if tournament_name not in data[status]:
                 data[status][tournament_name] = {
                     "tournament": tournament_name,
@@ -161,21 +175,21 @@ def scrape_matches(game: str = "valorant", use_matches_page: bool = False):
                 }
 
             match_info = {
-                "team1": team1.text.strip() if team1 else "N/A",
+                "team1": team1_name or "N/A",
                 "team1_url": team1_url,
                 "logo1_light": logo1_light,
                 "logo1_dark": logo1_dark,
-                "team2": team2.text.strip() if team2 else "N/A",
+                "team2": team2_name or "N/A",
                 "team2_url": team2_url,
                 "logo2_light": logo2_light,
                 "logo2_dark": logo2_dark,
-                "match_time": match_time if match_time else "N/A",
+                "match_time": match_time,
                 "format": fmt.text.strip() if fmt else "N/A",
                 "score": score,
                 "stream_link": stream_links,
                 "details_link": details_link,
                 "group": (match.select_one('.bracket-header span')
-                         or match.select_one('.bracket-header')).text.strip()
+                          or match.select_one('.bracket-header')).text.strip()
                 if match.select_one('.bracket-header') else None
             }
 
