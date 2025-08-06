@@ -444,3 +444,1156 @@ AttributeError: 'NoneType' object has no attribute 'name'
 2025-08-05 12:46:13,046 - INFO - 🛑 Stop requested by user...
 2025-08-05 12:46:13,401 - INFO - ❌ Processing stopped by user
 2025-08-05 12:46:13,412 - INFO - 🎉 Done! Processed 582 players in 20595.88 seconds.
+2025-08-06 06:22:21,380 - INFO - [1/440] Fetching info for: Tarzan (leagueoflegends)
+2025-08-06 06:22:24,700 - WARNING - ⚠️ API fetch failed for Tarzan (leagueoflegends)
+2025-08-06 06:22:25,031 - INFO - [2/440] Fetching info for: Guigo (leagueoflegends)
+2025-08-06 06:22:26,365 - WARNING - ⚠️ API fetch failed for Guigo (leagueoflegends)
+2025-08-06 06:22:26,367 - INFO - [3/440] Fetching info for: Kataomi` (dota2)
+2025-08-06 06:22:29,121 - WARNING - ⚠️ API fetch failed for Kataomi` (dota2)
+2025-08-06 06:22:29,123 - INFO - [4/440] Fetching info for: SaberLight (dota2)
+2025-08-06 06:22:31,053 - WARNING - ⚠️ API fetch failed for SaberLight (dota2)
+2025-08-06 06:22:31,054 - INFO - [5/440] Fetching info for: Riddys (dota2)
+2025-08-06 06:22:32,280 - INFO - ✅ Success for Riddys (dota2) [Took 1.23 sec]
+2025-08-06 06:22:32,282 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:24:53,235 - INFO - [6/440] Fetching info for: Skem (dota2)
+2025-08-06 06:24:55,083 - INFO - ✅ Success for Skem (dota2) [Took 1.85 sec]
+2025-08-06 06:24:55,086 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:27:15,939 - INFO - [7/440] Fetching info for: BuLba (dota2)
+2025-08-06 06:27:19,266 - INFO - ✅ Success for BuLba (dota2) [Took 3.33 sec]
+2025-08-06 06:27:19,267 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:29:40,090 - INFO - [8/440] Fetching info for: Yuma (dota2)
+2025-08-06 06:29:41,614 - INFO - ✅ Success for Yuma (dota2) [Took 1.52 sec]
+2025-08-06 06:29:41,616 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:32:02,481 - INFO - [9/440] Fetching info for: 4nalog (dota2)
+2025-08-06 06:32:05,521 - INFO - ✅ Success for 4nalog (dota2) [Took 3.04 sec]
+2025-08-06 06:32:05,521 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:34:26,383 - INFO - [10/440] Fetching info for: Wisper (dota2)
+2025-08-06 06:34:29,256 - INFO - ✅ Success for Wisper (dota2) [Took 2.87 sec]
+2025-08-06 06:34:29,259 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:36:50,018 - INFO - [11/440] Fetching info for: Scofield (dota2)
+2025-08-06 06:36:53,232 - INFO - ✅ Success for Scofield (dota2) [Took 3.21 sec]
+2025-08-06 06:36:53,234 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:39:14,103 - INFO - [12/440] Fetching info for: KJ (dota2)
+2025-08-06 06:39:15,775 - INFO - ✅ Success for KJ (dota2) [Took 1.67 sec]
+2025-08-06 06:39:15,777 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:41:36,589 - INFO - [13/440] Fetching info for: 3Mz (apexlegends)
+2025-08-06 06:41:41,711 - INFO - ✅ Success for 3Mz (apexlegends) [Took 5.12 sec]
+2025-08-06 06:41:41,714 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:44:02,559 - INFO - [14/440] Fetching info for: Pite (apexlegends)
+2025-08-06 06:44:09,056 - INFO - ✅ Success for Pite (apexlegends) [Took 6.50 sec]
+2025-08-06 06:44:09,059 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:46:29,878 - INFO - [15/440] Fetching info for: Return (apexlegends)
+2025-08-06 06:46:36,987 - INFO - ✅ Success for Return (apexlegends) [Took 7.11 sec]
+2025-08-06 06:46:36,990 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:48:57,896 - INFO - [16/440] Fetching info for: Luc1fuge (apexlegends)
+2025-08-06 06:49:00,148 - INFO - ✅ Success for Luc1fuge (apexlegends) [Took 2.25 sec]
+2025-08-06 06:49:00,149 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:51:20,983 - INFO - [17/440] Fetching info for: JonahP (valorant)
+2025-08-06 06:51:25,409 - INFO - ✅ Success for JonahP (valorant) [Took 4.43 sec]
+2025-08-06 06:51:25,411 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:53:46,250 - INFO - [18/440] Fetching info for: Trent (valorant)
+2025-08-06 06:53:49,795 - INFO - ✅ Success for Trent (valorant) [Took 3.55 sec]
+2025-08-06 06:53:49,798 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:56:10,605 - INFO - [19/440] Fetching info for: Valyn (valorant)
+2025-08-06 06:56:23,624 - INFO - ✅ Success for Valyn (valorant) [Took 13.02 sec]
+2025-08-06 06:56:23,627 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 06:58:44,473 - INFO - [20/440] Fetching info for: Jawgemo (valorant)
+2025-08-06 06:58:50,386 - INFO - ✅ Success for Jawgemo (valorant) [Took 5.91 sec]
+2025-08-06 06:58:50,390 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:01:11,256 - INFO - [21/440] Fetching info for: Shhhack (valorant)
+2025-08-06 07:01:16,437 - INFO - ✅ Success for Shhhack (valorant) [Took 5.18 sec]
+2025-08-06 07:01:16,438 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:03:37,260 - INFO - [22/440] Fetching info for: Zekken (valorant)
+2025-08-06 07:03:41,595 - INFO - ✅ Success for Zekken (valorant) [Took 4.33 sec]
+2025-08-06 07:03:41,597 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:06:02,411 - INFO - [23/440] Fetching info for: Johnqt (valorant)
+2025-08-06 07:06:06,768 - INFO - ✅ Success for Johnqt (valorant) [Took 4.36 sec]
+2025-08-06 07:06:06,769 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:08:27,582 - INFO - [24/440] Fetching info for: Zellsis (valorant)
+2025-08-06 07:08:33,137 - INFO - ✅ Success for Zellsis (valorant) [Took 5.56 sec]
+2025-08-06 07:08:33,140 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:10:53,967 - INFO - [25/440] Fetching info for: Bang (valorant)
+2025-08-06 07:10:59,396 - INFO - ✅ Success for Bang (valorant) [Took 5.43 sec]
+2025-08-06 07:10:59,398 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:13:20,301 - INFO - [26/440] Fetching info for: N4RRATE (valorant)
+2025-08-06 07:13:23,080 - INFO - ✅ Success for N4RRATE (valorant) [Took 2.78 sec]
+2025-08-06 07:13:23,082 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:15:43,938 - INFO - [27/440] Fetching info for: Rarga (valorant)
+2025-08-06 07:15:55,420 - WARNING - ⚠️ API fetch failed for Rarga (valorant)
+2025-08-06 07:15:55,424 - INFO - [28/440] Fetching info for: Happywei (valorant)
+2025-08-06 07:15:57,672 - WARNING - ⚠️ API fetch failed for Happywei (valorant)
+2025-08-06 07:15:57,672 - INFO - [29/440] Fetching info for: Coconut (valorant)
+2025-08-06 07:15:59,372 - WARNING - ⚠️ API fetch failed for Coconut (valorant)
+2025-08-06 07:15:59,375 - INFO - [30/440] Fetching info for: Viva (valorant)
+2025-08-06 07:16:00,672 - WARNING - ⚠️ API fetch failed for Viva (valorant)
+2025-08-06 07:16:00,672 - INFO - [31/440] Fetching info for: Hvoya (valorant)
+2025-08-06 07:16:03,105 - WARNING - ⚠️ API fetch failed for Hvoya (valorant)
+2025-08-06 07:16:03,105 - INFO - [32/440] Fetching info for: Whzy (valorant)
+2025-08-06 07:16:05,438 - WARNING - ⚠️ API fetch failed for Whzy (valorant)
+2025-08-06 07:16:05,438 - INFO - [33/440] Fetching info for: Knight (valorant)
+2025-08-06 07:16:06,704 - WARNING - ⚠️ API fetch failed for Knight (valorant)
+2025-08-06 07:16:06,704 - INFO - [34/440] Fetching info for: Levius (valorant)
+2025-08-06 07:16:09,637 - WARNING - ⚠️ API fetch failed for Levius (valorant)
+2025-08-06 07:16:09,637 - INFO - [35/440] Fetching info for: Nephh (valorant)
+2025-08-06 07:16:12,422 - WARNING - ⚠️ API fetch failed for Nephh (valorant)
+2025-08-06 07:16:12,423 - INFO - [36/440] Fetching info for: Rushia (valorant)
+2025-08-06 07:16:15,070 - WARNING - ⚠️ API fetch failed for Rushia (valorant)
+2025-08-06 07:16:15,070 - INFO - [37/440] Fetching info for: Boaster (valorant)
+2025-08-06 07:16:17,471 - WARNING - ⚠️ API fetch failed for Boaster (valorant)
+2025-08-06 07:16:17,471 - INFO - [38/440] Fetching info for: Alfajer (valorant)
+2025-08-06 07:16:19,718 - WARNING - ⚠️ API fetch failed for Alfajer (valorant)
+2025-08-06 07:16:19,720 - INFO - [39/440] Fetching info for: Chronicle (valorant)
+2025-08-06 07:16:22,701 - WARNING - ⚠️ API fetch failed for Chronicle (valorant)
+2025-08-06 07:16:22,701 - INFO - [40/440] Fetching info for: Kaajak (valorant)
+2025-08-06 07:16:24,102 - WARNING - ⚠️ API fetch failed for Kaajak (valorant)
+2025-08-06 07:16:24,102 - INFO - [41/440] Fetching info for: Crashies (valorant)
+2025-08-06 07:16:25,851 - WARNING - ⚠️ API fetch failed for Crashies (valorant)
+2025-08-06 07:16:25,854 - INFO - [42/440] Fetching info for: Boo (valorant)
+2025-08-06 07:16:27,700 - WARNING - ⚠️ API fetch failed for Boo (valorant)
+2025-08-06 07:16:27,700 - INFO - [43/440] Fetching info for: Benjyfishy (valorant)
+2025-08-06 07:16:30,235 - WARNING - ⚠️ API fetch failed for Benjyfishy (valorant)
+2025-08-06 07:16:30,238 - INFO - [44/440] Fetching info for: MiniBoo (valorant)
+2025-08-06 07:16:31,470 - WARNING - ⚠️ API fetch failed for MiniBoo (valorant)
+2025-08-06 07:16:31,470 - INFO - [45/440] Fetching info for: RieNs (valorant)
+2025-08-06 07:16:32,669 - WARNING - ⚠️ API fetch failed for RieNs (valorant)
+2025-08-06 07:16:32,670 - INFO - [46/440] Fetching info for: Wo0t (valorant)
+2025-08-06 07:16:34,452 - WARNING - ⚠️ API fetch failed for Wo0t (valorant)
+2025-08-06 07:16:34,452 - INFO - [47/440] Fetching info for: Xffero (valorant)
+2025-08-06 07:16:37,085 - WARNING - ⚠️ API fetch failed for Xffero (valorant)
+2025-08-06 07:16:37,085 - INFO - [48/440] Fetching info for: Jemkin (valorant)
+2025-08-06 07:16:38,120 - WARNING - ⚠️ API fetch failed for Jemkin (valorant)
+2025-08-06 07:16:38,120 - INFO - [49/440] Fetching info for: Monyet (valorant)
+2025-08-06 07:16:40,567 - WARNING - ⚠️ API fetch failed for Monyet (valorant)
+2025-08-06 07:16:40,570 - INFO - [50/440] Fetching info for: Kushy (valorant)
+2025-08-06 07:16:42,920 - WARNING - ⚠️ API fetch failed for Kushy (valorant)
+2025-08-06 07:16:42,922 - INFO - [51/440] Fetching info for: Crazyguy (valorant)
+2025-08-06 07:16:44,117 - WARNING - ⚠️ API fetch failed for Crazyguy (valorant)
+2025-08-06 07:16:44,120 - INFO - [52/440] Fetching info for: T3xture (valorant)
+2025-08-06 07:16:46,051 - WARNING - ⚠️ API fetch failed for T3xture (valorant)
+2025-08-06 07:16:46,051 - INFO - [53/440] Fetching info for: Karon (valorant)
+2025-08-06 07:16:48,884 - WARNING - ⚠️ API fetch failed for Karon (valorant)
+2025-08-06 07:16:48,884 - INFO - [54/440] Fetching info for: Munchkin (valorant)
+2025-08-06 07:16:51,301 - WARNING - ⚠️ API fetch failed for Munchkin (valorant)
+2025-08-06 07:16:51,301 - INFO - [55/440] Fetching info for: Ash_(Korean_player) (valorant)
+2025-08-06 07:16:54,083 - WARNING - ⚠️ API fetch failed for Ash_(Korean_player) (valorant)
+2025-08-06 07:16:54,083 - INFO - [56/440] Fetching info for: Foxy9 (valorant)
+2025-08-06 07:17:09,548 - WARNING - ⚠️ API fetch failed for Foxy9 (valorant)
+2025-08-06 07:17:09,551 - INFO - [57/440] Fetching info for: Ethan (valorant)
+2025-08-06 07:17:26,668 - WARNING - ⚠️ API fetch failed for Ethan (valorant)
+2025-08-06 07:17:26,679 - INFO - [58/440] Fetching info for: S0m (valorant)
+2025-08-06 07:17:28,781 - WARNING - ⚠️ API fetch failed for S0m (valorant)
+2025-08-06 07:17:28,781 - INFO - [59/440] Fetching info for: Mada (valorant)
+2025-08-06 07:17:31,146 - WARNING - ⚠️ API fetch failed for Mada (valorant)
+2025-08-06 07:17:31,146 - INFO - [60/440] Fetching info for: Brawk (valorant)
+2025-08-06 07:17:50,788 - WARNING - ⚠️ API fetch failed for Brawk (valorant)
+2025-08-06 07:17:50,790 - INFO - [61/440] Fetching info for: Skuba (valorant)
+2025-08-06 07:17:56,646 - INFO - ✅ Success for Skuba (valorant) [Took 5.86 sec]
+2025-08-06 07:17:56,648 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:20:17,526 - INFO - [62/440] Fetching info for: Asuna (valorant)
+2025-08-06 07:20:22,087 - INFO - ✅ Success for Asuna (valorant) [Took 4.56 sec]
+2025-08-06 07:20:22,090 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:22:43,028 - INFO - [63/440] Fetching info for: Cryocells (valorant)
+2025-08-06 07:22:47,687 - INFO - ✅ Success for Cryocells (valorant) [Took 4.66 sec]
+2025-08-06 07:22:47,687 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:25:08,614 - INFO - [64/440] Fetching info for: Eeiu (valorant)
+2025-08-06 07:25:12,804 - INFO - ✅ Success for Eeiu (valorant) [Took 4.19 sec]
+2025-08-06 07:25:12,807 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:27:33,602 - INFO - [65/440] Fetching info for: Boostio (valorant)
+2025-08-06 07:27:38,662 - INFO - ✅ Success for Boostio (valorant) [Took 5.06 sec]
+2025-08-06 07:27:38,663 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:29:59,554 - INFO - [66/440] Fetching info for: Zander (valorant)
+2025-08-06 07:30:02,958 - INFO - ✅ Success for Zander (valorant) [Took 3.41 sec]
+2025-08-06 07:30:02,959 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:32:23,822 - INFO - [67/440] Fetching info for: CHICHOO (valorant)
+2025-08-06 07:32:33,160 - INFO - ✅ Success for CHICHOO (valorant) [Took 9.34 sec]
+2025-08-06 07:32:33,162 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:34:54,059 - INFO - [68/440] Fetching info for: Nobody (valorant)
+2025-08-06 07:34:58,576 - INFO - ✅ Success for Nobody (valorant) [Took 4.52 sec]
+2025-08-06 07:34:58,579 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:37:19,410 - INFO - [69/440] Fetching info for: ZmjjKK (valorant)
+2025-08-06 07:37:24,553 - INFO - ✅ Success for ZmjjKK (valorant) [Took 5.14 sec]
+2025-08-06 07:37:24,553 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:39:45,396 - INFO - [70/440] Fetching info for: Smoggy (valorant)
+2025-08-06 07:39:50,103 - INFO - ✅ Success for Smoggy (valorant) [Took 4.71 sec]
+2025-08-06 07:39:50,106 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:42:10,981 - INFO - [71/440] Fetching info for: Zjc (valorant)
+2025-08-06 07:42:14,678 - INFO - ✅ Success for Zjc (valorant) [Took 3.70 sec]
+2025-08-06 07:42:14,681 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:44:35,533 - INFO - [72/440] Fetching info for: Abo (valorant)
+2025-08-06 07:44:38,322 - INFO - ✅ Success for Abo (valorant) [Took 2.79 sec]
+2025-08-06 07:44:38,324 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:46:59,218 - INFO - [73/440] Fetching info for: Haodong (valorant)
+2025-08-06 07:47:03,901 - INFO - ✅ Success for Haodong (valorant) [Took 4.68 sec]
+2025-08-06 07:47:03,906 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:49:24,771 - INFO - [74/440] Fetching info for: CoCo (valorant)
+2025-08-06 07:49:29,015 - INFO - ✅ Success for CoCo (valorant) [Took 4.24 sec]
+2025-08-06 07:49:29,017 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:51:49,874 - INFO - [75/440] Fetching info for: TvirusLuke (valorant)
+2025-08-06 07:51:52,804 - INFO - ✅ Success for TvirusLuke (valorant) [Took 2.93 sec]
+2025-08-06 07:51:52,808 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:54:13,691 - INFO - [76/440] Fetching info for: Lucas (valorant)
+2025-08-06 07:54:17,765 - INFO - ✅ Success for Lucas (valorant) [Took 4.07 sec]
+2025-08-06 07:54:17,768 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:56:38,562 - INFO - [77/440] Fetching info for: LêwN (valorant)
+2025-08-06 07:56:40,009 - INFO - ✅ Success for LêwN (valorant) [Took 1.45 sec]
+2025-08-06 07:56:40,011 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 07:59:00,847 - INFO - [78/440] Fetching info for: Jamppi (valorant)
+2025-08-06 07:59:04,162 - INFO - ✅ Success for Jamppi (valorant) [Took 3.32 sec]
+2025-08-06 07:59:04,165 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:01:24,965 - INFO - [79/440] Fetching info for: Profek (valorant)
+2025-08-06 08:01:27,529 - WARNING - ⚠️ API fetch failed for Profek (valorant)
+2025-08-06 08:01:27,531 - INFO - [80/440] Fetching info for: SociablEE (valorant)
+2025-08-06 08:01:31,000 - INFO - ✅ Success for SociablEE (valorant) [Took 3.47 sec]
+2025-08-06 08:01:31,002 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:03:51,816 - INFO - [81/440] Fetching info for: Magnum (valorant)
+2025-08-06 08:03:55,062 - INFO - ✅ Success for Magnum (valorant) [Took 3.25 sec]
+2025-08-06 08:03:55,063 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:06:15,887 - INFO - [82/440] Fetching info for: Marteen (valorant)
+2025-08-06 08:06:19,670 - INFO - ✅ Success for Marteen (valorant) [Took 3.78 sec]
+2025-08-06 08:06:19,673 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:08:40,489 - INFO - [83/440] Fetching info for: Avez (valorant)
+2025-08-06 08:08:44,908 - INFO - ✅ Success for Avez (valorant) [Took 4.42 sec]
+2025-08-06 08:08:44,909 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:11:05,709 - INFO - [84/440] Fetching info for: Elite (valorant)
+2025-08-06 08:11:10,114 - INFO - ✅ Success for Elite (valorant) [Took 4.40 sec]
+2025-08-06 08:11:10,114 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:13:30,961 - INFO - [85/440] Fetching info for: SUYGETSU (valorant)
+2025-08-06 08:13:34,920 - INFO - ✅ Success for SUYGETSU (valorant) [Took 3.96 sec]
+2025-08-06 08:13:34,922 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:15:55,778 - INFO - [86/440] Fetching info for: Saadhak (valorant)
+2025-08-06 08:15:59,192 - INFO - ✅ Success for Saadhak (valorant) [Took 3.41 sec]
+2025-08-06 08:15:59,193 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:18:20,014 - INFO - [87/440] Fetching info for: D4v41 (valorant)
+2025-08-06 08:18:24,897 - INFO - ✅ Success for D4v41 (valorant) [Took 4.88 sec]
+2025-08-06 08:18:24,898 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:20:45,751 - INFO - [88/440] Fetching info for: F0rsakeN (valorant)
+2025-08-06 08:20:49,306 - INFO - ✅ Success for F0rsakeN (valorant) [Took 3.56 sec]
+2025-08-06 08:20:49,307 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:23:10,238 - INFO - [89/440] Fetching info for: Something (valorant)
+2025-08-06 08:23:13,695 - INFO - ✅ Success for Something (valorant) [Took 3.46 sec]
+2025-08-06 08:23:13,696 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:25:34,541 - INFO - [90/440] Fetching info for: Jinggg (valorant)
+2025-08-06 08:25:39,178 - INFO - ✅ Success for Jinggg (valorant) [Took 4.64 sec]
+2025-08-06 08:25:39,180 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:28:00,108 - INFO - [91/440] Fetching info for: PatMen (valorant)
+2025-08-06 08:28:03,295 - INFO - ✅ Success for PatMen (valorant) [Took 3.19 sec]
+2025-08-06 08:28:03,298 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:30:24,078 - INFO - [92/440] Fetching info for: MaKo (valorant)
+2025-08-06 08:30:28,928 - INFO - ✅ Success for MaKo (valorant) [Took 4.85 sec]
+2025-08-06 08:30:28,929 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:32:49,762 - INFO - [93/440] Fetching info for: Free1ng (valorant)
+2025-08-06 08:32:51,095 - WARNING - ⚠️ API fetch failed for Free1ng (valorant)
+2025-08-06 08:32:51,100 - INFO - [94/440] Fetching info for: HYUNMIN (valorant)
+2025-08-06 08:32:54,846 - INFO - ✅ Success for HYUNMIN (valorant) [Took 3.75 sec]
+2025-08-06 08:32:54,849 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:35:15,616 - INFO - [95/440] Fetching info for: BeYN (valorant)
+2025-08-06 08:35:19,810 - INFO - ✅ Success for BeYN (valorant) [Took 4.19 sec]
+2025-08-06 08:35:19,811 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:37:40,650 - INFO - [96/440] Fetching info for: Flicker (valorant)
+2025-08-06 08:37:45,184 - INFO - ✅ Success for Flicker (valorant) [Took 4.53 sec]
+2025-08-06 08:37:45,185 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:40:06,004 - INFO - [97/440] Fetching info for: Donn (mobilelegends)
+2025-08-06 08:40:08,239 - INFO - ✅ Success for Donn (mobilelegends) [Took 2.24 sec]
+2025-08-06 08:40:08,240 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:42:29,057 - INFO - [98/440] Fetching info for: Lanaya (mobilelegends)
+2025-08-06 08:42:30,807 - INFO - ✅ Success for Lanaya (mobilelegends) [Took 1.75 sec]
+2025-08-06 08:42:30,808 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:44:51,642 - INFO - [99/440] Fetching info for: Paofu (mobilelegends)
+2025-08-06 08:44:54,011 - INFO - ✅ Success for Paofu (mobilelegends) [Took 2.37 sec]
+2025-08-06 08:44:54,013 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:47:14,912 - INFO - [100/440] Fetching info for: Mikey (mobilelegends)
+2025-08-06 08:47:16,737 - INFO - ✅ Success for Mikey (mobilelegends) [Took 1.83 sec]
+2025-08-06 08:47:16,739 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:49:37,596 - INFO - [101/440] Fetching info for: Cat9 (mobilelegends)
+2025-08-06 08:49:39,826 - INFO - ✅ Success for Cat9 (mobilelegends) [Took 2.23 sec]
+2025-08-06 08:49:39,827 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:52:00,616 - INFO - [102/440] Fetching info for: Keke (honorofkings)
+2025-08-06 08:52:03,487 - INFO - ✅ Success for Keke (honorofkings) [Took 2.87 sec]
+2025-08-06 08:52:03,487 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:54:24,336 - INFO - [103/440] Fetching info for: ZhaLie (honorofkings)
+2025-08-06 08:54:27,460 - INFO - ✅ Success for ZhaLie (honorofkings) [Took 3.12 sec]
+2025-08-06 08:54:27,463 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:56:48,271 - INFO - [104/440] Fetching info for: Wen (honorofkings)
+2025-08-06 08:56:51,246 - INFO - ✅ Success for Wen (honorofkings) [Took 2.98 sec]
+2025-08-06 08:56:51,247 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 08:59:12,091 - INFO - [105/440] Fetching info for: An_(Lin_Junan) (honorofkings)
+2025-08-06 08:59:13,916 - INFO - ✅ Success for An_(Lin_Junan) (honorofkings) [Took 1.83 sec]
+2025-08-06 08:59:13,918 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:01:34,757 - INFO - [106/440] Fetching info for: Muchen (honorofkings)
+2025-08-06 09:01:37,445 - INFO - ✅ Success for Muchen (honorofkings) [Took 2.69 sec]
+2025-08-06 09:01:37,446 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:03:58,246 - INFO - [107/440] Fetching info for: BLADE (freefire)
+2025-08-06 09:04:01,185 - INFO - ✅ Success for BLADE (freefire) [Took 2.94 sec]
+2025-08-06 09:04:01,188 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:06:21,962 - INFO - [108/440] Fetching info for: KUTTUSH (freefire)
+2025-08-06 09:06:24,591 - INFO - ✅ Success for KUTTUSH (freefire) [Took 2.63 sec]
+2025-08-06 09:06:24,593 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:08:45,465 - INFO - [109/440] Fetching info for: NEJAD (freefire)
+2025-08-06 09:08:48,034 - INFO - ✅ Success for NEJAD (freefire) [Took 2.57 sec]
+2025-08-06 09:08:48,037 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:11:08,869 - INFO - [110/440] Fetching info for: FLICKER (freefire)
+2025-08-06 09:11:11,432 - INFO - ✅ Success for FLICKER (freefire) [Took 2.56 sec]
+2025-08-06 09:11:11,432 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:13:32,306 - INFO - [111/440] Fetching info for: KAFI (freefire)
+2025-08-06 09:13:36,182 - INFO - ✅ Success for KAFI (freefire) [Took 3.88 sec]
+2025-08-06 09:13:36,184 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:15:57,039 - INFO - [112/440] Fetching info for: ABeZy (callofduty)
+2025-08-06 09:15:59,526 - INFO - ✅ Success for ABeZy (callofduty) [Took 2.49 sec]
+2025-08-06 09:15:59,527 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:18:20,377 - INFO - [113/440] Fetching info for: Cellium (callofduty)
+2025-08-06 09:18:22,762 - INFO - ✅ Success for Cellium (callofduty) [Took 2.38 sec]
+2025-08-06 09:18:22,766 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:20:43,612 - INFO - [114/440] Fetching info for: Drazah (callofduty)
+2025-08-06 09:20:47,382 - INFO - ✅ Success for Drazah (callofduty) [Took 3.77 sec]
+2025-08-06 09:20:47,382 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:23:08,182 - INFO - [115/440] Fetching info for: Simp (callofduty)
+2025-08-06 09:23:12,065 - INFO - ✅ Success for Simp (callofduty) [Took 3.88 sec]
+2025-08-06 09:23:12,067 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:25:32,935 - INFO - [116/440] Fetching info for: Dashy (callofduty)
+2025-08-06 09:25:35,410 - INFO - ✅ Success for Dashy (callofduty) [Took 2.47 sec]
+2025-08-06 09:25:35,413 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:27:56,240 - INFO - [117/440] Fetching info for: Huke (callofduty)
+2025-08-06 09:27:58,695 - INFO - ✅ Success for Huke (callofduty) [Took 2.46 sec]
+2025-08-06 09:27:58,697 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:30:19,494 - INFO - [118/440] Fetching info for: Mercules (callofduty)
+2025-08-06 09:30:22,027 - INFO - ✅ Success for Mercules (callofduty) [Took 2.53 sec]
+2025-08-06 09:30:22,029 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:32:42,847 - INFO - [119/440] Fetching info for: Shotzzy (callofduty)
+2025-08-06 09:32:45,196 - INFO - ✅ Success for Shotzzy (callofduty) [Took 2.35 sec]
+2025-08-06 09:32:45,198 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:35:06,015 - INFO - [120/440] Fetching info for: 04 (callofduty)
+2025-08-06 09:35:09,826 - INFO - ✅ Success for 04 (callofduty) [Took 3.81 sec]
+2025-08-06 09:35:09,829 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:37:30,634 - INFO - [121/440] Fetching info for: Abuzah (callofduty)
+2025-08-06 09:37:34,511 - INFO - ✅ Success for Abuzah (callofduty) [Took 3.88 sec]
+2025-08-06 09:37:34,513 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:39:55,354 - INFO - [122/440] Fetching info for: Neptune (callofduty)
+2025-08-06 09:39:57,354 - INFO - ✅ Success for Neptune (callofduty) [Took 2.00 sec]
+2025-08-06 09:39:57,357 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:42:18,275 - INFO - [123/440] Fetching info for: Nastie (callofduty)
+2025-08-06 09:42:22,151 - INFO - ✅ Success for Nastie (callofduty) [Took 3.88 sec]
+2025-08-06 09:42:22,153 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:44:43,012 - INFO - [124/440] Fetching info for: Cammy (callofduty)
+2025-08-06 09:44:46,839 - INFO - ✅ Success for Cammy (callofduty) [Took 3.83 sec]
+2025-08-06 09:44:46,839 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:47:07,682 - INFO - [125/440] Fetching info for: Owakening (callofduty)
+2025-08-06 09:47:09,818 - INFO - ✅ Success for Owakening (callofduty) [Took 2.14 sec]
+2025-08-06 09:47:09,820 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:49:30,619 - INFO - [126/440] Fetching info for: Purj (callofduty)
+2025-08-06 09:49:34,323 - INFO - ✅ Success for Purj (callofduty) [Took 3.70 sec]
+2025-08-06 09:49:34,325 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:51:55,122 - INFO - [127/440] Fetching info for: Snoopy (callofduty)
+2025-08-06 09:51:58,478 - INFO - ✅ Success for Snoopy (callofduty) [Took 3.36 sec]
+2025-08-06 09:51:58,480 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:54:19,307 - INFO - [128/440] Fetching info for: MettalZ (callofduty)
+2025-08-06 09:54:22,734 - INFO - ✅ Success for MettalZ (callofduty) [Took 3.43 sec]
+2025-08-06 09:54:22,736 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:56:43,527 - INFO - [129/440] Fetching info for: ReeaL (callofduty)
+2025-08-06 09:56:46,966 - INFO - ✅ Success for ReeaL (callofduty) [Took 3.44 sec]
+2025-08-06 09:56:46,969 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 09:59:07,812 - INFO - [130/440] Fetching info for: RenKoR (callofduty)
+2025-08-06 09:59:10,986 - INFO - ✅ Success for RenKoR (callofduty) [Took 3.17 sec]
+2025-08-06 09:59:10,987 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:01:31,817 - INFO - [131/440] Fetching info for: SupeR (callofduty)
+2025-08-06 10:01:34,746 - INFO - ✅ Success for SupeR (callofduty) [Took 2.93 sec]
+2025-08-06 10:01:34,747 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:03:55,635 - INFO - [132/440] Fetching info for: Abe (callofduty)
+2025-08-06 10:03:58,351 - INFO - ✅ Success for Abe (callofduty) [Took 2.72 sec]
+2025-08-06 10:03:58,355 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:06:19,192 - INFO - [133/440] Fetching info for: CleanX (callofduty)
+2025-08-06 10:06:22,779 - INFO - ✅ Success for CleanX (callofduty) [Took 3.59 sec]
+2025-08-06 10:06:22,782 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:08:43,694 - INFO - [134/440] Fetching info for: Insight (callofduty)
+2025-08-06 10:08:45,533 - INFO - ✅ Success for Insight (callofduty) [Took 1.84 sec]
+2025-08-06 10:08:45,534 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:11:06,329 - INFO - [135/440] Fetching info for: JoeDeceives (callofduty)
+2025-08-06 10:11:08,766 - INFO - ✅ Success for JoeDeceives (callofduty) [Took 2.44 sec]
+2025-08-06 10:11:08,767 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:13:29,599 - INFO - [136/440] Fetching info for: Envoy (callofduty)
+2025-08-06 10:13:33,249 - INFO - ✅ Success for Envoy (callofduty) [Took 3.65 sec]
+2025-08-06 10:13:33,251 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:15:54,070 - INFO - [137/440] Fetching info for: Ghosty (callofduty)
+2025-08-06 10:15:57,277 - INFO - ✅ Success for Ghosty (callofduty) [Took 3.21 sec]
+2025-08-06 10:15:57,279 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:18:18,087 - INFO - [138/440] Fetching info for: HyDra (callofduty)
+2025-08-06 10:18:19,484 - INFO - ✅ Success for HyDra (callofduty) [Took 1.40 sec]
+2025-08-06 10:18:19,487 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:20:40,406 - INFO - [139/440] Fetching info for: Scrap (callofduty)
+2025-08-06 10:20:42,980 - WARNING - ⚠️ API fetch failed for Scrap (callofduty)
+2025-08-06 10:20:42,985 - INFO - [140/440] Fetching info for: Estreal (callofduty)
+2025-08-06 10:20:46,419 - INFO - ✅ Success for Estreal (callofduty) [Took 3.44 sec]
+2025-08-06 10:20:46,422 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:23:07,245 - INFO - [141/440] Fetching info for: Gio (callofduty)
+2025-08-06 10:23:10,618 - INFO - ✅ Success for Gio (callofduty) [Took 3.37 sec]
+2025-08-06 10:23:10,622 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:25:31,462 - INFO - [142/440] Fetching info for: Kenny (callofduty)
+2025-08-06 10:25:34,389 - INFO - ✅ Success for Kenny (callofduty) [Took 2.93 sec]
+2025-08-06 10:25:34,390 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:27:55,216 - INFO - [143/440] Fetching info for: Nero (callofduty)
+2025-08-06 10:27:58,455 - INFO - ✅ Success for Nero (callofduty) [Took 3.24 sec]
+2025-08-06 10:27:58,457 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:30:19,335 - INFO - [144/440] Fetching info for: Gwinn (callofduty)
+2025-08-06 10:30:22,774 - INFO - ✅ Success for Gwinn (callofduty) [Took 3.44 sec]
+2025-08-06 10:30:22,774 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:32:43,604 - INFO - [145/440] Fetching info for: Kremp (callofduty)
+2025-08-06 10:32:44,941 - INFO - ✅ Success for Kremp (callofduty) [Took 1.34 sec]
+2025-08-06 10:32:44,942 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:35:05,788 - INFO - [146/440] Fetching info for: Sib (callofduty)
+2025-08-06 10:35:07,738 - INFO - ✅ Success for Sib (callofduty) [Took 1.95 sec]
+2025-08-06 10:35:07,742 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:37:28,542 - INFO - [147/440] Fetching info for: Spart (callofduty)
+2025-08-06 10:37:32,278 - INFO - ✅ Success for Spart (callofduty) [Took 3.74 sec]
+2025-08-06 10:37:32,281 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:39:53,092 - INFO - [148/440] Fetching info for: Team_WaR (callofduty)
+2025-08-06 10:39:55,624 - INFO - ✅ Success for Team_WaR (callofduty) [Took 2.53 sec]
+2025-08-06 10:39:55,626 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:42:16,430 - INFO - [149/440] Fetching info for: KiSMET (callofduty)
+2025-08-06 10:42:17,753 - INFO - ✅ Success for KiSMET (callofduty) [Took 1.32 sec]
+2025-08-06 10:42:17,754 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:44:38,615 - INFO - [150/440] Fetching info for: Lunarz (callofduty)
+2025-08-06 10:44:42,904 - INFO - ✅ Success for Lunarz (callofduty) [Took 4.29 sec]
+2025-08-06 10:44:42,907 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:47:03,802 - INFO - [151/440] Fetching info for: OJohnny (callofduty)
+2025-08-06 10:47:08,231 - INFO - ✅ Success for OJohnny (callofduty) [Took 4.43 sec]
+2025-08-06 10:47:08,234 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:49:29,004 - INFO - [152/440] Fetching info for: Arcitys (callofduty)
+2025-08-06 10:49:32,071 - INFO - ✅ Success for Arcitys (callofduty) [Took 3.07 sec]
+2025-08-06 10:49:32,073 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:51:52,956 - INFO - [153/440] Fetching info for: Exnid (callofduty)
+2025-08-06 10:51:55,407 - INFO - ✅ Success for Exnid (callofduty) [Took 2.45 sec]
+2025-08-06 10:51:55,409 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:54:16,243 - INFO - [154/440] Fetching info for: Pred (callofduty)
+2025-08-06 10:54:17,845 - INFO - ✅ Success for Pred (callofduty) [Took 1.60 sec]
+2025-08-06 10:54:17,846 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:56:38,712 - INFO - [155/440] Fetching info for: TJHaLy (callofduty)
+2025-08-06 10:56:41,199 - INFO - ✅ Success for TJHaLy (callofduty) [Took 2.49 sec]
+2025-08-06 10:56:41,202 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 10:59:02,048 - INFO - [156/440] Fetching info for: Craze (callofduty)
+2025-08-06 10:59:04,914 - INFO - ✅ Success for Craze (callofduty) [Took 2.86 sec]
+2025-08-06 10:59:04,915 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:01:25,768 - INFO - [157/440] Fetching info for: Mack (callofduty)
+2025-08-06 11:01:28,683 - INFO - ✅ Success for Mack (callofduty) [Took 2.92 sec]
+2025-08-06 11:01:28,686 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:03:49,484 - INFO - [158/440] Fetching info for: Mamba (callofduty)
+2025-08-06 11:03:50,915 - INFO - ✅ Success for Mamba (callofduty) [Took 1.43 sec]
+2025-08-06 11:03:50,917 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:06:11,837 - INFO - [159/440] Fetching info for: Vivid (callofduty)
+2025-08-06 11:06:15,190 - INFO - ✅ Success for Vivid (callofduty) [Took 3.35 sec]
+2025-08-06 11:06:15,191 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:08:36,058 - INFO - [160/440] Fetching info for: OMiT_Brooklyn (callofduty)
+2025-08-06 11:08:38,683 - INFO - ✅ Success for OMiT_Brooklyn (callofduty) [Took 2.63 sec]
+2025-08-06 11:08:38,685 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:10:59,444 - INFO - [161/440] Fetching info for: OMiT_Brooklyn (callofduty)
+2025-08-06 11:11:02,083 - INFO - ✅ Success for OMiT_Brooklyn (callofduty) [Took 2.64 sec]
+2025-08-06 11:11:02,086 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:13:22,894 - INFO - [162/440] Fetching info for: OMiT_Brooklyn (callofduty)
+2025-08-06 11:13:25,082 - INFO - ✅ Success for OMiT_Brooklyn (callofduty) [Took 2.19 sec]
+2025-08-06 11:13:25,083 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:15:45,930 - INFO - [163/440] Fetching info for: OMiT_Brooklyn (callofduty)
+2025-08-06 11:15:48,895 - INFO - ✅ Success for OMiT_Brooklyn (callofduty) [Took 2.97 sec]
+2025-08-06 11:15:48,898 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:18:09,683 - INFO - [164/440] Fetching info for: Nium (callofduty)
+2025-08-06 11:18:12,578 - INFO - ✅ Success for Nium (callofduty) [Took 2.90 sec]
+2025-08-06 11:18:12,583 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:20:33,434 - INFO - [165/440] Fetching info for: Assault (callofduty)
+2025-08-06 11:20:36,087 - INFO - ✅ Success for Assault (callofduty) [Took 2.65 sec]
+2025-08-06 11:20:36,089 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:22:56,890 - INFO - [166/440] Fetching info for: 2ReaL (callofduty)
+2025-08-06 11:23:00,655 - INFO - ✅ Success for 2ReaL (callofduty) [Took 3.76 sec]
+2025-08-06 11:23:00,656 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:25:21,525 - INFO - [167/440] Fetching info for: Bink (callofduty)
+2025-08-06 11:25:25,115 - INFO - ✅ Success for Bink (callofduty) [Took 3.59 sec]
+2025-08-06 11:25:25,116 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:27:45,960 - INFO - [168/440] Fetching info for: Beans (callofduty)
+2025-08-06 11:27:49,351 - INFO - ✅ Success for Beans (callofduty) [Took 3.39 sec]
+2025-08-06 11:27:49,353 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:30:10,245 - INFO - [169/440] Fetching info for: Bance (callofduty)
+2025-08-06 11:30:13,023 - INFO - ✅ Success for Bance (callofduty) [Took 2.78 sec]
+2025-08-06 11:30:13,026 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:32:33,881 - INFO - [170/440] Fetching info for: Harry (callofduty)
+2025-08-06 11:32:36,708 - INFO - ✅ Success for Harry (callofduty) [Took 2.83 sec]
+2025-08-06 11:32:36,708 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:34:57,635 - INFO - [171/440] Fetching info for: Mythix (callofduty)
+2025-08-06 11:35:00,414 - INFO - ✅ Success for Mythix (callofduty) [Took 2.78 sec]
+2025-08-06 11:35:00,415 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:37:21,221 - INFO - [172/440] Fetching info for: Exceed (callofduty)
+2025-08-06 11:37:24,601 - INFO - ✅ Success for Exceed (callofduty) [Took 3.38 sec]
+2025-08-06 11:37:24,603 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:39:45,422 - INFO - [173/440] Fetching info for: Hicksy (callofduty)
+2025-08-06 11:39:48,723 - INFO - ✅ Success for Hicksy (callofduty) [Took 3.30 sec]
+2025-08-06 11:39:48,724 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:42:09,576 - INFO - [174/440] Fetching info for: Fire (callofduty)
+2025-08-06 11:42:10,991 - INFO - ✅ Success for Fire (callofduty) [Took 1.42 sec]
+2025-08-06 11:42:10,993 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:44:31,828 - INFO - [175/440] Fetching info for: Capsidal (callofduty)
+2025-08-06 11:44:35,538 - INFO - ✅ Success for Capsidal (callofduty) [Took 3.71 sec]
+2025-08-06 11:44:35,540 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:46:56,397 - INFO - [176/440] Fetching info for: Wrecks (callofduty)
+2025-08-06 11:46:59,215 - INFO - ✅ Success for Wrecks (callofduty) [Took 2.82 sec]
+2025-08-06 11:46:59,219 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:49:20,066 - INFO - [177/440] Fetching info for: SlasheR (callofduty)
+2025-08-06 11:49:22,494 - INFO - ✅ Success for SlasheR (callofduty) [Took 2.43 sec]
+2025-08-06 11:49:22,496 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:51:43,367 - INFO - [178/440] Fetching info for: GooDBye60hz (callofduty)
+2025-08-06 11:51:45,820 - INFO - ✅ Success for GooDBye60hz (callofduty) [Took 2.45 sec]
+2025-08-06 11:51:45,823 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:54:06,653 - INFO - [179/440] Fetching info for: Veyl (callofduty)
+2025-08-06 11:54:10,718 - INFO - ✅ Success for Veyl (callofduty) [Took 4.06 sec]
+2025-08-06 11:54:10,721 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:56:31,571 - INFO - [180/440] Fetching info for: ElAtoo (callofduty)
+2025-08-06 11:56:34,029 - INFO - ✅ Success for ElAtoo (callofduty) [Took 2.46 sec]
+2025-08-06 11:56:34,031 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 11:58:54,908 - INFO - [181/440] Fetching info for: Aryan (pubgmobile)
+2025-08-06 11:58:57,467 - INFO - ✅ Success for Aryan (pubgmobile) [Took 2.56 sec]
+2025-08-06 11:58:57,469 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:01:18,328 - INFO - [182/440] Fetching info for: Syrax (pubgmobile)
+2025-08-06 12:01:30,270 - INFO - ✅ Success for Syrax (pubgmobile) [Took 11.94 sec]
+2025-08-06 12:01:30,274 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:03:51,096 - INFO - [183/440] Fetching info for: Devotee (pubgmobile)
+2025-08-06 12:03:53,052 - INFO - ✅ Success for Devotee (pubgmobile) [Took 1.96 sec]
+2025-08-06 12:03:53,055 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:06:13,866 - INFO - [184/440] Fetching info for: Henry_(Indian_player) (pubgmobile)
+2025-08-06 12:06:16,419 - INFO - ✅ Success for Henry_(Indian_player) (pubgmobile) [Took 2.55 sec]
+2025-08-06 12:06:16,423 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:08:37,318 - INFO - [185/440] Fetching info for: Vishu (pubgmobile)
+2025-08-06 12:08:39,708 - INFO - ✅ Success for Vishu (pubgmobile) [Took 2.39 sec]
+2025-08-06 12:08:39,710 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:11:00,571 - INFO - [186/440] Fetching info for: Opale (tft)
+2025-08-06 12:11:02,347 - INFO - ✅ Success for Opale (tft) [Took 1.78 sec]
+2025-08-06 12:11:02,350 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:13:23,256 - INFO - [187/440] Fetching info for: Pas_de_Bol (tft)
+2025-08-06 12:13:26,565 - INFO - ✅ Success for Pas_de_Bol (tft) [Took 3.31 sec]
+2025-08-06 12:13:26,568 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:15:47,442 - INFO - [188/440] Fetching info for: Lyyyress (tft)
+2025-08-06 12:15:50,556 - INFO - ✅ Success for Lyyyress (tft) [Took 3.11 sec]
+2025-08-06 12:15:50,559 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:18:11,378 - INFO - [189/440] Fetching info for: Gobosteur (tft)
+2025-08-06 12:18:13,344 - INFO - ✅ Success for Gobosteur (tft) [Took 1.97 sec]
+2025-08-06 12:18:13,347 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:20:34,178 - INFO - [190/440] Fetching info for: Clemou (tft)
+2025-08-06 12:20:36,136 - INFO - ✅ Success for Clemou (tft) [Took 1.96 sec]
+2025-08-06 12:20:36,138 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:22:57,017 - INFO - [191/440] Fetching info for: Yaroy (tft)
+2025-08-06 12:23:00,147 - INFO - ✅ Success for Yaroy (tft) [Took 3.13 sec]
+2025-08-06 12:23:00,150 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:25:20,950 - INFO - [192/440] Fetching info for: ArmaTruc (tft)
+2025-08-06 12:25:23,360 - INFO - ✅ Success for ArmaTruc (tft) [Took 2.41 sec]
+2025-08-06 12:25:23,361 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:27:44,220 - INFO - [193/440] Fetching info for: Bensac (tft)
+2025-08-06 12:27:47,148 - INFO - ✅ Success for Bensac (tft) [Took 2.93 sec]
+2025-08-06 12:27:47,150 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:30:08,025 - INFO - [194/440] Fetching info for: Simplywojtek (tft)
+2025-08-06 12:30:11,568 - INFO - ✅ Success for Simplywojtek (tft) [Took 3.54 sec]
+2025-08-06 12:30:11,571 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:32:32,391 - INFO - [195/440] Fetching info for: Shreddin (tft)
+2025-08-06 12:32:35,752 - INFO - ✅ Success for Shreddin (tft) [Took 3.36 sec]
+2025-08-06 12:32:35,756 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:34:56,563 - INFO - [196/440] Fetching info for: Kezman (tft)
+2025-08-06 12:34:59,074 - INFO - ✅ Success for Kezman (tft) [Took 2.51 sec]
+2025-08-06 12:34:59,076 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:37:19,930 - INFO - [197/440] Fetching info for: Aki (tft)
+2025-08-06 12:37:22,578 - INFO - ✅ Success for Aki (tft) [Took 2.65 sec]
+2025-08-06 12:37:22,579 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:39:43,467 - INFO - [198/440] Fetching info for: Salvyy (tft)
+2025-08-06 12:39:45,531 - WARNING - ⚠️ API fetch failed for Salvyy (tft)
+2025-08-06 12:39:45,534 - INFO - [199/440] Fetching info for: Loescher (tft)
+2025-08-06 12:39:48,032 - INFO - ✅ Success for Loescher (tft) [Took 2.50 sec]
+2025-08-06 12:39:48,034 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:42:08,868 - INFO - [200/440] Fetching info for: WetJungler (tft)
+2025-08-06 12:42:11,797 - WARNING - ⚠️ API fetch failed for WetJungler (tft)
+2025-08-06 12:42:11,800 - INFO - [201/440] Fetching info for: Sologesang (tft)
+2025-08-06 12:42:13,674 - INFO - ✅ Success for Sologesang (tft) [Took 1.88 sec]
+2025-08-06 12:42:13,676 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:44:34,538 - INFO - [202/440] Fetching info for: EsPat (tft)
+2025-08-06 12:44:37,847 - INFO - ✅ Success for EsPat (tft) [Took 3.31 sec]
+2025-08-06 12:44:37,848 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:46:58,675 - INFO - [203/440] Fetching info for: Voltariux (tft)
+2025-08-06 12:47:02,574 - INFO - ✅ Success for Voltariux (tft) [Took 3.90 sec]
+2025-08-06 12:47:02,576 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:49:23,459 - INFO - [204/440] Fetching info for: Rebanav (tft)
+2025-08-06 12:49:26,427 - INFO - ✅ Success for Rebanav (tft) [Took 2.97 sec]
+2025-08-06 12:49:26,430 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:51:47,211 - INFO - [205/440] Fetching info for: Flowders (tft)
+2025-08-06 12:51:49,536 - WARNING - ⚠️ API fetch failed for Flowders (tft)
+2025-08-06 12:51:49,538 - INFO - [206/440] Fetching info for: YGQF (tft)
+2025-08-06 12:51:51,737 - INFO - ✅ Success for YGQF (tft) [Took 2.20 sec]
+2025-08-06 12:51:51,738 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:54:12,546 - INFO - [207/440] Fetching info for: Serein (tft)
+2025-08-06 12:54:16,720 - INFO - ✅ Success for Serein (tft) [Took 4.17 sec]
+2025-08-06 12:54:16,723 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:56:37,581 - INFO - [208/440] Fetching info for: HongLian (tft)
+2025-08-06 12:56:41,578 - INFO - ✅ Success for HongLian (tft) [Took 4.00 sec]
+2025-08-06 12:56:41,579 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 12:59:02,365 - INFO - [209/440] Fetching info for: Sudowoodo (tft)
+2025-08-06 12:59:06,291 - INFO - ✅ Success for Sudowoodo (tft) [Took 3.93 sec]
+2025-08-06 12:59:06,292 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:01:27,155 - INFO - [210/440] Fetching info for: LiShao (tft)
+2025-08-06 13:01:29,602 - INFO - ✅ Success for LiShao (tft) [Took 2.45 sec]
+2025-08-06 13:01:29,603 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:03:50,455 - INFO - [211/440] Fetching info for: Ningli3z (tft)
+2025-08-06 13:03:52,524 - INFO - ✅ Success for Ningli3z (tft) [Took 2.07 sec]
+2025-08-06 13:03:52,526 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:06:13,377 - INFO - [212/440] Fetching info for: Lituchuan (tft)
+2025-08-06 13:06:16,399 - WARNING - ⚠️ API fetch failed for Lituchuan (tft)
+2025-08-06 13:06:16,402 - INFO - [213/440] Fetching info for: Sheltie (tft)
+2025-08-06 13:06:19,501 - INFO - ✅ Success for Sheltie (tft) [Took 3.10 sec]
+2025-08-06 13:06:19,502 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:08:40,344 - INFO - [214/440] Fetching info for: TianLong (tft)
+2025-08-06 13:08:44,034 - INFO - ✅ Success for TianLong (tft) [Took 3.69 sec]
+2025-08-06 13:08:44,037 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:11:04,882 - INFO - [215/440] Fetching info for: Saopimi (tft)
+2025-08-06 13:11:08,221 - INFO - ✅ Success for Saopimi (tft) [Took 3.34 sec]
+2025-08-06 13:11:08,222 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:13:29,049 - INFO - [216/440] Fetching info for: Guan (tft)
+2025-08-06 13:13:32,283 - INFO - ✅ Success for Guan (tft) [Took 3.23 sec]
+2025-08-06 13:13:32,285 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:15:53,170 - INFO - [217/440] Fetching info for: LBTZ (tft)
+2025-08-06 13:15:55,727 - WARNING - ⚠️ API fetch failed for LBTZ (tft)
+2025-08-06 13:15:55,732 - INFO - [218/440] Fetching info for: A_Hao (tft)
+2025-08-06 13:15:57,083 - WARNING - ⚠️ API fetch failed for A_Hao (tft)
+2025-08-06 13:15:57,086 - INFO - [219/440] Fetching info for: A_Chen (tft)
+2025-08-06 13:15:59,499 - INFO - ✅ Success for A_Chen (tft) [Took 2.41 sec]
+2025-08-06 13:15:59,499 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:18:20,305 - INFO - [220/440] Fetching info for: Flancy (tft)
+2025-08-06 13:18:23,489 - INFO - ✅ Success for Flancy (tft) [Took 3.18 sec]
+2025-08-06 13:18:23,491 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:20:44,324 - INFO - [221/440] Fetching info for: Xunge (tft)
+2025-08-06 13:20:47,288 - WARNING - ⚠️ API fetch failed for Xunge (tft)
+2025-08-06 13:20:47,292 - INFO - [222/440] Fetching info for: Iron_Bog (tft)
+2025-08-06 13:20:49,488 - INFO - ✅ Success for Iron_Bog (tft) [Took 2.20 sec]
+2025-08-06 13:20:49,490 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:23:10,343 - INFO - [223/440] Fetching info for: YYDM (tft)
+2025-08-06 13:23:13,373 - INFO - ✅ Success for YYDM (tft) [Took 3.03 sec]
+2025-08-06 13:23:13,375 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:25:34,277 - INFO - [224/440] Fetching info for: Haruru (tft)
+2025-08-06 13:25:37,966 - INFO - ✅ Success for Haruru (tft) [Took 3.69 sec]
+2025-08-06 13:25:37,967 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:27:58,811 - INFO - [225/440] Fetching info for: Kbaobao (tft)
+2025-08-06 13:28:02,708 - INFO - ✅ Success for Kbaobao (tft) [Took 3.90 sec]
+2025-08-06 13:28:02,709 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:30:23,565 - INFO - [226/440] Fetching info for: Binteum (tft)
+2025-08-06 13:30:25,317 - INFO - ✅ Success for Binteum (tft) [Took 1.75 sec]
+2025-08-06 13:30:25,320 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:32:46,184 - INFO - [227/440] Fetching info for: SCsC (tft)
+2025-08-06 13:32:50,074 - INFO - ✅ Success for SCsC (tft) [Took 3.89 sec]
+2025-08-06 13:32:50,077 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:35:10,872 - INFO - [228/440] Fetching info for: Dunizuni (tft)
+2025-08-06 13:35:14,265 - INFO - ✅ Success for Dunizuni (tft) [Took 3.39 sec]
+2025-08-06 13:35:14,269 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:37:35,205 - INFO - [229/440] Fetching info for: CrazyMoving (tft)
+2025-08-06 13:37:37,424 - INFO - ✅ Success for CrazyMoving (tft) [Took 2.22 sec]
+2025-08-06 13:37:37,427 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:39:58,257 - INFO - [230/440] Fetching info for: Maris (tft)
+2025-08-06 13:40:03,179 - INFO - ✅ Success for Maris (tft) [Took 4.92 sec]
+2025-08-06 13:40:03,180 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:42:23,996 - INFO - [231/440] Fetching info for: Milo (tft)
+2025-08-06 13:42:26,347 - WARNING - ⚠️ API fetch failed for Milo (tft)
+2025-08-06 13:42:26,350 - INFO - [232/440] Fetching info for: K1an (tft)
+2025-08-06 13:42:30,108 - INFO - ✅ Success for K1an (tft) [Took 3.76 sec]
+2025-08-06 13:42:30,111 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:44:51,012 - INFO - [233/440] Fetching info for: NCC1 (tft)
+2025-08-06 13:44:53,810 - INFO - ✅ Success for NCC1 (tft) [Took 2.80 sec]
+2025-08-06 13:44:53,813 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:47:14,600 - INFO - [234/440] Fetching info for: Dr_OH (tft)
+2025-08-06 13:47:16,491 - INFO - ✅ Success for Dr_OH (tft) [Took 1.89 sec]
+2025-08-06 13:47:16,493 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:49:37,334 - INFO - [235/440] Fetching info for: Panda_(Kim_Se-jin) (tft)
+2025-08-06 13:49:39,971 - INFO - ✅ Success for Panda_(Kim_Se-jin) (tft) [Took 2.64 sec]
+2025-08-06 13:49:39,973 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:52:00,870 - INFO - [236/440] Fetching info for: Araye (tft)
+2025-08-06 13:52:02,476 - WARNING - ⚠️ API fetch failed for Araye (tft)
+2025-08-06 13:52:02,480 - INFO - [237/440] Fetching info for: Ssangyeop (tft)
+2025-08-06 13:52:03,907 - WARNING - ⚠️ API fetch failed for Ssangyeop (tft)
+2025-08-06 13:52:03,909 - INFO - [238/440] Fetching info for: Prestivent (tft)
+2025-08-06 13:52:05,095 - INFO - ✅ Success for Prestivent (tft) [Took 1.19 sec]
+2025-08-06 13:52:05,096 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:54:25,957 - INFO - [239/440] Fetching info for: K3soju (tft)
+2025-08-06 13:54:27,491 - INFO - ✅ Success for K3soju (tft) [Took 1.53 sec]
+2025-08-06 13:54:27,492 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:56:48,344 - INFO - [240/440] Fetching info for: Setsuko (tft)
+2025-08-06 13:56:50,249 - INFO - ✅ Success for Setsuko (tft) [Took 1.91 sec]
+2025-08-06 13:56:50,251 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 13:59:11,128 - INFO - [241/440] Fetching info for: Milk (tft)
+2025-08-06 13:59:14,170 - INFO - ✅ Success for Milk (tft) [Took 3.04 sec]
+2025-08-06 13:59:14,173 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:01:35,048 - INFO - [242/440] Fetching info for: Eusouolucas (tft)
+2025-08-06 14:01:38,639 - INFO - ✅ Success for Eusouolucas (tft) [Took 3.59 sec]
+2025-08-06 14:01:38,641 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:03:59,432 - INFO - [243/440] Fetching info for: Ego_illusions (tft)
+2025-08-06 14:04:02,828 - INFO - ✅ Success for Ego_illusions (tft) [Took 3.40 sec]
+2025-08-06 14:04:02,830 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:06:23,687 - INFO - [244/440] Fetching info for: Vclf (tft)
+2025-08-06 14:06:26,636 - INFO - ✅ Success for Vclf (tft) [Took 2.95 sec]
+2025-08-06 14:06:26,638 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:08:47,472 - INFO - [245/440] Fetching info for: Bapzera (tft)
+2025-08-06 14:08:49,987 - INFO - ✅ Success for Bapzera (tft) [Took 2.52 sec]
+2025-08-06 14:08:49,990 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:11:10,875 - INFO - [246/440] Fetching info for: Robinsongz (tft)
+2025-08-06 14:11:14,598 - INFO - ✅ Success for Robinsongz (tft) [Took 3.72 sec]
+2025-08-06 14:11:14,599 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:13:35,427 - INFO - [247/440] Fetching info for: Kaiweng (tft)
+2025-08-06 14:13:38,721 - INFO - ✅ Success for Kaiweng (tft) [Took 3.29 sec]
+2025-08-06 14:13:38,723 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:15:59,594 - INFO - [248/440] Fetching info for: Souless (tft)
+2025-08-06 14:16:01,542 - INFO - ✅ Success for Souless (tft) [Took 1.95 sec]
+2025-08-06 14:16:01,543 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:18:22,447 - INFO - [249/440] Fetching info for: Dankmemes01 (tft)
+2025-08-06 14:18:24,183 - INFO - ✅ Success for Dankmemes01 (tft) [Took 1.74 sec]
+2025-08-06 14:18:24,187 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:20:45,032 - INFO - [250/440] Fetching info for: LOYY (crossfire)
+2025-08-06 14:20:47,511 - INFO - ✅ Success for LOYY (crossfire) [Took 2.48 sec]
+2025-08-06 14:20:47,512 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:23:08,386 - INFO - [251/440] Fetching info for: KLb (crossfire)
+2025-08-06 14:23:10,843 - INFO - ✅ Success for KLb (crossfire) [Took 2.46 sec]
+2025-08-06 14:23:10,844 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:25:31,655 - INFO - [252/440] Fetching info for: KLp (crossfire)
+2025-08-06 14:25:34,331 - INFO - ✅ Success for KLp (crossfire) [Took 2.68 sec]
+2025-08-06 14:25:34,333 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:27:55,190 - INFO - [253/440] Fetching info for: Jjhae (crossfire)
+2025-08-06 14:27:58,144 - INFO - ✅ Success for Jjhae (crossfire) [Took 2.95 sec]
+2025-08-06 14:27:58,146 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:30:19,028 - INFO - [254/440] Fetching info for: Kano (crossfire)
+2025-08-06 14:30:22,356 - INFO - ✅ Success for Kano (crossfire) [Took 3.33 sec]
+2025-08-06 14:30:22,358 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:32:43,280 - INFO - [255/440] Fetching info for: Bapn (rainbowsix)
+2025-08-06 14:32:45,907 - INFO - ✅ Success for Bapn (rainbowsix) [Took 2.63 sec]
+2025-08-06 14:32:45,909 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:35:06,798 - INFO - [256/440] Fetching info for: Fishoguy (rainbowsix)
+2025-08-06 14:35:08,578 - INFO - ✅ Success for Fishoguy (rainbowsix) [Took 1.78 sec]
+2025-08-06 14:35:08,580 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:37:29,402 - INFO - [257/440] Fetching info for: Playxr (rainbowsix)
+2025-08-06 14:37:33,012 - INFO - ✅ Success for Playxr (rainbowsix) [Took 3.61 sec]
+2025-08-06 14:37:33,012 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:39:53,855 - INFO - [258/440] Fetching info for: Relaes (rainbowsix)
+2025-08-06 14:39:56,484 - INFO - ✅ Success for Relaes (rainbowsix) [Took 2.63 sec]
+2025-08-06 14:39:56,486 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:42:17,253 - INFO - [259/440] Fetching info for: Tuhan (rainbowsix)
+2025-08-06 14:42:20,284 - INFO - ✅ Success for Tuhan (rainbowsix) [Took 3.03 sec]
+2025-08-06 14:42:20,285 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:44:41,159 - INFO - [260/440] Fetching info for: LIP (overwatch)
+2025-08-06 14:44:45,420 - INFO - ✅ Success for LIP (overwatch) [Took 4.26 sec]
+2025-08-06 14:44:45,423 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:47:06,344 - INFO - [261/440] Fetching info for: HeeSang (overwatch)
+2025-08-06 14:47:08,000 - INFO - ✅ Success for HeeSang (overwatch) [Took 1.66 sec]
+2025-08-06 14:47:08,001 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:49:28,828 - INFO - [262/440] Fetching info for: Junbin (overwatch)
+2025-08-06 14:49:32,067 - INFO - ✅ Success for Junbin (overwatch) [Took 3.24 sec]
+2025-08-06 14:49:32,069 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:51:52,950 - INFO - [263/440] Fetching info for: MAX (overwatch)
+2025-08-06 14:51:56,123 - INFO - ✅ Success for MAX (overwatch) [Took 3.17 sec]
+2025-08-06 14:51:56,125 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:54:16,969 - INFO - [264/440] Fetching info for: CH0R0NG (overwatch)
+2025-08-06 14:54:20,113 - INFO - ✅ Success for CH0R0NG (overwatch) [Took 3.14 sec]
+2025-08-06 14:54:20,115 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:56:41,020 - INFO - [265/440] Fetching info for: Shu (overwatch)
+2025-08-06 14:56:44,144 - INFO - ✅ Success for Shu (overwatch) [Took 3.12 sec]
+2025-08-06 14:56:44,148 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 14:59:05,022 - INFO - [266/440] Fetching info for: Proud (overwatch)
+2025-08-06 14:59:06,571 - INFO - ✅ Success for Proud (overwatch) [Took 1.55 sec]
+2025-08-06 14:59:06,574 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:01:27,390 - INFO - [267/440] Fetching info for: Viper (overwatch)
+2025-08-06 15:01:30,412 - INFO - ✅ Success for Viper (overwatch) [Took 3.02 sec]
+2025-08-06 15:01:30,413 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:03:51,279 - INFO - [268/440] Fetching info for: ZEST (overwatch)
+2025-08-06 15:03:53,692 - INFO - ✅ Success for ZEST (overwatch) [Took 2.41 sec]
+2025-08-06 15:03:53,695 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:06:14,580 - INFO - [269/440] Fetching info for: D0NGHAK (overwatch)
+2025-08-06 15:06:16,505 - INFO - ✅ Success for D0NGHAK (overwatch) [Took 1.92 sec]
+2025-08-06 15:06:16,507 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:08:37,316 - INFO - [270/440] Fetching info for: Skewed (overwatch)
+2025-08-06 15:08:40,264 - INFO - ✅ Success for Skewed (overwatch) [Took 2.95 sec]
+2025-08-06 15:08:40,265 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:11:01,102 - INFO - [271/440] Fetching info for: Vigilante (overwatch)
+2025-08-06 15:11:04,620 - INFO - ✅ Success for Vigilante (overwatch) [Took 3.52 sec]
+2025-08-06 15:11:04,622 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:13:25,456 - INFO - [272/440] Fetching info for: Ade (overwatch)
+2025-08-06 15:13:27,352 - INFO - ✅ Success for Ade (overwatch) [Took 1.90 sec]
+2025-08-06 15:13:27,355 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:15:48,242 - INFO - [273/440] Fetching info for: SeonJun (overwatch)
+2025-08-06 15:15:51,695 - INFO - ✅ Success for SeonJun (overwatch) [Took 3.45 sec]
+2025-08-06 15:15:51,698 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:18:12,560 - INFO - [274/440] Fetching info for: Mealgaru (overwatch)
+2025-08-06 15:18:15,145 - INFO - ✅ Success for Mealgaru (overwatch) [Took 2.58 sec]
+2025-08-06 15:18:15,148 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:20:36,078 - INFO - [275/440] Fetching info for: Jasm1ne (overwatch)
+2025-08-06 15:20:38,475 - INFO - ✅ Success for Jasm1ne (overwatch) [Took 2.40 sec]
+2025-08-06 15:20:38,477 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:22:59,283 - INFO - [276/440] Fetching info for: LeeSooMin (overwatch)
+2025-08-06 15:23:01,870 - INFO - ✅ Success for LeeSooMin (overwatch) [Took 2.59 sec]
+2025-08-06 15:23:01,871 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:25:22,667 - INFO - [277/440] Fetching info for: MAKA (overwatch)
+2025-08-06 15:25:24,455 - INFO - ✅ Success for MAKA (overwatch) [Took 1.79 sec]
+2025-08-06 15:25:24,457 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:27:45,203 - INFO - [278/440] Fetching info for: Nico (overwatch)
+2025-08-06 15:27:48,090 - INFO - ✅ Success for Nico (overwatch) [Took 2.89 sec]
+2025-08-06 15:27:48,090 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:30:08,871 - INFO - [279/440] Fetching info for: Qki (overwatch)
+2025-08-06 15:30:11,434 - INFO - ✅ Success for Qki (overwatch) [Took 2.56 sec]
+2025-08-06 15:30:11,436 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:32:32,293 - INFO - [280/440] Fetching info for: TOPDRAGON (overwatch)
+2025-08-06 15:32:33,622 - INFO - ✅ Success for TOPDRAGON (overwatch) [Took 1.33 sec]
+2025-08-06 15:32:33,625 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:34:54,462 - INFO - [281/440] Fetching info for: KSG (overwatch)
+2025-08-06 15:34:56,463 - INFO - ✅ Success for KSG (overwatch) [Took 2.00 sec]
+2025-08-06 15:34:56,465 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:37:17,344 - INFO - [282/440] Fetching info for: Qloud (overwatch)
+2025-08-06 15:37:19,268 - INFO - ✅ Success for Qloud (overwatch) [Took 1.92 sec]
+2025-08-06 15:37:19,270 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:39:40,117 - INFO - [283/440] Fetching info for: Mimoza (overwatch)
+2025-08-06 15:39:41,772 - INFO - ✅ Success for Mimoza (overwatch) [Took 1.65 sec]
+2025-08-06 15:39:41,774 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:42:02,566 - INFO - [284/440] Fetching info for: Sley (overwatch)
+2025-08-06 15:42:04,757 - INFO - ✅ Success for Sley (overwatch) [Took 2.19 sec]
+2025-08-06 15:42:04,759 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:44:25,586 - INFO - [285/440] Fetching info for: Nyang (overwatch)
+2025-08-06 15:44:28,133 - INFO - ✅ Success for Nyang (overwatch) [Took 2.55 sec]
+2025-08-06 15:44:28,134 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:46:48,973 - INFO - [286/440] Fetching info for: Colourhex (overwatch)
+2025-08-06 15:46:52,815 - INFO - ✅ Success for Colourhex (overwatch) [Took 3.84 sec]
+2025-08-06 15:46:52,816 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:49:13,642 - INFO - [287/440] Fetching info for: Punk (overwatch)
+2025-08-06 15:49:16,962 - INFO - ✅ Success for Punk (overwatch) [Took 3.32 sec]
+2025-08-06 15:49:16,963 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:51:37,813 - INFO - [288/440] Fetching info for: Ackyyy (overwatch)
+2025-08-06 15:51:41,035 - INFO - ✅ Success for Ackyyy (overwatch) [Took 3.22 sec]
+2025-08-06 15:51:41,037 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:54:01,913 - INFO - [289/440] Fetching info for: Rakattack (overwatch)
+2025-08-06 15:54:05,673 - INFO - ✅ Success for Rakattack (overwatch) [Took 3.76 sec]
+2025-08-06 15:54:05,676 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:56:26,466 - INFO - [290/440] Fetching info for: Lightt (overwatch)
+2025-08-06 15:56:28,920 - INFO - ✅ Success for Lightt (overwatch) [Took 2.45 sec]
+2025-08-06 15:56:28,922 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 15:58:49,818 - INFO - [291/440] Fetching info for: Lethal (overwatch)
+2025-08-06 15:58:53,748 - INFO - ✅ Success for Lethal (overwatch) [Took 3.93 sec]
+2025-08-06 15:58:53,749 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:01:14,589 - INFO - [292/440] Fetching info for: WMaimone (overwatch)
+2025-08-06 16:01:16,519 - INFO - ✅ Success for WMaimone (overwatch) [Took 1.93 sec]
+2025-08-06 16:01:16,521 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:03:37,324 - INFO - [293/440] Fetching info for: CuFFa (overwatch)
+2025-08-06 16:03:39,940 - INFO - ✅ Success for CuFFa (overwatch) [Took 2.62 sec]
+2025-08-06 16:03:39,941 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:06:00,744 - INFO - [294/440] Fetching info for: UltraViolet (overwatch)
+2025-08-06 16:06:02,129 - INFO - ✅ Success for UltraViolet (overwatch) [Took 1.39 sec]
+2025-08-06 16:06:02,131 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:08:23,046 - INFO - [295/440] Fetching info for: Admiral (overwatch)
+2025-08-06 16:08:25,758 - INFO - ✅ Success for Admiral (overwatch) [Took 2.71 sec]
+2025-08-06 16:08:25,761 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:10:46,576 - INFO - [296/440] Fetching info for: Knife (overwatch)
+2025-08-06 16:10:48,811 - WARNING - ⚠️ API fetch failed for Knife (overwatch)
+2025-08-06 16:10:48,815 - INFO - [297/440] Fetching info for: TR33 (overwatch)
+2025-08-06 16:10:50,976 - INFO - ✅ Success for TR33 (overwatch) [Took 2.16 sec]
+2025-08-06 16:10:50,979 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:13:11,816 - INFO - [298/440] Fetching info for: Zeruhh (overwatch)
+2025-08-06 16:13:14,829 - INFO - ✅ Success for Zeruhh (overwatch) [Took 3.01 sec]
+2025-08-06 16:13:14,830 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:15:35,718 - INFO - [299/440] Fetching info for: Infekted (overwatch)
+2025-08-06 16:15:40,964 - INFO - ✅ Success for Infekted (overwatch) [Took 5.25 sec]
+2025-08-06 16:15:40,967 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:18:01,871 - INFO - [300/440] Fetching info for: Rupal (overwatch)
+2025-08-06 16:18:04,235 - INFO - ✅ Success for Rupal (overwatch) [Took 2.36 sec]
+2025-08-06 16:18:04,238 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:20:25,056 - INFO - [301/440] Fetching info for: Vega (overwatch)
+2025-08-06 16:20:28,076 - INFO - ✅ Success for Vega (overwatch) [Took 3.02 sec]
+2025-08-06 16:20:28,077 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:22:48,910 - INFO - [302/440] Fetching info for: Rokit (overwatch)
+2025-08-06 16:22:53,278 - INFO - ✅ Success for Rokit (overwatch) [Took 4.37 sec]
+2025-08-06 16:22:53,282 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:25:14,195 - INFO - [303/440] Fetching info for: Kronik (overwatch)
+2025-08-06 16:25:18,256 - INFO - ✅ Success for Kronik (overwatch) [Took 4.06 sec]
+2025-08-06 16:25:18,258 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:27:39,063 - INFO - [304/440] Fetching info for: Painkiller (overwatch)
+2025-08-06 16:27:42,266 - INFO - ✅ Success for Painkiller (overwatch) [Took 3.20 sec]
+2025-08-06 16:27:42,270 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:30:03,168 - INFO - [305/440] Fetching info for: RhynO (overwatch)
+2025-08-06 16:30:05,817 - INFO - ✅ Success for RhynO (overwatch) [Took 2.65 sec]
+2025-08-06 16:30:05,821 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:32:26,704 - INFO - [306/440] Fetching info for: Lukemino (overwatch)
+2025-08-06 16:32:28,628 - INFO - ✅ Success for Lukemino (overwatch) [Took 1.93 sec]
+2025-08-06 16:32:28,631 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:34:49,455 - INFO - [307/440] Fetching info for: Lep (overwatch)
+2025-08-06 16:34:52,591 - INFO - ✅ Success for Lep (overwatch) [Took 3.14 sec]
+2025-08-06 16:34:52,592 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:37:13,474 - INFO - [308/440] Fetching info for: LBBD7 (overwatch)
+2025-08-06 16:37:17,840 - INFO - ✅ Success for LBBD7 (overwatch) [Took 4.37 sec]
+2025-08-06 16:37:17,843 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:39:38,728 - INFO - [309/440] Fetching info for: CheckMate (overwatch)
+2025-08-06 16:39:40,495 - WARNING - ⚠️ API fetch failed for CheckMate (overwatch)
+2025-08-06 16:39:40,498 - INFO - [310/440] Fetching info for: ZIYAD (overwatch)
+2025-08-06 16:39:42,168 - INFO - ✅ Success for ZIYAD (overwatch) [Took 1.67 sec]
+2025-08-06 16:39:42,172 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:42:03,013 - INFO - [311/440] Fetching info for: Haku_(Saudi_Arabian_player) (overwatch)
+2025-08-06 16:42:06,195 - INFO - ✅ Success for Haku_(Saudi_Arabian_player) (overwatch) [Took 3.18 sec]
+2025-08-06 16:42:06,198 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:44:26,999 - INFO - [312/440] Fetching info for: Landon (overwatch)
+2025-08-06 16:44:29,975 - INFO - ✅ Success for Landon (overwatch) [Took 2.98 sec]
+2025-08-06 16:44:29,977 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:46:50,816 - INFO - [313/440] Fetching info for: Kellex (overwatch)
+2025-08-06 16:46:52,736 - INFO - ✅ Success for Kellex (overwatch) [Took 1.92 sec]
+2025-08-06 16:46:52,738 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:49:13,653 - INFO - [314/440] Fetching info for: Quartz (overwatch)
+2025-08-06 16:49:17,759 - INFO - ✅ Success for Quartz (overwatch) [Took 4.11 sec]
+2025-08-06 16:49:17,761 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:51:38,623 - INFO - [315/440] Fetching info for: Youbi (overwatch)
+2025-08-06 16:51:42,564 - INFO - ✅ Success for Youbi (overwatch) [Took 3.94 sec]
+2025-08-06 16:51:42,566 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:54:03,442 - INFO - [316/440] Fetching info for: Seicoe (overwatch)
+2025-08-06 16:54:06,186 - INFO - ✅ Success for Seicoe (overwatch) [Took 2.74 sec]
+2025-08-06 16:54:06,189 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:56:27,056 - INFO - [317/440] Fetching info for: KSAA (overwatch)
+2025-08-06 16:56:28,933 - INFO - ✅ Success for KSAA (overwatch) [Took 1.88 sec]
+2025-08-06 16:56:28,936 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 16:58:49,764 - INFO - [318/440] Fetching info for: TVNT (overwatch)
+2025-08-06 16:58:52,265 - INFO - ✅ Success for TVNT (overwatch) [Took 2.50 sec]
+2025-08-06 16:58:52,267 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 17:01:13,148 - INFO - [319/440] Fetching info for: FunnyAstro (overwatch)
+2025-08-06 17:01:14,998 - INFO - ✅ Success for FunnyAstro (overwatch) [Took 1.85 sec]
+2025-08-06 17:01:15,001 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 17:03:35,865 - INFO - [320/440] Fetching info for: Simple (overwatch)
+2025-08-06 17:03:38,280 - INFO - ✅ Success for Simple (overwatch) [Took 2.42 sec]
+2025-08-06 17:03:38,284 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 17:05:59,104 - INFO - [321/440] Fetching info for: SHockWave (overwatch)
+2025-08-06 17:06:01,686 - INFO - ✅ Success for SHockWave (overwatch) [Took 2.58 sec]
+2025-08-06 17:06:01,687 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 17:08:22,539 - INFO - [322/440] Fetching info for: JaeWoo (overwatch)
+2025-08-06 17:08:25,543 - INFO - ✅ Success for JaeWoo (overwatch) [Took 3.00 sec]
+2025-08-06 17:08:25,545 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 17:10:46,374 - INFO - [323/440] Fetching info for: Vestola (overwatch)
+2025-08-06 17:10:48,984 - INFO - ✅ Success for Vestola (overwatch) [Took 2.61 sec]
+2025-08-06 17:10:48,986 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 17:13:09,877 - INFO - [324/440] Fetching info for: Galaa (overwatch)
+2025-08-06 17:13:11,747 - INFO - ✅ Success for Galaa (overwatch) [Took 1.87 sec]
+2025-08-06 17:13:11,750 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 17:15:32,646 - INFO - [325/440] Fetching info for: FiXa (overwatch)
+2025-08-06 17:15:34,459 - INFO - ✅ Success for FiXa (overwatch) [Took 1.81 sec]
+2025-08-06 17:15:34,462 - INFO - ⏳ Waiting 140 seconds before next player...
+2025-08-06 17:17:55,266 - INFO - [326/440] Fetching info for: Eisgnom (overwatch)
+2025-08-06 17:17:57,550 - WARNING - ⚠️ API fetch failed for Eisgnom (overwatch)
+2025-08-06 17:17:57,554 - INFO - [327/440] Fetching info for: Leave (overwatch)
+2025-08-06 17:18:00,232 - WARNING - ⚠️ API fetch failed for Leave (overwatch)
+2025-08-06 17:18:00,235 - INFO - [328/440] Fetching info for: Shy (overwatch)
+2025-08-06 17:18:02,631 - WARNING - ⚠️ API fetch failed for Shy (overwatch)
+2025-08-06 17:18:02,634 - INFO - [329/440] Fetching info for: Apr1ta (overwatch)
+2025-08-06 17:18:04,654 - WARNING - ⚠️ API fetch failed for Apr1ta (overwatch)
+2025-08-06 17:18:04,658 - INFO - [330/440] Fetching info for: Guxue (overwatch)
+2025-08-06 17:18:06,000 - WARNING - ⚠️ API fetch failed for Guxue (overwatch)
+2025-08-06 17:18:06,003 - INFO - [331/440] Fetching info for: LiGe (overwatch)
+2025-08-06 17:18:09,023 - WARNING - ⚠️ API fetch failed for LiGe (overwatch)
+2025-08-06 17:18:09,028 - INFO - [332/440] Fetching info for: Mew (overwatch)
+2025-08-06 17:18:12,019 - WARNING - ⚠️ API fetch failed for Mew (overwatch)
+2025-08-06 17:18:12,020 - INFO - [333/440] Fetching info for: Mmonk (overwatch)
+2025-08-06 17:18:13,773 - WARNING - ⚠️ API fetch failed for Mmonk (overwatch)
+2025-08-06 17:18:13,774 - INFO - [334/440] Fetching info for: Kaneki (overwatch)
+2025-08-06 17:18:15,107 - WARNING - ⚠️ API fetch failed for Kaneki (overwatch)
+2025-08-06 17:18:15,111 - INFO - [335/440] Fetching info for: Pineapple (overwatch)
+2025-08-06 17:18:16,646 - WARNING - ⚠️ API fetch failed for Pineapple (overwatch)
+2025-08-06 17:18:16,649 - INFO - [336/440] Fetching info for: GAGA (overwatch)
+2025-08-06 17:18:18,152 - WARNING - ⚠️ API fetch failed for GAGA (overwatch)
+2025-08-06 17:18:18,154 - INFO - [337/440] Fetching info for: BILIDENG (overwatch)
+2025-08-06 17:18:20,057 - WARNING - ⚠️ API fetch failed for BILIDENG (overwatch)
+2025-08-06 17:18:20,060 - INFO - [338/440] Fetching info for: Farway2025 (overwatch)
+2025-08-06 17:18:21,802 - WARNING - ⚠️ API fetch failed for Farway2025 (overwatch)
+2025-08-06 17:18:21,804 - INFO - [339/440] Fetching info for: Unkn0w (overwatch)
+2025-08-06 17:18:23,919 - WARNING - ⚠️ API fetch failed for Unkn0w (overwatch)
+2025-08-06 17:18:23,922 - INFO - [340/440] Fetching info for: Diya (overwatch)
+2025-08-06 17:18:25,638 - WARNING - ⚠️ API fetch failed for Diya (overwatch)
+2025-08-06 17:18:25,641 - INFO - [341/440] Fetching info for: Taejong (overwatch)
+2025-08-06 17:18:27,080 - WARNING - ⚠️ API fetch failed for Taejong (overwatch)
+2025-08-06 17:18:27,084 - INFO - [342/440] Fetching info for: Belosrea (overwatch)
+2025-08-06 17:18:29,370 - WARNING - ⚠️ API fetch failed for Belosrea (overwatch)
+2025-08-06 17:18:29,374 - INFO - [343/440] Fetching info for: Lengsa (overwatch)
+2025-08-06 17:18:30,689 - WARNING - ⚠️ API fetch failed for Lengsa (overwatch)
+2025-08-06 17:18:30,693 - INFO - [344/440] Fetching info for: Chamomile (overwatch)
+2025-08-06 17:18:33,021 - WARNING - ⚠️ API fetch failed for Chamomile (overwatch)
+2025-08-06 17:18:33,025 - INFO - [345/440] Fetching info for: JinMu (overwatch)
+2025-08-06 17:18:35,320 - WARNING - ⚠️ API fetch failed for JinMu (overwatch)
+2025-08-06 17:18:35,324 - INFO - [346/440] Fetching info for: Love (overwatch)
+2025-08-06 17:18:37,389 - WARNING - ⚠️ API fetch failed for Love (overwatch)
+2025-08-06 17:18:37,393 - INFO - [347/440] Fetching info for: WilmaFistFit (overwatch)
+2025-08-06 17:18:40,336 - WARNING - ⚠️ API fetch failed for WilmaFistFit (overwatch)
+2025-08-06 17:18:40,338 - INFO - [348/440] Fetching info for: Tunder (overwatch)
+2025-08-06 17:18:42,721 - WARNING - ⚠️ API fetch failed for Tunder (overwatch)
+2025-08-06 17:18:42,724 - INFO - [349/440] Fetching info for: Kani (overwatch)
+2025-08-06 17:18:45,353 - WARNING - ⚠️ API fetch failed for Kani (overwatch)
+2025-08-06 17:18:45,357 - INFO - [350/440] Fetching info for: Abbs (overwatch)
+2025-08-06 17:18:47,979 - WARNING - ⚠️ API fetch failed for Abbs (overwatch)
+2025-08-06 17:18:47,983 - INFO - [351/440] Fetching info for: StillKIWI (overwatch)
+2025-08-06 17:18:51,085 - WARNING - ⚠️ API fetch failed for StillKIWI (overwatch)
+2025-08-06 17:18:51,089 - INFO - [352/440] Fetching info for: Poke (overwatch)
+2025-08-06 17:18:53,064 - WARNING - ⚠️ API fetch failed for Poke (overwatch)
+2025-08-06 17:18:53,067 - INFO - [353/440] Fetching info for: Proper (overwatch)
+2025-08-06 17:18:54,753 - WARNING - ⚠️ API fetch failed for Proper (overwatch)
+2025-08-06 17:18:54,756 - INFO - [354/440] Fetching info for: Stalk3r (overwatch)
+2025-08-06 17:18:56,968 - WARNING - ⚠️ API fetch failed for Stalk3r (overwatch)
+2025-08-06 17:18:56,972 - INFO - [355/440] Fetching info for: MER1T (overwatch)
+2025-08-06 17:18:59,799 - WARNING - ⚠️ API fetch failed for MER1T (overwatch)
+2025-08-06 17:18:59,801 - INFO - [356/440] Fetching info for: SOMEONE (overwatch)
+2025-08-06 17:19:01,985 - WARNING - ⚠️ API fetch failed for SOMEONE (overwatch)
+2025-08-06 17:19:01,989 - INFO - [357/440] Fetching info for: Hanbin (overwatch)
+2025-08-06 17:19:03,351 - WARNING - ⚠️ API fetch failed for Hanbin (overwatch)
+2025-08-06 17:19:03,355 - INFO - [358/440] Fetching info for: ChiYo (overwatch)
+2025-08-06 17:19:06,321 - WARNING - ⚠️ API fetch failed for ChiYo (overwatch)
+2025-08-06 17:19:06,326 - INFO - [359/440] Fetching info for: Fielder (overwatch)
+2025-08-06 17:19:08,935 - WARNING - ⚠️ API fetch failed for Fielder (overwatch)
+2025-08-06 17:19:08,939 - INFO - [360/440] Fetching info for: Byul (easportsfc)
+2025-08-06 17:19:10,718 - WARNING - ⚠️ API fetch failed for Byul (easportsfc)
+2025-08-06 17:19:10,723 - INFO - [361/440] Fetching info for: Ofel (easportsfc)
+2025-08-06 17:19:12,469 - WARNING - ⚠️ API fetch failed for Ofel (easportsfc)
+2025-08-06 17:19:12,472 - INFO - [362/440] Fetching info for: Hoseok (easportsfc)
+2025-08-06 17:19:14,607 - WARNING - ⚠️ API fetch failed for Hoseok (easportsfc)
+2025-08-06 17:19:14,610 - INFO - [363/440] Fetching info for: Yoomin (easportsfc)
+2025-08-06 17:19:17,120 - WARNING - ⚠️ API fetch failed for Yoomin (easportsfc)
+2025-08-06 17:19:17,122 - INFO - [364/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:19,472 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:19,476 - INFO - [365/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:21,766 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:21,770 - INFO - [366/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:23,793 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:23,796 - INFO - [367/440] Fetching info for: Froste (easportsfc)
+2025-08-06 17:19:26,561 - WARNING - ⚠️ API fetch failed for Froste (easportsfc)
+2025-08-06 17:19:26,564 - INFO - [368/440] Fetching info for: JungMin (easportsfc)
+2025-08-06 17:19:29,412 - WARNING - ⚠️ API fetch failed for JungMin (easportsfc)
+2025-08-06 17:19:29,416 - INFO - [369/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:31,011 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:31,014 - INFO - [370/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:34,229 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:34,233 - INFO - [371/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:35,781 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:35,785 - INFO - [372/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:37,802 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:37,805 - INFO - [373/440] Fetching info for: Crong (easportsfc)
+2025-08-06 17:19:39,054 - WARNING - ⚠️ API fetch failed for Crong (easportsfc)
+2025-08-06 17:19:39,057 - INFO - [374/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:40,483 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:40,487 - INFO - [375/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:42,981 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:42,984 - INFO - [376/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:45,280 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:45,283 - INFO - [377/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:47,375 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:47,380 - INFO - [378/440] Fetching info for: Chan (easportsfc)
+2025-08-06 17:19:48,897 - WARNING - ⚠️ API fetch failed for Chan (easportsfc)
+2025-08-06 17:19:48,898 - INFO - [379/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:50,328 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:50,331 - INFO - [380/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:52,906 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:52,908 - INFO - [381/440] Fetching info for: 9KKI (easportsfc)
+2025-08-06 17:19:56,009 - WARNING - ⚠️ API fetch failed for 9KKI (easportsfc)
+2025-08-06 17:19:56,013 - INFO - [382/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:19:59,027 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:19:59,030 - INFO - [383/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:00,958 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:00,962 - INFO - [384/440] Fetching info for: KWAK (easportsfc)
+2025-08-06 17:20:03,773 - WARNING - ⚠️ API fetch failed for KWAK (easportsfc)
+2025-08-06 17:20:03,778 - INFO - [385/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:06,277 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:06,281 - INFO - [386/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:07,879 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:07,883 - INFO - [387/440] Fetching info for: JubJub (easportsfc)
+2025-08-06 17:20:10,211 - WARNING - ⚠️ API fetch failed for JubJub (easportsfc)
+2025-08-06 17:20:10,214 - INFO - [388/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:13,398 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:13,402 - INFO - [389/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:15,619 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:15,622 - INFO - [390/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:17,597 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:17,602 - INFO - [391/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:20,054 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:20,057 - INFO - [392/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:22,634 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:22,639 - INFO - [393/440] Fetching info for: LP (easportsfc)
+2025-08-06 17:20:25,697 - WARNING - ⚠️ API fetch failed for LP (easportsfc)
+2025-08-06 17:20:25,702 - INFO - [394/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:27,692 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:27,695 - INFO - [395/440] Fetching info for: Lihaohao (easportsfc)
+2025-08-06 17:20:30,075 - WARNING - ⚠️ API fetch failed for Lihaohao (easportsfc)
+2025-08-06 17:20:30,078 - INFO - [396/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:32,190 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:32,195 - INFO - [397/440] Fetching info for: Devil (easportsfc)
+2025-08-06 17:20:34,038 - WARNING - ⚠️ API fetch failed for Devil (easportsfc)
+2025-08-06 17:20:34,041 - INFO - [398/440] Fetching info for: Owen (easportsfc)
+2025-08-06 17:20:36,040 - WARNING - ⚠️ API fetch failed for Owen (easportsfc)
+2025-08-06 17:20:36,042 - INFO - [399/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:38,256 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:38,261 - INFO - [400/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:40,606 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:40,609 - INFO - [401/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:43,706 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:43,708 - INFO - [402/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:46,535 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:46,539 - INFO - [403/440] Fetching info for: Subin (easportsfc)
+2025-08-06 17:20:48,866 - WARNING - ⚠️ API fetch failed for Subin (easportsfc)
+2025-08-06 17:20:48,871 - INFO - [404/440] Fetching info for: Marspy (easportsfc)
+2025-08-06 17:20:51,296 - WARNING - ⚠️ API fetch failed for Marspy (easportsfc)
+2025-08-06 17:20:51,300 - INFO - [405/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:52,817 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:52,820 - INFO - [406/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:54,471 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:54,475 - INFO - [407/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:56,142 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:56,146 - INFO - [408/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:20:58,322 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:20:58,326 - INFO - [409/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:00,769 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:00,773 - INFO - [410/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:03,144 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:03,147 - INFO - [411/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:04,656 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:04,659 - INFO - [412/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:06,016 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:06,020 - INFO - [413/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:08,033 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:08,037 - INFO - [414/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:09,438 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:09,441 - INFO - [415/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:10,872 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:10,876 - INFO - [416/440] Fetching info for: GaGA (easportsfc)
+2025-08-06 17:21:12,173 - WARNING - ⚠️ API fetch failed for GaGA (easportsfc)
+2025-08-06 17:21:12,176 - INFO - [417/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:13,731 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:13,736 - INFO - [418/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:15,665 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:15,668 - INFO - [419/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:16,883 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:16,887 - INFO - [420/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:19,698 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:19,703 - INFO - [421/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:22,137 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:22,140 - INFO - [422/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:24,333 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:24,338 - INFO - [423/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:25,934 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:25,939 - INFO - [424/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:29,096 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:29,100 - INFO - [425/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:31,918 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:31,920 - INFO - [426/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:33,600 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:33,606 - INFO - [427/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:35,740 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:35,742 - INFO - [428/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:38,873 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:38,875 - INFO - [429/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:40,946 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:40,950 - INFO - [430/440] Fetching info for: index.php (easportsfc)
+2025-08-06 17:21:42,498 - WARNING - ⚠️ API fetch failed for index.php (easportsfc)
+2025-08-06 17:21:42,502 - INFO - [431/440] Fetching info for: HaiSaki (pubg)
+2025-08-06 17:21:43,905 - WARNING - ⚠️ API fetch failed for HaiSaki (pubg)
+2025-08-06 17:21:43,908 - INFO - [432/440] Fetching info for: Himass (pubg)
+2025-08-06 17:21:46,419 - WARNING - ⚠️ API fetch failed for Himass (pubg)
+2025-08-06 17:21:46,423 - INFO - [433/440] Fetching info for: Taikonn (pubg)
+2025-08-06 17:21:48,702 - WARNING - ⚠️ API fetch failed for Taikonn (pubg)
+2025-08-06 17:21:48,705 - INFO - [434/440] Fetching info for: Destroyy (pubg)
+2025-08-06 17:21:51,616 - WARNING - ⚠️ API fetch failed for Destroyy (pubg)
+2025-08-06 17:21:51,619 - INFO - [435/440] Fetching info for: HuuDat (pubg)
+2025-08-06 17:21:53,664 - WARNING - ⚠️ API fetch failed for HuuDat (pubg)
+2025-08-06 17:21:53,668 - INFO - [436/440] Fetching info for: Kross (pubg)
+2025-08-06 17:21:55,401 - WARNING - ⚠️ API fetch failed for Kross (pubg)
+2025-08-06 17:21:55,403 - INFO - [437/440] Fetching info for: Catalysm (rocketleague)
+2025-08-06 17:21:57,534 - WARNING - ⚠️ API fetch failed for Catalysm (rocketleague)
+2025-08-06 17:21:57,538 - INFO - [438/440] Fetching info for: Sosa (rocketleague)
+2025-08-06 17:21:59,793 - WARNING - ⚠️ API fetch failed for Sosa (rocketleague)
+2025-08-06 17:21:59,794 - INFO - [439/440] Fetching info for: Sphinx (rocketleague)
+2025-08-06 17:22:01,481 - WARNING - ⚠️ API fetch failed for Sphinx (rocketleague)
+2025-08-06 17:22:01,484 - INFO - [440/440] Fetching info for: Mectos (rocketleague)
+2025-08-06 17:22:04,368 - WARNING - ⚠️ API fetch failed for Mectos (rocketleague)
+2025-08-06 17:22:04,369 - INFO - 🎉 Done! Processed 440 players in 39582.99 seconds.
