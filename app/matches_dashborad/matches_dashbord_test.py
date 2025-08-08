@@ -8,7 +8,7 @@ import sqlite3
 import pytz
 from app.db import get_connection
 from app.matches_dashborad.match_model import MatchModel
-
+import uuid
 
 def validate_match_data(match_data: dict) -> tuple[bool, str]:
     """
@@ -18,7 +18,7 @@ def validate_match_data(match_data: dict) -> tuple[bool, str]:
     team1 = match_data.get("team1", "N/A")
     team2 = match_data.get("team2", "N/A")
     
-    # الشرط الأساسي: على الأقل واحد من الفريقين معروف
+
     if team1 == "N/A" and team2 == "N/A":
         return False, "الفريقان غير معروفان"
     
@@ -34,158 +34,120 @@ def determine_match_status(original_status: str, score: str) -> str:
     - Completed + score = "Completed" (مباراة منتهية)
     """
     if not score or score.strip() == "":
-        # لو مافيش سكور، يبقى المباراة لسه جاية
+
         return "Upcoming"
     
-    # لو فيه سكور
-    if original_status == "Completed":
-        return "Completed"  # مباراة منتهية
-    elif original_status == "Upcoming":
-        return "live"  # مباراة مباشرة (كان مقرر تبدأ ودلوقتي فيها سكور)
-    else:
-        return original_status  # أي حالة تانية زي live مثلاً
 
+    if original_status == "Completed":
+        return "Completed"
+    elif original_status == "Upcoming":
+        return "live"
+    else:
+        return original_status 
 def save_live_matches_to_db(game: str, matches: list):
-    """
-    دالة مخصصة لحفظ المباريات المُرسلة مباشرة من API
-    مع تحديث حالة المباراة بناءً على Status و Score
-    """
-    from app.matches_mohamed import get_connection
-    
     conn = get_connection()
     cursor = conn.cursor()
-    
-    # حذف جميع المباريات للعبة المحددة (مش بس live)
-    cursor.execute("DELETE FROM matches WHERE game = ?", (game,))
     
     saved_matches = 0
     skipped_matches = 0
     status_summary = {"Upcoming": 0, "live": 0, "Completed": 0}
-    
+    duplicate_matches = []
+
     for match in matches:
-        # التحقق من صحة البيانات
         match_dict = {
             "team1": match.team1,
             "team2": match.team2
         }
-        
         is_valid, reason = validate_match_data(match_dict)
-        
         if not is_valid:
             skipped_matches += 1
-            print(f"❌ تم تخطي مباراة: {reason} - {match.team1} vs {match.team2}")
             continue
-        
-        # تحديد حالة المباراة الفعلية بناءً على status و score
+
+        cursor.execute('''
+            SELECT uid FROM matches
+            WHERE ((team1 = ? AND team2 = ?) OR (team1 = ? AND team2 = ?))
+              AND match_time = ? AND tournament = ?
+        ''', (match.team1, match.team2, match.team2, match.team1, match.match_time, match.tournament))
+
+        existing_match = cursor.fetchone()
+        if existing_match:
+            skipped_matches += 1
+            duplicate_matches.append({
+                "team1": match.team1,
+                "team2": match.team2,
+                "match_time": match.match_time,
+                "tournament": match.tournament
+            })
+            continue
+
         actual_status = determine_match_status(match.status, match.score)
         status_summary[actual_status] += 1
         
-        print(f"🔄 تحديث حالة المباراة: {match.team1} vs {match.team2}")
-        print(f"   الحالة الأصلية: {match.status}, السكور: '{match.score}'")
-        print(f"   الحالة المُحدّثة: {actual_status}")
-        
-        # حفظ المباراة مع الحالة المُحدّثة
+        uid = str(uuid.uuid4())
         cursor.execute(
             '''
             INSERT INTO matches (
-                game, status, tournament, tournament_link, tournament_icon,
+                uid, game, status, tournament, tournament_link, tournament_icon,
                 team1, team1_url, logo1_light, logo1_dark,
                 team2, team2_url, logo2_light, logo2_dark,
                 score, match_time, format, stream_links, details_link, match_group
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', (
-                match.game, actual_status, match.tournament,  # استخدام actual_status بدلاً من match.status
+                uid, match.game, actual_status, match.tournament,
                 match.tournament_link, match.tournament_icon,
                 match.team1, match.team1_url, match.logo1_light, match.logo1_dark,
                 match.team2, match.team2_url, match.logo2_light, match.logo2_dark,
                 match.score, match.match_time, match.format,
                 json.dumps(match.stream_links) if match.stream_links else json.dumps([]),
                 match.details_link, match.match_group
-            ))
+            )
+        )
         saved_matches += 1
-    
-    print(f"✅ حُفظت {saved_matches} مباراة، تُخطيت {skipped_matches} مباراة")
-    print(f"📊 توزيع المباريات: {status_summary}")
-    
+
     conn.commit()
     conn.close()
-    
+
     return {
         'saved': saved_matches,
         'skipped': skipped_matches,
-        'status_distribution': status_summary
+        'status_distribution': status_summary,
+        'duplicates': duplicate_matches
     }
 
-def get_matches_by_filters(games=[], tournaments=[], live=False, page=1, per_page=10):
+def update_match_in_db(uid: str, updated_data: dict):
     conn = get_connection()
     cursor = conn.cursor()
-
-    query = "SELECT * FROM matches WHERE 1=1"
+    
+    set_clauses = []
     params = []
-
-    if games:
-        query += f" AND game IN ({','.join(['?'] * len(games))})"
-        params.extend(games)
-
-    if tournaments:
-        query += f" AND tournament IN ({','.join(['?'] * len(tournaments))})"
-        params.extend(tournaments)
-
-    if live:
-        query += " AND status = 'Not Started'"
-
-    query += " ORDER BY id ASC LIMIT ? OFFSET ?"
-    params.extend([per_page, (page - 1) * per_page])
-
+    
+    for key, value in updated_data.items():
+        if key in ['game', 'status', 'tournament', 'tournament_link', 'tournament_icon',
+                   'team1', 'team1_url', 'logo1_light', 'logo1_dark',
+                   'team2', 'team2_url', 'logo2_light', 'logo2_dark',
+                   'score', 'match_time', 'format', 'details_link', 'match_group']:
+            set_clauses.append(f"{key} = ?")
+            params.append(value)
+        elif key == 'stream_links':
+            set_clauses.append("stream_links = ?")
+            params.append(json.dumps(value))
+    
+    if not set_clauses:
+        conn.close()
+        return {"error": "No valid fields to update"}
+    
+    query = f"UPDATE matches SET {', '.join(set_clauses)} WHERE uid = ?"
+    params.append(uid)
+    
     cursor.execute(query, params)
-    matches = cursor.fetchall()
-
-    cursor.execute("SELECT COUNT(*) FROM matches WHERE 1=1", ())
-    total = cursor.fetchone()[0]
-
-    keys = [column[0] for column in cursor.description]
-    result = [dict(zip(keys, row)) for row in matches]
-
+    affected_rows = cursor.rowcount
+    conn.commit()
     conn.close()
-    return result, total
+    
+    if affected_rows == 0:
+        return {"error": "Match not found"}
+    return {"success": True}
 
-
-def get_matches_from_db(game: str):
-    conn = get_connection()
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM matches WHERE game = ?", (game, ))
-    rows = cursor.fetchall()
-    conn.close()
-
-    result = {}
-    for row in rows:
-        result.setdefault(row["status"], {}).setdefault(row["tournament"], {"matches": []})["matches"].append({
-            "team1": row["team1"],
-            "team2": row["team2"],
-            "score": row["score"],
-            "match_time": row["match_time"],
-            "format": row["format"],
-            "stream_link": row["stream_link"],
-            "group": row["match_group"]
-        })
-
-    return result
-
-
-def parse_match_date(match_time_str, timezone_str="UTC"):
-    try:
-        if not match_time_str or match_time_str == "N/A":
-            return None
-
-        date_part, time_part = match_time_str.split(" - ")
-        dt = datetime.strptime(f"{date_part} {time_part}", "%B %d, %Y %H:%M")
-        dt = pytz.utc.localize(dt)
-        local_tz = pytz.timezone(timezone_str)
-        local_dt = dt.astimezone(local_tz)
-        return local_dt
-    except Exception as e:
-        return None
-# Helper Function to Normalize Tournament Names
 def normalize_tournament_name(tournament_name: str) -> str:
     TOURNAMENT_NAME_MAP = {
         "OWCS Midseason": "Overwatch Champions",
@@ -195,7 +157,6 @@ def normalize_tournament_name(tournament_name: str) -> str:
         if keyword in tournament_name:
             return replacement
     return tournament_name
-
 def get_matches_paginated(games: list = [],
                           tournaments: list = [],
                           live: bool = False,
@@ -206,7 +167,6 @@ def get_matches_paginated(games: list = [],
     conn = get_connection()
     cursor = conn.cursor()
 
-    # Build WHERE conditions
     where_clauses = []
     params = []
 
@@ -246,21 +206,17 @@ def get_matches_paginated(games: list = [],
     keys = [column[0] for column in cursor.description]
     matches_data = [dict(zip(keys, row)) for row in all_matches]
 
-    # تحويل الوقت إلى التوقيت المحلي إذا كان live=False
     if not live and timezone:
         for match in matches_data:
             if match['match_time'] and match['match_time'] != 'N/A':
                 try:
-                    # تحويل الوقت من UTC إلى التوقيت المحلي
-                    dt_utc = datetime.fromisoformat(match['match_time'])
+                    dt_utc = datetime.fromisoformat(match['match_time'].replace('Z', '+00:00'))
                     local_tz = ZoneInfo(timezone)
                     local_dt = dt_utc.astimezone(local_tz)
                     match['match_time'] = local_dt.isoformat()
                 except ValueError:
-                    match[
-                        'match_time'] = None  # في حالة وجود خطأ في تحويل الوقت
+                    match['match_time'] = None
 
-    # Apply day filter in Python if specified
     if day:
         try:
             filter_date = datetime.strptime(day, "%Y-%m-%d").date()
@@ -276,7 +232,7 @@ def get_matches_paginated(games: list = [],
             matches_data = filtered_matches
         except ValueError:
             pass
-    # Group matches by tournament
+        
     tournaments_map = {}
     for match in matches_data:
         match['tournament'] = normalize_tournament_name(match['tournament'])
@@ -296,40 +252,24 @@ def get_matches_paginated(games: list = [],
             tournaments_map[tournament_name]["games"].append(game_entry)
 
         game_entry["matches"].append({
-            "team1":
-            match["team1"],
-            "team1_url":
-            match.get("team1_url"),
-            "logo1_light":
-            match["logo1_light"],
-            "logo1_dark":
-            match["logo1_dark"],
-            "team2":
-            match["team2"],
-            "team2_url":
-            match.get("team2_url"),
-            "logo2_light":
-            match["logo2_light"],
-            "logo2_dark":
-            match["logo2_dark"],
-            "score":
-            match["score"],
-            "match_time":
-            match["match_time"],
-            "format":
-            match["format"],
-            "stream_link":
-            json.loads(match["stream_links"])
-            if match.get("stream_links") else [],
-            "details_link":
-            match.get("details_link"),
-            "group":
-            match["match_group"],
-            "status":
-            match["status"]
+            "uid": match["uid"],
+            "team1": match["team1"],
+            "team1_url": match.get("team1_url"),
+            "logo1_light": match["logo1_light"],
+            "logo1_dark": match["logo1_dark"],
+            "team2": match["team2"],
+            "team2_url": match.get("team2_url"),
+            "logo2_light": match["logo2_light"],
+            "logo2_dark": match["logo2_dark"],
+            "score": match["score"],
+            "match_time": match["match_time"],
+            "format": match["format"],
+            "stream_link": json.loads(match["stream_links"]) if match.get("stream_links") else [],
+            "details_link": match.get("details_link"),
+            "group": match["match_group"],
+            "status": match["status"]
         })
 
-    # Apply pagination to tournaments
     total_tournaments = len(tournaments_map)
     tournament_list = list(tournaments_map.values())
 
@@ -359,9 +299,8 @@ def get_matches_paginated(games: list = [],
         for i, keyword in enumerate(priority_keywords):
             if keyword.lower() in name_lower:
                 return i
-        return len(priority_keywords) + 1  # non-priority
+        return len(priority_keywords) + 1
 
-    # فلترة البطولات ذات الأولوية فقط
     tournament_list = [
         t for t in tournament_list
         if any(keyword.lower() in t["tournament_name"].lower()

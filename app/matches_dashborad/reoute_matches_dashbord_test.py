@@ -1,11 +1,14 @@
+import re
 from flask import Blueprint, request, jsonify
 from datetime import datetime
 from zoneinfo import ZoneInfo
+from dateutil.parser import isoparse
 from app.matches_dashborad.match_model import MatchModel
-from app.matches_dashborad.matches_dashbord_test import save_live_matches_to_db, validate_match_data
-from app.matches_mohamed import get_matches_paginated
+from app.matches_dashborad.matches_dashbord_test import save_live_matches_to_db, update_match_in_db, validate_match_data
+from app.matches_dashborad.matches_dashbord_test import get_matches_paginated
 
 matches_bp = Blueprint('matches', __name__)
+ISO_REGEX = r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?([+-]\d{2}:\d{2}|Z)$'
 
 SUPPORTED_TIMEZONES = [
     'Africa/Cairo', 'Europe/London', 'Europe/Berlin', 'Europe/Athens',
@@ -13,56 +16,69 @@ SUPPORTED_TIMEZONES = [
     'Asia/Tokyo', 'Asia/Seoul', 'Asia/Singapore', 'Asia/Kolkata',
     'Australia/Sydney', 'UTC'
 ]
-
-@matches_bp.route("/matches_mohamed", methods=["GET", "POST"])
-def get_matches():
+@matches_bp.route("/matches_mohamed", methods=["GET", "POST", "PATCH"])
+def handle_matches():
     try:
-        live = request.args.get("live", "false").lower() == "true"
-        page = int(request.args.get("page", 1))
-        per_page = int(request.args.get("per_page", 10))
-        day = request.args.get("day")
-        timezone = request.args.get("timezone", "UTC")
+        method = request.method
 
-        if page < 1:
-            return jsonify({"error": "Page number must be greater than 0"}), 400
-        if per_page < 1 or per_page > 100:
-            return jsonify({"error": "per_page must be between 1 and 100"}), 400
-        if day:
-            try:
-                datetime.strptime(day, "%Y-%m-%d")
-            except ValueError:
+        if method == "GET":
+            # 🟩 جلب المباريات
+            live = request.args.get("live", "false").lower() == "true"
+            page = int(request.args.get("page", 1))
+            per_page = int(request.args.get("per_page", 10))
+            day = request.args.get("day")
+            timezone = request.args.get("timezone", "UTC")
+            games = request.args.getlist("game")
+            tournaments = request.args.getlist("tournament")
+
+            # تحقق من صحة البيانات
+            if day:
+                try:
+                    datetime.strptime(day, "%Y-%m-%d")
+                except ValueError:
+                    return jsonify({
+                        "error": "Invalid day format. Expected format: YYYY-MM-DD"
+                    }), 400
+
+            if timezone not in SUPPORTED_TIMEZONES:
                 return jsonify({
-                    "error": "Invalid day format. Expected format: YYYY-MM-DD",
-                    "example": "2025-07-24"
+                    "error": f"Invalid timezone: {timezone}",
+                    "examples": SUPPORTED_TIMEZONES
                 }), 400
-        try:
-            ZoneInfo(timezone)
-        except Exception:
-            return jsonify({
-                "error": f"Invalid timezone: {timezone}",
-                "message": "Please use IANA timezone format",
-                "examples": SUPPORTED_TIMEZONES
-            }), 400
 
-        if live and request.method != "POST":
-            return jsonify({"error": "Sending live matches with data requires POST request"}), 405
-        if not live and request.method != "GET":
-            return jsonify({"error": "Fetching matches requires GET request"}), 405
+            result = get_matches_paginated(
+                games=games,
+                tournaments=tournaments,
+                live=False,
+                day=day,
+                page=page,
+                per_page=per_page,
+                timezone=timezone
+            )
+            result["metadata"] = {
+                "method": "GET",
+                "timezone": timezone,
+                "day_filter": day,
+                "fetched_at": datetime.now(ZoneInfo("UTC")).isoformat()
+            }
+            return jsonify(result)
+# !--------------------ADD MATCH-----------------------------
+        elif method == "POST":
+            live = request.args.get("live", "false").lower() == "true"
+            if not live:
+                return jsonify({
+                    "error": "POST only supported for live=true"
+                }), 400
 
-        if live:
             game = request.args.get("game")
             if not game:
                 return jsonify({
-                    "error": "Missing required parameter: game",
-                    "message": "When live=true, you must specify a game"
+                    "error": "Missing game in query"
                 }), 400
 
             data = request.get_json()
             if not data:
-                return jsonify({
-                    "error": "Missing JSON body",
-                    "message": "You must send match data in request body when live=true"
-                }), 400
+                return jsonify({"error": "Missing JSON body"}), 400
 
             if isinstance(data, dict):
                 data = [data]
@@ -78,7 +94,7 @@ def get_matches():
                     "logo2_dark", "score", "match_time", "format", "details_link"
                 ]
 
-                missing = [field for field in required_fields if field not in item]
+                missing = [f for f in required_fields if f not in item]
                 if missing:
                     validation_errors.append({
                         "match_index": i,
@@ -86,6 +102,23 @@ def get_matches():
                     })
                     continue
 
+                # ✅ تحقق من match_time
+                try:
+                    match_time_str = item["match_time"]
+                    parsed_time = isoparse(match_time_str)
+                    
+                    if parsed_time.tzinfo is None:
+                        raise ValueError("match_time must include timezone info (e.g. +00:00 or Z)")
+                    
+                    if not re.match(ISO_REGEX, match_time_str):
+                        raise ValueError("match_time format must match ISO8601 with timezone")
+
+                except Exception as e:
+                    validation_errors.append({
+                        "match_index": i,
+                        "error": f"Invalid match_time format: {str(e)}"
+                    })
+                    continue                # ✅ تحقق من صحة أسماء الفرق
                 is_valid, reason = validate_match_data({
                     "team1": item["team1"],
                     "team2": item["team2"]
@@ -93,11 +126,11 @@ def get_matches():
                 if not is_valid:
                     validation_errors.append({
                         "match_index": i,
-                        "error": f"Invalid match data: {reason}",
-                        "teams": f"{item['team1']} vs {item['team2']}"
+                        "error": f"Invalid match data: {reason}"
                     })
                     continue
 
+                # ✅ إنشاء الماتش
                 match = MatchModel(
                     game=item["game"],
                     status=item["status"],
@@ -123,74 +156,43 @@ def get_matches():
 
             if validation_errors:
                 return jsonify({
-                    "error": "Validation failed for some matches",
-                    "validation_errors": validation_errors,
-                    "valid_matches": len(matches),
-                    "invalid_matches": len(validation_errors)
+                    "error": "Validation failed",
+                    "validation_errors": validation_errors
                 }), 400
 
-            save_result = {"saved": 0, "skipped": 0, "status_distribution": {"Upcoming": 0, "live": 0, "Completed": 0}}
-            if matches:
-                print(f"💾 Saving {len(matches)} manually submitted matches for {game}...")
-                save_result = save_live_matches_to_db(game, matches)
-                print(f"✅ Save result: {save_result}")
+            save_result = save_live_matches_to_db(game, matches)
 
-            result = get_matches_paginated(
-                games=[game],
-                day=day,
-                page=page,
-                per_page=per_page,
-                timezone=timezone
-            )
-            result["metadata"] = {
-                "live_data": True,
-                "game": game,
-                "timezone": timezone,
-                "submitted_at": datetime.now(ZoneInfo('UTC')).isoformat(),
-                "day_filter": day if day else None,
-                "save_summary": save_result
-            }
-            return jsonify(result)
+            return jsonify({
+                "message": "Matches saved successfully",
+                "save_result": save_result,
+                "saved_at": datetime.now(ZoneInfo("UTC")).isoformat()
+            })
+# !--------------------UPDATE MATCH-----------------------------
+        elif method == "PATCH":
+            
+            uid = request.args.get("uid")
+            if not uid:
+                return jsonify({"error": "Missing uid parameter in query"}), 400
+
+            data = request.get_json()
+            if not data:
+                return jsonify({"error": "No data provided"}), 400
+
+            result = update_match_in_db(uid, data)
+            if "error" in result:
+                return jsonify(result), 404 if result["error"] == "Match not found" else 400
+
+            return jsonify({
+                "message": "Match updated successfully",
+                "updated_data": result
+            })
 
         else:
-            games = request.args.getlist("game")
-            tournaments = request.args.getlist("tournament")
+            return jsonify({"error": "Method not allowed"}), 405
 
-            print(f"📊 Fetching matches from database...")
-            if games: print(f"   Games filter: {games}")
-            if tournaments: print(f"   Tournaments filter: {tournaments}")
-            if day: print(f"   Day filter: {day}")
-            if timezone: print(f"   Timezone: {timezone}")
-
-            result = get_matches_paginated(
-                games=games,
-                tournaments=tournaments,
-                live=False,
-                day=day,
-                page=page,
-                per_page=per_page,
-                timezone=timezone
-            )
-            result["metadata"] = {
-                "live_data": False,
-                "games_filter": games,
-                "tournaments_filter": tournaments,
-                "timezone": timezone,
-                "day_filter": day if day else None,
-                "fetched_at": datetime.now(ZoneInfo('UTC')).isoformat()
-            }
-            return jsonify(result)
-
-    except ValueError as ve:
-        return jsonify({
-            "error": "Invalid parameter value",
-            "message": str(ve),
-            "type": "validation_error"
-        }), 400
     except Exception as e:
         print(f"❌ API Error: {str(e)}")
         return jsonify({
             "error": "Internal server error",
-            "message": str(e),
-            "type": "server_error"
+            "message": str(e)
         }), 500

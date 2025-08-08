@@ -1,5 +1,7 @@
+
 from dataclasses import dataclass
 from typing import List, Optional
+import uuid
 
 @dataclass
 class MatchModel:
@@ -21,4 +23,5 @@ class MatchModel:
     format: str
     stream_links: List[str]
     details_link: str
-    match_group: Optional[str]
+    uid: Optional[str] = None
+    match_group: Optional[str] = None

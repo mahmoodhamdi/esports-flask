@@ -20,32 +20,32 @@ def init_db():
     cursor = conn.cursor()
     
     try:
-        # Create matches table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS matches (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+                uid TEXT UNIQUE,
                 game TEXT,
                 status TEXT,
                 tournament TEXT,
                 tournament_link TEXT,
                 tournament_icon TEXT,
                 team1 TEXT,
-                team1_url TEXT,                        
+                team1_url TEXT,
                 logo1_light TEXT,
                 logo1_dark TEXT,
                 team2 TEXT,
-                team2_url TEXT,                        
+                team2_url TEXT,
                 logo2_light TEXT,
                 logo2_dark TEXT,
                 score TEXT,
                 match_time TEXT,
                 format TEXT,
-                stream_links TEXT,                     
-                details_link TEXT,                     
+                stream_links TEXT,
+                details_link TEXT,
                 match_group TEXT
             )
         ''')
-        # # Try to add uid column (skip if already exists)
+# # Try to add uid column (skip if already exists)
         # try:
         #     cursor.execute("ALTER TABLE matches ADD COLUMN uid TEXT")
         # except sqlite3.OperationalError as e:
